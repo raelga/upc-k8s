@@ -1,5 +1,13 @@
 # Postgrado Universitario en Kubernetes y Cloud Native Engineering
 
+> **Nota:** Este documento es una **visión expandida y aspiracional** (60 ECTS / 1500h,
+> formato máster de 2 semestres). **No** corresponde al programa publicado por la UPC.
+> El programa oficial es de **90h lectivas / 12 ECTS** (6 módulos + Proyecto Final,
+> *live online*, martes y jueves 18:00–21:00, 03/11/2026 → 18/03/2027) y su temario
+> vigente está en [`roadmap-postgrado-kubernetes.md`](roadmap-postgrado-kubernetes.md).
+> Se conserva aquí como material de referencia y posible base para futuras ediciones ampliadas.
+> Página publicada: https://upcschool.upc.edu/esp/estudis/formacio/curs/305300/postgrau-platform-engineering-devops-kubernetes/
+
 ## Estructura General
 
 | Dato               | Detalle                                      |
