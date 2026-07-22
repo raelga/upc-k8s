@@ -31,8 +31,8 @@ A university postgraduate program proposal for UPC (Universitat Politècnica de 
 | `ejemplo.docx` | Reference document from UPC showing expected format (binary, structure extracted) | Reference only |
 | `Postgrado_Kubernetes_Platform_Engineering.docx` | Detailed program document following ejemplo.docx format | Generated |
 | `Calendario_Postgrado_Kubernetes.xlsx` | Excel: program summary, dated session calendar, module breakdown (ECTS/hours), detailed contents | Generated |
-| `roadmap-postgrado-kubernetes.md` | Full roadmap in markdown (90h, 12 ECTS, 6 modules + Proyecto Final) | Updated |
-| `roadmap-postgrado-kubernetes-full.md` | Expanded 60 ECTS / 1500h aspirational vision (master format). NOT the published program; kept as reference (has clarifying header + cross-link) | Reference |
+| `roadmap-postgrado-kubernetes.md` | Short/overview roadmap (90h, 12 ECTS, 6 modules + Proyecto Final): titles, calendar, tech | Updated |
+| `roadmap-postgrado-kubernetes-detallado.md` | In-depth roadmap of the SAME published program: 30 dated sessions with labs, objetivos, prerequisitos, evaluación, bibliografía per module; condensed 60 ECTS vision as appendix | Current |
 | `proposta-universitaria.md` | Catalan texts for UPC proposal form | Updated |
 | `generate_docs.py` | Python script to regenerate .docx and .xlsx | Working |
 | `CONTEXT.md` | This file | Current |

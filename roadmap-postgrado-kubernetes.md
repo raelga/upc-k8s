@@ -2,6 +2,10 @@
 
 > Conviértete en Platform Engineer: especialízate en Kubernetes y despliega la nueva generación de plataformas cloud.
 
+> 📄 **Este documento** es la vista **resumida** del programa (títulos, calendario y tecnologías).
+> Para el desarrollo sesión a sesión, con laboratorios, objetivos y evaluación por módulo,
+> consulta el [**roadmap detallado**](roadmap-postgrado-kubernetes-detallado.md).
+
 ## Estructura General
 
 | Dato               | Detalle                                               |
