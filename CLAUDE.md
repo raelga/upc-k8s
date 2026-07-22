@@ -12,16 +12,17 @@ A university postgraduate program proposal for UPC (Universitat Politècnica de 
 
 ## Program Structure
 
-- **Title candidates:**
-  - "Postgrado en DevOps, Kubernetes y Platform Engineering" (latest preferred)
-  - "Postgrado en DevOps y Kubernetes: De la Infraestructura Cloud al Ecosistema Cloud Native"
-  - "Postgrado en Kubernetes: Arquitectura, Operación y Ecosistema Cloud Native"
-- **Total hours:** 140h lectivas
-- **Session format:** 40 sessions of 3.5h each
-- **Weekly dedication:** 7h/week (2 sessions)
-- **Duration:** 20 weeks
-- **Modules:** 12 modules in 9 thematic blocks
+- **Published title:** "Posgrado en Platform Engineering y DevOps con Kubernetes"
+- **Titulación:** Diploma de experto en Platform Engineering y DevOps con Kubernetes (UPC)
+- **Total hours:** 90h lectivas
+- **Credits:** 12 ECTS
+- **Modality:** Live online
+- **Duration:** 5 meses (1ª edición)
+- **Schedule:** Martes y jueves, 18:00–21:00 · Inicio 03/11/2026 · Fin 18/03/2027 · 30 sesiones de 3h
+- **Structure:** 6 módulos + Proyecto Final
+- **Dirección académica:** Rael Garcia Arnes, René Serral Gracià
 - **Languages:** Content in Spanish (castellano), university proposal form in Catalan
+- **Reference:** https://upcschool.upc.edu/esp/estudis/formacio/curs/305300/postgrau-platform-engineering-devops-kubernetes/
 
 ## Files in this directory
 
@@ -29,29 +30,27 @@ A university postgraduate program proposal for UPC (Universitat Politècnica de 
 |------|-------------|--------|
 | `ejemplo.docx` | Reference document from UPC showing expected format (binary, structure extracted) | Reference only |
 | `Postgrado_Kubernetes_Platform_Engineering.docx` | Detailed program document following ejemplo.docx format | Generated |
-| `Calendario_Postgrado_Kubernetes.xlsx` | Excel with 3 sheets: weekly calendar, module summary, session detail | Generated |
-| `roadmap-postgrado-kubernetes.md` | Full roadmap in markdown (140h, 40 sessions of 3.5h) | Updated |
+| `Calendario_Postgrado_Kubernetes.xlsx` | Excel: program summary, dated session calendar, module breakdown (ECTS/hours), detailed contents | Generated |
+| `roadmap-postgrado-kubernetes.md` | Full roadmap in markdown (90h, 12 ECTS, 6 modules + Proyecto Final) | Updated |
 | `roadmap-postgrado-kubernetes-full.md` | Original expanded version (pre-140h adjustment) | Legacy, can be deleted |
 | `proposta-universitaria.md` | Catalan texts for UPC proposal form | Updated |
 | `generate_docs.py` | Python script to regenerate .docx and .xlsx | Working |
 | `CONTEXT.md` | This file | Current |
 
-## Module Breakdown (40 sessions = 140h)
+## Module Breakdown (6 modules + Proyecto Final = 90h / 12 ECTS)
 
-| Module | Title | Sessions | Hours |
-|--------|-------|----------|-------|
-| M01 | Fundamentos de DevOps y Platform Engineering | 1 | 3.5h |
-| M02 | Programación para DevOps: Go, Python y Bash | 2 | 7h |
-| M03 | Redes, DNS y CDN con Cloudflare | 1 | 3.5h |
-| M04 | Control de Versiones Avanzado con Git | 1 | 3.5h |
-| M05 | Cloud Computing: AWS, Azure y GCP | 3 | 10.5h |
-| M06 | Infraestructura como Código con Terraform | 2 | 7h |
-| M07 | Contenedores y Ecosistema OCI | 2 | 7h |
-| M08 | Kubernetes Core: Arquitectura y Building Blocks | 8 | 28h |
-| M09 | Kubernetes en Producción: Multi-cloud | 2 | 7h |
-| M10 | Ecosistema Cloud Native: Bundles, IaC, Secrets y Observabilidad | 7 | 24.5h |
-| M11 | GitOps, Pipelines y Networking Avanzado | 6 | 21h |
-| M12 | Platform Engineering Avanzado: Operators y Multi-cluster | 5 | 17.5h |
+| Module | Title | ECTS | Hours |
+|--------|-------|------|-------|
+| M1 | Fundamentos DevOps, Platform Engineering y Programación para Infraestructura | 1.5 | 12h |
+| M2 | Cloud Computing Multicloud e Infraestructura como Código | 1 | 12h |
+| M3 | Contenedores y Kubernetes Core. Ecosistema OCI | 2 | 15h |
+| M4 | Kubernetes en Producción y Ecosistema Cloud Native | 2 | 15h |
+| M5 | Observabilidad, GitOps, CI/CD y Networking Avanzado | 2 | 15h |
+| M6 | Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 2 | 15h |
+| PF | Proyecto Final | 1.5 | 6h |
+| | **Total** | **12** | **90h** |
+
+The 6 published modules aggregate the original 12-module roadmap (M1←old M01+M02; M2←M03+M04+M05+M06; M3←M07+M08; M4←M09+M10 bundles/IaC/secrets; M5←M10 observabilidad+M11; M6←M12). M1 adds AI-assisted programming.
 
 ## Catalan Proposal Texts (proposta-universitaria.md)
 
@@ -63,30 +62,26 @@ Contains the following sections required by UPC:
 
 ## Key Decisions Made
 
-1. Session blocks are exactly 3.5h (university scheduling constraint)
-2. 7h/week, 2 sessions per week
-3. Total 140h (adjusted from original 150h)
-4. Kubernetes Core (M08) is the largest module at 28h (8 sessions) — intentional
-5. No separate "Proyecto Final" module — project is embedded in the program
+1. Program published by UPC at 90h lectivas / 12 ECTS, Live online, 5 meses
+2. Structure: 6 thematic modules + a standalone Proyecto Final (1.5 ECTS / 6h)
+3. The 6 published modules aggregate the original detailed 12-module roadmap (see mapping in Module Breakdown)
+4. Kubernetes content is the core: M3 (Core + OCI, 15h) + M4 (Producción + Cloud Native, 15h) = 30h
+5. Module M1 explicitly includes AI-assisted programming (Bash, Python, Go)
 6. Operators referred to as "Operator Framework" (not Go/Kubebuilder specifically) in proposal texts
-7. The .docx follows the visual structure of ejemplo.docx (title page, summary tables, block headers, module detail tables with topics, session breakdown tables, certifications, technologies)
+7. The .docx follows the visual structure of ejemplo.docx (title page, summary tables, module detail tables with topics, certifications, technologies)
 8. Aligned with certifications: CKA, CKAD, CKS, Terraform Associate, Vault Associate, KCNA, CGOA
 
 ## Pending / Future Work
 
-- [ ] Final title selection
-- [ ] Fill in "Fecha orientativa" column in the Excel (actual calendar dates)
-- [ ] Review and potentially adjust module hours based on UPC feedback
-- [ ] Add instructor/professor assignments
-- [ ] Add evaluation criteria per module
-- [ ] Add detailed lab descriptions per session
-- [ ] Potentially add a "Proyecto Final" if UPC requires it as a separate deliverable
-- [ ] Regenerate .docx if content changes (run `python3 generate_docs.py`)
+- [ ] Add instructor/professor assignments per module
+- [ ] Add evaluation criteria per module and for the Proyecto Final
+- [ ] Add detailed lab descriptions
+- [ ] Regenerate .docx/.xlsx if content changes (run `python3 generate_docs.py`)
 
 ## How to Regenerate Documents
 
 ```bash
-cd /Users/rael/UPC-DevOps
+cd /Users/rael/Code/raelga/UPC-k8s
 python3 generate_docs.py
 ```
 

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Generate the Postgrado Kubernetes .docx and .xlsx files."""
+"""Generate the Posgrado Platform Engineering & DevOps con Kubernetes .docx and .xlsx files.
+
+Structure matches the published UPC program (curso 305300):
+90 horas lectivas / 12 ECTS / Live online / 6 módulos + Proyecto Final.
+"""
 
 from docx import Document
 from docx.shared import Pt, Inches, Cm, RGBColor
@@ -14,489 +18,449 @@ from openpyxl.utils import get_column_letter
 import os
 
 # ============================================================
-# DATA: 40 sessions, 3.5h each, 140h total
+# PROGRAM FACTS (published UPC program 305300)
+# ============================================================
+
+PROGRAM = {
+    "title": "Posgrado en Platform Engineering y DevOps con Kubernetes",
+    "titulacion": "Diploma de experto en Platform Engineering y DevOps con Kubernetes (UPC)",
+    "tagline": "Conviértete en Platform Engineer: especialízate en Kubernetes y despliega la nueva generación de plataformas cloud.",
+    "hours": "90h",
+    "ects": "12",
+    "modalidad": "Live online",
+    "idioma": "Español",
+    "duracion": "5 meses",
+    "edicion": "1ª edición",
+    "direccion": "Rael Garcia Arnes · René Serral Gracià",
+    "url": "https://upcschool.upc.edu/esp/estudis/formacio/curs/305300/postgrau-platform-engineering-devops-kubernetes/",
+    "inicio": "03/11/2026",
+    "fin": "18/03/2027",
+    "horario": "Martes y jueves, 18:00 a 21:00 (3h por sesión)",
+}
+
+# Class schedule: sessions run Tue/Thu 18:00-21:00 from inicio to fin.
+# Non-teaching dates: La Immaculada (8 Dec) + Christmas break (22 Dec 2026 - 7 Jan 2027).
+# 90h / 3h = 30 sessions; the remaining Tue/Thu slots act as buffer/recuperación.
+SCHEDULE_START = (2026, 11, 3)
+SCHEDULE_END = (2027, 3, 18)
+SESSION_HOURS = 3
+NON_TEACHING = {
+    (2026, 12, 8): "Festivo: La Immaculada",
+    (2026, 12, 22): "Vacaciones de Navidad",
+    (2026, 12, 24): "Vacaciones de Navidad",
+    (2026, 12, 29): "Vacaciones de Navidad",
+    (2026, 12, 31): "Vacaciones de Navidad",
+    (2027, 1, 5): "Vacaciones de Navidad",
+    (2027, 1, 7): "Vacaciones de Navidad",
+}
+
+# ============================================================
+# DATA: 6 modules + Proyecto Final, 90h / 12 ECTS total
+# Each module aggregates units from the original detailed roadmap.
 # ============================================================
 
 MODULES = [
     {
-        "id": "M01",
-        "title": "Fundamentos de DevOps y Platform Engineering",
-        "hours": 3.5,
-        "sessions": 1,
-        "block": "BLOQUE I",
-        "block_title": "Fundamentos y Cultura DevOps",
-        "description": (
-            "Contextualización histórica, filosófica y organizativa del movimiento DevOps "
-            "y su evolución hacia Platform Engineering como disciplina."
-        ),
-        "topics": [
-            "Historia y principios DevOps: de Waterfall a Agile a DevOps. Cultura, automatización, medición y compartición (CALMS)",
-            "Prácticas clave: CI/CD, Infrastructure as Code, Monitoring, Incident Management, Blameless Postmortems",
-            "El problema de escala de DevOps: de equipos pequeños a grandes organizaciones de ingeniería",
-            "Platform Engineering: definición, diferencias con DevOps y SRE, y casos de adopción real",
-            "Internal Developer Platforms (IDP): concepto, golden paths, ciclo de vida y Developer Experience (DevEx)",
-            "Team Topologies: stream-aligned, enabling, platform teams y complicated subsystem teams",
-            "Métricas de éxito: DORA metrics (Deployment Frequency, Lead Time, MTTR, Change Failure Rate) y framework SPACE",
-            "Backstage como portal de desarrollo interno: plugins, TechDocs y Software Catalog",
-            "El rol del Platform Engineer: responsabilidades, skills T-shaped y evolución de carrera",
+        "id": "M1",
+        "title": "Fundamentos DevOps, Platform Engineering y Programación para Infraestructura",
+        "ects": "1.5",
+        "hours": 12,
+        "sessions": [
+            "Fundamentos de DevOps y Platform Engineering (CALMS, IDP, Team Topologies, DORA)",
+            "Programación asistida por IA: Bash y automatización de sistema",
+            "Python para DevOps: SDKs cloud, CLIs y testing",
+            "Go para infraestructura: client-go, controllers y tooling",
         ],
-        "session_detail": [
-            ("Sesión 1", "DevOps y Platform Engineering", "3.5h",
-             "Historia DevOps, CALMS, prácticas CI/CD e IaC. Platform Engineering: IDP, golden paths, "
-             "Team Topologies, DORA metrics. Backstage como portal interno."),
+        "description": (
+            "Contextualización del movimiento DevOps y su evolución hacia Platform Engineering. "
+            "Competencias de programación asistidas por inteligencia artificial en Bash, Python y Go "
+            "orientadas a la automatización de infraestructura, desarrollo de CLIs y construcción de "
+            "controladores para Kubernetes."
+        ),
+        "units": [
+            {
+                "title": "Fundamentos de DevOps y Platform Engineering",
+                "topics": [
+                    "Historia y principios DevOps: de Waterfall a Agile a DevOps. Cultura, automatización, medición y compartición (CALMS)",
+                    "Prácticas clave: CI/CD, Infrastructure as Code, Monitoring, Incident Management, Blameless Postmortems",
+                    "El problema de escala de DevOps: de equipos pequeños a grandes organizaciones de ingeniería",
+                    "Platform Engineering: definición, diferencias con DevOps y SRE, y casos de adopción real",
+                    "Internal Developer Platforms (IDP): concepto, golden paths, ciclo de vida y Developer Experience (DevEx)",
+                    "Team Topologies: stream-aligned, enabling, platform teams y complicated subsystem teams",
+                    "Métricas de éxito: DORA metrics (Deployment Frequency, Lead Time, MTTR, Change Failure Rate) y framework SPACE",
+                    "Backstage como portal de desarrollo interno: plugins, TechDocs y Software Catalog",
+                    "El rol del Platform Engineer: responsabilidades, skills T-shaped y evolución de carrera",
+                ],
+            },
+            {
+                "title": "Programación para Infraestructura: Bash, Python y Go (asistida por IA)",
+                "topics": [
+                    "Programación asistida por IA: copilots y asistentes para scripting, refactorización y generación de tests",
+                    "Bash scripting avanzado: variables, estructuras de control, funciones, arrays y manejo de errores",
+                    "Automatización de sistema: gestión de procesos, pipes, redirecciones, grep/sed/awk/jq/yq, cron y Makefiles",
+                    "Python para DevOps: scripting, SDKs cloud (boto3, azure-sdk, google-cloud) y manejo de APIs REST",
+                    "Python: manipulación de YAML/JSON/TOML, Jinja2 templating, CLIs con Click/Typer y testing con pytest",
+                    "Go: sintaxis, tipos, structs, interfaces, goroutines, channels y manejo de errores idiomático",
+                    "Go para infraestructura: desarrollo de CLIs con cobra/viper y cliente Kubernetes (client-go)",
+                    "Patrones de desarrollo de controladores y operators en Go: reconciliation loop e informers",
+                    "Testing en Go: unit tests, table-driven tests, mocks con testify e integración con CI",
+                    "Herramientas de desarrollo: Makefile, direnv, pre-commit hooks y linters (golangci-lint, ruff)",
+                ],
+            },
         ],
     },
     {
-        "id": "M02",
-        "title": "Programación para DevOps: Go, Python y Bash",
-        "hours": 7,
-        "sessions": 2,
-        "block": None,
-        "description": (
-            "Bases de programación orientadas a la automatización de infraestructura "
-            "y desarrollo de herramientas de plataforma."
-        ),
-        "topics": [
-            "Bash scripting avanzado: variables, estructuras de control, funciones, arrays y manejo de errores",
-            "Automatización de sistema: gestión de procesos, pipes, redirecciones, grep/sed/awk/jq/yq, cron y Makefiles",
-            "Python para DevOps: scripting, SDKs cloud (boto3, azure-sdk, google-cloud) y manejo de APIs REST",
-            "Python: manipulación de YAML/JSON/TOML, Jinja2 templating, CLIs con Click/Typer y testing con pytest",
-            "Go: sintaxis, tipos, structs, interfaces, goroutines, channels y manejo de errores idiomático",
-            "Go para infraestructura: desarrollo de CLIs con cobra/viper y cliente Kubernetes (client-go)",
-            "Patrones de desarrollo de controladores y operators en Go: reconciliation loop e informers",
-            "Testing en Go: unit tests, table-driven tests, mocks con testify e integración con CI",
-            "Herramientas de desarrollo: Makefile, direnv, pre-commit hooks y linters (golangci-lint, ruff)",
+        "id": "M2",
+        "title": "Cloud Computing Multicloud e Infraestructura como Código",
+        "ects": "1",
+        "hours": 12,
+        "sessions": [
+            "Redes, DNS y CDN con Cloudflare",
+            "Control de versiones avanzado con Git",
+            "Cloud Computing: AWS, Azure y GCP",
+            "Infraestructura como Código con Terraform",
         ],
-        "session_detail": [
-            ("Sesión 2", "Bash y Python para DevOps", "3.5h",
-             "Bash: variables, control de flujo, funciones, pipes, grep/sed/awk/jq. "
-             "Python: scripting, SDKs cloud, CLIs con Click/Typer, pytest, ruff."),
-            ("Sesión 3", "Go para Cloud Native", "3.5h",
-             "Fundamentos Go: tipos, structs, interfaces, goroutines, channels. "
-             "CLIs con cobra/viper, client-go, controller-runtime. Testing y golangci-lint."),
+        "description": (
+            "Recursos fundamentales de AWS, Azure y GCP (computación, redes, almacenamiento, identidad y "
+            "servicios gestionados). Terraform como herramienta central de aprovisionamiento declarativo "
+            "multi-cloud: HCL, gestión del estado, módulos, testing y CI/CD. Redes, DNS y CDNs con "
+            "Cloudflare. Control de versiones avanzado con Git."
+        ),
+        "units": [
+            {
+                "title": "Redes, DNS y CDN con Cloudflare",
+                "topics": [
+                    "Revisión de fundamentos TCP/IP, UDP, TLS 1.3/mTLS, HTTP/2 y HTTP/3 (QUIC)",
+                    "DNS: resolución recursiva e iterativa, registros (A, AAAA, CNAME, TXT, SRV, NS), TTL y propagación",
+                    "DNS avanzado: DNSSEC, DNS-over-HTTPS, split-horizon DNS y service discovery basado en DNS",
+                    "CDN: arquitectura, edge caching, routing geográfico, invalidación y cache-control headers",
+                    "Cloudflare: DNS authoritative, Cloudflare Tunnel, Workers, WAF, DDoS protection y R2",
+                    "Certificados TLS: PKI, cadena de confianza, ACME protocol y automatización con Let's Encrypt",
+                    "Load balancing: algoritmos, health checks, session persistence y global load balancing",
+                ],
+            },
+            {
+                "title": "Control de Versiones Avanzado con Git",
+                "topics": [
+                    "Arquitectura interna de Git: objects (blob, tree, commit, tag), refs, packfiles, reflog y garbage collection",
+                    "Estrategias de branching: Git Flow, GitHub Flow, trunk-based development y comparativa práctica",
+                    "Rebases interactivos: squash, fixup, reword, edit y reordenación de commits",
+                    "Resolución de conflictos: estrategias de merge (recursive, ort), rerere, git mergetool y best practices",
+                    "Gestión de ramas: naming conventions, branch protection rules, CODEOWNERS y cleanup automático",
+                    "Pull Requests y code review: merge strategies (merge, squash, rebase), signed commits y draft PRs",
+                    "Git hooks: pre-commit, commit-msg, post-merge y automatización con pre-commit framework",
+                    "Monorepos: estrategias, herramientas (Nx, Turborepo) y gestión de dependencias",
+                    "Operaciones avanzadas: git bisect, git worktree, submodules, subtrees y sparse-checkout",
+                ],
+            },
+            {
+                "title": "Cloud Computing: AWS, Azure y GCP",
+                "topics": [
+                    "AWS · IAM: users, roles, policies, OIDC federation, IRSA y AWS SSO",
+                    "AWS · Computación: EC2 (instance types, AMIs, user-data), Auto Scaling Groups, Lambda",
+                    "AWS · Redes: VPC, subnets públicas/privadas, Security Groups, ALB/NLB, Route 53 y PrivateLink",
+                    "AWS · Almacenamiento: S3 (lifecycle, versioning), EBS, EFS y ECR",
+                    "AWS · Servicios gestionados: RDS, DynamoDB, SQS, CloudWatch y Secrets Manager",
+                    "Azure · IAM: Entra ID, Managed Identities, RBAC y Azure Key Vault",
+                    "Azure · Computación: VMs, VMSS, Azure Functions y Azure Container Apps",
+                    "Azure · Redes: VNet, subnets, NSG, Load Balancer, Application Gateway y Azure DNS",
+                    "Azure · Almacenamiento: Blob Storage, Azure Files, Managed Disks y ACR",
+                    "Azure · Servicios gestionados: Azure SQL, Cosmos DB, Service Bus y Azure Monitor",
+                    "GCP · IAM: Service Accounts, Workload Identity, org policies y Cloud Audit Logs",
+                    "GCP · Computación: Compute Engine, Cloud Functions y Cloud Run",
+                    "GCP · Redes: VPC, Firewall Rules, Cloud NAT, Cloud Load Balancing y Cloud DNS",
+                    "GCP · Almacenamiento: Cloud Storage, Persistent Disk y Artifact Registry",
+                    "GCP · Servicios gestionados: Cloud SQL, Firestore, Pub/Sub y Cloud Monitoring",
+                    "Comparativa multi-cloud: estrategias de portabilidad, vendor lock-in y abstracción de recursos",
+                ],
+            },
+            {
+                "title": "Infraestructura como Código con Terraform",
+                "topics": [
+                    "Fundamentos de IaC: filosofía declarativa vs imperativa, idempotencia y drift detection",
+                    "HCL: sintaxis, tipos de datos, expresiones, funciones y meta-argumentos (count, for_each, depends_on)",
+                    "Providers: configuración, autenticación y uso de los providers de AWS, Azure y GCP",
+                    "State management: local vs remote state, state locking, backends (S3, GCS, Azure Blob) y workspaces",
+                    "Módulos: diseño, versionado, registro público y privado, composición y reusabilidad",
+                    "Patrones avanzados: for_each, dynamic blocks, moved blocks, import y workspaces",
+                    "Terraform en CI/CD: plan/apply automatizado, Atlantis y GitHub Actions",
+                    "Testing de infraestructura: terraform test, tflint, checkov, tfsec y políticas con OPA/Conftest",
+                    "Alternativas complementarias: OpenTofu, Pulumi y CDKTF",
+                ],
+            },
         ],
     },
     {
-        "id": "M03",
-        "title": "Redes, DNS y CDN con Cloudflare",
-        "hours": 3.5,
-        "sessions": 1,
-        "block": None,
-        "description": (
-            "Fundamentos de red aplicados a entornos cloud y distribuidos, "
-            "con Cloudflare como plataforma de referencia."
-        ),
-        "topics": [
-            "Revisión de fundamentos TCP/IP, UDP, TLS 1.3/mTLS, HTTP/2 y HTTP/3 (QUIC)",
-            "DNS: resolución recursiva e iterativa, registros (A, AAAA, CNAME, TXT, SRV, NS), TTL y propagación",
-            "DNS avanzado: DNSSEC, DNS-over-HTTPS, split-horizon DNS y service discovery basado en DNS",
-            "CDN: arquitectura, edge caching, routing geográfico, invalidación y cache-control headers",
-            "Cloudflare: DNS authoritative, Cloudflare Tunnel, Workers, WAF, DDoS protection y R2",
-            "Certificados TLS: PKI, cadena de confianza, ACME protocol y automatización con Let's Encrypt",
-            "Load balancing: algoritmos, health checks, session persistence y global load balancing",
+        "id": "M3",
+        "title": "Contenedores y Kubernetes Core. Ecosistema OCI",
+        "ects": "2",
+        "hours": 15,
+        "sessions": [
+            "Contenedores y ecosistema OCI: imágenes, runtimes y seguridad",
+            "Kubernetes: arquitectura, control plane y clusters locales (kind)",
+            "Building Blocks: workloads, configuración y scheduling",
+            "Almacenamiento y networking en Kubernetes",
+            "Autenticación, RBAC y clúster componente a componente",
         ],
-        "session_detail": [
-            ("Sesión 4", "DNS, CDNs y Cloudflare", "3.5h",
-             "TCP/IP, DNS en profundidad (registros, resolución, DNSSEC). CDNs: edge caching, anycast. "
-             "Cloudflare: DNS autoritativo, proxy, WAF, Workers, R2, Tunnels. TLS y ACME."),
+        "description": (
+            "Ecosistema OCI: construcción de imágenes, runtimes, registros y seguridad. Arquitectura "
+            "completa de Kubernetes: plano de control, bloques fundamentales (workloads, configuración, "
+            "scheduling), almacenamiento (PV/PVC, CSI), networking (Services, Ingress, Gateway API, CNI, "
+            "Network Policies), autenticación (RBAC, OIDC, admission controllers) y construcción de un "
+            "clúster componente a componente."
+        ),
+        "units": [
+            {
+                "title": "Contenedores y Ecosistema OCI",
+                "topics": [
+                    "Arquitectura de contenedores: Linux namespaces, cgroups v2, UnionFS y el modelo de capas OCI",
+                    "Dockerfile avanzado: multi-stage builds, BuildKit, cache optimization y distroless/scratch images",
+                    "Container runtimes: Docker, containerd, CRI-O, runc, gVisor y la interfaz CRI de Kubernetes",
+                    "Docker Compose: definición de servicios multi-contenedor, redes, volúmenes y profiles",
+                    "Registros de imágenes: Docker Hub, GHCR, ECR, ACR, GAR y Harbor como registro privado",
+                    "Seguridad de imágenes: CVE scanning con Trivy/Grype, image signing con Cosign y generación de SBOM",
+                    "Builds in-cluster: kaniko, buildah y Paketo Buildpacks para entornos sin Docker daemon",
+                    "Optimización: reducción de tamaño, gestión de capas, secrets en build time y multi-platform builds",
+                    "OCI Artifacts: almacenamiento de Helm charts, políticas OPA y otros artefactos en registros OCI",
+                ],
+            },
+            {
+                "title": "Kubernetes Core: Arquitectura y Building Blocks",
+                "topics": [
+                    "Introducción · Control Plane: kube-apiserver, etcd, kube-scheduler, controller-manager, cloud-controller-manager",
+                    "Introducción · Data Plane: kubelet, kube-proxy, container runtime y comunicación entre nodos",
+                    "Clusters locales · kind (Kubernetes in Docker): configuración multi-nodo, networking y uso en CI",
+                    "Building Blocks · Pods: ciclo de vida, init containers, sidecar pattern y ephemeral containers",
+                    "Building Blocks · Workloads: Deployment, StatefulSet, DaemonSet, Job, CronJob y ReplicaSet",
+                    "Building Blocks · Configuración: ConfigMap, Secret (tipos, encriptación at rest), env vars y volúmenes",
+                    "Building Blocks · Namespace, Labels, Selectors, Annotations, Finalizers y OwnerReferences",
+                    "Building Blocks · Scheduling: node/pod affinity, taints, tolerations, topology spread y priority classes",
+                    "Building Blocks · Resource management: requests, limits, LimitRange, ResourceQuota y QoS classes",
+                    "Almacenamiento · PersistentVolume, PersistentVolumeClaim, StorageClass, dynamic provisioning y CSI (EBS, Azure Disk, GCE PD)",
+                    "Networking · Services (ClusterIP, NodePort, LoadBalancer, Headless), Ingress, Gateway API, CNI (Calico, Cilium) y NetworkPolicy",
+                    "Networking · DNS interno: CoreDNS, resolución de servicios y customización de zonas",
+                    "Autenticación · RBAC: ServiceAccounts, Roles, ClusterRoles, Bindings y principio de mínimo privilegio",
+                    "Autenticación · certificados X.509, OIDC, webhook auth, bound SA tokens y admission controllers (Gatekeeper, Kyverno, PSA)",
+                    "Cluster desde cero · etcd, kube-apiserver, scheduler, controller-manager, kubelet, kube-proxy: configuración manual, PKI y TLS bootstrapping",
+                ],
+            },
         ],
     },
     {
-        "id": "M04",
-        "title": "Control de Versiones Avanzado con Git",
-        "hours": 3.5,
-        "sessions": 1,
-        "block": "BLOQUE II",
-        "block_title": "Infraestructura y Colaboración",
-        "description": (
-            "Dominio profundo de Git como herramienta colaborativa "
-            "en equipos de alto rendimiento."
-        ),
-        "topics": [
-            "Arquitectura interna de Git: objects (blob, tree, commit, tag), refs, packfiles, reflog y garbage collection",
-            "Estrategias de branching: Git Flow, GitHub Flow, trunk-based development y comparativa práctica",
-            "Rebases interactivos: squash, fixup, reword, edit y reordenación de commits",
-            "Resolución de conflictos: estrategias de merge (recursive, ort), rerere, git mergetool y best practices",
-            "Gestión de ramas: naming conventions, branch protection rules, CODEOWNERS y cleanup automático",
-            "Pull Requests y code review: merge strategies (merge, squash, rebase), signed commits y draft PRs",
-            "Git hooks: pre-commit, commit-msg, post-merge y automatización con pre-commit framework",
-            "Monorepos: estrategias, herramientas (Nx, Turborepo) y gestión de dependencias",
-            "Operaciones avanzadas: git bisect, git worktree, submodules, subtrees y sparse-checkout",
+        "id": "M4",
+        "title": "Kubernetes en Producción y Ecosistema Cloud Native",
+        "ects": "2",
+        "hours": 15,
+        "sessions": [
+            "Kubernetes gestionado: EKS, GKE y AKS",
+            "Otros entornos y aprovisionamiento IaC multi-cloud",
+            "Application bundles: Helm y Kustomize",
+            "Infraestructura declarativa: ExternalDNS, cert-manager y Crossplane",
+            "Gestión de secretos: Vault y External Secrets Operator",
         ],
-        "session_detail": [
-            ("Sesión 5", "Git avanzado", "3.5h",
-             "Internals de Git: objects, DAG, reflog. Flujos: Git Flow, GitHub Flow, trunk-based. "
-             "Rebase interactivo, resolución de conflictos, CODEOWNERS, hooks, monorepos."),
+        "description": (
+            "Operación de clústeres gestionados (EKS, GKE, AKS) y otros entornos. Application bundles "
+            "(Helm, Kustomize). Infraestructura declarativa dentro de Kubernetes: ExternalDNS, "
+            "cert-manager y Crossplane. Gestión de secretos con HashiCorp Vault y External Secrets Operator."
+        ),
+        "units": [
+            {
+                "title": "Kubernetes en Producción: clústeres gestionados multi-cloud",
+                "topics": [
+                    "EKS (AWS): arquitectura, node groups (managed, self-managed, Fargate), eksctl",
+                    "EKS Add-ons: AWS Load Balancer Controller, EBS/EFS CSI, VPC CNI, ExternalDNS",
+                    "EKS Seguridad: IRSA, EKS Pod Identity, KMS encryption y audit logging",
+                    "GKE: Standard vs Autopilot, node pools, Workload Identity y VPC-native networking",
+                    "GKE Add-ons: Cloud Operations, Config Connector, GKE Gateway y Fleet Management",
+                    "AKS: arquitectura, AAD/Entra ID integration, Managed Identities y Azure CNI",
+                    "AKS Add-ons: Azure Monitor, CSI drivers (Disk/Files/Blob), AGIC y Azure Policy",
+                    "AKS Seguridad: Workload Identity, Azure Key Vault CSI Provider y Defender for Containers",
+                    "Otros entornos: OVHcloud, DigitalOcean DOKS, Linode LKE, on-premises (k3s, k0s, Rancher, OpenShift)",
+                    "Aprovisionamiento IaC: Terraform modules para EKS, GKE y AKS. Comparativa multi-cloud",
+                ],
+            },
+            {
+                "title": "Application Bundles e Infraestructura Declarativa",
+                "topics": [
+                    "Helm: charts, templates, values, hooks, repositorios, helm-secrets y helm-diff",
+                    "Kustomize: bases, overlays, patches, generators y transformers. Helm + Kustomize",
+                    "Patrón Operator: CRDs, controller loop, Operator Lifecycle Manager, niveles de madurez",
+                    "Operators de referencia: cert-manager, Prometheus Operator, Strimzi, Crossplane",
+                    "ExternalDNS: providers (Route53, CloudDNS, Cloudflare), anotaciones y políticas de sync",
+                    "cert-manager: Issuers, ClusterIssuers, Let's Encrypt, ACME DNS-01/HTTP-01, renovación automática",
+                    "Crossplane: Providers, Managed Resources, Compositions, XRDs. Comparativa con Terraform",
+                    "Crossplane avanzado: Composition Functions, EnvironmentConfigs, integración con ArgoCD",
+                ],
+            },
+            {
+                "title": "Gestión de Secretos: Vault y External Secrets",
+                "topics": [
+                    "Vault · Arquitectura: server, agents, backends de almacenamiento y alta disponibilidad",
+                    "Vault · Auth methods en Kubernetes: Kubernetes Auth, JWT/OIDC, AppRole y cloud IAM",
+                    "Vault · Secrets Engines: KV v1/v2, Dynamic Secrets (database, AWS, Azure), PKI y Transit",
+                    "Vault · Vault Agent: auto-auth, template rendering, sidecar injection. Vault Secrets Operator (VSO)",
+                    "Vault · Políticas (HCL), namespaces, auditing, DR con Raft y auto-unseal con KMS (AWS, Azure, GCP)",
+                    "External Secrets · ExternalSecret, SecretStore, ClusterSecretStore y refresh intervals",
+                    "External Secrets · Providers: AWS Secrets Manager, Azure Key Vault, GCP Secret Manager y Vault",
+                    "External Secrets · Patrones avanzados: secret templating, generators, pushSecret e integración con GitOps",
+                    "Secret Management · Sealed Secrets, SOPS y comparativa de patrones por madurez",
+                ],
+            },
         ],
     },
     {
-        "id": "M05",
-        "title": "Cloud Computing: AWS, Azure y GCP",
-        "hours": 10.5,
-        "sessions": 3,
-        "block": "BLOQUE III",
-        "block_title": "Cloud Computing",
-        "description": (
-            "Introducción práctica a los tres grandes proveedores cloud con foco en los recursos "
-            "necesarios para Kubernetes."
-        ),
-        "topics": [
-            "AWS · IAM: users, roles, policies, OIDC federation, IRSA y AWS SSO",
-            "AWS · Computación: EC2 (instance types, AMIs, user-data), Auto Scaling Groups, Lambda",
-            "AWS · Redes: VPC, subnets públicas/privadas, Security Groups, ALB/NLB, Route 53 y PrivateLink",
-            "AWS · Almacenamiento: S3 (lifecycle, versioning), EBS, EFS y ECR",
-            "AWS · Servicios gestionados: RDS, DynamoDB, SQS, CloudWatch y Secrets Manager",
-            "AZURE · IAM: Entra ID, Managed Identities, RBAC y Azure Key Vault",
-            "AZURE · Computación: VMs, VMSS, Azure Functions y Azure Container Apps",
-            "AZURE · Redes: VNet, subnets, NSG, Load Balancer, Application Gateway y Azure DNS",
-            "AZURE · Almacenamiento: Blob Storage, Azure Files, Managed Disks y ACR",
-            "AZURE · Servicios gestionados: Azure SQL, Cosmos DB, Service Bus y Azure Monitor",
-            "GCP · IAM: Service Accounts, Workload Identity, org policies y Cloud Audit Logs",
-            "GCP · Computación: Compute Engine, Cloud Functions y Cloud Run",
-            "GCP · Redes: VPC, Firewall Rules, Cloud NAT, Cloud Load Balancing y Cloud DNS",
-            "GCP · Almacenamiento: Cloud Storage, Persistent Disk y Artifact Registry",
-            "GCP · Servicios gestionados: Cloud SQL, Firestore, Pub/Sub y Cloud Monitoring",
-            "Comparativa multi-cloud: estrategias de portabilidad, vendor lock-in y abstracción de recursos",
+        "id": "M5",
+        "title": "Observabilidad, GitOps, CI/CD y Networking Avanzado",
+        "ects": "2",
+        "hours": 15,
+        "sessions": [
+            "Observabilidad (I): Prometheus, PromQL y Alertmanager",
+            "Observabilidad (II): Grafana stack (Loki, Tempo) y OpenTelemetry",
+            "GitOps y pipelines CI/CD: ArgoCD, Prow y Tekton",
+            "Networking avanzado: Traefik e Istio (service mesh)",
+            "Entrega progresiva y escalado: Argo Rollouts, HPA/VPA, KEDA, Karpenter",
         ],
-        "session_detail": [
-            ("Sesión 6", "Introducción a AWS", "3.5h",
-             "IAM (users, roles, policies, OIDC). EC2, ASG, Lambda. VPC, subnets, SG, ALB. "
-             "S3, EBS, EFS, ECR. RDS, DynamoDB, SQS, CloudWatch."),
-            ("Sesión 7", "Introducción a Azure", "3.5h",
-             "Entra ID, Managed Identities, RBAC. VMs, VMSS, Azure Functions. "
-             "VNet, NSG, Load Balancer. Blob Storage, Azure Files, ACR. Azure SQL, Cosmos DB."),
-            ("Sesión 8", "Introducción a GCP y comparativa multi-cloud", "3.5h",
-             "Service Accounts, Workload Identity. Compute Engine, Cloud Functions, Cloud Run. "
-             "VPC, Cloud NAT, Cloud LB. Cloud Storage, Artifact Registry. Cloud SQL, Pub/Sub. Comparativa."),
+        "description": (
+            "Stack de observabilidad completo: Prometheus, Grafana (Loki, Tempo, Mimir), OpenTelemetry. "
+            "GitOps con ArgoCD y Prow. Pipelines con Tekton. Networking avanzado con Traefik e Istio "
+            "(service mesh). Estrategias de despliegue (canary, blue/green) con Argo Rollouts. Escalado de "
+            "workloads (HPA, VPA, KEDA, Karpenter)."
+        ),
+        "units": [
+            {
+                "title": "Observabilidad",
+                "topics": [
+                    "Los tres pilares: métricas, logs, trazas. Correlación entre señales",
+                    "Prometheus: arquitectura, scraping, PromQL, service discovery, Alertmanager",
+                    "Prometheus Operator: ServiceMonitor, PodMonitor, recording rules, alerting rules. Thanos para HA",
+                    "Grafana: datasources, dashboards, variables, alerting. Grafana as Code (grafonnet, Terraform)",
+                    "Grafana stack: Loki (logs), Tempo (trazas), Mimir (métricas), Alloy (collector)",
+                    "OpenTelemetry: especificación OTLP, Collector pipelines, auto-instrumentación en Kubernetes",
+                    "Stack completo: Prometheus + Grafana + Loki + Tempo + OTel Collector integrados",
+                ],
+            },
+            {
+                "title": "GitOps y Pipelines CI/CD",
+                "topics": [
+                    "Principios GitOps: declarativo, versionado, automatizado, reconciliado. Pull vs Push model",
+                    "ArgoCD: Applications, AppProjects, ApplicationSets, sync policies, waves, hooks y RBAC",
+                    "ArgoCD avanzado: multi-tenancy, SSO, App of Apps, ApplicationSet generators y notifications",
+                    "ArgoCD Image Updater y Argo Rollouts: patrones de Progressive Delivery con análisis automático",
+                    "Prow: arquitectura CI nativa en Kubernetes, plugins, Tide, Deck dashboard y ProwJobs",
+                    "Tekton: Tasks, Pipelines, PipelineRuns, Workspaces, Triggers y Tekton Chains",
+                    "Integración Tekton + ArgoCD para workflows CI/CD end-to-end en Kubernetes",
+                ],
+            },
+            {
+                "title": "Networking Avanzado (Service Mesh)",
+                "topics": [
+                    "Traefik: IngressRoute CRDs, middlewares, TLS automático, dashboard y métricas",
+                    "Traefik avanzado: TCP/UDP routing, rate limiting, circuit breaker, canary con TraefikService",
+                    "Istio: arquitectura (Istiod + Envoy sidecars), mTLS automático y observabilidad integrada",
+                    "Istio traffic: VirtualServices, DestinationRules, Gateways, traffic shifting, fault injection",
+                    "Istio seguridad: AuthorizationPolicies, PeerAuthentication, circuit breaking, Kiali",
+                    "Ambient Mesh (Istio): modo sin sidecar, ztunnel, waypoints y migración",
+                ],
+            },
+            {
+                "title": "Entrega Progresiva y Escalado",
+                "topics": [
+                    "Estrategias: rolling update, blue/green, canary, A/B testing y trade-offs",
+                    "Argo Rollouts: canary con análisis automatizado, blue-green, integración Istio/Traefik + Prometheus",
+                    "Progressive delivery: Feature flags (Flagger/OpenFeature), métricas como gates, rollback automático",
+                    "HPA: métricas CPU/memory, custom metrics (Prometheus Adapter), scaling behavior",
+                    "VPA: modos (Off/Initial/Auto), recomendaciones y limitaciones",
+                    "KEDA: ScaledObject, ScaledJob, triggers (Kafka, SQS, Prometheus, cron) y cooldown",
+                    "Cluster Autoscaler vs Karpenter: node pools, scale-from-zero, cost optimization",
+                ],
+            },
         ],
     },
     {
-        "id": "M06",
-        "title": "Infraestructura como Código con Terraform",
-        "hours": 7,
-        "sessions": 2,
-        "block": None,
-        "description": (
-            "Diseño y operación de infraestructura declarativa multi-cloud con Terraform."
-        ),
-        "topics": [
-            "Fundamentos de IaC: filosofía declarativa vs imperativa, idempotencia y drift detection",
-            "HCL: sintaxis, tipos de datos, expresiones, funciones y meta-argumentos (count, for_each, depends_on)",
-            "Providers: configuración, autenticación y uso de los providers de AWS, Azure y GCP",
-            "State management: local vs remote state, state locking, backends (S3, GCS, Azure Blob) y workspaces",
-            "Módulos: diseño, versionado, registro público y privado, composición y reusabilidad",
-            "Patrones avanzados: for_each, dynamic blocks, moved blocks, import y workspaces",
-            "Terraform en CI/CD: plan/apply automatizado, Atlantis y GitHub Actions",
-            "Testing de infraestructura: terraform test, tflint, checkov, tfsec y políticas con OPA/Conftest",
-            "Alternativas complementarias: OpenTofu, Pulumi y CDKTF",
+        "id": "M6",
+        "title": "Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster",
+        "ects": "2",
+        "hours": 15,
+        "sessions": [
+            "Construcción de Operators con Kubebuilder/Operator SDK",
+            "Gestión de clústeres (Cluster API) y serverless (Knative)",
+            "Hosted Control Planes: HyperShift, vCluster y Kamaji",
+            "Multi-cluster: OCM, Istio multicluster y Cilium Cluster Mesh",
+            "Multi-cloud con Crossplane y Disaster Recovery con Velero",
         ],
-        "session_detail": [
-            ("Sesión 9", "Terraform: fundamentos y state", "3.5h",
-             "IaC declarativa. HCL, providers, resources, data sources, variables, outputs. "
-             "State: local vs remote, locking, backends. Módulos: estructura, versionado, registry."),
-            ("Sesión 10", "Terraform: avanzado y CI/CD", "3.5h",
-             "for_each, dynamic blocks, moved blocks, import, workspaces. "
-             "CI/CD: Atlantis, GitHub Actions. Testing: tflint, checkov, OPA. OpenTofu."),
+        "description": (
+            "Construcción de operators personalizados con Kubebuilder/Operator SDK. Gestión del ciclo de "
+            "vida de clústeres con Cluster API. Serverless con Knative. Hosted Control Planes (HyperShift, "
+            "vCluster, Kamaji). Gestión y despliegue multi-cluster (Istio multicluster, Cilium Cluster "
+            "Mesh, Submariner) y multi-cloud con Crossplane. Disaster Recovery con Velero."
+        ),
+        "units": [
+            {
+                "title": "Construcción de Operators",
+                "topics": [
+                    "Operator SDK (Go): scaffolding, CRD design, controller implementation y webhooks",
+                    "kubebuilder: reconciliation patterns, finalizers, status conditions y API versioning",
+                    "Operadores de producción: leader election, metrics, testing (envtest) y OLM",
+                ],
+            },
+            {
+                "title": "Gestión de Clústeres y Serverless",
+                "topics": [
+                    "Cluster API (CAPI): arquitectura, providers (AWS/Azure/GCP), lifecycle y upgrades",
+                    "Rancher Fleet y ArgoCD ApplicationSets para gestión de flotas de clusters",
+                    "Upgrade strategies: rolling upgrades, ventanas de mantenimiento y node drain",
+                    "Knative Serving: auto-scaling a cero, revision routing y traffic splitting",
+                    "Virtual Kubelet: nodos virtuales con Fargate, ACI y Cloud Run",
+                ],
+            },
+            {
+                "title": "Hosted Control Planes",
+                "topics": [
+                    "HyperShift (Red Hat): arquitectura, hosted clusters y node pools",
+                    "vCluster: clusters virtuales ligeros, sincronización y multi-tenancy",
+                    "Kamaji: tenant control planes, datastores y gestión de flota",
+                ],
+            },
+            {
+                "title": "Multi-cluster y Multi-cloud",
+                "topics": [
+                    "Arquitecturas: hub-and-spoke, peer-to-peer, federación",
+                    "Open Cluster Management (OCM), Rancher MCM y ArgoCD multicluster",
+                    "Istio multicluster (primary-remote, multi-primary)",
+                    "Cilium Cluster Mesh: tunneling, shared services y network policies globales",
+                    "Submariner: cross-cluster networking, service discovery y globalnet",
+                    "Crossplane como plano de control universal, políticas OPA y ESO multi-cloud",
+                    "Disaster Recovery: Velero, replicación de estado, RPO/RTO y failover automático",
+                ],
+            },
         ],
     },
     {
-        "id": "M07",
-        "title": "Contenedores y Ecosistema OCI",
-        "hours": 7,
-        "sessions": 2,
-        "block": "BLOQUE IV",
-        "block_title": "Contenedores",
+        "id": "PF",
+        "title": "Proyecto Final",
+        "ects": "1.5",
+        "hours": 6,
+        "sessions": [
+            "Proyecto Final: desarrollo de la plataforma (IDP)",
+            "Proyecto Final: presentación y defensa",
+        ],
         "description": (
-            "Dominio del ecosistema de contenedores: desde la construcción de imágenes "
-            "hasta seguridad y registros."
+            "Diseño, implementación y defensa de una plataforma interna de desarrollo (IDP) end-to-end "
+            "que integre las competencias del programa."
         ),
-        "topics": [
-            "Arquitectura de contenedores: Linux namespaces, cgroups v2, UnionFS y el modelo de capas OCI",
-            "Dockerfile avanzado: multi-stage builds, BuildKit, cache optimization y distroless/scratch images",
-            "Container runtimes: Docker, containerd, CRI-O, runc, gVisor y la interfaz CRI de Kubernetes",
-            "Docker Compose: definición de servicios multi-contenedor, redes, volúmenes y profiles",
-            "Registros de imágenes: Docker Hub, GHCR, ECR, ACR, GAR y Harbor como registro privado",
-            "Seguridad de imágenes: CVE scanning con Trivy/Grype, image signing con Cosign y generación de SBOM",
-            "Builds in-cluster: kaniko, buildah y Paketo Buildpacks para entornos sin Docker daemon",
-            "Optimización: reducción de tamaño, gestión de capas, secrets en build time y multi-platform builds",
-            "OCI Artifacts: almacenamiento de Helm charts, políticas OPA y otros artefactos en registros OCI",
-        ],
-        "session_detail": [
-            ("Sesión 11", "Contenedores: fundamentos y Docker", "3.5h",
-             "Namespaces, cgroups, OCI. Dockerfile: multi-stage, BuildKit, cache. "
-             "Runtimes: containerd, CRI-O, gVisor. Docker Compose. Podman."),
-            ("Sesión 12", "Imágenes: seguridad, registries y builds", "3.5h",
-             "Imágenes: distroless, scratch, alpine. Scanning: Trivy, Grype, Cosign, SBOM. "
-             "Registries: Harbor, ECR, ACR, GAR. Kaniko, Buildpacks. OCI Artifacts."),
-        ],
-    },
-    {
-        "id": "M08",
-        "title": "Kubernetes Core: Arquitectura y Building Blocks",
-        "hours": 28,
-        "sessions": 8,
-        "block": "BLOQUE V",
-        "block_title": "Kubernetes Core",
-        "description": (
-            "Estudio exhaustivo de la arquitectura de Kubernetes y sus objetos fundamentales."
-        ),
-        "topics": [
-            "INTRODUCCIÓN · Control Plane: kube-apiserver, etcd, kube-scheduler, controller-manager, cloud-controller-manager",
-            "INTRODUCCIÓN · Data Plane: kubelet, kube-proxy, container runtime y comunicación entre nodos",
-            "CLUSTERS LOCALES · kind (Kubernetes in Docker): configuración multi-nodo, networking y uso en CI",
-            "BUILDING BLOCKS · Pods: ciclo de vida, init containers, sidecar pattern y ephemeral containers",
-            "BUILDING BLOCKS · Workloads: Deployment, StatefulSet, DaemonSet, Job, CronJob y ReplicaSet",
-            "BUILDING BLOCKS · Configuración: ConfigMap, Secret (tipos, encriptación at rest), env vars y volúmenes",
-            "BUILDING BLOCKS · Namespace, Labels, Selectors, Annotations, Finalizers y OwnerReferences",
-            "BUILDING BLOCKS · Scheduling: node/pod affinity, taints, tolerations, topology spread y priority classes",
-            "BUILDING BLOCKS · Resource management: requests, limits, LimitRange, ResourceQuota y QoS classes",
-            "ALMACENAMIENTO · PersistentVolume, PersistentVolumeClaim, StorageClass y dynamic provisioning",
-            "ALMACENAMIENTO · CSI: arquitectura, drivers (EBS, Azure Disk, GCE PD), volume snapshots y Velero",
-            "ALMACENAMIENTO · Patrones: ReadWriteOnce vs ReadWriteMany, StatefulSet storage y volume cloning",
-            "APLICACIONES · Probes (liveness/readiness/startup), init containers, sidecar containers y PodDisruptionBudgets",
-            "APLICACIONES · Scheduling avanzado: node selectors, affinity/anti-affinity, topology spread constraints",
-            "APLICACIONES · Rolling updates, rollbacks y ConfigMap/Secret reloading con Reloader",
-            "NETWORKING · Services: ClusterIP, NodePort, LoadBalancer, ExternalName, Headless y EndpointSlices",
-            "NETWORKING · Ingress: controllers, IngressClass, Gateway API (HTTPRoute, GRPCRoute)",
-            "NETWORKING · CNI: Calico, Cilium, Flannel. NetworkPolicy y microsegmentación de tráfico",
-            "NETWORKING · DNS interno: CoreDNS, resolución de servicios y customización de zonas",
-            "AUTENTICACIÓN · RBAC: ServiceAccounts, Roles, ClusterRoles, Bindings y principio de mínimo privilegio",
-            "AUTENTICACIÓN · Autenticación: certificados X.509, OIDC, webhook auth y bound SA tokens",
-            "AUTENTICACIÓN · Admission controllers: validating/mutating webhooks, OPA Gatekeeper y Kyverno",
-            "AUTENTICACIÓN · Pod Security Admission (PSA) y Pod Security Standards",
-            "CLUSTER DESDE CERO · etcd: operaciones, snapshots, restore, clustering TLS y monitorización",
-            "CLUSTER DESDE CERO · kube-apiserver, scheduler, controller-manager: configuración manual y flags",
-            "CLUSTER DESDE CERO · kubelet, container runtime, kube-proxy: configuración y TLS bootstrapping",
-            "CLUSTER DESDE CERO · PKI del cluster: generación de certificados con cfssl/openssl y rotación",
-            "CLUSTER DESDE CERO · kubeadm bajo el capó, debugging: logs, kubectl debug, ephemeral containers",
-        ],
-        "session_detail": [
-            ("Sesión 13", "Introducción y arquitectura de Kubernetes", "3.5h",
-             "Historia, CNCF. Control plane: API server, etcd, scheduler, controller-manager. "
-             "Data plane: kubelet, kube-proxy, CRI. Clusters locales con kind: multi-nodo, port mappings."),
-            ("Sesión 14", "Building Blocks: Workloads", "3.5h",
-             "Pod anatomy, ciclo de vida. ReplicaSet, Deployment (rolling update, rollback). "
-             "DaemonSet, StatefulSet, Job, CronJob. Init containers, sidecar pattern."),
-            ("Sesión 15", "Building Blocks: Configuración y organización", "3.5h",
-             "ConfigMap, Secret (tipos, encriptación at rest). ServiceAccount. Namespaces, Labels, "
-             "Selectors, Annotations, Finalizers, OwnerReferences. ResourceQuotas, LimitRanges."),
-            ("Sesión 16", "Almacenamiento en Kubernetes", "3.5h",
-             "PV, PVC, StorageClass, dynamic provisioning. CSI drivers (EBS, Azure Disk, GCE PD). "
-             "EmptyDir, hostPath, volume snapshots, expansion, cloning. Velero backup."),
-            ("Sesión 17", "Aplicaciones en Kubernetes", "3.5h",
-             "Probes (liveness, readiness, startup). Scheduling: affinity/anti-affinity, taints, "
-             "tolerations, topology spread. Requests, limits, QoS, PriorityClasses, PDBs. Reloader."),
-            ("Sesión 18", "Networking en Kubernetes", "3.5h",
-             "Modelo de red, CNI (Calico, Cilium, Flannel). Services: ClusterIP, NodePort, LoadBalancer, "
-             "Headless, EndpointSlices. Ingress controllers, Gateway API. Network Policies. CoreDNS."),
-            ("Sesión 19", "Autenticación y autorización", "3.5h",
-             "RBAC: Role, ClusterRole, RoleBinding, ClusterRoleBinding, ServiceAccounts. "
-             "Auth: X.509, OIDC, webhook, bound SA tokens. Admission controllers: Gatekeeper, Kyverno. PSA."),
-            ("Sesión 20", "Cluster Kubernetes componente a componente", "3.5h",
-             "Kubernetes 'the hard way': etcd manual, kube-apiserver, scheduler, controller-manager. "
-             "kubelet, containerd, kube-proxy, TLS bootstrapping. PKI, cfssl. kubeadm. Debugging."),
-        ],
-    },
-    {
-        "id": "M09",
-        "title": "Kubernetes en Producción: Multi-cloud",
-        "hours": 7,
-        "sessions": 2,
-        "block": "BLOQUE VI",
-        "block_title": "Kubernetes en Cloud",
-        "description": (
-            "Despliegue y operación de Kubernetes gestionado en los principales proveedores cloud "
-            "y otros entornos."
-        ),
-        "topics": [
-            "EKS (AWS): arquitectura, node groups (managed, self-managed, Fargate), eksctl",
-            "EKS Add-ons: AWS Load Balancer Controller, EBS/EFS CSI, VPC CNI, ExternalDNS",
-            "EKS Seguridad: IRSA, EKS Pod Identity, KMS encryption y audit logging",
-            "GKE: Standard vs Autopilot, node pools, Workload Identity y VPC-native networking",
-            "GKE Add-ons: Cloud Operations, Config Connector, GKE Gateway y Fleet Management",
-            "AKS: arquitectura, AAD/Entra ID integration, Managed Identities y Azure CNI",
-            "AKS Add-ons: Azure Monitor, CSI drivers (Disk/Files/Blob), AGIC y Azure Policy",
-            "AKS Seguridad: Workload Identity, Azure Key Vault CSI Provider y Defender for Containers",
-            "Otros clouds: OVHcloud, DigitalOcean DOKS, Scaleway, Linode LKE y Hetzner",
-            "On-premises: k3s, k0s, Rancher, Tanzu y OpenShift",
-            "Aprovisionamiento IaC: Terraform modules para EKS, GKE y AKS",
-            "Comparativa multi-cloud: feature matrix, managed vs self-managed, pricing y criterios de selección",
-        ],
-        "session_detail": [
-            ("Sesión 21", "Kubernetes en AWS (EKS) y GCP (GKE)", "3.5h",
-             "EKS: arquitectura, node groups, Fargate, IRSA, EBS CSI, ALB Controller, VPC CNI. "
-             "GKE: Autopilot vs Standard, Workload Identity, GKE Gateway, Fleet Management."),
-            ("Sesión 22", "Kubernetes en Azure (AKS) y otros entornos", "3.5h",
-             "AKS: node pools, Workload Identity, Azure CNI, AGIC. Defender for Containers. "
-             "Otros: DOKS, LKE, OVHcloud, k3s, Talos. Terraform IaC para los tres. Comparativa."),
-        ],
-    },
-    {
-        "id": "M10",
-        "title": "Ecosistema Cloud Native: Bundles, IaC, Secrets y Observabilidad",
-        "hours": 24.5,
-        "sessions": 7,
-        "block": "BLOQUE VII",
-        "block_title": "Ecosistema Cloud Native",
-        "description": (
-            "Herramientas del ecosistema CNCF para gestionar application bundles, infraestructura declarativa, "
-            "secretos y observabilidad en Kubernetes."
-        ),
-        "topics": [
-            "APPLICATION BUNDLES · Helm: charts, templates, values, hooks, repositorios, helm-secrets y helm-diff",
-            "APPLICATION BUNDLES · Kustomize: bases, overlays, patches, generators y transformers. Helm + Kustomize",
-            "OPERATORS OVERVIEW · Patrón Operator: CRDs, controller loop, Operator Lifecycle Manager, niveles de madurez",
-            "OPERATORS OVERVIEW · Operators de referencia: cert-manager, Prometheus Operator, Strimzi, Crossplane",
-            "INFRA AS CODE · ExternalDNS: providers (Route53, CloudDNS, Cloudflare), anotaciones y políticas de sync",
-            "INFRA AS CODE · cert-manager: Issuers, ClusterIssuers, Let's Encrypt, ACME DNS-01/HTTP-01, renovación automática",
-            "INFRA AS CODE · Crossplane: Providers, Managed Resources, Compositions, XRDs. Comparativa con Terraform",
-            "INFRA AS CODE · Crossplane avanzado: Composition Functions, EnvironmentConfigs, integración con ArgoCD",
-            "VAULT · Arquitectura: server, agents, backends de almacenamiento y alta disponibilidad",
-            "VAULT · Auth methods en Kubernetes: Kubernetes Auth, JWT/OIDC, AppRole y cloud IAM",
-            "VAULT · Secrets Engines: KV v1/v2, Dynamic Secrets (database, AWS, Azure), PKI y Transit",
-            "VAULT · Vault Agent: auto-auth, template rendering, sidecar injection. Vault Secrets Operator (VSO)",
-            "VAULT · Políticas (HCL), namespaces, auditing y disaster recovery con Raft integrated storage",
-            "VAULT · Operaciones: inicialización, unseal, auto-unseal con KMS (AWS, Azure, GCP)",
-            "EXTERNAL SECRETS · Arquitectura: ExternalSecret, SecretStore, ClusterSecretStore y refresh intervals",
-            "EXTERNAL SECRETS · Providers: AWS Secrets Manager, Azure Key Vault, GCP Secret Manager y Vault",
-            "EXTERNAL SECRETS · Patrones avanzados: secret templating, generators y pushSecret",
-            "EXTERNAL SECRETS · Integración con GitOps: ArgoCD + ESO y gestión del ciclo de vida",
-            "SECRET MANAGEMENT · Sealed Secrets, SOPS, comparativa de patrones por madurez",
-            "OBSERVABILIDAD · Los tres pilares: métricas, logs, trazas. Correlación entre señales",
-            "OBSERVABILIDAD · Prometheus: arquitectura, scraping, PromQL, service discovery, Alertmanager",
-            "OBSERVABILIDAD · Prometheus Operator: ServiceMonitor, PodMonitor, recording rules, alerting rules. Thanos para HA",
-            "OBSERVABILIDAD · Grafana: datasources, dashboards, variables, alerting. Grafana as Code (grafonnet, Terraform)",
-            "OBSERVABILIDAD · Grafana stack: Loki (logs), Tempo (trazas), Mimir (métricas), Alloy (collector)",
-            "OBSERVABILIDAD · OpenTelemetry: especificación OTLP, Collector pipelines, auto-instrumentación en Kubernetes",
-            "OBSERVABILIDAD · Stack completo: Prometheus + Grafana + Loki + Tempo + OTel Collector integrados",
-        ],
-        "session_detail": [
-            ("Sesión 23", "Application Bundles y Operators Overview", "3.5h",
-             "Helm: charts, templates, values, hooks, repositorios. Kustomize: overlays, patches, generators. "
-             "Helm + Kustomize. Patrón Operator, CRDs, controller loop, OLM, operators de referencia."),
-            ("Sesión 24", "InfraAsCode: ExternalDNS, cert-manager y Crossplane", "3.5h",
-             "ExternalDNS: providers, sincronización DNS. cert-manager: Issuers, Let's Encrypt, ACME. "
-             "Crossplane: Providers, Managed Resources, Compositions, XRDs. Crossplane vs Terraform."),
-            ("Sesión 25", "Vault: fundamentos y Kubernetes", "3.5h",
-             "Vault: arquitectura, seal/unseal, storage backends, HA. Auth methods: K8s Auth, OIDC, AppRole. "
-             "Secret engines: KV, Dynamic Secrets, PKI, Transit. Vault Agent y VSO en Kubernetes."),
-            ("Sesión 26", "External Secrets y Secret Management", "3.5h",
-             "ESO: SecretStore, ExternalSecret, providers (Vault, AWS SM, Azure KV, GCP SM). "
-             "Templating, generators, pushSecret. Sealed Secrets, SOPS. Vault + ESO combinados. ArgoCD + ESO."),
-            ("Sesión 27", "Prometheus y Alertmanager", "3.5h",
-             "Tres pilares de observabilidad. Prometheus: arquitectura, scraping, PromQL, service discovery. "
-             "Prometheus Operator: ServiceMonitor, PodMonitor. Recording rules, alerting rules. Thanos HA."),
-            ("Sesión 28", "Grafana, Loki, Tempo y stack completo", "3.5h",
-             "Grafana: datasources, dashboards, variables, alerting, Grafana as Code. "
-             "Loki (logs), Tempo (trazas), Mimir (métricas), Alloy (collector). Stack integrado."),
-            ("Sesión 29", "OpenTelemetry y observabilidad end-to-end", "3.5h",
-             "OTel: especificación OTLP, SDK, Collector (receivers, processors, exporters). "
-             "Auto-instrumentación en K8s. Lab: instrumentar aplicación con métricas, trazas, logs y dashboards."),
-        ],
-    },
-    {
-        "id": "M11",
-        "title": "GitOps, Pipelines y Networking Avanzado",
-        "hours": 21,
-        "sessions": 6,
-        "block": "BLOQUE VIII",
-        "block_title": "GitOps, CI/CD y Networking",
-        "description": (
-            "Herramientas que conforman el ecosistema moderno de entrega continua "
-            "y networking avanzado en Kubernetes."
-        ),
-        "topics": [
-            "GITOPS · Principios GitOps: declarativo, versionado, automatizado, reconciliado. Pull vs Push model",
-            "GITOPS · ArgoCD: Applications, AppProjects, ApplicationSets, sync policies, waves, hooks y RBAC",
-            "GITOPS · ArgoCD avanzado: multi-tenancy, SSO, App of Apps, ApplicationSet generators y notifications",
-            "GITOPS · ArgoCD Image Updater y Argo Rollouts: patrones de Progressive Delivery con análisis automático",
-            "GITOPS · Prow: arquitectura CI nativa en Kubernetes, plugins, Tide, Deck dashboard y ProwJobs",
-            "PIPELINES · Tekton: Tasks, Pipelines, PipelineRuns, Workspaces, Triggers y Tekton Chains",
-            "PIPELINES · Integración Tekton + ArgoCD para workflows CI/CD end-to-end en Kubernetes",
-            "NETWORKING · Traefik: IngressRoute CRDs, middlewares, TLS automático, dashboard y métricas",
-            "NETWORKING · Traefik avanzado: TCP/UDP routing, rate limiting, circuit breaker, canary con TraefikService",
-            "NETWORKING · Istio: arquitectura (Istiod + Envoy sidecars), mTLS automático y observabilidad integrada",
-            "NETWORKING · Istio traffic: VirtualServices, DestinationRules, Gateways, traffic shifting, fault injection",
-            "NETWORKING · Istio seguridad: AuthorizationPolicies, PeerAuthentication, circuit breaking, Kiali",
-            "NETWORKING · Ambient Mesh (Istio): modo sin sidecar, ztunnel, waypoints y migración",
-            "DEPLOYMENT · Estrategias: rolling update, blue/green, canary, A/B testing y trade-offs",
-            "DEPLOYMENT · Argo Rollouts: canary con análisis automatizado, blue-green, integración Istio/Traefik + Prometheus",
-            "DEPLOYMENT · Progressive delivery: Feature flags (Flagger/OpenFeature), métricas como gates, rollback automático",
-            "SCALING · HPA: métricas CPU/memory, custom metrics (Prometheus Adapter), scaling behavior",
-            "SCALING · VPA: modos (Off/Initial/Auto), recomendaciones y limitaciones",
-            "SCALING · KEDA: ScaledObject, ScaledJob, triggers (Kafka, SQS, Prometheus, cron) y cooldown",
-            "SCALING · Cluster Autoscaler vs Karpenter: node pools, scale-from-zero, cost optimization",
-        ],
-        "session_detail": [
-            ("Sesión 30", "GitOps: principios y ArgoCD", "3.5h",
-             "Principios GitOps: pull vs push. ArgoCD: arquitectura, Application, ApplicationSet, Projects, "
-             "sync policies, waves, hooks, RBAC. App of Apps, SSO, notifications."),
-            ("Sesión 31", "Prow, Tekton y pipelines CI/CD", "3.5h",
-             "Prow: arquitectura, plugins, Tide, Deck, ProwJobs. "
-             "Tekton: Tasks, Pipelines, Triggers, Workspaces, Tekton Chains. Integración Tekton + ArgoCD."),
-            ("Sesión 32", "Networking: Traefik", "3.5h",
-             "Traefik: IngressRoute CRD, middlewares (rate limiting, auth, headers), TLS automático. "
-             "TCP/UDP routing, canary con TraefikService, métricas, trazas, dashboard."),
-            ("Sesión 33", "Networking: Istio", "3.5h",
-             "Service mesh: Istiod, Envoy sidecar, Ambient mode (ztunnel). "
-             "VirtualService, DestinationRule, Gateway, traffic shifting, fault injection, circuit breaker. "
-             "mTLS, AuthorizationPolicy, Kiali."),
-            ("Sesión 34", "Estrategias de despliegue y Progressive Delivery", "3.5h",
-             "Rolling, blue/green, canary, A/B. Argo Rollouts: canary con análisis Prometheus, blue-green. "
-             "Progressive delivery: Flagger, OpenFeature, métricas como gates, rollback automático."),
-            ("Sesión 35", "Scaling de workloads y clusters", "3.5h",
-             "HPA: CPU/memory, custom metrics con Prometheus Adapter. VPA: modos y limitaciones. "
-             "KEDA: event-driven, ScaledObject, triggers. Cluster Autoscaler vs Karpenter, cost optimization."),
-        ],
-    },
-    {
-        "id": "M12",
-        "title": "Platform Engineering Avanzado: Operators, Serverless y Multi-cluster",
-        "hours": 17.5,
-        "sessions": 5,
-        "block": "BLOQUE IX",
-        "block_title": "Platform Engineering Avanzado",
-        "description": (
-            "Capacidades avanzadas de plataforma: construcción de operators, hosted control planes, "
-            "serverless y despliegues multi-cluster/multi-cloud."
-        ),
-        "topics": [
-            "BUILDING OPERATORS · Operator SDK (Go): scaffolding, CRD design, controller implementation y webhooks",
-            "BUILDING OPERATORS · kubebuilder: reconciliation patterns, finalizers, status conditions y API versioning",
-            "BUILDING OPERATORS · Operadores de producción: leader election, metrics, testing (envtest) y OLM",
-            "CLUSTER MANAGEMENT · Cluster API (CAPI): arquitectura, providers (AWS/Azure/GCP), lifecycle y upgrades",
-            "CLUSTER MANAGEMENT · Rancher Fleet y ArgoCD ApplicationSets para gestión de flotas de clusters",
-            "CLUSTER MANAGEMENT · Upgrade strategies: rolling upgrades, ventanas de mantenimiento y node drain",
-            "SERVERLESS · Knative Serving: auto-scaling a cero, revision routing y traffic splitting",
-            "SERVERLESS · Virtual Kubelet: nodos virtuales con Fargate, ACI y Cloud Run",
-            "HOSTED CONTROL PLANES · HyperShift (Red Hat): arquitectura, hosted clusters y node pools",
-            "HOSTED CONTROL PLANES · vCluster: clusters virtuales ligeros, sincronización y multi-tenancy",
-            "HOSTED CONTROL PLANES · Kamaji: tenant control planes, datastores y gestión de flota",
-            "MULTI-CLUSTER MANAGEMENT · Arquitecturas: hub-and-spoke, peer-to-peer, federación",
-            "MULTI-CLUSTER MANAGEMENT · Open Cluster Management (OCM), Rancher MCM y ArgoCD multicluster",
-            "MULTI-CLUSTER DEPLOYMENTS · Istio multicluster (primary-remote, multi-primary)",
-            "MULTI-CLUSTER DEPLOYMENTS · Cilium Cluster Mesh: tunneling, shared services y network policies globales",
-            "MULTI-CLUSTER DEPLOYMENTS · Submariner: cross-cluster networking, service discovery y globalnet",
-            "MULTI-CLOUD DEPLOYMENTS · Crossplane como plano de control universal, políticas OPA y ESO multi-cloud",
-            "MULTI-CLOUD DEPLOYMENTS · Disaster Recovery: Velero, replicación de estado, RPO/RTO y failover automático",
-        ],
-        "session_detail": [
-            ("Sesión 36", "Building Kubernetes Operators", "3.5h",
-             "CRD design, API versioning, status subresource. Kubebuilder/Operator SDK: scaffolding, "
-             "controller-runtime, reconciliation loop, predicates. Testing con envtest, OLM."),
-            ("Sesión 37", "Cluster Management y Serverless", "3.5h",
-             "Cluster API (CAPI): providers, ClusterClass, lifecycle. Rancher Fleet. "
-             "Serverless: Knative Serving, Virtual Kubelet (Fargate, ACI). Upgrade strategies."),
-            ("Sesión 38", "Hosted Control Planes", "3.5h",
-             "HyperShift: arquitectura, hosted clusters. vCluster: clusters virtuales, multi-tenancy. "
-             "Kamaji: tenant control planes, datastores. Comparativa de trade-offs."),
-            ("Sesión 39", "Multi-cluster management y deployments", "3.5h",
-             "Arquitecturas multi-cluster: hub-spoke, federación. OCM, Rancher MCM, ArgoCD multicluster. "
-             "Istio multicluster, Cilium Cluster Mesh, Submariner."),
-            ("Sesión 40", "Multi-cloud deployments y Disaster Recovery", "3.5h",
-             "Crossplane multi-cloud, OPA policies, ESO multi-cloud. "
-             "Velero backup/restore, replicación de estado, RPO/RTO, failover cross-region/cross-cloud. "
-             "Proyecto Final: presentación de requisitos."),
+        "units": [
+            {
+                "title": "Plataforma Interna de Desarrollo end-to-end",
+                "topics": [
+                    "Aprovisionamiento de la infraestructura base con Terraform sobre uno o varios proveedores cloud",
+                    "Despliegue y configuración de un clúster Kubernetes gestionado",
+                    "Flujo GitOps con ArgoCD para el ciclo de vida de las aplicaciones de plataforma",
+                    "Gestión de secretos con Vault y/o External Secrets Operator",
+                    "Stack de observabilidad (métricas, logs, trazas) y alerting",
+                    "Entrega progresiva (canary o blue/green) con rollback automático basado en métricas",
+                    "Documentación, golden paths y defensa del proyecto",
+                ],
+            },
         ],
     },
 ]
@@ -546,6 +510,53 @@ def set_paragraph_spacing(paragraph, before=0, after=0):
     pPr.append(spacing)
 
 
+def module_hours(mod):
+    return mod["hours"]
+
+
+def build_calendar():
+    """Return (sessions, buffer) where sessions is a list of dicts with the 30
+    dated class sessions (Tue/Thu) mapped to modules, and buffer is the list of
+    remaining Tue/Thu dates (recuperación) up to the official end date."""
+    from datetime import date, timedelta
+
+    start = date(*SCHEDULE_START)
+    end = date(*SCHEDULE_END)
+    non_teaching = {date(*k): v for k, v in NON_TEACHING.items()}
+
+    teaching_dates = []
+    d = start
+    while d <= end:
+        if d.weekday() in (1, 3) and d not in non_teaching:  # Tue=1, Thu=3
+            teaching_dates.append(d)
+        d += timedelta(days=1)
+
+    # Flatten module sessions in order
+    flat = []
+    for mod in MODULES:
+        for si, theme in enumerate(mod["sessions"], 1):
+            flat.append((mod, si, theme))
+
+    n = len(flat)  # expected 30
+    dias = {1: "Martes", 3: "Jueves"}
+    sessions = []
+    acc = 0
+    for idx, (mod, si, theme) in enumerate(flat):
+        dt = teaching_dates[idx]
+        acc += SESSION_HOURS
+        sessions.append({
+            "n": idx + 1,
+            "date": dt,
+            "day": dias[dt.weekday()],
+            "module_id": mod["id"],
+            "module_title": mod["title"],
+            "theme": theme,
+            "acc_hours": acc,
+        })
+    buffer = teaching_dates[n:]
+    return sessions, buffer
+
+
 # ============================================================
 # GENERATE DOCX
 # ============================================================
@@ -575,14 +586,14 @@ def generate_docx():
 
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = p.add_run("POSTGRADO UNIVERSITARIO")
+    run = p.add_run("POSGRADO")
     run.font.size = Pt(14)
     run.font.color.rgb = COLOR_MEDIUM
     run.font.name = 'Calibri'
 
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = p.add_run("Kubernetes &\nPlatform Engineering")
+    run = p.add_run("Platform Engineering & DevOps\ncon Kubernetes")
     run.font.size = Pt(28)
     run.font.bold = True
     run.font.color.rgb = COLOR_PRIMARY
@@ -590,7 +601,7 @@ def generate_docx():
 
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = p.add_run("De DevOps a Plataformas Internas de Desarrollo a Escala")
+    run = p.add_run(PROGRAM["tagline"])
     run.font.size = Pt(12)
     run.font.italic = True
     run.font.color.rgb = COLOR_MEDIUM
@@ -603,12 +614,11 @@ def generate_docx():
     h.runs[0].font.color.rgb = COLOR_PRIMARY
 
     doc.add_paragraph(
-        "Este postgrado forma ingenieros y arquitectos capaces de diseñar, implementar y operar "
-        "plataformas internas de desarrollo sobre Kubernetes a escala empresarial. El programa "
-        "integra los fundamentos de DevOps con las prácticas avanzadas de Platform Engineering, "
-        "cubriendo el ciclo completo: desde la infraestructura cloud y la gestión de secretos "
-        "hasta los flujos GitOps, la observabilidad distribuida y la gestión multicluster en "
-        "entornos productivos de alta exigencia."
+        "Este posgrado forma ingenieros capaces de diseñar, implementar y operar plataformas internas "
+        "de desarrollo (IDP) sobre Kubernetes a escala empresarial. El programa integra los fundamentos "
+        "de DevOps con las prácticas avanzadas de Platform Engineering, cubriendo el ciclo completo: "
+        "desde la infraestructura cloud y la programación para automatización hasta los flujos GitOps, "
+        "la observabilidad distribuida y la gestión multicluster en entornos productivos."
     )
 
     # ---- STRUCTURE SUMMARY TABLE ----
@@ -618,7 +628,12 @@ def generate_docx():
     table = doc.add_table(rows=1, cols=4)
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
     add_table_borders(table)
-    data = [("12", "Módulos"), ("140h", "Horas lectivas"), ("3", "Clouds"), ("35+", "Herramientas")]
+    data = [
+        (PROGRAM["hours"], "Horas lectivas"),
+        (PROGRAM["ects"], "ECTS"),
+        ("6 + PF", "Módulos + Proyecto"),
+        ("3", "Clouds"),
+    ]
     row = table.rows[0]
     for i, (val, label) in enumerate(data):
         cell = row.cells[i]
@@ -637,12 +652,41 @@ def generate_docx():
 
     doc.add_paragraph("")
 
+    # -- Program facts table --
+    facts = [
+        ("Titulación", PROGRAM["titulacion"]),
+        ("Modalidad", PROGRAM["modalidad"]),
+        ("Idioma", PROGRAM["idioma"]),
+        ("Duración", PROGRAM["duracion"]),
+        ("Dirección académica", PROGRAM["direccion"]),
+    ]
+    fact_table = doc.add_table(rows=len(facts), cols=2)
+    fact_table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    add_table_borders(fact_table)
+    for ri, (k, v) in enumerate(facts):
+        c0 = fact_table.rows[ri].cells[0]
+        r0 = c0.paragraphs[0].add_run(k)
+        r0.font.bold = True
+        r0.font.size = Pt(9)
+        r0.font.color.rgb = COLOR_PRIMARY
+        c1 = fact_table.rows[ri].cells[1]
+        r1 = c1.paragraphs[0].add_run(v)
+        r1.font.size = Pt(9)
+        if ri % 2 == 0:
+            set_cell_shading(c0, COLOR_LIGHT_BG)
+            set_cell_shading(c1, COLOR_LIGHT_BG)
+    for r in fact_table.rows:
+        r.cells[0].width = Cm(4.5)
+        r.cells[1].width = Cm(11.5)
+
+    doc.add_paragraph("")
+
     # -- Profile tables --
     for label, text in [
         ("Perfil de ingreso recomendado",
-         "Ingenieros de software o sistemas con experiencia en desarrollo o administración de "
-         "sistemas Linux. Se valorará conocimiento básico de redes TCP/IP, scripting y algún "
-         "proveedor cloud. No se requiere experiencia previa en Kubernetes."),
+         "Profesionales con experiencia inicial en IT (software o sistemas) que quieren construir una "
+         "base sólida en DevOps y Kubernetes con enfoque práctico. Se valorará conocimiento básico de "
+         "redes TCP/IP, scripting y algún proveedor cloud. No se requiere experiencia previa en Kubernetes."),
         ("Perfil de egreso",
          "Al finalizar, el estudiante estará capacitado para diseñar y operar Internal Developer "
          "Platforms (IDP) basadas en Kubernetes, implementar estrategias GitOps con gestión avanzada "
@@ -665,13 +709,13 @@ def generate_docx():
 
     # ---- MODULE SUMMARY TABLE ----
     doc.add_paragraph("")
-    table = doc.add_table(rows=len(MODULES) + 1, cols=2)
+    table = doc.add_table(rows=len(MODULES) + 2, cols=3)
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
     add_table_borders(table)
 
     # Header
     hdr = table.rows[0]
-    for i, txt in enumerate(["Módulo", "Título"]):
+    for i, txt in enumerate(["Módulo", "ECTS · Horas", "Título"]):
         cell = hdr.cells[i]
         p = cell.paragraphs[0]
         run = p.add_run(txt)
@@ -682,68 +726,49 @@ def generate_docx():
 
     for ri, mod in enumerate(MODULES, 1):
         row = table.rows[ri]
-        cell0 = row.cells[0]
-        p0 = cell0.paragraphs[0]
-        run0 = p0.add_run(f"{mod['id']} · {mod['hours']:.0f}h")
-        run0.font.bold = True
-        run0.font.size = Pt(10)
-        run0.font.color.rgb = COLOR_PRIMARY
+        c0 = row.cells[0]
+        r0 = c0.paragraphs[0].add_run(mod["id"])
+        r0.font.bold = True
+        r0.font.size = Pt(10)
+        r0.font.color.rgb = COLOR_PRIMARY
 
-        cell1 = row.cells[1]
-        p1 = cell1.paragraphs[0]
-        run1 = p1.add_run(mod['title'])
-        run1.font.size = Pt(10)
+        c1 = row.cells[1]
+        r1 = c1.paragraphs[0].add_run(f"{mod['ects']} ECTS · {mod['hours']}h")
+        r1.font.size = Pt(10)
+
+        c2 = row.cells[2]
+        r2 = c2.paragraphs[0].add_run(mod["title"])
+        r2.font.size = Pt(10)
 
         if ri % 2 == 0:
-            set_cell_shading(cell0, COLOR_LIGHT_BG)
-            set_cell_shading(cell1, COLOR_LIGHT_BG)
+            for c in (c0, c1, c2):
+                set_cell_shading(c, COLOR_LIGHT_BG)
 
-    # Set column widths
+    # Total row
+    total_row = table.rows[len(MODULES) + 1]
+    rt0 = total_row.cells[0].paragraphs[0].add_run("TOTAL")
+    rt0.font.bold = True
+    rt0.font.color.rgb = COLOR_PRIMARY
+    rt1 = total_row.cells[1].paragraphs[0].add_run(f"{PROGRAM['ects']} ECTS · {PROGRAM['hours']}")
+    rt1.font.bold = True
+    rt1.font.color.rgb = COLOR_PRIMARY
+
     for row in table.rows:
-        row.cells[0].width = Cm(3.5)
-        row.cells[1].width = Cm(12.5)
+        row.cells[0].width = Cm(2.0)
+        row.cells[1].width = Cm(3.5)
+        row.cells[2].width = Cm(10.5)
 
     doc.add_page_break()
 
     # ---- DETAILED MODULES ----
-    current_block = None
     for mod in MODULES:
-        # Block header
-        if mod.get("block") and mod["block"] != current_block:
-            current_block = mod["block"]
-
-            table = doc.add_table(rows=1, cols=1)
-            add_table_borders(table)
-            cell = table.rows[0].cells[0]
-            p = cell.paragraphs[0]
-            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            run = p.add_run(f"{mod['block']}")
-            run.font.bold = True
-            run.font.size = Pt(11)
-            run.font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
-            p2 = cell.add_paragraph()
-            p2.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            run2 = p2.add_run(mod.get("block_title", ""))
-            run2.font.size = Pt(13)
-            run2.font.bold = True
-            run2.font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
-            set_cell_shading(cell, COLOR_HEADER_BG)
-            doc.add_paragraph("")
-
-        # Module detail table
-        # Build topics string
-        topics_lines = []
-        for t in mod["topics"]:
-            topics_lines.append(f"›  {t}")
-        topics_str = "\n".join(topics_lines)
-
         table = doc.add_table(rows=1, cols=1)
         add_table_borders(table)
         cell = table.rows[0].cells[0]
 
         # Module header line
         p = cell.paragraphs[0]
-        run = p.add_run(f"{mod['id']} | {mod['hours']:.0f}h")
+        run = p.add_run(f"{mod['id']} | {mod['ects']} ECTS · {mod['hours']}h")
         run.font.bold = True
         run.font.size = Pt(11)
         run.font.color.rgb = COLOR_PRIMARY
@@ -755,57 +780,25 @@ def generate_docx():
 
         # Description
         p2 = cell.add_paragraph()
-        run3 = p2.add_run(mod['description'])
+        run3 = p2.add_run(mod["description"])
         run3.font.size = Pt(10)
         run3.font.italic = True
         run3.font.color.rgb = COLOR_MEDIUM
 
-        # Topics
-        for topic in mod["topics"]:
-            p3 = cell.add_paragraph()
-            run4 = p3.add_run(f"›  {topic}")
-            run4.font.size = Pt(9)
-            run4.font.color.rgb = COLOR_DARK
-            set_paragraph_spacing(p3, before=20, after=20)
-
-        doc.add_paragraph("")
-
-        # Session breakdown table
-        if mod["session_detail"]:
-            sess_table = doc.add_table(rows=len(mod["session_detail"]) + 1, cols=4)
-            sess_table.alignment = WD_TABLE_ALIGNMENT.CENTER
-            add_table_borders(sess_table)
-
-            # Header
-            hdr = sess_table.rows[0]
-            for i, txt in enumerate(["#", "Título", "Duración", "Contenido"]):
-                cell_h = hdr.cells[i]
-                p_h = cell_h.paragraphs[0]
-                run_h = p_h.add_run(txt)
-                run_h.font.bold = True
-                run_h.font.size = Pt(9)
-                run_h.font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
-                set_cell_shading(cell_h, COLOR_HEADER_BG)
-
-            for si, (sess_num, sess_title, sess_dur, sess_content) in enumerate(mod["session_detail"], 1):
-                row = sess_table.rows[si]
-                for ci, val in enumerate([sess_num, sess_title, sess_dur, sess_content]):
-                    cell_s = row.cells[ci]
-                    p_s = cell_s.paragraphs[0]
-                    run_s = p_s.add_run(val)
-                    run_s.font.size = Pt(9)
-                    if ci == 0:
-                        run_s.font.bold = True
-                        run_s.font.color.rgb = COLOR_PRIMARY
-                    if si % 2 == 0:
-                        set_cell_shading(cell_s, COLOR_LIGHT_BG)
-
-            # Column widths
-            for row in sess_table.rows:
-                row.cells[0].width = Cm(2)
-                row.cells[1].width = Cm(4)
-                row.cells[2].width = Cm(1.5)
-                row.cells[3].width = Cm(8.5)
+        # Units with topics
+        for unit in mod["units"]:
+            pu = cell.add_paragraph()
+            run_u = pu.add_run(f"▸ {unit['title']}")
+            run_u.font.bold = True
+            run_u.font.size = Pt(10)
+            run_u.font.color.rgb = COLOR_PRIMARY
+            set_paragraph_spacing(pu, before=40, after=20)
+            for topic in unit["topics"]:
+                p3 = cell.add_paragraph()
+                run4 = p3.add_run(f"     ›  {topic}")
+                run4.font.size = Pt(9)
+                run4.font.color.rgb = COLOR_DARK
+                set_paragraph_spacing(p3, before=10, after=10)
 
         doc.add_paragraph("")
 
@@ -824,14 +817,14 @@ def generate_docx():
     h2.runs[0].font.color.rgb = COLOR_PRIMARY
 
     certs = [
-        ("CKA — Certified Kubernetes Administrator", "Cobertura directa: módulos M08 y M09"),
-        ("CKAD — Certified Kubernetes Application Dev.", "Cobertura directa: módulos M07, M08 y M11"),
-        ("CKS — Certified Kubernetes Security Specialist", "Cobertura directa: módulos M08, M09 y M10"),
-        ("HashiCorp Vault Associate", "Cobertura directa: módulo M10"),
-        ("HashiCorp Terraform Associate", "Cobertura directa: módulo M06"),
-        ("AWS / Azure / GCP Associate Cloud", "Cobertura directa: módulo M05"),
+        ("CKA — Certified Kubernetes Administrator", "Cobertura directa: módulos M3 y M4"),
+        ("CKAD — Certified Kubernetes Application Dev.", "Cobertura directa: módulos M3 y M5"),
+        ("CKS — Certified Kubernetes Security Specialist", "Cobertura directa: módulos M3 y M4"),
+        ("HashiCorp Vault Associate", "Cobertura directa: módulo M4"),
+        ("HashiCorp Terraform Associate", "Cobertura directa: módulo M2"),
+        ("AWS / Azure / GCP Associate Cloud", "Cobertura directa: módulo M2"),
         ("KCNA — Kubernetes and Cloud Native Associate", "Cobertura completa del programa"),
-        ("GitOps Certified (CGOA — Linux Foundation)", "Cobertura directa: módulos M11 y M12"),
+        ("GitOps Certified (CGOA — Linux Foundation)", "Cobertura directa: módulos M5 y M6"),
     ]
 
     cert_table = doc.add_table(rows=len(certs) + 1, cols=2)
@@ -924,13 +917,11 @@ def generate_docx():
 
 
 # ============================================================
-# GENERATE XLSX — Weekly Calendar
+# GENERATE XLSX
 # ============================================================
 
 def generate_xlsx():
     wb = Workbook()
-    ws = wb.active
-    ws.title = "Calendario Semanal"
 
     # Styles
     header_font = Font(name="Calibri", size=11, bold=True, color="FFFFFF")
@@ -938,6 +929,7 @@ def generate_xlsx():
     alt_fill = PatternFill(start_color="E8F0FE", end_color="E8F0FE", fill_type="solid")
     module_font = Font(name="Calibri", size=10, bold=True, color="1A56DB")
     normal_font = Font(name="Calibri", size=10, color="1F2A37")
+    total_font = Font(name="Calibri", size=11, bold=True, color="1A56DB")
     center_align = Alignment(horizontal="center", vertical="center", wrap_text=True)
     left_align = Alignment(horizontal="left", vertical="center", wrap_text=True)
     thin_border = Border(
@@ -947,100 +939,108 @@ def generate_xlsx():
         bottom=Side(style="thin", color="D1D5DB"),
     )
 
-    # Build session list in order
-    sessions = []
-    for mod in MODULES:
-        for sess in mod["session_detail"]:
-            sessions.append({
-                "module_id": mod["id"],
-                "module_title": mod["title"],
-                "block": mod.get("block", ""),
-                "block_title": mod.get("block_title", ""),
-                "session_num": sess[0],
-                "session_title": sess[1],
-                "duration": sess[2],
-                "content": sess[3],
-            })
+    # ---- Sheet 1: Programa ----
+    ws1 = wb.active
+    ws1.title = "Programa"
+    ws1.cell(row=1, column=1, value="Dato").font = header_font
+    ws1.cell(row=1, column=1).fill = header_fill
+    ws1.cell(row=1, column=1).alignment = center_align
+    ws1.cell(row=1, column=1).border = thin_border
+    ws1.cell(row=1, column=2, value="Detalle").font = header_font
+    ws1.cell(row=1, column=2).fill = header_fill
+    ws1.cell(row=1, column=2).alignment = center_align
+    ws1.cell(row=1, column=2).border = thin_border
 
-    # Headers
-    headers = [
-        "Semana", "Fecha orientativa", "Día",
-        "Sesión", "Módulo", "Título de la sesión",
-        "Duración", "Contenido principal",
-        "Horas semana", "Horas acumuladas"
+    facts = [
+        ("Título", PROGRAM["title"]),
+        ("Titulación", PROGRAM["titulacion"]),
+        ("Horas lectivas", PROGRAM["hours"]),
+        ("Créditos", f"{PROGRAM['ects']} ECTS"),
+        ("Modalidad", PROGRAM["modalidad"]),
+        ("Idioma", PROGRAM["idioma"]),
+        ("Duración", PROGRAM["duracion"]),
+        ("Edición", PROGRAM["edicion"]),
+        ("Inicio de clases", PROGRAM["inicio"]),
+        ("Fin de clases", PROGRAM["fin"]),
+        ("Horario", PROGRAM["horario"]),
+        ("Dirección académica", PROGRAM["direccion"]),
+        ("Estructura", "6 módulos + Proyecto Final"),
+        ("Referencia", PROGRAM["url"]),
     ]
+    for ri, (k, v) in enumerate(facts, 2):
+        c0 = ws1.cell(row=ri, column=1, value=k)
+        c0.font = module_font
+        c0.alignment = left_align
+        c0.border = thin_border
+        c1 = ws1.cell(row=ri, column=2, value=v)
+        c1.font = normal_font
+        c1.alignment = left_align
+        c1.border = thin_border
+        if ri % 2 == 0:
+            c0.fill = alt_fill
+            c1.fill = alt_fill
+    ws1.column_dimensions["A"].width = 22
+    ws1.column_dimensions["B"].width = 75
 
-    for ci, header in enumerate(headers, 1):
-        cell = ws.cell(row=1, column=ci, value=header)
+    # ---- Sheet 2: Calendario (dated sessions) ----
+    wsc = wb.create_sheet("Calendario")
+    sessions, buffer = build_calendar()
+    headers_c = ["Sesión", "Fecha", "Día", "Horario", "Módulo", "Tema de la sesión", "Duración", "Horas acum."]
+    for ci, header in enumerate(headers_c, 1):
+        cell = wsc.cell(row=1, column=ci, value=header)
         cell.font = header_font
         cell.fill = header_fill
         cell.alignment = center_align
         cell.border = thin_border
 
-    # Fill data: 2 sessions per week, 7h/week
     row_num = 2
-    cumulative_hours = 0
+    for s in sessions:
+        vals = [
+            s["n"],
+            s["date"].strftime("%d/%m/%Y"),
+            s["day"],
+            "18:00–21:00",
+            s["module_id"],
+            s["theme"],
+            f"{SESSION_HOURS}h",
+            f"{s['acc_hours']}h",
+        ]
+        is_alt = row_num % 2 == 0
+        for ci, val in enumerate(vals, 1):
+            cell = wsc.cell(row=row_num, column=ci, value=val)
+            cell.font = module_font if ci in (1, 5) else normal_font
+            cell.alignment = left_align if ci == 6 else center_align
+            cell.border = thin_border
+            if is_alt:
+                cell.fill = alt_fill
+        row_num += 1
 
-    for week in range(1, 21):  # 20 weeks
-        sess_idx_1 = (week - 1) * 2
-        sess_idx_2 = (week - 1) * 2 + 1
+    # Buffer / recuperación rows
+    for bd in buffer:
+        dias = {1: "Martes", 3: "Jueves"}
+        vals = ["—", bd.strftime("%d/%m/%Y"), dias[bd.weekday()], "18:00–21:00",
+                "—", "Reserva / recuperación", f"{SESSION_HOURS}h", ""]
+        for ci, val in enumerate(vals, 1):
+            cell = wsc.cell(row=row_num, column=ci, value=val)
+            cell.font = normal_font
+            cell.alignment = left_align if ci == 6 else center_align
+            cell.border = thin_border
+        row_num += 1
 
-        week_sessions = []
-        if sess_idx_1 < len(sessions):
-            week_sessions.append(sessions[sess_idx_1])
-        if sess_idx_2 < len(sessions):
-            week_sessions.append(sessions[sess_idx_2])
+    # Total row
+    wsc.cell(row=row_num, column=1, value="TOTAL").font = total_font
+    wsc.cell(row=row_num, column=6, value=f"{len(sessions)} sesiones").font = total_font
+    wsc.cell(row=row_num, column=8, value=PROGRAM["hours"]).font = total_font
+    for ci in range(1, 9):
+        wsc.cell(row=row_num, column=ci).border = thin_border
 
-        week_hours = len(week_sessions) * 3.5
-        cumulative_hours += week_hours
+    widths_c = [8, 12, 9, 12, 9, 62, 9, 11]
+    for ci, w in enumerate(widths_c, 1):
+        wsc.column_dimensions[get_column_letter(ci)].width = w
 
-        for si, sess in enumerate(week_sessions):
-            day_label = "Día 1" if si == 0 else "Día 2"
-            is_alt = week % 2 == 0
-
-            values = [
-                f"Semana {week}",
-                "",  # fecha orientativa (blank)
-                day_label,
-                sess["session_num"],
-                f"{sess['module_id']} — {sess['module_title']}",
-                sess["session_title"],
-                sess["duration"],
-                sess["content"],
-                f"{week_hours:.0f}h" if si == 0 else "",
-                f"{cumulative_hours:.0f}h" if si == 0 else "",
-            ]
-
-            for ci, val in enumerate(values, 1):
-                cell = ws.cell(row=row_num, column=ci, value=val)
-                cell.font = normal_font
-                cell.alignment = left_align if ci >= 5 else center_align
-                cell.border = thin_border
-                if ci == 4 or ci == 5:
-                    cell.font = module_font
-                if is_alt:
-                    cell.fill = alt_fill
-
-            row_num += 1
-
-    # Summary row
-    row_num += 1
-    ws.cell(row=row_num, column=1, value="TOTAL").font = Font(name="Calibri", size=11, bold=True, color="1A56DB")
-    ws.cell(row=row_num, column=7, value="140h").font = Font(name="Calibri", size=11, bold=True, color="1A56DB")
-    ws.cell(row=row_num, column=9, value="7h/sem").font = Font(name="Calibri", size=11, bold=True, color="1A56DB")
-    ws.cell(row=row_num, column=10, value="140h").font = Font(name="Calibri", size=11, bold=True, color="1A56DB")
-    for ci in range(1, 11):
-        ws.cell(row=row_num, column=ci).border = thin_border
-
-    # Column widths
-    widths = [10, 14, 8, 10, 38, 30, 9, 60, 10, 12]
-    for ci, w in enumerate(widths, 1):
-        ws.column_dimensions[get_column_letter(ci)].width = w
-
-    # ---- Sheet 2: Module summary ----
-    ws2 = wb.create_sheet("Resumen por Módulo")
-
-    headers2 = ["Módulo", "Título", "Horas", "Sesiones", "Bloque"]
+    # ---- Sheet 3: Módulos ----
+    ws2 = wb.create_sheet("Módulos")
+    headers2 = ["Módulo", "Título", "ECTS", "Horas", "Unidades / contenidos"]
     for ci, header in enumerate(headers2, 1):
         cell = ws2.cell(row=1, column=ci, value=header)
         cell.font = header_font
@@ -1049,13 +1049,8 @@ def generate_xlsx():
         cell.border = thin_border
 
     for ri, mod in enumerate(MODULES, 2):
-        vals = [
-            mod["id"],
-            mod["title"],
-            f"{mod['hours']:.0f}h",
-            mod["sessions"],
-            mod.get("block_title", mod.get("block", "")),
-        ]
+        units = " · ".join(u["title"] for u in mod["units"])
+        vals = [mod["id"], mod["title"], mod["ects"], f"{mod['hours']}h", units]
         is_alt = ri % 2 == 0
         for ci, val in enumerate(vals, 1):
             cell = ws2.cell(row=ri, column=ci, value=val)
@@ -1065,22 +1060,21 @@ def generate_xlsx():
             if is_alt:
                 cell.fill = alt_fill
 
-    # Total row
     total_row = len(MODULES) + 2
-    ws2.cell(row=total_row, column=1, value="TOTAL").font = Font(name="Calibri", size=11, bold=True, color="1A56DB")
-    ws2.cell(row=total_row, column=3, value="140h").font = Font(name="Calibri", size=11, bold=True, color="1A56DB")
-    ws2.cell(row=total_row, column=4, value=40).font = Font(name="Calibri", size=11, bold=True, color="1A56DB")
+    ws2.cell(row=total_row, column=1, value="TOTAL").font = total_font
+    ws2.cell(row=total_row, column=3, value=PROGRAM["ects"]).font = total_font
+    ws2.cell(row=total_row, column=4, value=PROGRAM["hours"]).font = total_font
     for ci in range(1, 6):
         ws2.cell(row=total_row, column=ci).border = thin_border
+        ws2.cell(row=total_row, column=ci).alignment = center_align if ci in (1, 3, 4) else left_align
 
-    widths2 = [8, 45, 8, 10, 25]
+    widths2 = [10, 52, 8, 8, 60]
     for ci, w in enumerate(widths2, 1):
         ws2.column_dimensions[get_column_letter(ci)].width = w
 
-    # ---- Sheet 3: Session detail ----
-    ws3 = wb.create_sheet("Detalle de Sesiones")
-
-    headers3 = ["Sesión", "Módulo", "Título", "Duración", "Contenido detallado"]
+    # ---- Sheet 3: Contenidos detallados ----
+    ws3 = wb.create_sheet("Contenidos detallados")
+    headers3 = ["Módulo", "Unidad", "Contenido"]
     for ci, header in enumerate(headers3, 1):
         cell = ws3.cell(row=1, column=ci, value=header)
         cell.font = header_font
@@ -1088,27 +1082,22 @@ def generate_xlsx():
         cell.alignment = center_align
         cell.border = thin_border
 
-    for ri, sess in enumerate(sessions, 2):
-        vals = [
-            sess["session_num"],
-            sess["module_id"],
-            sess["session_title"],
-            sess["duration"],
-            sess["content"],
-        ]
-        is_alt = ri % 2 == 0
-        for ci, val in enumerate(vals, 1):
-            cell = ws3.cell(row=ri, column=ci, value=val)
-            cell.font = normal_font
-            cell.alignment = left_align
-            cell.border = thin_border
-            if ci in (1, 2):
-                cell.font = module_font
-                cell.alignment = center_align
-            if is_alt:
-                cell.fill = alt_fill
+    row_num = 2
+    for mi, mod in enumerate(MODULES):
+        for unit in mod["units"]:
+            for topic in unit["topics"]:
+                is_alt = mi % 2 == 1
+                vals = [mod["id"], unit["title"], topic]
+                for ci, val in enumerate(vals, 1):
+                    cell = ws3.cell(row=row_num, column=ci, value=val)
+                    cell.font = module_font if ci == 1 else normal_font
+                    cell.alignment = center_align if ci == 1 else left_align
+                    cell.border = thin_border
+                    if is_alt:
+                        cell.fill = alt_fill
+                row_num += 1
 
-    widths3 = [12, 8, 32, 9, 70]
+    widths3 = [10, 42, 95]
     for ci, w in enumerate(widths3, 1):
         ws3.column_dimensions[get_column_letter(ci)].width = w
 

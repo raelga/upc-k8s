@@ -1,4 +1,4 @@
-# Proposta Universitària — Postgrado en Kubernetes i Platform Engineering
+# Proposta Universitària — Postgrau en Platform Engineering i DevOps amb Kubernetes
 
 ---
 
@@ -6,7 +6,7 @@
 
 Aquest postgrau forma enginyers capaços de dissenyar, implementar i operar plataformes internes de desenvolupament (IDP) basades en Kubernetes a escala empresarial. El programa integra els fonaments de DevOps amb les pràctiques avançades de Platform Engineering, cobrint el cicle complet: des de la infraestructura cloud i la programació per a automatització fins als fluxos GitOps, l'observabilitat distribuïda i la gestió multicluster en entorns productius.
 
-Amb 140 hores lectives distribuïdes en 40 sessions de 3,5 hores, l'estudi s'estructura en 12 mòduls que progressen des dels fonaments (DevOps, programació en Go/Python/Bash, xarxes, Git i cloud computing amb AWS, Azure i GCP) fins a les capacitats avançades de plataforma (operators personalitzats, hosted control planes, serverless i desplegaments multi-cloud). El nucli del programa és Kubernetes, amb 28 hores dedicades a l'arquitectura, building blocks, emmagatzematge, networking, autenticació i la construcció d'un clúster component a component.
+Amb 90 hores lectives equivalents a 12 crèdits ECTS, impartides en modalitat *live online*, l'estudi s'estructura en sis mòduls i un projecte final que progressen des dels fonaments (DevOps, programació assistida per IA en Go/Python/Bash, xarxes, Git i cloud computing amb AWS, Azure i GCP) fins a les capacitats avançades de plataforma (operators personalitzats, hosted control planes, serverless i desplegaments multi-cloud). El nucli del programa és Kubernetes, amb 30 hores dedicades a l'arquitectura, els building blocks, l'emmagatzematge, el networking, l'autenticació, la construcció d'un clúster component a component i la seva operació en producció.
 
 El programa incorpora les eines de l'ecosistema CNCF més demandades per la indústria: Terraform, Helm, ArgoCD, Prometheus, Grafana, OpenTelemetry, Istio, Traefik, HashiCorp Vault, External Secrets Operator, Crossplane, Tekton i KEDA, entre d'altres. L'enfocament és eminentment pràctic: cada sessió combina teoria, demos en viu i laboratoris guiats sobre entorns reals multi-cloud.
 
@@ -20,7 +20,7 @@ El perfil de sortida capacita per exercir com a Platform Engineer, Site Reliabil
 
 A nivell internacional existeixen programes comparables, encara que la majoria se centren exclusivament en Kubernetes sense cobrir el cicle complet de Platform Engineering:
 
-- **Linux Foundation — Kubernetes Certifications (CKA/CKAD/CKS):** Certificacions de referència que validen competències tècniques en Kubernetes. El nostre programa cobreix directament el temari de les tres certificacions dins dels mòduls M07, M08, M09 i M10.
+- **Linux Foundation — Kubernetes Certifications (CKA/CKAD/CKS):** Certificacions de referència que validen competències tècniques en Kubernetes. El nostre programa cobreix directament el temari de les tres certificacions dins dels mòduls M3, M4 i M5.
 - **CNCF — Platform Engineering Maturity Model:** Marc de referència publicat per la CNCF que defineix els nivells de maduresa en Platform Engineering. El nostre programa s'alinea amb aquest model, des del nivell provisional fins a l'optimitzat.
 - **KubeCon + CloudNativeCon:** La conferència de referència de l'ecosistema cloud native, amb més de 12.000 assistents, evidencia la demanda creixent de professionals especialitzats en Kubernetes i Platform Engineering.
 
