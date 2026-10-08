@@ -103,87 +103,41 @@ MODULES = [
             },
         ],
     },
-    {
-        "id": "M2",
-        "title": "Cloud Computing Multicloud e Infraestructura como Código",
-        "ects": "1",
-        "hours": 12,
-        "sessions": [
-            "Redes, DNS y CDN con Cloudflare",
-            "Control de versiones avanzado con Git",
-            "Cloud Computing: AWS, Azure y GCP",
-            "Infraestructura como Código con Terraform",
-        ],
-        "description": (
-            "Recursos fundamentales de AWS, Azure y GCP (computación, redes, almacenamiento, identidad y "
-            "servicios gestionados). Terraform como herramienta central de aprovisionamiento declarativo "
-            "multi-cloud: HCL, gestión del estado, módulos, testing y CI/CD. Redes, DNS y CDNs con "
-            "Cloudflare. Control de versiones avanzado con Git."
-        ),
-        "units": [
-            {
-                "title": "Redes, DNS y CDN con Cloudflare",
-                "topics": [
-                    "Revisión de fundamentos TCP/IP, UDP, TLS 1.3/mTLS, HTTP/2 y HTTP/3 (QUIC)",
-                    "DNS: resolución recursiva e iterativa, registros (A, AAAA, CNAME, TXT, SRV, NS), TTL y propagación",
-                    "DNS avanzado: DNSSEC, DNS-over-HTTPS, split-horizon DNS y service discovery basado en DNS",
-                    "CDN: arquitectura, edge caching, routing geográfico, invalidación y cache-control headers",
-                    "Cloudflare: DNS authoritative, Cloudflare Tunnel, Workers, WAF, DDoS protection y R2",
-                    "Certificados TLS: PKI, cadena de confianza, ACME protocol y automatización con Let's Encrypt",
-                    "Load balancing: algoritmos, health checks, session persistence y global load balancing",
-                ],
-            },
-            {
-                "title": "Control de Versiones Avanzado con Git",
-                "topics": [
-                    "Arquitectura interna de Git: objects (blob, tree, commit, tag), refs, packfiles, reflog y garbage collection",
-                    "Estrategias de branching: Git Flow, GitHub Flow, trunk-based development y comparativa práctica",
-                    "Rebases interactivos: squash, fixup, reword, edit y reordenación de commits",
-                    "Resolución de conflictos: estrategias de merge (recursive, ort), rerere, git mergetool y best practices",
-                    "Gestión de ramas: naming conventions, branch protection rules, CODEOWNERS y cleanup automático",
-                    "Pull Requests y code review: merge strategies (merge, squash, rebase), signed commits y draft PRs",
-                    "Git hooks: pre-commit, commit-msg, post-merge y automatización con pre-commit framework",
-                    "Monorepos: estrategias, herramientas (Nx, Turborepo) y gestión de dependencias",
-                    "Operaciones avanzadas: git bisect, git worktree, submodules, subtrees y sparse-checkout",
-                ],
-            },
-            {
-                "title": "Cloud Computing: AWS, Azure y GCP",
-                "topics": [
-                    "AWS · IAM: users, roles, policies, OIDC federation, IRSA y AWS SSO",
-                    "AWS · Computación: EC2 (instance types, AMIs, user-data), Auto Scaling Groups, Lambda",
-                    "AWS · Redes: VPC, subnets públicas/privadas, Security Groups, ALB/NLB, Route 53 y PrivateLink",
-                    "AWS · Almacenamiento: S3 (lifecycle, versioning), EBS, EFS y ECR",
-                    "AWS · Servicios gestionados: RDS, DynamoDB, SQS, CloudWatch y Secrets Manager",
-                    "Azure · IAM: Entra ID, Managed Identities, RBAC y Azure Key Vault",
-                    "Azure · Computación: VMs, VMSS, Azure Functions y Azure Container Apps",
-                    "Azure · Redes: VNet, subnets, NSG, Load Balancer, Application Gateway y Azure DNS",
-                    "Azure · Almacenamiento: Blob Storage, Azure Files, Managed Disks y ACR",
-                    "Azure · Servicios gestionados: Azure SQL, Cosmos DB, Service Bus y Azure Monitor",
-                    "GCP · IAM: Service Accounts, Workload Identity, org policies y Cloud Audit Logs",
-                    "GCP · Computación: Compute Engine, Cloud Functions y Cloud Run",
-                    "GCP · Redes: VPC, Firewall Rules, Cloud NAT, Cloud Load Balancing y Cloud DNS",
-                    "GCP · Almacenamiento: Cloud Storage, Persistent Disk y Artifact Registry",
-                    "GCP · Servicios gestionados: Cloud SQL, Firestore, Pub/Sub y Cloud Monitoring",
-                    "Comparativa multi-cloud: estrategias de portabilidad, vendor lock-in y abstracción de recursos",
-                ],
-            },
-            {
-                "title": "Infraestructura como Código con Terraform",
-                "topics": [
-                    "Fundamentos de IaC: filosofía declarativa vs imperativa, idempotencia y drift detection",
-                    "HCL: sintaxis, tipos de datos, expresiones, funciones y meta-argumentos (count, for_each, depends_on)",
-                    "Providers: configuración, autenticación y uso de los providers de AWS, Azure y GCP",
-                    "State management: local vs remote state, state locking, backends (S3, GCS, Azure Blob) y workspaces",
-                    "Módulos: diseño, versionado, registro público y privado, composición y reusabilidad",
-                    "Patrones avanzados: for_each, dynamic blocks, moved blocks, import y workspaces",
-                    "Terraform en CI/CD: plan/apply automatizado, Atlantis y GitHub Actions",
-                    "Testing de infraestructura: terraform test, tflint, checkov, tfsec y políticas con OPA/Conftest",
-                    "Alternativas complementarias: OpenTofu, Pulumi y CDKTF",
-                ],
-            },
-        ],
-    },
+    {'id': 'M2',
+     'title': 'Cloud Computing Multicloud e Infraestructura como Código',
+     'ects': '1',
+     'hours': 9,
+     'sessions': ['AWS y fundamentos de Terraform/OpenTofu',
+                  'Azure e IaC: equivalencias y módulos',
+                  'GCP e IaC: estado y comparativa multicloud'],
+     'description': 'Infraestructura cloud básica con Terraform/OpenTofu integrado en tres sesiones. AWS como '
+                    'caso principal; Azure y GCP como transferencia del mismo patrón, con ejemplos preparados. '
+                    'Identidad, redes, máquinas virtuales y almacenamiento. Comparación breve con Pulumi, sin '
+                    'laboratorio propio. Kubernetes gestionado y su aprovisionamiento se abordan en M4.',
+     'units': [{'title': 'AWS y fundamentos de Terraform/OpenTofu',
+                'topics': ['AWS: IAM, regiones y zonas, VPC, subredes, Security Groups, EC2 y S3; contexto de '
+                           'ECR',
+                           'Fundamentos IaC: declarativo, idempotencia y drift; Terraform/OpenTofu, HCL, '
+                           'provider y recursos',
+                           'Caso práctico común: red, máquina virtual y almacenamiento; init, plan, apply y '
+                           'destroy; permisos y control de costes']},
+               {'title': 'Azure e IaC: equivalencias y módulos',
+                'topics': ['Azure: Entra ID, suscripciones, grupos de recursos, Managed Identities, VNet, NSG, '
+                           'máquinas virtuales y Blob Storage; contexto de ACR',
+                           'Transferencia del caso AWS a Azure con configuración preparada: equivalencias y '
+                           'diferencias',
+                           'Terraform/OpenTofu: variables, outputs y uso de módulos existentes; sin diseño '
+                           'avanzado de módulos propios']},
+               {'title': 'GCP e IaC: estado y comparativa multicloud',
+                'topics': ['GCP: proyectos, cuentas de servicio, IAM, VPC, firewall, Compute Engine y Cloud '
+                           'Storage; contexto de Artifact Registry',
+                           'Transferencia del mismo caso a GCP con configuración preparada; comparación de '
+                           'identidad, redes, permisos y portabilidad',
+                           'Terraform/OpenTofu: estado local y remoto, locking según backend y protección del '
+                           'estado y de las credenciales',
+                           'Pulumi: comparación de 10–15 minutos de HCL frente a Python/Go con un ejemplo '
+                           'equivalente pequeño; también requiere gestión de estado; sin instalación ni '
+                           'laboratorio propio']}]},
     {
         "id": "M3",
         "title": "Contenedores y Kubernetes Core. Ecosistema OCI",
