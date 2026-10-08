@@ -29,12 +29,12 @@
 
 | #   | Módulo                                                                       | ECTS  | Horas  |
 |-----|------------------------------------------------------------------------------|-------|--------|
-| M1  | Fundamentos DevOps, Platform Engineering y Programación para Infraestructura  | 1.5   | 12h    |
-| M2  | Cloud Computing Multicloud e Infraestructura como Código                      | 1     | 12h    |
+| M1  | Fundamentos DevOps, Platform Engineering y Programación para Infraestructura  | 1.5   | 6h    |
+| M2  | Cloud Computing Multicloud e Infraestructura como Código                      | 1     | 9h    |
 | M3  | Contenedores y Kubernetes Core. Ecosistema OCI                               | 2     | 15h    |
 | M4  | Kubernetes en Producción y Ecosistema Cloud Native                          | 2     | 15h    |
-| M5  | Observabilidad, GitOps, CI/CD y Networking Avanzado                          | 2     | 15h    |
-| M6  | Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster         | 2     | 15h    |
+| M5  | Observabilidad, GitOps, CI/CD y Networking Avanzado                          | 2     | 21h    |
+| M6  | Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster         | 2     | 18h    |
 | PF  | Proyecto Final                                                               | 1.5   | 6h     |
 |     | **Total**                                                                    | **12**|**90h** |
 
@@ -48,19 +48,19 @@ El programa es eminentemente práctico: cada módulo combina teoría, demos en v
 
 | Módulo | Sesiones | Fechas                          |
 |--------|----------|---------------------------------|
-| M1     | 1–4      | 03/11/2026 – 12/11/2026         |
-| M2     | 5–8      | 17/11/2026 – 26/11/2026         |
-| M3     | 9–13     | 01/12/2026 – 17/12/2026         |
-| M4     | 14–18    | 22/12/2026 – 19/01/2027         |
-| M5     | 19–23    | 21/01/2027 – 04/02/2027         |
-| M6     | 24–28    | 11/02/2027 – 25/02/2027         |
-| PF     | 29–30    | 02/03/2027 – 04/03/2027         |
+| M1     | 1–2 | 03/11/2026 → 05/11/2026 |
+| M2     | 3–5 | 10/11/2026 → 17/11/2026 |
+| M3     | 6–10 | 19/11/2026 → 03/12/2026 |
+| M4     | 11–15 | 10/12/2026 → 07/01/2027 |
+| M5     | 16–22 | 12/01/2027 → 02/02/2027 |
+| M6     | 23–28 | 04/02/2027 → 25/02/2027 |
+| PF     | 29–30 | 02/03/2027 → 04/03/2027 |
 
 ---
 
-## M1 — Fundamentos DevOps, Platform Engineering y Programación para Infraestructura (1.5 ECTS · 12h)
+## M1 — Fundamentos DevOps, Platform Engineering y Programación para Infraestructura (1.5 ECTS · 6h)
 
-**Descripción:** Contextualización del movimiento DevOps y su evolución hacia Platform Engineering. Competencias de programación asistidas por inteligencia artificial en Bash, Python y Go orientadas a la automatización de infraestructura, desarrollo de CLIs y construcción de controladores para Kubernetes.
+**Descripción:** Contextualización del movimiento DevOps y su evolución hacia Platform Engineering. Competencias de programación asistidas por inteligencia artificial en Bash y Python orientadas a la automatización de infraestructura y desarrollo de CLIs. Go se introduce más adelante (M6), en el contexto de construcción de controladores para Kubernetes.
 
 ### Fundamentos de DevOps y Platform Engineering
 - Historia y principios DevOps: de Waterfall a Agile a DevOps. Cultura, automatización, medición y compartición (CALMS)
@@ -73,72 +73,35 @@ El programa es eminentemente práctico: cada módulo combina teoría, demos en v
 - Backstage como portal de desarrollo interno: plugins, TechDocs y Software Catalog
 - El rol del Platform Engineer: responsabilidades, skills T-shaped y evolución de carrera
 
-### Programación para Infraestructura: Bash, Python y Go (asistida por IA)
+### Bash y Python para DevOps (asistida por IA)
 - Programación asistida por IA: copilots y asistentes para scripting, refactorización y generación de tests
-- Bash scripting avanzado: variables, estructuras de control, funciones, arrays y manejo de errores
-- Automatización de sistema: gestión de procesos, pipes, redirecciones, grep/sed/awk/jq/yq, cron y Makefiles
+- Bash scripting: variables, estructuras de control, funciones, arrays y manejo de errores
+- Automatización de sistema: pipes, redirecciones, grep/sed/awk/jq/yq, cron y Makefiles
 - Python para DevOps: scripting, SDKs cloud (boto3, azure-sdk, google-cloud) y manejo de APIs REST
 - Python: manipulación de YAML/JSON/TOML, Jinja2 templating, CLIs con Click/Typer y testing con pytest
-- Go: sintaxis, tipos, structs, interfaces, goroutines, channels y manejo de errores idiomático
-- Go para infraestructura: desarrollo de CLIs con cobra/viper y cliente Kubernetes (client-go)
-- Patrones de desarrollo de controladores y operators en Go: reconciliation loop e informers
-- Testing en Go: unit tests, table-driven tests, mocks con testify e integración con CI
-- Herramientas de desarrollo: Makefile, direnv, pre-commit hooks y linters (golangci-lint, ruff)
+- Calidad de código: linting con ruff, type checking con mypy, pre-commit hooks
 
 ---
 
-## M2 — Cloud Computing Multicloud e Infraestructura como Código (1 ECTS · 12h)
+## M2 — Cloud Computing Multicloud e Infraestructura como Código (1 ECTS · 9h)
 
-**Descripción:** Recursos fundamentales de AWS, Azure y GCP (computación, redes, almacenamiento, identidad y servicios gestionados). Terraform como herramienta central de aprovisionamiento declarativo multi-cloud: HCL, gestión del estado, módulos, testing y CI/CD. Redes, DNS y CDNs con Cloudflare. Control de versiones avanzado con Git.
+**Descripción:** Infraestructura cloud básica con Terraform/OpenTofu integrado en tres sesiones. AWS como caso principal; Azure y GCP como transferencia del mismo patrón, con ejemplos preparados. Identidad, redes, máquinas virtuales y almacenamiento. Comparación breve con Pulumi, sin laboratorio propio. Kubernetes gestionado y su aprovisionamiento se abordan en M4.
 
-### Redes, DNS y CDN con Cloudflare
-- Revisión de fundamentos TCP/IP, UDP, TLS 1.3/mTLS, HTTP/2 y HTTP/3 (QUIC)
-- DNS: resolución recursiva e iterativa, registros (A, AAAA, CNAME, TXT, SRV, NS), TTL y propagación
-- DNS avanzado: DNSSEC, DNS-over-HTTPS, split-horizon DNS y service discovery basado en DNS
-- CDN: arquitectura, edge caching, routing geográfico, invalidación y cache-control headers
-- Cloudflare: DNS authoritative, Cloudflare Tunnel, Workers, WAF, DDoS protection y R2
-- Certificados TLS: PKI, cadena de confianza, ACME protocol y automatización con Let's Encrypt
-- Load balancing: algoritmos, health checks, session persistence y global load balancing
+### AWS y fundamentos de Terraform/OpenTofu
+- AWS: IAM, regiones y zonas, VPC, subredes, Security Groups, EC2 y S3; contexto de ECR
+- Fundamentos IaC: declarativo, idempotencia y drift; Terraform/OpenTofu, HCL, provider y recursos
+- Caso práctico común: red, máquina virtual y almacenamiento; init, plan, apply y destroy; permisos y control de costes
 
-### Control de Versiones Avanzado con Git
-- Arquitectura interna de Git: objects (blob, tree, commit, tag), refs, packfiles, reflog y garbage collection
-- Estrategias de branching: Git Flow, GitHub Flow, trunk-based development y comparativa práctica
-- Rebases interactivos: squash, fixup, reword, edit y reordenación de commits
-- Resolución de conflictos: estrategias de merge (recursive, ort), rerere, git mergetool y best practices
-- Gestión de ramas: naming conventions, branch protection rules, CODEOWNERS y cleanup automático
-- Pull Requests y code review: merge strategies (merge, squash, rebase), signed commits y draft PRs
-- Git hooks: pre-commit, commit-msg, post-merge y automatización con pre-commit framework
-- Monorepos: estrategias, herramientas (Nx, Turborepo) y gestión de dependencias
-- Operaciones avanzadas: git bisect, git worktree, submodules, subtrees y sparse-checkout
+### Azure e IaC: equivalencias y módulos
+- Azure: Entra ID, suscripciones, grupos de recursos, Managed Identities, VNet, NSG, máquinas virtuales y Blob Storage; contexto de ACR
+- Transferencia del caso AWS a Azure con configuración preparada: equivalencias y diferencias
+- Terraform/OpenTofu: variables, outputs y uso de módulos existentes; sin diseño avanzado de módulos propios
 
-### Cloud Computing: AWS, Azure y GCP
-- AWS · IAM: users, roles, policies, OIDC federation, IRSA y AWS SSO
-- AWS · Computación: EC2 (instance types, AMIs, user-data), Auto Scaling Groups, Lambda
-- AWS · Redes: VPC, subnets públicas/privadas, Security Groups, ALB/NLB, Route 53 y PrivateLink
-- AWS · Almacenamiento: S3 (lifecycle, versioning), EBS, EFS y ECR
-- AWS · Servicios gestionados: RDS, DynamoDB, SQS, CloudWatch y Secrets Manager
-- Azure · IAM: Entra ID, Managed Identities, RBAC y Azure Key Vault
-- Azure · Computación: VMs, VMSS, Azure Functions y Azure Container Apps
-- Azure · Redes: VNet, subnets, NSG, Load Balancer, Application Gateway y Azure DNS
-- Azure · Almacenamiento: Blob Storage, Azure Files, Managed Disks y ACR
-- Azure · Servicios gestionados: Azure SQL, Cosmos DB, Service Bus y Azure Monitor
-- GCP · IAM: Service Accounts, Workload Identity, org policies y Cloud Audit Logs
-- GCP · Computación: Compute Engine, Cloud Functions y Cloud Run
-- GCP · Redes: VPC, Firewall Rules, Cloud NAT, Cloud Load Balancing y Cloud DNS
-- GCP · Almacenamiento: Cloud Storage, Persistent Disk y Artifact Registry
-- GCP · Servicios gestionados: Cloud SQL, Firestore, Pub/Sub y Cloud Monitoring
-- Comparativa multi-cloud: estrategias de portabilidad, vendor lock-in y abstracción de recursos
-
-### Infraestructura como Código con Terraform
-- Fundamentos de IaC: filosofía declarativa vs imperativa, idempotencia y drift detection
-- HCL: sintaxis, tipos de datos, expresiones, funciones y meta-argumentos (count, for_each, depends_on)
-- Providers: configuración, autenticación y uso de los providers de AWS, Azure y GCP
-- State management: local vs remote state, state locking, backends (S3, GCS, Azure Blob) y workspaces
-- Módulos: diseño, versionado, registro público y privado, composición y reusabilidad
-- Patrones avanzados: for_each, dynamic blocks, moved blocks, import y workspaces
-- Terraform en CI/CD: plan/apply automatizado, Atlantis y GitHub Actions
-- Testing de infraestructura: terraform test, tflint, checkov, tfsec y políticas con OPA/Conftest
-- Alternativas complementarias: OpenTofu, Pulumi y CDKTF
+### GCP e IaC: estado y comparativa multicloud
+- GCP: proyectos, cuentas de servicio, IAM, VPC, firewall, Compute Engine y Cloud Storage; contexto de Artifact Registry
+- Transferencia del mismo caso a GCP con configuración preparada; comparación de identidad, redes, permisos y portabilidad
+- Terraform/OpenTofu: estado local y remoto, locking según backend y protección del estado y de las credenciales
+- Pulumi: comparación de 10–15 minutos de HCL frente a Python/Go con un ejemplo equivalente pequeño; también requiere gestión de estado; sin instalación ni laboratorio propio
 
 ---
 
@@ -223,24 +186,37 @@ El programa es eminentemente práctico: cada módulo combina teoría, demos en v
 
 ---
 
-## M5 — Observabilidad, GitOps, CI/CD y Networking Avanzado (2 ECTS · 15h)
+## M5 — Observabilidad, GitOps, CI/CD y Networking Avanzado (2 ECTS · 21h)
 
-**Descripción:** Stack de observabilidad completo: Prometheus, Grafana (Loki, Tempo, Mimir), OpenTelemetry. GitOps con ArgoCD y Prow. Pipelines con Tekton. Networking avanzado con Traefik e Istio (service mesh). Estrategias de despliegue (canary, blue/green) con Argo Rollouts. Escalado de workloads (HPA, VPA, KEDA, Karpenter).
+**Descripción:** Stack de observabilidad completo: Prometheus, Grafana (Loki, Tempo, Mimir), OpenTelemetry, repartido en 3 sesiones (métricas, logs, trazas+correlación) para un ritmo sostenible. Git básico y principios GitOps junto a ArgoCD. Sesión propia de pipelines CI/CD con Prow y Tekton. Networking avanzado con Traefik e Istio (service mesh). Estrategias de despliegue (canary, blue/green) con Argo Rollouts. Escalado de workloads (HPA, VPA, KEDA, Karpenter).
 
-### Observabilidad
+### Observabilidad (I): Métricas
 - Los tres pilares: métricas, logs, trazas. Correlación entre señales
 - Prometheus: arquitectura, scraping, PromQL, service discovery, Alertmanager
 - Prometheus Operator: ServiceMonitor, PodMonitor, recording rules, alerting rules. Thanos para HA
-- Grafana: datasources, dashboards, variables, alerting. Grafana as Code (grafonnet, Terraform)
-- Grafana stack: Loki (logs), Tempo (trazas), Mimir (métricas), Alloy (collector)
-- OpenTelemetry: especificación OTLP, Collector pipelines, auto-instrumentación en Kubernetes
-- Stack completo: Prometheus + Grafana + Loki + Tempo + OTel Collector integrados
 
-### GitOps y Pipelines CI/CD
+### Observabilidad (II): Grafana y Logs
+- Grafana: datasources, dashboards, variables, alerting. Grafana as Code (grafonnet, Terraform)
+- Loki: arquitectura, LogQL (mismo modelo mental que PromQL), labels vs indexación de texto completo
+- Promtail: recolección de logs de los Pods y envío a Loki
+- Grafana Explore: consulta y filtrado de logs por label en tiempo real
+
+### Observabilidad (III): OpenTelemetry, Tempo y Correlación
+- OpenTelemetry: especificación OTLP, SDK, auto-instrumentación de la app sin tocar código
+- OpenTelemetry Collector: pipeline de receivers, processors y exporters
+- Tempo: backend de trazas distribuidas, trace ID, spans, integración con Grafana
+- Mimir: métricas a escala/federadas (mención breve, complementa la sesión de Prometheus)
+- Correlación end-to-end: exemplars, salto métrica→traza→logs en un mismo dashboard
+
+### Git y GitOps con ArgoCD
+- Git para el repositorio de manifiestos: ramas, commits, PR, revisión y conflictos sencillos; sin Git avanzado
 - Principios GitOps: declarativo, versionado, automatizado, reconciliado. Pull vs Push model
 - ArgoCD: Applications, AppProjects, ApplicationSets, sync policies, waves, hooks y RBAC
 - ArgoCD avanzado: multi-tenancy, SSO, App of Apps, ApplicationSet generators y notifications
-- ArgoCD Image Updater y Argo Rollouts: patrones de Progressive Delivery con análisis automático
+- Práctica: modificar un manifiesto, revisar el PR, sincronizar con ArgoCD y observar la reconciliación
+
+### Pipelines CI/CD: Prow y Tekton
+- Git aplicado a CI: cambios y PR como disparadores de validaciones y pipelines
 - Prow: arquitectura CI nativa en Kubernetes, plugins, Tide, Deck dashboard y ProwJobs
 - Tekton: Tasks, Pipelines, PipelineRuns, Workspaces, Triggers y Tekton Chains
 - Integración Tekton + ArgoCD para workflows CI/CD end-to-end en Kubernetes
@@ -264,9 +240,15 @@ El programa es eminentemente práctico: cada módulo combina teoría, demos en v
 
 ---
 
-## M6 — Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster (2 ECTS · 15h)
+## M6 — Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster (2 ECTS · 18h)
 
 **Descripción:** Construcción de operators personalizados con Kubebuilder/Operator SDK. Gestión del ciclo de vida de clústeres con Cluster API. Serverless con Knative. Hosted Control Planes (HyperShift, vCluster, Kamaji). Gestión y despliegue multi-cluster (Istio multicluster, Cilium Cluster Mesh, Submariner) y multi-cloud con Crossplane. Disaster Recovery con Velero.
+
+### Go: de cero a controlador de Kubernetes
+- Fundamentos de Go: tipos, structs, interfaces, goroutines, channels, manejo de errores idiomático
+- client-go: clientset, kubeconfig, serialización, listar/filtrar/crear recursos de la API
+- controller-runtime: reconciliation loop, informers, predicates (fundamentos, sin construir el operator todavía)
+- CLIs y tooling: cobra/viper, logging estructurado, go test, mocks con testify, golangci-lint
 
 ### Construcción de Operators
 - Operator SDK (Go): scaffolding, CRD design, controller implementation y webhooks

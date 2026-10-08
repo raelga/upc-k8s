@@ -4,6 +4,21 @@
 > real del repo (que esta aplicado en disco vs que esta acordado en conversacion
 > pero AUN NO escrito en ningun archivo). Generado: 2026-10-08.
 
+## Actualización aplicada — decisión del usuario (2026-10-08)
+
+Esta sección prevalece sobre las propuestas y el estado histórico que siguen debajo.
+
+- M2 queda en 3 sesiones / 9h / 1 ECTS: AWS como caso principal, Azure y GCP como transferencia del mismo patrón con ejemplos preparados. Terraform/OpenTofu integrado; identidad, redes, VM y almacenamiento. Pulumi: comparación breve de 10–15 minutos, sin laboratorio propio.
+- EKS/AKS/GKE y su aprovisionamiento siguen en M4; no duplicarlos en M2.
+- Git avanzado sale de M2. Git básico y principios GitOps se enseñan con ArgoCD; PR y validaciones con Prow/Tekton. M5 pasa a 7 sesiones / 21h / 2 ECTS.
+- Total verificado: 30 sesiones / 90h / 12 ECTS. Los ECTS por módulo no cambian.
+- **Posible ampliación futura, NO aprobada ni incluida en las 90h:** añadir una cuarta sesión independiente de IaC si se quiere profundizar en Terraform/OpenTofu, diseño de módulos propios, testing y automatización, o dar más práctica por proveedor. Requiere revisar el reparto de horas; no añadirla automáticamente. Pulumi podría ampliarse solo si se decide expresamente.
+- Alcance actual: módulos existentes, variables, outputs y estado. No prometer dominio de tres clouds ni diseño avanzado de módulos tras 9h.
+- Otros recortes y traslados de contenido de las notas históricas siguen pendientes de aprobación; no aplicar en bloque.
+- Mantener el trabajo por cambios concretos aprobados por el usuario.
+
+---
+
 ## Contexto del programa
 
 - Posgrado en Platform Engineering y DevOps con Kubernetes (UPC School, curso 305300)

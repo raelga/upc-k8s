@@ -41,12 +41,12 @@ A university postgraduate program proposal for UPC (Universitat Politècnica de 
 
 | Module | Title | ECTS | Hours |
 |--------|-------|------|-------|
-| M1 | Fundamentos DevOps, Platform Engineering y Programación para Infraestructura | 1.5 | 12h |
-| M2 | Cloud Computing Multicloud e Infraestructura como Código | 1 | 12h |
+| M1 | Fundamentos DevOps, Platform Engineering y Programación para Infraestructura | 1.5 | 6h |
+| M2 | Cloud Computing Multicloud e Infraestructura como Código | 1 | 9h |
 | M3 | Contenedores y Kubernetes Core. Ecosistema OCI | 2 | 15h |
 | M4 | Kubernetes en Producción y Ecosistema Cloud Native | 2 | 15h |
-| M5 | Observabilidad, GitOps, CI/CD y Networking Avanzado | 2 | 15h |
-| M6 | Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 2 | 15h |
+| M5 | Observabilidad, GitOps, CI/CD y Networking Avanzado | 2 | 21h |
+| M6 | Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 2 | 18h |
 | PF | Proyecto Final | 1.5 | 6h |
 | | **Total** | **12** | **90h** |
 
