@@ -39,19 +39,19 @@ PROGRAM = {
 }
 
 # Class schedule: sessions run Tue/Thu 18:00-21:00 from inicio to fin.
-# Non-teaching dates: La Immaculada (8 Dec) + Christmas break (22 Dec 2026 - 7 Jan 2027).
+# Non-teaching dates aligned with the official UPC FIB academic calendar (festius + vacances):
+# La Immaculada (8 Dec), Christmas break (24, 29, 31 Dec 2026; 5 Jan 2027), and 9 Feb 2027 (festiu UPC).
 # 90h / 3h = 30 sessions; the remaining Tue/Thu slots act as buffer/recuperación.
 SCHEDULE_START = (2026, 11, 3)
 SCHEDULE_END = (2027, 3, 18)
 SESSION_HOURS = 3
 NON_TEACHING = {
     (2026, 12, 8): "Festivo: La Immaculada",
-    (2026, 12, 22): "Vacaciones de Navidad",
     (2026, 12, 24): "Vacaciones de Navidad",
     (2026, 12, 29): "Vacaciones de Navidad",
     (2026, 12, 31): "Vacaciones de Navidad",
     (2027, 1, 5): "Vacaciones de Navidad",
-    (2027, 1, 7): "Vacaciones de Navidad",
+    (2027, 2, 9): "Festivo UPC",
 }
 
 # ============================================================
@@ -64,18 +64,16 @@ MODULES = [
         "id": "M1",
         "title": "Fundamentos DevOps, Platform Engineering y Programación para Infraestructura",
         "ects": "1.5",
-        "hours": 12,
+        "hours": 6,
         "sessions": [
             "Fundamentos de DevOps y Platform Engineering (CALMS, IDP, Team Topologies, DORA)",
-            "Programación asistida por IA: Bash y automatización de sistema",
-            "Python para DevOps: SDKs cloud, CLIs y testing",
-            "Go para infraestructura: client-go, controllers y tooling",
+            "Bash y Python para DevOps, asistidos por IA",
         ],
         "description": (
             "Contextualización del movimiento DevOps y su evolución hacia Platform Engineering. "
-            "Competencias de programación asistidas por inteligencia artificial en Bash, Python y Go "
-            "orientadas a la automatización de infraestructura, desarrollo de CLIs y construcción de "
-            "controladores para Kubernetes."
+            "Competencias de programación asistidas por inteligencia artificial en Bash y Python "
+            "orientadas a la automatización de infraestructura y desarrollo de CLIs. Go se introduce "
+            "más adelante (M6), en el contexto de construcción de controladores para Kubernetes."
         ),
         "units": [
             {
@@ -93,18 +91,14 @@ MODULES = [
                 ],
             },
             {
-                "title": "Programación para Infraestructura: Bash, Python y Go (asistida por IA)",
+                "title": "Bash y Python para DevOps (asistida por IA)",
                 "topics": [
                     "Programación asistida por IA: copilots y asistentes para scripting, refactorización y generación de tests",
-                    "Bash scripting avanzado: variables, estructuras de control, funciones, arrays y manejo de errores",
-                    "Automatización de sistema: gestión de procesos, pipes, redirecciones, grep/sed/awk/jq/yq, cron y Makefiles",
+                    "Bash scripting: variables, estructuras de control, funciones, arrays y manejo de errores",
+                    "Automatización de sistema: pipes, redirecciones, grep/sed/awk/jq/yq, cron y Makefiles",
                     "Python para DevOps: scripting, SDKs cloud (boto3, azure-sdk, google-cloud) y manejo de APIs REST",
                     "Python: manipulación de YAML/JSON/TOML, Jinja2 templating, CLIs con Click/Typer y testing con pytest",
-                    "Go: sintaxis, tipos, structs, interfaces, goroutines, channels y manejo de errores idiomático",
-                    "Go para infraestructura: desarrollo de CLIs con cobra/viper y cliente Kubernetes (client-go)",
-                    "Patrones de desarrollo de controladores y operators en Go: reconciliation loop e informers",
-                    "Testing en Go: unit tests, table-driven tests, mocks con testify e integración con CI",
-                    "Herramientas de desarrollo: Makefile, direnv, pre-commit hooks y linters (golangci-lint, ruff)",
+                    "Calidad de código: linting con ruff, type checking con mypy, pre-commit hooks",
                 ],
             },
         ],
@@ -254,7 +248,7 @@ MODULES = [
         "sessions": [
             "Kubernetes gestionado: EKS, GKE y AKS",
             "Otros entornos y aprovisionamiento IaC multi-cloud",
-            "Application bundles: Helm y Kustomize",
+            "Application bundles: Kustomize, Helm y su ecosistema",
             "Infraestructura declarativa: ExternalDNS, cert-manager y Crossplane",
             "Gestión de secretos: Vault y External Secrets Operator",
         ],
@@ -282,10 +276,10 @@ MODULES = [
             {
                 "title": "Application Bundles e Infraestructura Declarativa",
                 "topics": [
-                    "Helm: charts, templates, values, hooks, repositorios, helm-secrets y helm-diff",
-                    "Kustomize: bases, overlays, patches, generators y transformers. Helm + Kustomize",
-                    "Patrón Operator: CRDs, controller loop, Operator Lifecycle Manager, niveles de madurez",
-                    "Operators de referencia: cert-manager, Prometheus Operator, Strimzi, Crossplane",
+                    "Kustomize: bases, overlays, patches, generators y transformers. 2 ejemplos prácticos (dev/prod)",
+                    "Helm: charts, templates, values, hooks. El catálogo de Helm (Artifact Hub) como ecosistema de distribución",
+                    "Helm + Kustomize: helm-secrets, helm-diff. Combinar render de Helm con overlays Kustomize por entorno",
+                    "Caso real: charts que despliegan operators (kube-prometheus-stack, Grafana Operator). Se profundiza en la Sesión 24",
                     "ExternalDNS: providers (Route53, CloudDNS, Cloudflare), anotaciones y políticas de sync",
                     "cert-manager: Issuers, ClusterIssuers, Let's Encrypt, ACME DNS-01/HTTP-01, renovación automática",
                     "Crossplane: Providers, Managed Resources, Compositions, XRDs. Comparativa con Terraform",
@@ -312,31 +306,48 @@ MODULES = [
         "id": "M5",
         "title": "Observabilidad, GitOps, CI/CD y Networking Avanzado",
         "ects": "2",
-        "hours": 15,
+        "hours": 18,
         "sessions": [
             "Observabilidad (I): Prometheus, PromQL y Alertmanager",
-            "Observabilidad (II): Grafana stack (Loki, Tempo) y OpenTelemetry",
+            "Observabilidad (II): Grafana y Loki (logs)",
+            "Observabilidad (III): OpenTelemetry, Tempo y correlación",
             "GitOps y pipelines CI/CD: ArgoCD, Prow y Tekton",
             "Networking avanzado: Traefik e Istio (service mesh)",
             "Entrega progresiva y escalado: Argo Rollouts, HPA/VPA, KEDA, Karpenter",
         ],
         "description": (
-            "Stack de observabilidad completo: Prometheus, Grafana (Loki, Tempo, Mimir), OpenTelemetry. "
+            "Stack de observabilidad completo: Prometheus, Grafana (Loki, Tempo, Mimir), OpenTelemetry, "
+            "repartido en 3 sesiones (métricas, logs, trazas+correlación) para un ritmo sostenible. "
             "GitOps con ArgoCD y Prow. Pipelines con Tekton. Networking avanzado con Traefik e Istio "
             "(service mesh). Estrategias de despliegue (canary, blue/green) con Argo Rollouts. Escalado de "
             "workloads (HPA, VPA, KEDA, Karpenter)."
         ),
         "units": [
             {
-                "title": "Observabilidad",
+                "title": "Observabilidad (I): Métricas",
                 "topics": [
                     "Los tres pilares: métricas, logs, trazas. Correlación entre señales",
                     "Prometheus: arquitectura, scraping, PromQL, service discovery, Alertmanager",
                     "Prometheus Operator: ServiceMonitor, PodMonitor, recording rules, alerting rules. Thanos para HA",
+                ],
+            },
+            {
+                "title": "Observabilidad (II): Grafana y Logs",
+                "topics": [
                     "Grafana: datasources, dashboards, variables, alerting. Grafana as Code (grafonnet, Terraform)",
-                    "Grafana stack: Loki (logs), Tempo (trazas), Mimir (métricas), Alloy (collector)",
-                    "OpenTelemetry: especificación OTLP, Collector pipelines, auto-instrumentación en Kubernetes",
-                    "Stack completo: Prometheus + Grafana + Loki + Tempo + OTel Collector integrados",
+                    "Loki: arquitectura, LogQL (mismo modelo mental que PromQL), labels vs indexación de texto completo",
+                    "Promtail: recolección de logs de los Pods y envío a Loki",
+                    "Grafana Explore: consulta y filtrado de logs por label en tiempo real",
+                ],
+            },
+            {
+                "title": "Observabilidad (III): OpenTelemetry, Tempo y Correlación",
+                "topics": [
+                    "OpenTelemetry: especificación OTLP, SDK, auto-instrumentación de la app sin tocar código",
+                    "OpenTelemetry Collector: pipeline de receivers, processors y exporters",
+                    "Tempo: backend de trazas distribuidas, trace ID, spans, integración con Grafana",
+                    "Mimir: métricas a escala/federadas (mención breve, complementa Prometheus de la Sesión 19)",
+                    "Correlación end-to-end: exemplars, salto métrica→traza→logs en un mismo dashboard",
                 ],
             },
             {
@@ -380,8 +391,9 @@ MODULES = [
         "id": "M6",
         "title": "Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster",
         "ects": "2",
-        "hours": 15,
+        "hours": 18,
         "sessions": [
+            "Go: de cero a controlador de Kubernetes",
             "Construcción de Operators con Kubebuilder/Operator SDK",
             "Gestión de clústeres (Cluster API) y serverless (Knative)",
             "Hosted Control Planes: HyperShift, vCluster y Kamaji",
@@ -389,12 +401,22 @@ MODULES = [
             "Multi-cloud con Crossplane y Disaster Recovery con Velero",
         ],
         "description": (
-            "Construcción de operators personalizados con Kubebuilder/Operator SDK. Gestión del ciclo de "
-            "vida de clústeres con Cluster API. Serverless con Knative. Hosted Control Planes (HyperShift, "
-            "vCluster, Kamaji). Gestión y despliegue multi-cluster (Istio multicluster, Cilium Cluster "
-            "Mesh, Submariner) y multi-cloud con Crossplane. Disaster Recovery con Velero."
+            "Go desde cero hasta cliente de la API de Kubernetes, como base para construir operators "
+            "personalizados con Kubebuilder/Operator SDK. Gestión del ciclo de vida de clústeres con "
+            "Cluster API. Serverless con Knative. Hosted Control Planes (HyperShift, vCluster, Kamaji). "
+            "Gestión y despliegue multi-cluster (Istio multicluster, Cilium Cluster Mesh, Submariner) y "
+            "multi-cloud con Crossplane. Disaster Recovery con Velero."
         ),
         "units": [
+            {
+                "title": "Go: de cero a controlador de Kubernetes",
+                "topics": [
+                    "Fundamentos de Go: tipos, structs, interfaces, goroutines, channels, manejo de errores idiomático",
+                    "client-go: clientset, kubeconfig, serialización, listar/filtrar/crear recursos de la API",
+                    "controller-runtime: reconciliation loop, informers, predicates (fundamentos, sin construir el operator todavía)",
+                    "CLIs y tooling: cobra/viper, logging estructurado, go test, mocks con testify, golangci-lint",
+                ],
+            },
             {
                 "title": "Construcción de Operators",
                 "topics": [
@@ -1107,6 +1129,79 @@ def generate_xlsx():
     return path
 
 
+def generate_calendar_md():
+    """Generate the public Markdown calendar from the canonical schedule data."""
+    sessions, buffer = build_calendar()
+    lines = [
+        "# Calendario",
+        "",
+        f"**{PROGRAM['title']}** · {PROGRAM['edicion']} · {PROGRAM['modalidad']}",
+        "",
+        (
+            f"**{len(sessions)} sesiones de {SESSION_HOURS}h** · "
+            f"{PROGRAM['inicio']}–{PROGRAM['fin']} · {PROGRAM['horario']}"
+        ),
+        "",
+        (
+            "> Las columnas de profesorado quedan pendientes de completar cuando se cierre "
+            "la asignación docente."
+        ),
+        "",
+        "| Semana | Fecha | Día | Sesión | Título | Asignatura | Horario | Profesor/a 1 | Profesor/a 2 |",
+        "| ------ | ----- | --- | ------ | ------ | ---------- | ------- | ------------ | ------------ |",
+    ]
+
+    for session in sessions:
+        lines.append(
+            "| {week} | {date} | {day} | {number} | {title} | {module} · {module_title} | "
+            "18:00–21:00 |  |  |".format(
+                week=session["date"].isocalendar().week,
+                date=session["date"].strftime("%d/%m/%Y"),
+                day=session["day"],
+                number=session["n"],
+                title=session["theme"],
+                module=session["module_id"],
+                module_title=session["module_title"],
+            )
+        )
+
+    for date in buffer:
+        day = {1: "Martes", 3: "Jueves"}[date.weekday()]
+        lines.append(
+            f"| {date.isocalendar().week} | {date.strftime('%d/%m/%Y')} | {day} | — | "
+            "Reserva / recuperación | — | 18:00–21:00 |  |  |"
+        )
+
+    lines.extend([
+        "",
+        "## Fechas no lectivas",
+        "",
+        "| Fecha | Motivo |",
+        "| ----- | ------ |",
+    ])
+    for date_tuple, reason in sorted(NON_TEACHING.items()):
+        from datetime import date
+
+        date_value = date(*date_tuple)
+        lines.append(f"| {date_value.strftime('%d/%m/%Y')} | {reason} |")
+
+    lines.extend([
+        "",
+        (
+            "El desarrollo de cada sesión, incluidos objetivos, contenidos y laboratorios, "
+            "está disponible en el "
+            "[roadmap detallado](roadmap-postgrado-kubernetes-detallado.md)."
+        ),
+        "",
+    ])
+
+    path = os.path.join(os.path.dirname(__file__), "calendario.md")
+    with open(path, "w", encoding="utf-8") as calendar_file:
+        calendar_file.write("\n".join(lines))
+    print(f"Markdown calendar saved: {path}")
+    return path
+
+
 # ============================================================
 # MAIN
 # ============================================================
@@ -1114,4 +1209,5 @@ def generate_xlsx():
 if __name__ == "__main__":
     generate_docx()
     generate_xlsx()
+    generate_calendar_md()
     print("Done!")

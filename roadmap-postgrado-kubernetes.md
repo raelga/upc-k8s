@@ -44,17 +44,17 @@ El programa es eminentemente práctico: cada módulo combina teoría, demos en v
 
 ## Calendario de Sesiones
 
-**30 sesiones de 3h** (martes y jueves, 18:00–21:00), del **03/11/2026** al **18/03/2027**. No hay clase en festivos (La Immaculada, 8 dic) ni durante las vacaciones de Navidad (23 dic 2026 – 7 ene 2027). Las últimas fechas de la ventana oficial (11, 16 y 18 mar 2027) quedan como reserva/recuperación. El detalle dado por dado está en `Calendario_Postgrado_Kubernetes.xlsx` (hoja *Calendario*).
+**30 sesiones de 3h** (martes y jueves, 18:00–21:00), del **03/11/2026** al **18/03/2027**. El calendario sigue el mismo criterio de días no lectivos que el calendario académico oficial de la UPC-FIB: festivo de La Immaculada (8 dic), vacaciones de Navidad (24, 29 y 31 dic 2026, 5 ene 2027) y festivo UPC (9 feb 2027). Las últimas fechas de la ventana oficial (9, 11, 16 y 18 mar 2027) quedan como reserva/recuperación. Consulta el [**calendario completo**](calendario.md) o `Calendario_Postgrado_Kubernetes.xlsx` (hoja *Calendario*).
 
 | Módulo | Sesiones | Fechas                          |
 |--------|----------|---------------------------------|
 | M1     | 1–4      | 03/11/2026 – 12/11/2026         |
 | M2     | 5–8      | 17/11/2026 – 26/11/2026         |
 | M3     | 9–13     | 01/12/2026 – 17/12/2026         |
-| M4     | 14–18    | 12/01/2027 – 26/01/2027         |
-| M5     | 19–23    | 28/01/2027 – 11/02/2027         |
-| M6     | 24–28    | 16/02/2027 – 02/03/2027         |
-| PF     | 29–30    | 04/03/2027 – 09/03/2027         |
+| M4     | 14–18    | 22/12/2026 – 19/01/2027         |
+| M5     | 19–23    | 21/01/2027 – 04/02/2027         |
+| M6     | 24–28    | 11/02/2027 – 25/02/2027         |
+| PF     | 29–30    | 02/03/2027 – 04/03/2027         |
 
 ---
 
