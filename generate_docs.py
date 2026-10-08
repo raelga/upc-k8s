@@ -256,91 +256,78 @@ MODULES = [
             },
         ],
     },
-    {
-        "id": "M5",
-        "title": "Observabilidad, GitOps, CI/CD y Networking Avanzado",
-        "ects": "2",
-        "hours": 18,
-        "sessions": [
-            "Observabilidad (I): Prometheus, PromQL y Alertmanager",
-            "Observabilidad (II): Grafana y Loki (logs)",
-            "Observabilidad (III): OpenTelemetry, Tempo y correlación",
-            "GitOps y pipelines CI/CD: ArgoCD, Prow y Tekton",
-            "Networking avanzado: Traefik e Istio (service mesh)",
-            "Entrega progresiva y escalado: Argo Rollouts, HPA/VPA, KEDA, Karpenter",
-        ],
-        "description": (
-            "Stack de observabilidad completo: Prometheus, Grafana (Loki, Tempo, Mimir), OpenTelemetry, "
-            "repartido en 3 sesiones (métricas, logs, trazas+correlación) para un ritmo sostenible. "
-            "GitOps con ArgoCD y Prow. Pipelines con Tekton. Networking avanzado con Traefik e Istio "
-            "(service mesh). Estrategias de despliegue (canary, blue/green) con Argo Rollouts. Escalado de "
-            "workloads (HPA, VPA, KEDA, Karpenter)."
-        ),
-        "units": [
-            {
-                "title": "Observabilidad (I): Métricas",
-                "topics": [
-                    "Los tres pilares: métricas, logs, trazas. Correlación entre señales",
-                    "Prometheus: arquitectura, scraping, PromQL, service discovery, Alertmanager",
-                    "Prometheus Operator: ServiceMonitor, PodMonitor, recording rules, alerting rules. Thanos para HA",
-                ],
-            },
-            {
-                "title": "Observabilidad (II): Grafana y Logs",
-                "topics": [
-                    "Grafana: datasources, dashboards, variables, alerting. Grafana as Code (grafonnet, Terraform)",
-                    "Loki: arquitectura, LogQL (mismo modelo mental que PromQL), labels vs indexación de texto completo",
-                    "Promtail: recolección de logs de los Pods y envío a Loki",
-                    "Grafana Explore: consulta y filtrado de logs por label en tiempo real",
-                ],
-            },
-            {
-                "title": "Observabilidad (III): OpenTelemetry, Tempo y Correlación",
-                "topics": [
-                    "OpenTelemetry: especificación OTLP, SDK, auto-instrumentación de la app sin tocar código",
-                    "OpenTelemetry Collector: pipeline de receivers, processors y exporters",
-                    "Tempo: backend de trazas distribuidas, trace ID, spans, integración con Grafana",
-                    "Mimir: métricas a escala/federadas (mención breve, complementa Prometheus de la Sesión 19)",
-                    "Correlación end-to-end: exemplars, salto métrica→traza→logs en un mismo dashboard",
-                ],
-            },
-            {
-                "title": "GitOps y Pipelines CI/CD",
-                "topics": [
-                    "Principios GitOps: declarativo, versionado, automatizado, reconciliado. Pull vs Push model",
-                    "ArgoCD: Applications, AppProjects, ApplicationSets, sync policies, waves, hooks y RBAC",
-                    "ArgoCD avanzado: multi-tenancy, SSO, App of Apps, ApplicationSet generators y notifications",
-                    "ArgoCD Image Updater y Argo Rollouts: patrones de Progressive Delivery con análisis automático",
-                    "Prow: arquitectura CI nativa en Kubernetes, plugins, Tide, Deck dashboard y ProwJobs",
-                    "Tekton: Tasks, Pipelines, PipelineRuns, Workspaces, Triggers y Tekton Chains",
-                    "Integración Tekton + ArgoCD para workflows CI/CD end-to-end en Kubernetes",
-                ],
-            },
-            {
-                "title": "Networking Avanzado (Service Mesh)",
-                "topics": [
-                    "Traefik: IngressRoute CRDs, middlewares, TLS automático, dashboard y métricas",
-                    "Traefik avanzado: TCP/UDP routing, rate limiting, circuit breaker, canary con TraefikService",
-                    "Istio: arquitectura (Istiod + Envoy sidecars), mTLS automático y observabilidad integrada",
-                    "Istio traffic: VirtualServices, DestinationRules, Gateways, traffic shifting, fault injection",
-                    "Istio seguridad: AuthorizationPolicies, PeerAuthentication, circuit breaking, Kiali",
-                    "Ambient Mesh (Istio): modo sin sidecar, ztunnel, waypoints y migración",
-                ],
-            },
-            {
-                "title": "Entrega Progresiva y Escalado",
-                "topics": [
-                    "Estrategias: rolling update, blue/green, canary, A/B testing y trade-offs",
-                    "Argo Rollouts: canary con análisis automatizado, blue-green, integración Istio/Traefik + Prometheus",
-                    "Progressive delivery: Feature flags (Flagger/OpenFeature), métricas como gates, rollback automático",
-                    "HPA: métricas CPU/memory, custom metrics (Prometheus Adapter), scaling behavior",
-                    "VPA: modos (Off/Initial/Auto), recomendaciones y limitaciones",
-                    "KEDA: ScaledObject, ScaledJob, triggers (Kafka, SQS, Prometheus, cron) y cooldown",
-                    "Cluster Autoscaler vs Karpenter: node pools, scale-from-zero, cost optimization",
-                ],
-            },
-        ],
-    },
+    {'id': 'M5',
+     'title': 'Observabilidad, GitOps, CI/CD y Networking Avanzado',
+     'ects': '2',
+     'hours': 21,
+     'sessions': ['Observabilidad (I): Prometheus, PromQL y Alertmanager',
+                  'Observabilidad (II): Grafana y Loki (logs)',
+                  'Observabilidad (III): OpenTelemetry, Tempo y correlación',
+                  'Git y GitOps con ArgoCD',
+                  'Pipelines CI/CD: Prow y Tekton',
+                  'Networking avanzado: Traefik e Istio (service mesh)',
+                  'Entrega progresiva y escalado: Argo Rollouts, HPA/VPA, KEDA, Karpenter'],
+     'description': 'Stack de observabilidad completo: Prometheus, Grafana (Loki, Tempo, Mimir), OpenTelemetry, '
+                    'repartido en 3 sesiones (métricas, logs, trazas+correlación) para un ritmo sostenible. Git '
+                    'básico y principios GitOps junto a ArgoCD. Sesión propia de pipelines CI/CD con Prow y '
+                    'Tekton. Networking avanzado con Traefik e Istio (service mesh). Estrategias de despliegue '
+                    '(canary, blue/green) con Argo Rollouts. Escalado de workloads (HPA, VPA, KEDA, Karpenter).',
+     'units': [{'title': 'Observabilidad (I): Métricas',
+                'topics': ['Los tres pilares: métricas, logs, trazas. Correlación entre señales',
+                           'Prometheus: arquitectura, scraping, PromQL, service discovery, Alertmanager',
+                           'Prometheus Operator: ServiceMonitor, PodMonitor, recording rules, alerting rules. '
+                           'Thanos para HA']},
+               {'title': 'Observabilidad (II): Grafana y Logs',
+                'topics': ['Grafana: datasources, dashboards, variables, alerting. Grafana as Code (grafonnet, '
+                           'Terraform)',
+                           'Loki: arquitectura, LogQL (mismo modelo mental que PromQL), labels vs indexación de '
+                           'texto completo',
+                           'Promtail: recolección de logs de los Pods y envío a Loki',
+                           'Grafana Explore: consulta y filtrado de logs por label en tiempo real']},
+               {'title': 'Observabilidad (III): OpenTelemetry, Tempo y Correlación',
+                'topics': ['OpenTelemetry: especificación OTLP, SDK, auto-instrumentación de la app sin tocar '
+                           'código',
+                           'OpenTelemetry Collector: pipeline de receivers, processors y exporters',
+                           'Tempo: backend de trazas distribuidas, trace ID, spans, integración con Grafana',
+                           'Mimir: métricas a escala/federadas (mención breve, complementa Prometheus de la '
+                           'Sesión 19)',
+                           'Correlación end-to-end: exemplars, salto métrica→traza→logs en un mismo dashboard']},
+               {'title': 'Git y GitOps con ArgoCD',
+                'topics': ['Git para el repositorio de manifiestos: ramas, commits, PR, revisión y conflictos '
+                           'sencillos; sin Git avanzado',
+                           'Principios GitOps: declarativo, versionado, automatizado, reconciliado. Pull vs Push '
+                           'model',
+                           'ArgoCD: Applications, AppProjects, ApplicationSets, sync policies, waves, hooks y '
+                           'RBAC',
+                           'ArgoCD avanzado: multi-tenancy, SSO, App of Apps, ApplicationSet generators y '
+                           'notifications',
+                           'Práctica: modificar un manifiesto, revisar el PR, sincronizar con ArgoCD y observar '
+                           'la reconciliación']},
+               {'title': 'Pipelines CI/CD: Prow y Tekton',
+                'topics': ['Git aplicado a CI: cambios y PR como disparadores de validaciones y pipelines',
+                           'Prow: arquitectura CI nativa en Kubernetes, plugins, Tide, Deck dashboard y ProwJobs',
+                           'Tekton: Tasks, Pipelines, PipelineRuns, Workspaces, Triggers y Tekton Chains',
+                           'Integración Tekton + ArgoCD para workflows CI/CD end-to-end en Kubernetes']},
+               {'title': 'Networking Avanzado (Service Mesh)',
+                'topics': ['Traefik: IngressRoute CRDs, middlewares, TLS automático, dashboard y métricas',
+                           'Traefik avanzado: TCP/UDP routing, rate limiting, circuit breaker, canary con '
+                           'TraefikService',
+                           'Istio: arquitectura (Istiod + Envoy sidecars), mTLS automático y observabilidad '
+                           'integrada',
+                           'Istio traffic: VirtualServices, DestinationRules, Gateways, traffic shifting, fault '
+                           'injection',
+                           'Istio seguridad: AuthorizationPolicies, PeerAuthentication, circuit breaking, Kiali',
+                           'Ambient Mesh (Istio): modo sin sidecar, ztunnel, waypoints y migración']},
+               {'title': 'Entrega Progresiva y Escalado',
+                'topics': ['Estrategias: rolling update, blue/green, canary, A/B testing y trade-offs',
+                           'Argo Rollouts: canary con análisis automatizado, blue-green, integración '
+                           'Istio/Traefik + Prometheus',
+                           'Progressive delivery: Feature flags (Flagger/OpenFeature), métricas como gates, '
+                           'rollback automático',
+                           'HPA: métricas CPU/memory, custom metrics (Prometheus Adapter), scaling behavior',
+                           'VPA: modos (Off/Initial/Auto), recomendaciones y limitaciones',
+                           'KEDA: ScaledObject, ScaledJob, triggers (Kafka, SQS, Prometheus, cron) y cooldown',
+                           'Cluster Autoscaler vs Karpenter: node pools, scale-from-zero, cost optimization']}]},
     {
         "id": "M6",
         "title": "Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster",
