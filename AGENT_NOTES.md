@@ -4,6 +4,44 @@
 > real del repo (que esta aplicado en disco vs que esta acordado en conversacion
 > pero AUN NO escrito en ningun archivo). Generado: 2026-10-08.
 
+## Acuerdos posteriores — pendientes de aplicar al generador
+
+Esta sección prevalece sobre las notas históricas inferiores. El usuario pide trabajar localmente, registrar y commitear cada cambio aprobado, y regenerar todos los documentos al final. No ajustar por ahora el contenido para cuadrar horas o ECTS: cubrir el temario oficial copiado por el usuario desde https://upcschool.upc.edu/esp/estudis/formacio/curs/305300/platform-engineering-devops-kubernetes/.
+
+### M3 acordado: seis sesiones
+
+1. Contenedores y OCI.
+2. Arquitectura, API, kind, autenticación y RBAC básico.
+3. Ejecutar y configurar: Pods, Deployments, Jobs, ConfigMaps, Secrets, probes, recursos y scheduling básico.
+4. Persistencia y workloads con estado: volúmenes, PV/PVC, StorageClass, CSI, StatefulSets y restricciones de ubicación.
+5. Comunicar y exponer: Services, CoreDNS, CNI, NetworkPolicy e Ingress/Gateway API.
+6. Clúster desde cero: PKI, etcd, control plane y unión de un nodo. Sesión propia con material preparado.
+
+### M4 acordado: cinco sesiones
+
+1. EKS y Kubernetes autogestionado en AWS; comparar responsabilidades y operación sobre EC2/VPC, sin repetir el montaje desde cero de M3.
+2. AKS y GKE: aplicar el mismo marco de identidad, redes, nodos, actualizaciones y modos de operación.
+3. Kustomize y Helm: bases/overlays/patches; charts existentes, values/templates/releases; combinación de ambas herramientas; chart que instala un operator. Charts complejos propios como ampliación.
+4. ExternalDNS y cert-manager: DNS necesario, publicación de registros, certificados/ACME y renovación; exponer la misma aplicación mediante dominio y HTTPS. Crossplane se concentra en M6, conservando la conexión con M4.
+5. Gestión de secretos externos: almacén, identidad/permisos, entrega como Secret o archivos y actualización/rotación. AWS Secrets Manager como ejemplo; ESO y ASCP/CSI como alternativas. Vault y ESO deben cubrirse porque están nombrados oficialmente. Continuidad con Terraform y Helm; no fijar todavía la implementación del laboratorio.
+
+Admisión y políticas (PSA/Kyverno/Gatekeeper) quedan en el aire para decidir ubicación y profundidad. Admission controllers sí aparece en el contenido oficial de M3. Pendiente contrastar también cobertura de Git avanzado, testing/CI de Terraform y redes/DNS/CDN con Cloudflare, recortados previamente pero explícitos en la web; no dar esos huecos por resueltos.
+
+### M5: bloque de observabilidad aprobado
+
+Tres sesiones sobre la misma aplicación, con continuidad del entorno Kubernetes y despliegues Helm preparados. Priorizar consulta y diagnóstico frente a instalación. Aplicación con dos servicios preparada para la tercera sesión.
+
+1. Prometheus, PromQL y Alertmanager: qué medir (infraestructura/aplicación), contadores/histogramas, labels/cardinalidad; scraping, exporters, descubrimiento; Prometheus Operator, ServiceMonitor/PodMonitor; consultas de tasas, errores, latencia y agregaciones; reglas y Alertmanager (agrupación, routing, silencios). Lab: conectar la app, provocar errores/carga, consultar y comprobar una alerta. Introducir Mimir y almacenamiento de métricas a escala, sin laboratorio completo. kube-prometheus-stack preparado. HA/federación/operación avanzada como ampliación.
+   Reparto orientativo de 180 min: 20 métricas, 30 recogida, 40 PromQL, 25 alertas, 55 lab, 10 límites/Mimir.
+2. Grafana, Loki y Alloy: datasources, paneles, variables y dashboard pequeño con tráfico/errores/latencia; Loki, labels frente a campos del mensaje, cardinalidad; recoger logs de Pods con Alloy, configuración guiada/preparada; LogQL y Explore, filtros y extracción de JSON. Lab: provocar fallo, detectarlo en métricas y encontrar logs en el mismo intervalo. No profundizar en Grafana as Code ni operación avanzada de Loki. **El usuario ha aprobado reintroducir Alloy**: este acuerdo sustituye la propuesta histórica de quitarlo.
+3. OpenTelemetry, Collector y Tempo: spans/contexto/propagación entre servicios, instrumentación automática, receivers/processors/exporters y búsqueda de peticiones lentas desde Grafana. Lab: provocar latencia y correlacionar métrica → traza → logs. Preparar trace ID en logs, enlaces de Grafana y exemplars cuando proceda. Collector para trazas; no repetir la recogida de logs con Alloy. Es la sesión más exigente: no desarrollar instrumentación desde cero. Mimir ya se introduce en la primera sesión.
+
+Resultado pedagógico: 1) qué falla y cuándo actuar; 2) qué ocurrió cuando falló; 3) dónde se atasca la petición. Explicar el solapamiento entre Alloy y OTel Collector y el motivo de la configuración elegida para los labs. No presentar su reparto logs/trazas como una limitación de las herramientas.
+
+Siguiente bloque por revisar: Git/GitOps con ArgoCD, después Prow/Tekton. Todavía no aplicar ni generar documentos para estos acuerdos; las notas son el registro de continuidad.
+
+---
+
 ## Actualización aplicada — decisión del usuario (2026-10-08)
 
 Esta sección prevalece sobre las propuestas y el estado histórico que siguen debajo.
