@@ -8,6 +8,20 @@
 
 Esta sección prevalece sobre las notas históricas inferiores. El usuario pide trabajar localmente, registrar y commitear cada cambio aprobado, y regenerar todos los documentos al final. No ajustar por ahora el contenido para cuadrar horas o ECTS: cubrir el temario oficial copiado por el usuario desde https://upcschool.upc.edu/esp/estudis/formacio/curs/305300/platform-engineering-devops-kubernetes/.
 
+### Seguridad y Cloudflare — último acuerdo aprobado
+
+Esta sección prevalece sobre los repartos y pendientes anteriores.
+
+- Se añade una sesión de **seguridad de imágenes y políticas de admisión**, tras los fundamentos/workloads/networking de M3 y antes de M4. M3 pasa a siete sesiones. Reparto provisional: M1=1, M2=3, M3=7, M4=5, M5=9, M6=5: **30 sesiones / 90h lectivas, Proyecto Final aparte**. M6 continúa provisional.
+- **Trivy** para escanear una imagen, interpretar vulnerabilidades y corregir un ejemplo; el escaneo se incorpora al pipeline de Tekton. En la sesión de seguridad se explica/demuestra este control y se practica admisión, sin repetir un laboratorio completo de CI.
+- **PSA y Kyverno** para evitar configuraciones inseguras; Kyverno como herramienta práctica principal. **OPA/Gatekeeper** como comparación y demostración breve, no segundo motor aprendido en profundidad. Lab: rechazar un Pod privilegiado o que incumpla una política, corregirlo y comprobar admisión.
+- Distinguir análisis de imagen de evaluación de manifiestos. No prometer que instalar Trivy y el motor de políticas conecte automáticamente los resultados. Controles separados en el recorrido principal.
+- **Extras:** firmas de imágenes, SBOM y conexión de resultados del escaneo con admisión mediante attestations firmadas vinculadas al digest. Kyverno puede verificar firmas/attestations; Gatekeeper requeriría integración/proveedor externo según diseño. No desarrollar esta conexión como parte del lab básico.
+- **Snyk descartado por petición expresa del usuario:** no incluirlo como herramienta, comparación ni requisito de cuenta.
+- **Cloudflare** se cubre con DNS/ExternalDNS/cert-manager: registros, publicación automática y ACME DNS-01. Su token puede servir como ejemplo de credencial externa protegida; no presentar Cloudflare como un almacén equivalente a Vault/Secrets Manager. **CDN sigue pendiente** de encaje para cubrir el contenido oficial.
+- Git avanzado, testing/CI de Terraform y configuración OIDC siguen pendientes de afinar. Admisión ya tiene sesión propia; no mantenerla como contenido sin ubicación.
+- Sesión de seguridad en amarillo con ejemplos preparados. Documentos/generador pendientes de actualización conjunta al final.
+
 ### Últimos acuerdos: reparto y concentración (prevalecen sobre propuestas anteriores)
 
 - Reparto actual: M1 una sesión DevOps/PE; M2 tres sesiones por proveedor (AWS/Azure/GCP), con Terraform/OpenTofu integrado y Python progresivo. Se elimina la sesión independiente de automatización. Bash se aplica principalmente a scripting/Tekton.
