@@ -20,7 +20,10 @@ Esta sección prevalece sobre las notas históricas inferiores. El usuario pide 
 - **Networking M3 aprobado, pasa a amarillo:** recorrer Pod→Pod (CNI), descubrimiento/acceso mediante Service/CoreDNS, exposición con un ejemplo Gateway API y explicación de Ingress, NetworkPolicy para bloquear/permitir lo necesario. Clúster con CNI y controlador de entrada preparados; una aplicación y manifiestos preparados.
 - **Fuera del laboratorio de networking M3:** instalación y comparación de varios CNI, catálogo completo de tipos de rutas y networking avanzado. Esto limita la práctica, no elimina Services/DNS/CNI/NetworkPolicy/Ingress/Gateway API del contenido. Traefik/Istio avanzado va a M5; comparativas de CNI y rutas adicionales quedan como ampliación. El usuario pide mantener explícitamente esta nota de exclusiones.
 
-Siguiente rojo por revisar: OpenTelemetry/Collector/Tempo y correlación; después Traefik/Istio y escalado. No regenerar documentos aún.
+- **Trazas y correlación aprobado, pasa a amarillo:** dos servicios preparados; petición distribuida e instrumentación automática, sin programarla desde cero. Seguir traza por Collector hasta Tempo; provocar latencia y localizar el servicio responsable en Grafana; relacionar con métricas/logs con enlaces previamente configurados. Objetivo: entender y diagnosticar una petición distribuida.
+- **Fuera de esta sesión / ampliación:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación de Collector/Tempo en producción. OpenTelemetry, Collector, Tempo y correlación se mantienen en el contenido.
+
+Siguiente rojo por revisar: Traefik/Istio; después escalado. No regenerar documentos aún.
 
 ### M1–M2: sesiones 2–5 reorganizadas y aprobadas
 
