@@ -4,6 +4,14 @@
 > real del repo (que esta aplicado en disco vs que esta acordado en conversacion
 > pero AUN NO escrito en ningun archivo). Generado: 2026-10-08.
 
+## Consolidación de la edición 2026
+
+Por petición expresa del usuario, se han creado los documentos del curso en `2026/`: syllabus resumido, syllabus detallado, calendario Markdown, calendario CSV y datos estructurados `curso.json`, con índice README. Esta carpeta prevalece como referencia de la edición sobre los repartos históricos inferiores. El generador/documentos de la raíz siguen correspondiendo al reparto anterior; no regenerar esta edición con ese script.
+
+30 clases / 90h lectivas sin Proyecto Final. Inicio 03/11/2026; sesión 30 el 04/03/2027; PF propuesto 09/03 y 11/03, reservas 16/03 y 18/03. Europe/Madrid, martes/jueves 18:00–21:00, conservando festivos del repositorio. PF/docencia UPC y alcance final M6 por confirmar. Git avanzado, testing/CI Terraform, CDN Cloudflare y práctica OIDC permanecen identificados como pendientes; no afirmar que estén resueltos.
+
+La instrucción de generar al final se ha cumplido para esta carpeta bajo autorización del usuario, quien además pidió nuevo commit y push. Los contenidos detallados separan núcleo, lab y extras sin introducir Snyk ni volver a quitar Alloy.
+
 ## Acuerdos posteriores — pendientes de aplicar al generador
 
 Esta sección prevalece sobre las notas históricas inferiores. El usuario pide trabajar localmente, registrar y commitear cada cambio aprobado, y regenerar todos los documentos al final. No ajustar por ahora el contenido para cuadrar horas o ECTS: cubrir el temario oficial copiado por el usuario desde https://upcschool.upc.edu/esp/estudis/formacio/curs/305300/platform-engineering-devops-kubernetes/.

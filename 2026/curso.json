@@ -1,0 +1,538 @@
+{
+  "edition": "2026–2027",
+  "timezone": "Europe/Madrid",
+  "class_hours": 3,
+  "lecture_hours": 90,
+  "sessions": [
+    {
+      "number": 1,
+      "module": "M1",
+      "title": "DevOps y Platform Engineering",
+      "teacher": "René",
+      "load": "verde",
+      "objective": "Relacionar DevOps, SRE y Platform Engineering con necesidades de una organización",
+      "contents": [
+        "CALMS y prácticas DevOps",
+        "IDP, golden paths y experiencia de desarrollo",
+        "Team Topologies y métricas DORA"
+      ],
+      "lab": "Propuesta breve de plataforma para una empresa: usuarios, capacidades y criterios de éxito",
+      "extras": "Implantación completa de Backstage y diseño organizativo en profundidad",
+      "date": "2026-11-03"
+    },
+    {
+      "number": 2,
+      "module": "M2",
+      "title": "AWS, Terraform y Python",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Entender una infraestructura AWS pequeña y verificar su funcionamiento mediante código",
+      "contents": [
+        "IAM, regiones y zonas",
+        "VPC, subredes, Security Groups, EC2 y S3, contexto de ECR",
+        "HCL, provider, recursos, variables y plan/apply/destroy",
+        "consulta Python preparada e IA para adaptar código"
+      ],
+      "lab": "Lanzar el ejemplo preparado, explicar mientras se despliega, modificar una variable, consultar recursos y verificar limpieza",
+      "extras": "Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless",
+      "date": "2026-11-05"
+    },
+    {
+      "number": 3,
+      "module": "M2",
+      "title": "Azure, Terraform y automatización Python",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Transferir el patrón de AWS a Azure y reconocer diferencias de identidad y red",
+      "contents": [
+        "Entra ID, suscripciones, grupos de recursos y Managed Identities",
+        "VNet, NSG, VM y Blob Storage, contexto de ACR",
+        "variables, outputs y módulos existentes",
+        "adaptación del script Python"
+      ],
+      "lab": "Reproducir el caso común con configuración preparada y explicar equivalencias y diferencias",
+      "extras": "SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados",
+      "date": "2026-11-10"
+    },
+    {
+      "number": 4,
+      "module": "M2",
+      "title": "GCP, estado remoto y comparación de IaC",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Aplicar el caso común en GCP y comparar proveedores y formas de definir infraestructura",
+      "contents": [
+        "Proyectos, cuentas de servicio e IAM",
+        "VPC, firewall, Compute Engine y Cloud Storage, contexto de Artifact Registry",
+        "estado local/remoto, permisos y locking según backend",
+        "Pulumi con Python frente a HCL durante 10–15 minutos"
+      ],
+      "lab": "Adaptar el caso preparado, consultar recursos y comparar identidad, red, estado y portabilidad",
+      "extras": "Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados; la comparación Pulumi es ampliación si falta tiempo",
+      "date": "2026-11-12"
+    },
+    {
+      "number": 5,
+      "module": "M3",
+      "title": "Contenedores y ecosistema OCI",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Construir, ejecutar y publicar una imagen entendiendo aislamiento y runtime",
+      "contents": [
+        "Namespaces, cgroups y capas OCI",
+        "Dockerfile y build multi-stage",
+        "Docker/containerd/CRI-O y CRI",
+        "registros e higiene de imágenes"
+      ],
+      "lab": "Construir una imagen pequeña y ejecutar/publicar la aplicación que servirá de hilo conductor",
+      "extras": "Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en seguridad y Tekton",
+      "date": "2026-11-17"
+    },
+    {
+      "number": 6,
+      "module": "M3",
+      "title": "Arquitectura, API, kind, autenticación y RBAC",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Seguir una petición kubectl y distinguir autenticación de autorización",
+      "contents": [
+        "Control plane y nodos",
+        "API, etcd, reconciliación y ejecución de Pods",
+        "kubeconfig, certificados, tokens y ServiceAccounts",
+        "Role/RoleBinding",
+        "OIDC y admisión conceptual"
+      ],
+      "lab": "Levantar kind, localizar componentes y comprobar una operación permitida y otra denegada",
+      "extras": "Configuración completa OIDC pendiente de alcance; montaje interno se aborda en la sesión de clúster desde cero",
+      "date": "2026-11-19"
+    },
+    {
+      "number": 7,
+      "module": "M3",
+      "title": "Workloads, configuración y recursos",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Desplegar una aplicación y gestionar su configuración y ciclo de vida",
+      "contents": [
+        "Pods, Deployments, Jobs y CronJobs",
+        "ConfigMap/Secret",
+        "probes",
+        "requests/limits y scheduling básico",
+        "namespaces, labels y selectors"
+      ],
+      "lab": "Modificar configuración, observar probes, actualizar la aplicación y comprobar asignación de recursos",
+      "extras": "Catálogo exhaustivo de controladores y scheduling avanzado",
+      "date": "2026-11-24"
+    },
+    {
+      "number": 8,
+      "module": "M3",
+      "title": "Persistencia, CSI y StatefulSets",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Mantener datos y comprender las necesidades de workloads con estado",
+      "contents": [
+        "Volúmenes, PV/PVC, StorageClass y aprovisionamiento dinámico",
+        "función de CSI",
+        "StatefulSet",
+        "afinidad y restricciones de ubicación relevantes para almacenamiento"
+      ],
+      "lab": "Añadir persistencia, recrear un Pod y verificar datos y comportamiento del workload",
+      "extras": "Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada",
+      "date": "2026-11-26"
+    },
+    {
+      "number": 9,
+      "module": "M3",
+      "title": "Networking y exposición de aplicaciones",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Seguir tráfico entre Pods, descubrir servicios y exponer la aplicación",
+      "contents": [
+        "CNI en Pod→Pod",
+        "Services y CoreDNS",
+        "ejemplo Gateway API y relación con Ingress",
+        "NetworkPolicy"
+      ],
+      "lab": "Con CNI/controlador preparados, exponer la aplicación, bloquear tráfico y permitir solo conexiones necesarias",
+      "extras": "Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio",
+      "date": "2026-12-01"
+    },
+    {
+      "number": 10,
+      "module": "M3",
+      "title": "Clúster componente a componente",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Comprender cómo se ensamblan y autentican los componentes de Kubernetes",
+      "contents": [
+        "PKI, etcd, kube-apiserver, scheduler y controller-manager",
+        "kubelet, runtime y kube-proxy",
+        "unión de un nodo y TLS bootstrapping"
+      ],
+      "lab": "Arrancar un clúster reducido con material preparado, unir un nodo y ejecutar un Pod",
+      "extras": "Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada",
+      "date": "2026-12-03"
+    },
+    {
+      "number": 11,
+      "module": "M3",
+      "title": "Seguridad de imágenes y políticas de admisión",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Distinguir análisis de imagen y control de recursos admitidos",
+      "contents": [
+        "Trivy e interpretación de vulnerabilidades",
+        "PSA",
+        "Kyverno como herramienta práctica",
+        "OPA/Gatekeeper como comparación breve"
+      ],
+      "lab": "Revisar una imagen, rechazar un Pod privilegiado o que incumpla una política, corregirlo y comprobar admisión",
+      "extras": "Firmas, SBOM, attestations y conexión automática entre escaneo/admisión; segundo motor de políticas completo",
+      "date": "2026-12-10"
+    },
+    {
+      "number": 12,
+      "module": "M4",
+      "title": "EKS y kOps en AWS",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Comparar Kubernetes gestionado y autogestionado sobre la misma base AWS",
+      "contents": [
+        "Terraform para lanzar EKS",
+        "kOps con configuración preparada",
+        "control plane, red, identidad y nodos",
+        "responsabilidades, upgrades, disponibilidad, costes y recuperación"
+      ],
+      "lab": "Explicar durante ambos despliegues, solapar esperas, desplegar la misma aplicación y comparar; comprobar permisos y disponer de clústeres de respaldo",
+      "extras": "Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad",
+      "date": "2026-12-15"
+    },
+    {
+      "number": 13,
+      "module": "M4",
+      "title": "AKS y GKE",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Aplicar la comparación de operación cloud a Azure y GCP",
+      "contents": [
+        "Identidad de workloads",
+        "networking",
+        "pools de nodos",
+        "actualizaciones y responsabilidad operativa",
+        "GKE Standard/Autopilot y opciones de AKS"
+      ],
+      "lab": "Demostración preparada de los mismos requisitos y comparación razonada con EKS",
+      "extras": "Instalaciones completas independientes y catálogo de add-ons de ambos proveedores",
+      "date": "2026-12-17"
+    },
+    {
+      "number": 14,
+      "module": "M4",
+      "title": "Kustomize y Helm",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Adaptar manifiestos y usar paquetes existentes",
+      "contents": [
+        "Bases, overlays y patches",
+        "charts, values, templates y releases",
+        "uso combinado de render Helm y Kustomize",
+        "chart que instala un operator"
+      ],
+      "lab": "Adaptar la aplicación a dos entornos e instalar/configurar un chart, distinguiendo chart, operator y recursos gestionados",
+      "extras": "Creación de charts complejos desde cero y catálogo de plugins",
+      "date": "2026-12-22"
+    },
+    {
+      "number": 15,
+      "module": "M4",
+      "title": "DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager",
+      "teacher": "Rael",
+      "load": "verde",
+      "objective": "Publicar una aplicación con dominio y certificados renovables",
+      "contents": [
+        "Registros DNS, resolución y TTL",
+        "Cloudflare como provider",
+        "ExternalDNS",
+        "Issuer/ClusterIssuer y ACME DNS-01",
+        "protección del token"
+      ],
+      "lab": "Instalar componentes por Helm sobre el entorno anterior, publicar el registro y verificar HTTPS y renovación",
+      "extras": "DNSSEC/DoH y operación DNS avanzada; CDN de Cloudflare permanece pendiente de encaje, no se elimina como contenido oficial",
+      "date": "2027-01-07"
+    },
+    {
+      "number": 16,
+      "module": "M4",
+      "title": "Secretos externos: Vault y External Secrets Operator",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Separar secretos de manifiestos y aplicar identidad y permisos de acceso",
+      "contents": [
+        "Vault y ESO explícitos del programa",
+        "despliegue guiado mediante Helm, operator como opción sin fijar uno",
+        "autenticación Kubernetes y política básica",
+        "SecretStore/ExternalSecret",
+        "AWS Secrets Manager como alternativa y entrega CSI frente a Secret"
+      ],
+      "lab": "Aplicación consume secreto externo, modificarlo y comprobar sincronización y comportamiento de la aplicación",
+      "extras": "HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state",
+      "date": "2027-01-12"
+    },
+    {
+      "number": 17,
+      "module": "M5",
+      "title": "Prometheus, PromQL y Alertmanager",
+      "teacher": "David",
+      "load": "amarillo",
+      "objective": "Detectar fallos mediante métricas y definir cuándo alertar",
+      "contents": [
+        "Contadores/histogramas, labels/cardinalidad",
+        "scraping/exporters",
+        "Operator, ServiceMonitor/PodMonitor",
+        "tasas, errores, latencia y agregación",
+        "reglas, routing y silencios",
+        "introducción Mimir"
+      ],
+      "lab": "kube-prometheus-stack preparado, conectar la app, provocar errores/carga, consultar y comprobar una alerta",
+      "extras": "HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre",
+      "date": "2027-01-14"
+    },
+    {
+      "number": 18,
+      "module": "M5",
+      "title": "Grafana, Loki y Alloy",
+      "teacher": "David",
+      "load": "amarillo",
+      "objective": "Pasar de un síntoma en métricas a mensajes que explican el fallo",
+      "contents": [
+        "Datasources, paneles y variables",
+        "dashboard de tráfico/errores/latencia",
+        "labels frente a campos de logs",
+        "Alloy para logs de Pods",
+        "LogQL, Explore y JSON"
+      ],
+      "lab": "Provocar fallo, detectarlo en el dashboard y localizar logs del mismo intervalo con configuración guiada de Alloy",
+      "extras": "Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy",
+      "date": "2027-01-19"
+    },
+    {
+      "number": 19,
+      "module": "M5",
+      "title": "OpenTelemetry, Collector, Tempo y correlación",
+      "teacher": "David",
+      "load": "amarillo",
+      "objective": "Localizar dónde se atasca una petición entre servicios",
+      "contents": [
+        "Spans, contexto y propagación",
+        "instrumentación automática",
+        "receivers/processors/exporters",
+        "Tempo/Grafana",
+        "trace ID en logs, enlaces y exemplars cuando proceda"
+      ],
+      "lab": "Dos servicios preparados, provocar latencia y recorrer métrica→traza→logs; Collector para trazas y Alloy para logs",
+      "extras": "SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo",
+      "date": "2027-01-21"
+    },
+    {
+      "number": 20,
+      "module": "M5",
+      "title": "Scripting y pipelines con Tekton",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Automatizar tareas verificables y construir una imagen mediante pipeline",
+      "contents": [
+        "Git mínimo",
+        "Bash para CLI, errores y resultados, jq",
+        "Python cuando aporte valor",
+        "asistencia de IA y revisión",
+        "Tasks, Pipelines, PipelineRuns y Workspaces",
+        "Trivy en CI"
+      ],
+      "lab": "Conectar tareas preparadas de build/test/scan/publicación y comprobar fallos y resultados",
+      "extras": "Curso completo de Bash/Python; Triggers/Chains avanzados y attestations; testing/CI Terraform pendiente de concretar, no omitir cobertura oficial",
+      "date": "2027-01-26"
+    },
+    {
+      "number": 21,
+      "module": "M5",
+      "title": "Git y Prow: colaboración y validaciones",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Conectar un cambio revisado con las comprobaciones conocidas de CI",
+      "contents": [
+        "Ramas, commits, PR, revisión y conflictos sencillos",
+        "ProwJobs, plugins, Tide y Deck como visión operativa",
+        "relación con pipeline Tekton"
+      ],
+      "lab": "Prow preparado, abrir un PR, observar validaciones y resolver un fallo antes del merge",
+      "extras": "Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas; alcance exacto de Git avanzado oficial pendiente",
+      "date": "2027-01-28"
+    },
+    {
+      "number": 22,
+      "module": "M5",
+      "title": "GitOps con ArgoCD",
+      "teacher": "Rael",
+      "load": "amarillo",
+      "objective": "Reconciliar el estado del repositorio con Kubernetes",
+      "contents": [
+        "Declarativo, versionado y pull",
+        "Application, diferencias, health y sync policies",
+        "Helm/Kustomize",
+        "drift y corrección"
+      ],
+      "lab": "Desplegar imagen producida por CI, modificar manifiesto mediante PR, observar sync y provocar drift manual",
+      "extras": "ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves",
+      "date": "2027-02-02"
+    },
+    {
+      "number": 23,
+      "module": "M5",
+      "title": "Traefik e Istio",
+      "teacher": "David",
+      "load": "amarillo",
+      "objective": "Distinguir entrada externa y comunicación segura entre servicios",
+      "contents": [
+        "Traefik para routing/TLS con cert-manager",
+        "Istio para mTLS y política de acceso",
+        "reparto entre versiones como preparación de Rollouts"
+      ],
+      "lab": "Componentes preparados, modificar pocas reglas, comprobar acceso y comunicación y observar reparto de tráfico",
+      "extras": "Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo",
+      "date": "2027-02-04"
+    },
+    {
+      "number": 24,
+      "module": "M5",
+      "title": "Entrega progresiva con Argo Rollouts",
+      "teacher": "David",
+      "load": "amarillo",
+      "objective": "Desplegar versiones con métricas que deciden avance o rollback",
+      "contents": [
+        "Canary y blue/green",
+        "Rollouts",
+        "integración con ArgoCD, Prometheus e Istio/Traefik",
+        "análisis y rollback"
+      ],
+      "lab": "Canary principal sobre la misma app, provocar degradación y comprobar retorno; blue/green como comparación",
+      "extras": "Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking",
+      "date": "2027-02-11"
+    },
+    {
+      "number": 25,
+      "module": "M5",
+      "title": "Escalado con HPA, VPA, KEDA y Karpenter",
+      "teacher": "David",
+      "load": "amarillo",
+      "objective": "Distinguir ajuste de recursos, réplicas y capacidad de nodos",
+      "contents": [
+        "HPA por CPU como práctica principal",
+        "recomendaciones VPA",
+        "KEDA por eventos y su uso de HPA",
+        "Karpenter ante Pods pendientes y consolidación"
+      ],
+      "lab": "Generar carga, observar HPA; consulta VPA; demos preparadas de cola KEDA y provisión/consolidación de nodos",
+      "extras": "Catálogo triggers, métricas complejas, tuning, políticas Spot/capacidad y optimización profunda de costes; evitar controladores compitiendo",
+      "date": "2027-02-16"
+    },
+    {
+      "number": 26,
+      "module": "M6",
+      "title": "Operators con Go y Kubebuilder/Operator SDK",
+      "teacher": "Profesor UPC — por confirmar",
+      "load": "amarillo",
+      "objective": "Reconocer cuándo un operator automatiza conocimiento operativo",
+      "contents": [
+        "CRD, estado deseado y reconciliación",
+        "Go mínimo para leer tipos/structs/errores",
+        "organización de Kubebuilder/Operator SDK"
+      ],
+      "lab": "Leer un operator preparado, crear un recurso, observar actuación y modificar un comportamiento pequeño",
+      "extras": "Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero; sesión provisional de visión general",
+      "date": "2027-02-18"
+    },
+    {
+      "number": 27,
+      "module": "M6",
+      "title": "Cluster API y Hosted Control Planes",
+      "teacher": "Profesor UPC — por confirmar",
+      "load": "amarillo",
+      "objective": "Comparar automatización del ciclo de vida y ubicación del control plane",
+      "contents": [
+        "Cluster API: creación/escalado/upgrades",
+        "HyperShift, vCluster y Kamaji: aislamiento, arquitectura y casos de uso",
+        "enfoques no equivalentes"
+      ],
+      "lab": "Demostraciones preparadas y comparación de responsabilidades, sin asumir integración universal de todas las herramientas",
+      "extras": "Instalación de todos los productos y operación avanzada; propuesta provisional",
+      "date": "2027-02-23"
+    },
+    {
+      "number": 28,
+      "module": "M6",
+      "title": "Knative y serverless",
+      "teacher": "Profesor UPC — por confirmar",
+      "load": "verde",
+      "objective": "Entender cuándo usar ejecución orientada a demanda sobre Kubernetes",
+      "contents": [
+        "Knative Serving, revisions, routing y scale-to-zero",
+        "contexto serverless",
+        "Virtual Kubelet como mención opcional de continuidad histórica"
+      ],
+      "lab": "Publicar una función/servicio preparado, generar tráfico y observar escalado a cero",
+      "extras": "Plataforma serverless completa, Eventing avanzado y Virtual Kubelet profundo; propuesta provisional",
+      "date": "2027-02-25"
+    },
+    {
+      "number": 29,
+      "module": "M6",
+      "title": "Multi-cluster: Istio, Cilium y Submariner",
+      "teacher": "Profesor UPC — por confirmar",
+      "load": "amarillo",
+      "objective": "Comparar conectividad de servicios y redes entre clústeres",
+      "contents": [
+        "Istio multicluster",
+        "Cilium Cluster Mesh",
+        "Submariner",
+        "identidad, conectividad y limitaciones",
+        "distinguir sus ámbitos"
+      ],
+      "lab": "Diagramas y demostración preparada de tráfico entre clústeres, comparando opciones",
+      "extras": "Desplegar las tres soluciones desde cero; OCM/Rancher fuera del recorrido actual; propuesta provisional",
+      "date": "2027-03-02"
+    },
+    {
+      "number": 30,
+      "module": "M6",
+      "title": "Crossplane y recuperación con Velero",
+      "teacher": "Profesor UPC — por confirmar",
+      "load": "amarillo",
+      "objective": "Distinguir aprovisionamiento declarativo y recuperación ante desastres",
+      "contents": [
+        "Crossplane: providers, managed resources, compositions y XRDs",
+        "relación con IaC de M2 y M4",
+        "Velero: backup/restore, alcance y límites"
+      ],
+      "lab": "Demos separadas de recurso cloud reconciliado y recuperación de aplicación; discutir dependencias, datos y RPO/RTO",
+      "extras": "Composition Functions avanzado, plataforma multicloud completa y DR de producción; propuesta provisional",
+      "date": "2027-03-04"
+    }
+  ],
+  "non_teaching_dates": {
+    "2026-12-08": "La Immaculada",
+    "2026-12-24": "Vacaciones de Navidad",
+    "2026-12-29": "Vacaciones de Navidad",
+    "2026-12-31": "Vacaciones de Navidad",
+    "2027-01-05": "Vacaciones de Navidad",
+    "2027-02-09": "Festivo UPC"
+  },
+  "project_dates_proposed": [
+    "2027-03-09",
+    "2027-03-11"
+  ],
+  "reserve_dates": [
+    "2027-03-16",
+    "2027-03-18"
+  ]
+}
