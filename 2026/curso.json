@@ -68,7 +68,7 @@
         "Pulumi con Python frente a HCL durante 10–15 minutos"
       ],
       "lab": "Adaptar el caso preparado, consultar recursos y comparar identidad, red, estado y portabilidad",
-      "extras": "Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados; la comparación Pulumi es ampliación si falta tiempo",
+      "extras": "Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados",
       "date": "2026-11-12"
     },
     {
@@ -103,7 +103,7 @@
         "OIDC y admisión conceptual"
       ],
       "lab": "Levantar kind, localizar componentes y comprobar una operación permitida y otra denegada",
-      "extras": "Configuración completa OIDC pendiente de alcance; montaje interno se aborda en la sesión de clúster desde cero",
+      "extras": "Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero",
       "date": "2026-11-19"
     },
     {
@@ -258,7 +258,7 @@
         "protección del token"
       ],
       "lab": "Instalar componentes por Helm sobre el entorno anterior, publicar el registro y verificar HTTPS y renovación",
-      "extras": "DNSSEC/DoH y operación DNS avanzada; CDN de Cloudflare permanece pendiente de encaje, no se elimina como contenido oficial",
+      "extras": "DNSSEC/DoH y operación DNS avanzada",
       "date": "2027-01-07"
     },
     {
@@ -350,7 +350,7 @@
         "Trivy en CI"
       ],
       "lab": "Conectar tareas preparadas de build/test/scan/publicación y comprobar fallos y resultados",
-      "extras": "Curso completo de Bash/Python; Triggers/Chains avanzados y attestations; testing/CI Terraform pendiente de concretar, no omitir cobertura oficial",
+      "extras": "Curso completo de Bash/Python; Triggers/Chains avanzados y attestations",
       "date": "2027-01-26"
     },
     {
@@ -366,7 +366,7 @@
         "relación con pipeline Tekton"
       ],
       "lab": "Prow preparado, abrir un PR, observar validaciones y resolver un fallo antes del merge",
-      "extras": "Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas; alcance exacto de Git avanzado oficial pendiente",
+      "extras": "Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas",
       "date": "2027-01-28"
     },
     {
@@ -440,7 +440,7 @@
       "number": 26,
       "module": "M6",
       "title": "Operators con Go y Kubebuilder/Operator SDK",
-      "teacher": "Profesor UPC — por confirmar",
+      "teacher": "Profesor UPC",
       "load": "amarillo",
       "objective": "Reconocer cuándo un operator automatiza conocimiento operativo",
       "contents": [
@@ -449,14 +449,14 @@
         "organización de Kubebuilder/Operator SDK"
       ],
       "lab": "Leer un operator preparado, crear un recurso, observar actuación y modificar un comportamiento pequeño",
-      "extras": "Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero; sesión provisional de visión general",
+      "extras": "Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero",
       "date": "2027-02-18"
     },
     {
       "number": 27,
       "module": "M6",
       "title": "Cluster API y Hosted Control Planes",
-      "teacher": "Profesor UPC — por confirmar",
+      "teacher": "Profesor UPC",
       "load": "amarillo",
       "objective": "Comparar automatización del ciclo de vida y ubicación del control plane",
       "contents": [
@@ -465,30 +465,30 @@
         "enfoques no equivalentes"
       ],
       "lab": "Demostraciones preparadas y comparación de responsabilidades, sin asumir integración universal de todas las herramientas",
-      "extras": "Instalación de todos los productos y operación avanzada; propuesta provisional",
+      "extras": "Instalación de todos los productos y operación avanzada",
       "date": "2027-02-23"
     },
     {
       "number": 28,
       "module": "M6",
       "title": "Knative y serverless",
-      "teacher": "Profesor UPC — por confirmar",
+      "teacher": "Profesor UPC",
       "load": "verde",
       "objective": "Entender cuándo usar ejecución orientada a demanda sobre Kubernetes",
       "contents": [
         "Knative Serving, revisions, routing y scale-to-zero",
         "contexto serverless",
-        "Virtual Kubelet como mención opcional de continuidad histórica"
+        "Introducción opcional a Virtual Kubelet"
       ],
       "lab": "Publicar una función/servicio preparado, generar tráfico y observar escalado a cero",
-      "extras": "Plataforma serverless completa, Eventing avanzado y Virtual Kubelet profundo; propuesta provisional",
+      "extras": "Plataforma serverless completa, Eventing avanzado y Virtual Kubelet profundo",
       "date": "2027-02-25"
     },
     {
       "number": 29,
       "module": "M6",
       "title": "Multi-cluster: Istio, Cilium y Submariner",
-      "teacher": "Profesor UPC — por confirmar",
+      "teacher": "Profesor UPC",
       "load": "amarillo",
       "objective": "Comparar conectividad de servicios y redes entre clústeres",
       "contents": [
@@ -499,14 +499,14 @@
         "distinguir sus ámbitos"
       ],
       "lab": "Diagramas y demostración preparada de tráfico entre clústeres, comparando opciones",
-      "extras": "Desplegar las tres soluciones desde cero; OCM/Rancher fuera del recorrido actual; propuesta provisional",
+      "extras": "Desplegar las tres soluciones desde cero",
       "date": "2027-03-02"
     },
     {
       "number": 30,
       "module": "M6",
       "title": "Crossplane y recuperación con Velero",
-      "teacher": "Profesor UPC — por confirmar",
+      "teacher": "Profesor UPC",
       "load": "amarillo",
       "objective": "Distinguir aprovisionamiento declarativo y recuperación ante desastres",
       "contents": [
@@ -515,7 +515,7 @@
         "Velero: backup/restore, alcance y límites"
       ],
       "lab": "Demos separadas de recurso cloud reconciliado y recuperación de aplicación; discutir dependencias, datos y RPO/RTO",
-      "extras": "Composition Functions avanzado, plataforma multicloud completa y DR de producción; propuesta provisional",
+      "extras": "Composition Functions avanzado, plataforma multicloud completa y DR de producción",
       "date": "2027-03-04"
     }
   ],
@@ -527,12 +527,12 @@
     "2027-01-05": "Vacaciones de Navidad",
     "2027-02-09": "Festivo UPC"
   },
-  "project_dates_proposed": [
-    "2027-03-09",
-    "2027-03-11"
-  ],
   "reserve_dates": [
     "2027-03-16",
     "2027-03-18"
+  ],
+  "project_dates": [
+    "2027-03-09",
+    "2027-03-11"
   ]
 }

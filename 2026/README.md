@@ -1,13 +1,17 @@
-# Curso 2026–2027
+# Posgrado en Platform Engineering y DevOps con Kubernetes
 
-Versión consolidada del reparto acordado para el Posgrado en Platform Engineering y DevOps con Kubernetes.
+## Edición 2026–2027
 
-- [Syllabus resumido](syllabus-resumido.md): ficha, reparto, docentes y lista de sesiones.
-- [Syllabus detallado](syllabus-detallado.md): objetivos, contenidos, prácticas, alcance y extras.
-- [Calendario](calendario.md): fechas, docentes, festivos, Proyecto Final y reservas.
-- [Calendario CSV](calendario.csv): las 30 clases para importar en una hoja de cálculo.
-- [Datos del curso](curso.json): contenido estructurado de esta edición, con fechas y docentes.
+UPC School · Live online · Castellano · 12 ECTS.
 
-30 clases de 3h, 90h lectivas, Europe/Madrid. Proyecto Final fuera del cómputo. M6/profesor UPC y actividades PF pendientes de confirmación; los documentos identifican los alcances oficiales que aún requieren cierre.
+30 sesiones lectivas de 3 horas, los martes y jueves de 18:00 a 21:00 (Europe/Madrid). Las actividades del Proyecto Final se realizan fuera de las 90 horas lectivas.
 
-Esta carpeta es la referencia de trabajo de la edición 2026. Los roadmaps, calendario y Word/Excel de la raíz corresponden a la versión anterior y no reflejan aún este reparto. No ejecutar `generate_docs.py` de la raíz para regenerar esta edición: utiliza los datos antiguos. Los archivos de esta carpeta se han creado a partir de los acuerdos y no de ese generador.
+- [Syllabus resumido](syllabus-resumido.md): estructura, docentes y sesiones.
+- [Syllabus detallado](syllabus-detallado.md): objetivos, contenidos, prácticas y ampliaciones.
+- [Calendario](calendario.md): clases, docentes, Proyecto Final, festivos y recuperación.
+- [Calendario CSV](calendario.csv): sesiones para importar en una hoja de cálculo.
+- [Datos del curso](curso.json): contenidos, fechas y docentes en formato estructurado.
+
+El curso comienza el 3 de noviembre de 2026. La última clase lectiva se celebra el 4 de marzo de 2027; la consolidación y defensa del proyecto tienen lugar el 9 y el 11 de marzo. El 16 y el 18 de marzo se reservan para recuperación.
+
+Docencia: René (M1), Rael (M2–M4 y Tekton/Git/Prow/ArgoCD de M5), David (observabilidad, Traefik/Istio, entrega progresiva y escalado de M5) y Profesor UPC (M6).

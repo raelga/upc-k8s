@@ -24,8 +24,8 @@ sesion,fecha,horario,zona_horaria,modulo,titulo,docente,concentracion
 23,2027-02-04,18:00–21:00,Europe/Madrid,M5,Traefik e Istio,David,amarillo
 24,2027-02-11,18:00–21:00,Europe/Madrid,M5,Entrega progresiva con Argo Rollouts,David,amarillo
 25,2027-02-16,18:00–21:00,Europe/Madrid,M5,"Escalado con HPA, VPA, KEDA y Karpenter",David,amarillo
-26,2027-02-18,18:00–21:00,Europe/Madrid,M6,Operators con Go y Kubebuilder/Operator SDK,Profesor UPC — por confirmar,amarillo
-27,2027-02-23,18:00–21:00,Europe/Madrid,M6,Cluster API y Hosted Control Planes,Profesor UPC — por confirmar,amarillo
-28,2027-02-25,18:00–21:00,Europe/Madrid,M6,Knative y serverless,Profesor UPC — por confirmar,verde
-29,2027-03-02,18:00–21:00,Europe/Madrid,M6,"Multi-cluster: Istio, Cilium y Submariner",Profesor UPC — por confirmar,amarillo
-30,2027-03-04,18:00–21:00,Europe/Madrid,M6,Crossplane y recuperación con Velero,Profesor UPC — por confirmar,amarillo
+26,2027-02-18,18:00–21:00,Europe/Madrid,M6,Operators con Go y Kubebuilder/Operator SDK,Profesor UPC,amarillo
+27,2027-02-23,18:00–21:00,Europe/Madrid,M6,Cluster API y Hosted Control Planes,Profesor UPC,amarillo
+28,2027-02-25,18:00–21:00,Europe/Madrid,M6,Knative y serverless,Profesor UPC,verde
+29,2027-03-02,18:00–21:00,Europe/Madrid,M6,"Multi-cluster: Istio, Cilium y Submariner",Profesor UPC,amarillo
+30,2027-03-04,18:00–21:00,Europe/Madrid,M6,Crossplane y recuperación con Velero,Profesor UPC,amarillo

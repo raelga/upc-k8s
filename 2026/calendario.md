@@ -1,12 +1,8 @@
 # Posgrado en Platform Engineering y DevOps con Kubernetes — edición 2026–2027
 
-UPC School · Curso 305300 · Live online · Castellano.
+UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 
-**Versión de trabajo consolidada con los acuerdos del curso.** 30 sesiones lectivas de 3 horas (90h), martes y jueves de 18:00 a 21:00, zona horaria **Europe/Madrid**. Ventana del curso: 03/11/2026–18/03/2027. El Proyecto Final tiene actividades propias fuera de las 30 sesiones y 90 horas, conforme al criterio acordado. Se conservan como referencia los 12 ECTS publicados, incluido PF; no se recalculan proporcionalmente con este reparto interno.
-
-Referencia oficial: https://upcschool.upc.edu/esp/estudis/formacio/curs/305300/platform-engineering-devops-kubernetes/. El contenido oficial se ha contrastado con la transcripción aportada por el usuario; no se dispone de una descarga verificada de la página.
-
-M6 sigue provisional, con enfoque de visión general y demostraciones; docente UPC por confirmar. La asignación Traefik/Istio completa corresponde a David. René y Rael son las denominaciones docentes acordadas; no se inventan nombres completos para David ni para el profesor UPC.
+El programa se desarrolla en **30 sesiones lectivas de 3 horas (90h)**, los martes y jueves de 18:00 a 21:00, en la zona horaria **Europe/Madrid**. El curso comienza el 03/11/2026 y finaliza el 18/03/2027. El Proyecto Final cuenta con actividades de consolidación y defensa adicionales a las 90 horas lectivas.
 
 Enlaces: [syllabus resumido](syllabus-resumido.md) · [syllabus detallado](syllabus-detallado.md).
 
@@ -39,24 +35,24 @@ Enlaces: [syllabus resumido](syllabus-resumido.md) · [syllabus detallado](sylla
 | 23 | 04/02/2027 | Jueves | M5 | Traefik e Istio | 18:00–21:00 | David | 🟡 |
 | 24 | 11/02/2027 | Jueves | M5 | Entrega progresiva con Argo Rollouts | 18:00–21:00 | David | 🟡 |
 | 25 | 16/02/2027 | Martes | M5 | Escalado con HPA, VPA, KEDA y Karpenter | 18:00–21:00 | David | 🟡 |
-| 26 | 18/02/2027 | Jueves | M6 | Operators con Go y Kubebuilder/Operator SDK | 18:00–21:00 | Profesor UPC — por confirmar | 🟡 |
-| 27 | 23/02/2027 | Martes | M6 | Cluster API y Hosted Control Planes | 18:00–21:00 | Profesor UPC — por confirmar | 🟡 |
-| 28 | 25/02/2027 | Jueves | M6 | Knative y serverless | 18:00–21:00 | Profesor UPC — por confirmar | 🟢 |
-| 29 | 02/03/2027 | Martes | M6 | Multi-cluster: Istio, Cilium y Submariner | 18:00–21:00 | Profesor UPC — por confirmar | 🟡 |
-| 30 | 04/03/2027 | Jueves | M6 | Crossplane y recuperación con Velero | 18:00–21:00 | Profesor UPC — por confirmar | 🟡 |
+| 26 | 18/02/2027 | Jueves | M6 | Operators con Go y Kubebuilder/Operator SDK | 18:00–21:00 | Profesor UPC | 🟡 |
+| 27 | 23/02/2027 | Martes | M6 | Cluster API y Hosted Control Planes | 18:00–21:00 | Profesor UPC | 🟡 |
+| 28 | 25/02/2027 | Jueves | M6 | Knative y serverless | 18:00–21:00 | Profesor UPC | 🟢 |
+| 29 | 02/03/2027 | Martes | M6 | Multi-cluster: Istio, Cilium y Submariner | 18:00–21:00 | Profesor UPC | 🟡 |
+| 30 | 04/03/2027 | Jueves | M6 | Crossplane y recuperación con Velero | 18:00–21:00 | Profesor UPC | 🟡 |
 
-## Actividades fuera de las 90h y reservas
+## Proyecto Final y recuperación
 
-| Fecha | Día | Actividad | Horario | Docencia / estado |
+| Fecha | Día | Actividad | Horario | Docencia |
 |---|---|---|---|---|
-| 09/03/2027 | Martes | PF: consolidación | 18:00–21:00 | Por confirmar; fecha propuesta |
-| 11/03/2027 | Jueves | PF: presentación y defensa | 18:00–21:00 | Tribunal por confirmar; fecha propuesta |
+| 09/03/2027 | Martes | PF: consolidación | 18:00–21:00 | — |
+| 11/03/2027 | Jueves | PF: presentación y defensa | 18:00–21:00 | Tribunal |
 | 16/03/2027 | Martes | Reserva / recuperación | 18:00–21:00 | Si se necesita |
 | 18/03/2027 | Jueves | Reserva / recuperación | 18:00–21:00 | Si se necesita |
 
 ## Fechas no lectivas
 
-Se conserva el criterio de festivos UPC-FIB y Navidad ya documentado en el repositorio; no se presenta como una nueva verificación del calendario oficial. 22/12 y 07/01 son lectivos con ese criterio.
+El calendario excluye los festivos y periodos no lectivos indicados a continuación. El 22/12 y el 07/01 son lectivos.
 
 | Fecha | Motivo |
 |---|---|
@@ -69,15 +65,15 @@ Se conserva el criterio de festivos UPC-FIB y Navidad ya documentado en el repos
 
 ## Resumen
 
-| Bloque | Sesiones | Horas lectivas | ECTS publicados | Docencia |
+| Bloque | Sesiones | Horas lectivas | ECTS | Docencia |
 |---|---:|---:|---:|---|
-| M1 · Fundamentos DevOps, Platform Engineering y Programación para Infraestructura | 1–1 (1) | 3h | 1.5 | René |
+| M1 · Fundamentos DevOps, Platform Engineering y Programación para Infraestructura | 1 (1) | 3h | 1.5 | René |
 | M2 · Cloud Computing Multicloud e Infraestructura como Código | 2–4 (3) | 9h | 1 | Rael |
 | M3 · Contenedores y Kubernetes Core. Ecosistema OCI | 5–11 (7) | 21h | 2 | Rael |
 | M4 · Kubernetes en Producción y Ecosistema Cloud Native | 12–16 (5) | 15h | 2 | Rael |
 | M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado | 17–25 (9) | 27h | 2 | David, Rael |
-| M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 26–30 (5) | 15h | 2 | Profesor UPC — por confirmar |
-| PF · Proyecto Final | Fuera de las 30 | Fuera de las 90h; referencia publicada 6h | 1.5 | Por confirmar |
+| M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 26–30 (5) | 15h | 2 | Profesor UPC |
+| PF · Proyecto Final | Fuera de las 30 | 6h adicionales | 1.5 | — |
 | **Total lectivo** | **30** | **90h** | **12 ECTS, incluido PF** | |
 
 ## Carga docente
@@ -87,20 +83,6 @@ Se conserva el criterio de festivos UPC-FIB y Navidad ya documentado en el repos
 | René | 1 | 3h |
 | Rael | 18 | 54h |
 | David | 6 | 18h |
-| Profesor UPC — por confirmar | 5 | 15h |
+| Profesor UPC | 5 | 15h |
 
-Tutoría, consolidación y defensa del Proyecto Final no están asignadas todavía.
-
-La sesión 30 se celebra el **04/03/2027**. Las 90h son horas de reloj en Europe/Madrid; no interpretar 18:00 como UTC. Las actividades PF y reservas no se suman a las 30 sesiones.
-
-## Cobertura oficial y decisiones pendientes
-
-Este reparto conserva las tecnologías nombradas oficialmente, pero cuatro alcances requieren cierre docente; no se consideran extras prescindibles:
-
-- **Git avanzado:** sesión 21. Se ha acordado práctica de colaboración básica; decidir qué parte avanzada (por ejemplo rebase, conflictos o protección de ramas) cubrir sin volver a un catálogo de operaciones.
-- **Testing y CI/CD de Terraform:** vincular ejemplos de M2 con sesión 20; concretar las comprobaciones y el tiempo, sin afirmar que el pipeline de imágenes ya cubre IaC.
-- **Cloudflare CDN:** DNS/ExternalDNS/ACME se cubren en sesión 15; falta concretar el ejemplo o explicación de CDN.
-- **OIDC:** introducción en sesión 6 y contexto de identidad cloud; configuración práctica y profundidad pendientes.
-
-Admission controllers sí tienen espacio en sesión 11. Vault y ESO permanecen explícitos en sesión 16; Secrets Manager es alternativa, no sustitución. Crossplane se concentra en sesión 30 con referencia desde M4. Mimir se introduce en sesión 17. Alloy se conserva por decisión expresa; no se incluye Snyk. OCM y Rancher no forman parte del reparto actual. La distribución de M6 y su profesor UPC requieren confirmación; las fechas reflejan la propuesta actual y no disponibilidad individual verificada.
-
+La última sesión lectiva se celebra el **04/03/2027**. Todos los horarios corresponden a Europe/Madrid. Las actividades del Proyecto Final y las reservas quedan fuera de las 90h lectivas.

@@ -1,18 +1,14 @@
 # Posgrado en Platform Engineering y DevOps con Kubernetes — edición 2026–2027
 
-UPC School · Curso 305300 · Live online · Castellano.
+UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 
-**Versión de trabajo consolidada con los acuerdos del curso.** 30 sesiones lectivas de 3 horas (90h), martes y jueves de 18:00 a 21:00, zona horaria **Europe/Madrid**. Ventana del curso: 03/11/2026–18/03/2027. El Proyecto Final tiene actividades propias fuera de las 30 sesiones y 90 horas, conforme al criterio acordado. Se conservan como referencia los 12 ECTS publicados, incluido PF; no se recalculan proporcionalmente con este reparto interno.
-
-Referencia oficial: https://upcschool.upc.edu/esp/estudis/formacio/curs/305300/platform-engineering-devops-kubernetes/. El contenido oficial se ha contrastado con la transcripción aportada por el usuario; no se dispone de una descarga verificada de la página.
-
-M6 sigue provisional, con enfoque de visión general y demostraciones; docente UPC por confirmar. La asignación Traefik/Istio completa corresponde a David. René y Rael son las denominaciones docentes acordadas; no se inventan nombres completos para David ni para el profesor UPC.
+El programa se desarrolla en **30 sesiones lectivas de 3 horas (90h)**, los martes y jueves de 18:00 a 21:00, en la zona horaria **Europe/Madrid**. El curso comienza el 03/11/2026 y finaliza el 18/03/2027. El Proyecto Final cuenta con actividades de consolidación y defensa adicionales a las 90 horas lectivas.
 
 Enlaces: [syllabus resumido](syllabus-resumido.md) · [calendario](calendario.md).
 
 ## Enfoque docente y prerrequisitos
 
-Perfil junior: Linux, redes y scripting básicos según el contexto del repositorio; requisitos de acceso oficiales pendientes de verificar. No se exige experiencia cloud previa en esta planificación. Una misma aplicación Python con dos servicios conecta cloud, Kubernetes, observabilidad, CI y GitOps. Bash se practica en Tekton; Python aparece progresivamente en proveedores y automatización; Go se usa para comprender el operator. La IA ayuda a escribir/adaptar código que debe revisarse y verificarse.
+Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Las sesiones de proveedores introducen los fundamentos cloud. Una misma aplicación Python con dos servicios conecta cloud, Kubernetes, observabilidad, CI y GitOps. Bash se practica en Tekton; Python aparece progresivamente en proveedores y automatización; Go se usa para comprender el operator. La IA ayuda a escribir/adaptar código que debe revisarse y verificarse.
 
 Laboratorios guiados con manifiestos/configuraciones preparados. Antes de clase se comprueban cuentas, permisos, cuotas, dominios y costes. Se preservan estados reutilizables; para despliegues lentos, especialmente EKS/kOps, se explican conceptos durante la espera y se dispone de un entorno alternativo preparado. Cada práctica cloud incluye limpieza. Secretos y credenciales no se guardan en repositorios, logs ni estado Terraform; crear el contenedor del secreto no implica cargar su valor mediante IaC.
 
@@ -24,7 +20,7 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 ## M1 · Fundamentos DevOps, Platform Engineering y Programación para Infraestructura
 
-1 sesiones · 3h lectivas · 1.5 ECTS publicados como referencia.
+1 sesiones · 3h lectivas · 1.5 ECTS.
 
 ### Sesión 1 · DevOps y Platform Engineering
 
@@ -42,11 +38,11 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 **Práctica / evidencia:** Propuesta breve de plataforma para una empresa: usuarios, capacidades y criterios de éxito.
 
-**Extras y profundidad fuera de la clase:** Implantación completa de Backstage y diseño organizativo en profundidad.
+**Ampliación:** Implantación completa de Backstage y diseño organizativo en profundidad.
 
 ## M2 · Cloud Computing Multicloud e Infraestructura como Código
 
-3 sesiones · 9h lectivas · 1 ECTS publicados como referencia.
+3 sesiones · 9h lectivas · 1 ECTS.
 
 ### Sesión 2 · AWS, Terraform y Python
 
@@ -61,11 +57,11 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 - IAM, regiones y zonas.
 - VPC, subredes, Security Groups, EC2 y S3, contexto de ECR.
 - HCL, provider, recursos, variables y plan/apply/destroy.
-- consulta Python preparada e IA para adaptar código.
+- Consulta Python preparada e IA para adaptar código.
 
 **Práctica / evidencia:** Lanzar el ejemplo preparado, explicar mientras se despliega, modificar una variable, consultar recursos y verificar limpieza.
 
-**Extras y profundidad fuera de la clase:** Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless.
+**Ampliación:** Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless.
 
 ### Sesión 3 · Azure, Terraform y automatización Python
 
@@ -79,12 +75,12 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 - Entra ID, suscripciones, grupos de recursos y Managed Identities.
 - VNet, NSG, VM y Blob Storage, contexto de ACR.
-- variables, outputs y módulos existentes.
-- adaptación del script Python.
+- Variables, outputs y módulos existentes.
+- Adaptación del script Python.
 
 **Práctica / evidencia:** Reproducir el caso común con configuración preparada y explicar equivalencias y diferencias.
 
-**Extras y profundidad fuera de la clase:** SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados.
+**Ampliación:** SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados.
 
 ### Sesión 4 · GCP, estado remoto y comparación de IaC
 
@@ -98,16 +94,16 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 - Proyectos, cuentas de servicio e IAM.
 - VPC, firewall, Compute Engine y Cloud Storage, contexto de Artifact Registry.
-- estado local/remoto, permisos y locking según backend.
+- Estado local/remoto, permisos y locking según backend.
 - Pulumi con Python frente a HCL durante 10–15 minutos.
 
 **Práctica / evidencia:** Adaptar el caso preparado, consultar recursos y comparar identidad, red, estado y portabilidad.
 
-**Extras y profundidad fuera de la clase:** Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados; la comparación Pulumi es ampliación si falta tiempo.
+**Ampliación:** Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados.
 
 ## M3 · Contenedores y Kubernetes Core. Ecosistema OCI
 
-7 sesiones · 21h lectivas · 2 ECTS publicados como referencia.
+7 sesiones · 21h lectivas · 2 ECTS.
 
 ### Sesión 5 · Contenedores y ecosistema OCI
 
@@ -122,11 +118,11 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 - Namespaces, cgroups y capas OCI.
 - Dockerfile y build multi-stage.
 - Docker/containerd/CRI-O y CRI.
-- registros e higiene de imágenes.
+- Registros e higiene de imágenes.
 
 **Práctica / evidencia:** Construir una imagen pequeña y ejecutar/publicar la aplicación que servirá de hilo conductor.
 
-**Extras y profundidad fuera de la clase:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en seguridad y Tekton.
+**Ampliación:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en seguridad y Tekton.
 
 ### Sesión 6 · Arquitectura, API, kind, autenticación y RBAC
 
@@ -140,13 +136,13 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 - Control plane y nodos.
 - API, etcd, reconciliación y ejecución de Pods.
-- kubeconfig, certificados, tokens y ServiceAccounts.
+- Kubeconfig, certificados, tokens y ServiceAccounts.
 - Role/RoleBinding.
 - OIDC y admisión conceptual.
 
 **Práctica / evidencia:** Levantar kind, localizar componentes y comprobar una operación permitida y otra denegada.
 
-**Extras y profundidad fuera de la clase:** Configuración completa OIDC pendiente de alcance; montaje interno se aborda en la sesión de clúster desde cero.
+**Ampliación:** Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero.
 
 ### Sesión 7 · Workloads, configuración y recursos
 
@@ -160,13 +156,13 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 - Pods, Deployments, Jobs y CronJobs.
 - ConfigMap/Secret.
-- probes.
-- requests/limits y scheduling básico.
-- namespaces, labels y selectors.
+- Probes.
+- Requests/limits y scheduling básico.
+- Namespaces, labels y selectors.
 
 **Práctica / evidencia:** Modificar configuración, observar probes, actualizar la aplicación y comprobar asignación de recursos.
 
-**Extras y profundidad fuera de la clase:** Catálogo exhaustivo de controladores y scheduling avanzado.
+**Ampliación:** Catálogo exhaustivo de controladores y scheduling avanzado.
 
 ### Sesión 8 · Persistencia, CSI y StatefulSets
 
@@ -179,13 +175,13 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 **Contenido principal:**
 
 - Volúmenes, PV/PVC, StorageClass y aprovisionamiento dinámico.
-- función de CSI.
+- Función de CSI.
 - StatefulSet.
-- afinidad y restricciones de ubicación relevantes para almacenamiento.
+- Afinidad y restricciones de ubicación relevantes para almacenamiento.
 
 **Práctica / evidencia:** Añadir persistencia, recrear un Pod y verificar datos y comportamiento del workload.
 
-**Extras y profundidad fuera de la clase:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
+**Ampliación:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
 
 ### Sesión 9 · Networking y exposición de aplicaciones
 
@@ -199,12 +195,12 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 - CNI en Pod→Pod.
 - Services y CoreDNS.
-- ejemplo Gateway API y relación con Ingress.
+- Ejemplo Gateway API y relación con Ingress.
 - NetworkPolicy.
 
 **Práctica / evidencia:** Con CNI/controlador preparados, exponer la aplicación, bloquear tráfico y permitir solo conexiones necesarias.
 
-**Extras y profundidad fuera de la clase:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
+**Ampliación:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
 
 ### Sesión 10 · Clúster componente a componente
 
@@ -217,12 +213,12 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 **Contenido principal:**
 
 - PKI, etcd, kube-apiserver, scheduler y controller-manager.
-- kubelet, runtime y kube-proxy.
-- unión de un nodo y TLS bootstrapping.
+- Kubelet, runtime y kube-proxy.
+- Unión de un nodo y TLS bootstrapping.
 
 **Práctica / evidencia:** Arrancar un clúster reducido con material preparado, unir un nodo y ejecutar un Pod.
 
-**Extras y profundidad fuera de la clase:** Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada.
+**Ampliación:** Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada.
 
 ### Sesión 11 · Seguridad de imágenes y políticas de admisión
 
@@ -241,11 +237,11 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 **Práctica / evidencia:** Revisar una imagen, rechazar un Pod privilegiado o que incumpla una política, corregirlo y comprobar admisión.
 
-**Extras y profundidad fuera de la clase:** Firmas, SBOM, attestations y conexión automática entre escaneo/admisión; segundo motor de políticas completo.
+**Ampliación:** Firmas, SBOM, attestations y conexión automática entre escaneo/admisión; segundo motor de políticas completo.
 
 ## M4 · Kubernetes en Producción y Ecosistema Cloud Native
 
-5 sesiones · 15h lectivas · 2 ECTS publicados como referencia.
+5 sesiones · 15h lectivas · 2 ECTS.
 
 ### Sesión 12 · EKS y kOps en AWS
 
@@ -258,13 +254,13 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 **Contenido principal:**
 
 - Terraform para lanzar EKS.
-- kOps con configuración preparada.
-- control plane, red, identidad y nodos.
-- responsabilidades, upgrades, disponibilidad, costes y recuperación.
+- KOps con configuración preparada.
+- Control plane, red, identidad y nodos.
+- Responsabilidades, upgrades, disponibilidad, costes y recuperación.
 
 **Práctica / evidencia:** Explicar durante ambos despliegues, solapar esperas, desplegar la misma aplicación y comparar; comprobar permisos y disponer de clústeres de respaldo.
 
-**Extras y profundidad fuera de la clase:** Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad.
+**Ampliación:** Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad.
 
 ### Sesión 13 · AKS y GKE
 
@@ -277,14 +273,14 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 **Contenido principal:**
 
 - Identidad de workloads.
-- networking.
-- pools de nodos.
-- actualizaciones y responsabilidad operativa.
+- Networking.
+- Pools de nodos.
+- Actualizaciones y responsabilidad operativa.
 - GKE Standard/Autopilot y opciones de AKS.
 
 **Práctica / evidencia:** Demostración preparada de los mismos requisitos y comparación razonada con EKS.
 
-**Extras y profundidad fuera de la clase:** Instalaciones completas independientes y catálogo de add-ons de ambos proveedores.
+**Ampliación:** Instalaciones completas independientes y catálogo de add-ons de ambos proveedores.
 
 ### Sesión 14 · Kustomize y Helm
 
@@ -297,13 +293,13 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 **Contenido principal:**
 
 - Bases, overlays y patches.
-- charts, values, templates y releases.
-- uso combinado de render Helm y Kustomize.
-- chart que instala un operator.
+- Charts, values, templates y releases.
+- Uso combinado de render Helm y Kustomize.
+- Chart que instala un operator.
 
 **Práctica / evidencia:** Adaptar la aplicación a dos entornos e instalar/configurar un chart, distinguiendo chart, operator y recursos gestionados.
 
-**Extras y profundidad fuera de la clase:** Creación de charts complejos desde cero y catálogo de plugins.
+**Ampliación:** Creación de charts complejos desde cero y catálogo de plugins.
 
 ### Sesión 15 · DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager
 
@@ -319,11 +315,11 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 - Cloudflare como provider.
 - ExternalDNS.
 - Issuer/ClusterIssuer y ACME DNS-01.
-- protección del token.
+- Protección del token.
 
 **Práctica / evidencia:** Instalar componentes por Helm sobre el entorno anterior, publicar el registro y verificar HTTPS y renovación.
 
-**Extras y profundidad fuera de la clase:** DNSSEC/DoH y operación DNS avanzada; CDN de Cloudflare permanece pendiente de encaje, no se elimina como contenido oficial.
+**Ampliación:** DNSSEC/DoH y operación DNS avanzada.
 
 ### Sesión 16 · Secretos externos: Vault y External Secrets Operator
 
@@ -336,18 +332,18 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 **Contenido principal:**
 
 - Vault y ESO explícitos del programa.
-- despliegue guiado mediante Helm, operator como opción sin fijar uno.
-- autenticación Kubernetes y política básica.
+- Despliegue guiado mediante Helm, operator como opción sin fijar uno.
+- Autenticación Kubernetes y política básica.
 - SecretStore/ExternalSecret.
 - AWS Secrets Manager como alternativa y entrega CSI frente a Secret.
 
 **Práctica / evidencia:** Aplicación consume secreto externo, modificarlo y comprobar sincronización y comportamiento de la aplicación.
 
-**Extras y profundidad fuera de la clase:** HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state.
+**Ampliación:** HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state.
 
 ## M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado
 
-9 sesiones · 27h lectivas · 2 ECTS publicados como referencia.
+9 sesiones · 27h lectivas · 2 ECTS.
 
 ### Sesión 17 · Prometheus, PromQL y Alertmanager
 
@@ -360,15 +356,15 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 **Contenido principal:**
 
 - Contadores/histogramas, labels/cardinalidad.
-- scraping/exporters.
+- Scraping/exporters.
 - Operator, ServiceMonitor/PodMonitor.
-- tasas, errores, latencia y agregación.
-- reglas, routing y silencios.
-- introducción Mimir.
+- Tasas, errores, latencia y agregación.
+- Reglas, routing y silencios.
+- Introducción Mimir.
 
 **Práctica / evidencia:** kube-prometheus-stack preparado, conectar la app, provocar errores/carga, consultar y comprobar una alerta.
 
-**Extras y profundidad fuera de la clase:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
+**Ampliación:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
 
 ### Sesión 18 · Grafana, Loki y Alloy
 
@@ -381,14 +377,14 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 **Contenido principal:**
 
 - Datasources, paneles y variables.
-- dashboard de tráfico/errores/latencia.
-- labels frente a campos de logs.
+- Dashboard de tráfico/errores/latencia.
+- Labels frente a campos de logs.
 - Alloy para logs de Pods.
 - LogQL, Explore y JSON.
 
 **Práctica / evidencia:** Provocar fallo, detectarlo en el dashboard y localizar logs del mismo intervalo con configuración guiada de Alloy.
 
-**Extras y profundidad fuera de la clase:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
+**Ampliación:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
 
 ### Sesión 19 · OpenTelemetry, Collector, Tempo y correlación
 
@@ -401,14 +397,14 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 **Contenido principal:**
 
 - Spans, contexto y propagación.
-- instrumentación automática.
-- receivers/processors/exporters.
+- Instrumentación automática.
+- Receivers/processors/exporters.
 - Tempo/Grafana.
-- trace ID en logs, enlaces y exemplars cuando proceda.
+- Trace ID en logs, enlaces y exemplars cuando proceda.
 
 **Práctica / evidencia:** Dos servicios preparados, provocar latencia y recorrer métrica→traza→logs; Collector para trazas y Alloy para logs.
 
-**Extras y profundidad fuera de la clase:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo.
+**Ampliación:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo.
 
 **Preparación específica:** propagación de contexto entre dos servicios, trace ID en logs y enlaces de Grafana comprobados. Alloy y Collector tienen capacidades solapadas: el reparto logs/trazas elegido es una decisión del lab, no una limitación de las herramientas.
 
@@ -425,13 +421,13 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 - Git mínimo.
 - Bash para CLI, errores y resultados, jq.
 - Python cuando aporte valor.
-- asistencia de IA y revisión.
+- Asistencia de IA y revisión.
 - Tasks, Pipelines, PipelineRuns y Workspaces.
 - Trivy en CI.
 
 **Práctica / evidencia:** Conectar tareas preparadas de build/test/scan/publicación y comprobar fallos y resultados.
 
-**Extras y profundidad fuera de la clase:** Curso completo de Bash/Python; Triggers/Chains avanzados y attestations; testing/CI Terraform pendiente de concretar, no omitir cobertura oficial.
+**Ampliación:** Curso completo de Bash/Python; Triggers/Chains avanzados y attestations.
 
 **Continuidad:** introducir repositorio/commit mínimos antes del pipeline; PR y colaboración se desarrollan después con Prow. No asumir que todos los ProwJobs ejecutan Tekton automáticamente: usar un puente preparado o mostrar ambos sin prometer integración nativa universal.
 
@@ -447,11 +443,11 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 - Ramas, commits, PR, revisión y conflictos sencillos.
 - ProwJobs, plugins, Tide y Deck como visión operativa.
-- relación con pipeline Tekton.
+- Relación con pipeline Tekton.
 
 **Práctica / evidencia:** Prow preparado, abrir un PR, observar validaciones y resolver un fallo antes del merge.
 
-**Extras y profundidad fuera de la clase:** Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas; alcance exacto de Git avanzado oficial pendiente.
+**Ampliación:** Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas.
 
 ### Sesión 22 · GitOps con ArgoCD
 
@@ -466,11 +462,11 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 - Declarativo, versionado y pull.
 - Application, diferencias, health y sync policies.
 - Helm/Kustomize.
-- drift y corrección.
+- Drift y corrección.
 
 **Práctica / evidencia:** Desplegar imagen producida por CI, modificar manifiesto mediante PR, observar sync y provocar drift manual.
 
-**Extras y profundidad fuera de la clase:** ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves.
+**Ampliación:** ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves.
 
 ### Sesión 23 · Traefik e Istio
 
@@ -484,11 +480,11 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 - Traefik para routing/TLS con cert-manager.
 - Istio para mTLS y política de acceso.
-- reparto entre versiones como preparación de Rollouts.
+- Reparto entre versiones como preparación de Rollouts.
 
 **Práctica / evidencia:** Componentes preparados, modificar pocas reglas, comprobar acceso y comunicación y observar reparto de tráfico.
 
-**Extras y profundidad fuera de la clase:** Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo.
+**Ampliación:** Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo.
 
 ### Sesión 24 · Entrega progresiva con Argo Rollouts
 
@@ -502,12 +498,12 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 - Canary y blue/green.
 - Rollouts.
-- integración con ArgoCD, Prometheus e Istio/Traefik.
-- análisis y rollback.
+- Integración con ArgoCD, Prometheus e Istio/Traefik.
+- Análisis y rollback.
 
 **Práctica / evidencia:** Canary principal sobre la misma app, provocar degradación y comprobar retorno; blue/green como comparación.
 
-**Extras y profundidad fuera de la clase:** Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking.
+**Ampliación:** Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking.
 
 ### Sesión 25 · Escalado con HPA, VPA, KEDA y Karpenter
 
@@ -520,25 +516,25 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 **Contenido principal:**
 
 - HPA por CPU como práctica principal.
-- recomendaciones VPA.
+- Recomendaciones VPA.
 - KEDA por eventos y su uso de HPA.
 - Karpenter ante Pods pendientes y consolidación.
 
 **Práctica / evidencia:** Generar carga, observar HPA; consulta VPA; demos preparadas de cola KEDA y provisión/consolidación de nodos.
 
-**Extras y profundidad fuera de la clase:** Catálogo triggers, métricas complejas, tuning, políticas Spot/capacidad y optimización profunda de costes; evitar controladores compitiendo.
+**Ampliación:** Catálogo triggers, métricas complejas, tuning, políticas Spot/capacidad y optimización profunda de costes; evitar controladores compitiendo.
 
 **Precaución del lab:** no dejar HPA y KEDA compitiendo sobre el mismo workload; VPA en modo recomendación. Karpenter requiere infraestructura/permisos preparados y costes controlados.
 
 ## M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster
 
-5 sesiones · 15h lectivas · 2 ECTS publicados como referencia.
+5 sesiones · 15h lectivas · 2 ECTS.
 
-**Bloque provisional:** problema → concepto → ejemplo → cuándo usarlo. Profesor UPC por confirmar.
+**Enfoque del bloque:** problema → concepto → ejemplo → cuándo usarlo. Docencia: Profesor UPC.
 
 ### Sesión 26 · Operators con Go y Kubebuilder/Operator SDK
 
-**Fecha:** 18/02/2027 · 18:00–21:00 · **Docente:** Profesor UPC — por confirmar · **Concentración:** 🟡.
+**Fecha:** 18/02/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟡.
 
 **Objetivo:** Reconocer cuándo un operator automatiza conocimiento operativo.
 
@@ -548,15 +544,15 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 - CRD, estado deseado y reconciliación.
 - Go mínimo para leer tipos/structs/errores.
-- organización de Kubebuilder/Operator SDK.
+- Organización de Kubebuilder/Operator SDK.
 
 **Práctica / evidencia:** Leer un operator preparado, crear un recurso, observar actuación y modificar un comportamiento pequeño.
 
-**Extras y profundidad fuera de la clase:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero; sesión provisional de visión general.
+**Ampliación:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero.
 
 ### Sesión 27 · Cluster API y Hosted Control Planes
 
-**Fecha:** 23/02/2027 · 18:00–21:00 · **Docente:** Profesor UPC — por confirmar · **Concentración:** 🟡.
+**Fecha:** 23/02/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟡.
 
 **Objetivo:** Comparar automatización del ciclo de vida y ubicación del control plane.
 
@@ -566,15 +562,15 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 - Cluster API: creación/escalado/upgrades.
 - HyperShift, vCluster y Kamaji: aislamiento, arquitectura y casos de uso.
-- enfoques no equivalentes.
+- Enfoques no equivalentes.
 
 **Práctica / evidencia:** Demostraciones preparadas y comparación de responsabilidades, sin asumir integración universal de todas las herramientas.
 
-**Extras y profundidad fuera de la clase:** Instalación de todos los productos y operación avanzada; propuesta provisional.
+**Ampliación:** Instalación de todos los productos y operación avanzada.
 
 ### Sesión 28 · Knative y serverless
 
-**Fecha:** 25/02/2027 · 18:00–21:00 · **Docente:** Profesor UPC — por confirmar · **Concentración:** 🟢.
+**Fecha:** 25/02/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟢.
 
 **Objetivo:** Entender cuándo usar ejecución orientada a demanda sobre Kubernetes.
 
@@ -583,16 +579,16 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 **Contenido principal:**
 
 - Knative Serving, revisions, routing y scale-to-zero.
-- contexto serverless.
-- Virtual Kubelet como mención opcional de continuidad histórica.
+- Contexto serverless.
+- Introducción opcional a Virtual Kubelet.
 
 **Práctica / evidencia:** Publicar una función/servicio preparado, generar tráfico y observar escalado a cero.
 
-**Extras y profundidad fuera de la clase:** Plataforma serverless completa, Eventing avanzado y Virtual Kubelet profundo; propuesta provisional.
+**Ampliación:** Plataforma serverless completa, Eventing avanzado y Virtual Kubelet profundo.
 
 ### Sesión 29 · Multi-cluster: Istio, Cilium y Submariner
 
-**Fecha:** 02/03/2027 · 18:00–21:00 · **Docente:** Profesor UPC — por confirmar · **Concentración:** 🟡.
+**Fecha:** 02/03/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟡.
 
 **Objetivo:** Comparar conectividad de servicios y redes entre clústeres.
 
@@ -603,16 +599,16 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 - Istio multicluster.
 - Cilium Cluster Mesh.
 - Submariner.
-- identidad, conectividad y limitaciones.
-- distinguir sus ámbitos.
+- Identidad, conectividad y limitaciones.
+- Distinguir sus ámbitos.
 
 **Práctica / evidencia:** Diagramas y demostración preparada de tráfico entre clústeres, comparando opciones.
 
-**Extras y profundidad fuera de la clase:** Desplegar las tres soluciones desde cero; OCM/Rancher fuera del recorrido actual; propuesta provisional.
+**Ampliación:** Desplegar las tres soluciones desde cero.
 
 ### Sesión 30 · Crossplane y recuperación con Velero
 
-**Fecha:** 04/03/2027 · 18:00–21:00 · **Docente:** Profesor UPC — por confirmar · **Concentración:** 🟡.
+**Fecha:** 04/03/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟡.
 
 **Objetivo:** Distinguir aprovisionamiento declarativo y recuperación ante desastres.
 
@@ -621,44 +617,33 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 **Contenido principal:**
 
 - Crossplane: providers, managed resources, compositions y XRDs.
-- relación con IaC de M2 y M4.
+- Relación con IaC de M2 y M4.
 - Velero: backup/restore, alcance y límites.
 
 **Práctica / evidencia:** Demos separadas de recurso cloud reconciliado y recuperación de aplicación; discutir dependencias, datos y RPO/RTO.
 
-**Extras y profundidad fuera de la clase:** Composition Functions avanzado, plataforma multicloud completa y DR de producción; propuesta provisional.
+**Ampliación:** Composition Functions avanzado, plataforma multicloud completa y DR de producción.
 
-## Proyecto Final — fuera del cómputo lectivo
+## Proyecto Final
 
-Construcción incremental de una plataforma con el material de las prácticas; no se empieza desde cero al acabar las clases. Infraestructura IaC en un proveedor, aplicación en Kubernetes, configuración Helm/Kustomize, CI, ArgoCD, DNS/TLS, secretos externos, observabilidad, seguridad, entrega progresiva y escalado.
+El proyecto integra progresivamente los resultados de las prácticas: infraestructura IaC en un proveedor, aplicación en Kubernetes, configuración con Helm/Kustomize, CI, ArgoCD, DNS/TLS, secretos externos, observabilidad, seguridad, entrega progresiva y escalado.
 
-Entregables propuestos, basados en el roadmap previo: repositorio reproducible, memoria de arquitectura/decisiones y runbooks, demo end-to-end con fallo/diagnóstico/recuperación y defensa oral. Firmas/SBOM y multi-cluster no se convierten en requisitos obligatorios si se tratan solo como extras o demostraciones.
+**Entregables:** repositorio reproducible, memoria de arquitectura y decisiones técnicas, runbooks, demostración end-to-end con un escenario de fallo, diagnóstico y recuperación, y defensa oral.
 
-Criterios para cerrar con el equipo docente: funcionalidad, reproducibilidad, seguridad, observabilidad, justificación de decisiones, limpieza/costes, documentación y defensa. No se fijan pesos nuevos ni tamaño de equipos. Tutoría/tribunal pendientes de asignación.
+**Evaluación:** funcionalidad, reproducibilidad, seguridad, observabilidad, justificación de decisiones, control de costes, documentación y defensa. Las tecnologías tratadas como ampliación, como firmas/SBOM y configuraciones multi-cluster avanzadas, son opcionales en el proyecto.
 
-Actividades propuestas: **09/03/2027 consolidación** y **11/03/2027 presentación/defensa**, 18:00–21:00; no cuentan como sesiones 31/32 ni añaden horas al total lectivo. Fechas de PF por confirmar según organización y número de equipos. 16/03 y 18/03 quedan como reserva/recuperación.
+**Consolidación:** 09/03/2027, 18:00–21:00. **Presentación y defensa:** 11/03/2027, 18:00–21:00. Ambas actividades se realizan fuera de las 30 sesiones lectivas. El 16/03 y el 18/03 se reservan para recuperación.
 
-## Cobertura oficial y decisiones pendientes
+## Contenidos de ampliación
 
-Este reparto conserva las tecnologías nombradas oficialmente, pero cuatro alcances requieren cierre docente; no se consideran extras prescindibles:
-
-- **Git avanzado:** sesión 21. Se ha acordado práctica de colaboración básica; decidir qué parte avanzada (por ejemplo rebase, conflictos o protección de ramas) cubrir sin volver a un catálogo de operaciones.
-- **Testing y CI/CD de Terraform:** vincular ejemplos de M2 con sesión 20; concretar las comprobaciones y el tiempo, sin afirmar que el pipeline de imágenes ya cubre IaC.
-- **Cloudflare CDN:** DNS/ExternalDNS/ACME se cubren en sesión 15; falta concretar el ejemplo o explicación de CDN.
-- **OIDC:** introducción en sesión 6 y contexto de identidad cloud; configuración práctica y profundidad pendientes.
-
-Admission controllers sí tienen espacio en sesión 11. Vault y ESO permanecen explícitos en sesión 16; Secrets Manager es alternativa, no sustitución. Crossplane se concentra en sesión 30 con referencia desde M4. Mimir se introduce en sesión 17. Alloy se conserva por decisión expresa; no se incluye Snyk. OCM y Rancher no forman parte del reparto actual. La distribución de M6 y su profesor UPC requieren confirmación; las fechas reflejan la propuesta actual y no disponibilidad individual verificada.
-
-## Registro de ampliaciones
-
-Estos extras preservan lo apartado del alcance principal. No añaden sesiones automáticamente.
+Material complementario para profundizar mediante trabajo autónomo o formación adicional.
 
 - **Sesión 1 · DevOps y Platform Engineering:** Implantación completa de Backstage y diseño organizativo en profundidad.
 - **Sesión 2 · AWS, Terraform y Python:** Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless.
 - **Sesión 3 · Azure, Terraform y automatización Python:** SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados.
-- **Sesión 4 · GCP, estado remoto y comparación de IaC:** Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados; la comparación Pulumi es ampliación si falta tiempo.
+- **Sesión 4 · GCP, estado remoto y comparación de IaC:** Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados.
 - **Sesión 5 · Contenedores y ecosistema OCI:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en seguridad y Tekton.
-- **Sesión 6 · Arquitectura, API, kind, autenticación y RBAC:** Configuración completa OIDC pendiente de alcance; montaje interno se aborda en la sesión de clúster desde cero.
+- **Sesión 6 · Arquitectura, API, kind, autenticación y RBAC:** Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero.
 - **Sesión 7 · Workloads, configuración y recursos:** Catálogo exhaustivo de controladores y scheduling avanzado.
 - **Sesión 8 · Persistencia, CSI y StatefulSets:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
 - **Sesión 9 · Networking y exposición de aplicaciones:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
@@ -667,22 +652,21 @@ Estos extras preservan lo apartado del alcance principal. No añaden sesiones au
 - **Sesión 12 · EKS y kOps en AWS:** Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad.
 - **Sesión 13 · AKS y GKE:** Instalaciones completas independientes y catálogo de add-ons de ambos proveedores.
 - **Sesión 14 · Kustomize y Helm:** Creación de charts complejos desde cero y catálogo de plugins.
-- **Sesión 15 · DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager:** DNSSEC/DoH y operación DNS avanzada; CDN de Cloudflare permanece pendiente de encaje, no se elimina como contenido oficial.
+- **Sesión 15 · DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager:** DNSSEC/DoH y operación DNS avanzada.
 - **Sesión 16 · Secretos externos: Vault y External Secrets Operator:** HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state.
 - **Sesión 17 · Prometheus, PromQL y Alertmanager:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
 - **Sesión 18 · Grafana, Loki y Alloy:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
 - **Sesión 19 · OpenTelemetry, Collector, Tempo y correlación:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo.
-- **Sesión 20 · Scripting y pipelines con Tekton:** Curso completo de Bash/Python; Triggers/Chains avanzados y attestations; testing/CI Terraform pendiente de concretar, no omitir cobertura oficial.
-- **Sesión 21 · Git y Prow: colaboración y validaciones:** Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas; alcance exacto de Git avanzado oficial pendiente.
+- **Sesión 20 · Scripting y pipelines con Tekton:** Curso completo de Bash/Python; Triggers/Chains avanzados y attestations.
+- **Sesión 21 · Git y Prow: colaboración y validaciones:** Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas.
 - **Sesión 22 · GitOps con ArgoCD:** ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves.
 - **Sesión 23 · Traefik e Istio:** Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo.
 - **Sesión 24 · Entrega progresiva con Argo Rollouts:** Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking.
 - **Sesión 25 · Escalado con HPA, VPA, KEDA y Karpenter:** Catálogo triggers, métricas complejas, tuning, políticas Spot/capacidad y optimización profunda de costes; evitar controladores compitiendo.
-- **Sesión 26 · Operators con Go y Kubebuilder/Operator SDK:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero; sesión provisional de visión general.
-- **Sesión 27 · Cluster API y Hosted Control Planes:** Instalación de todos los productos y operación avanzada; propuesta provisional.
-- **Sesión 28 · Knative y serverless:** Plataforma serverless completa, Eventing avanzado y Virtual Kubelet profundo; propuesta provisional.
-- **Sesión 29 · Multi-cluster: Istio, Cilium y Submariner:** Desplegar las tres soluciones desde cero; OCM/Rancher fuera del recorrido actual; propuesta provisional.
-- **Sesión 30 · Crossplane y recuperación con Velero:** Composition Functions avanzado, plataforma multicloud completa y DR de producción; propuesta provisional.
+- **Sesión 26 · Operators con Go y Kubebuilder/Operator SDK:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero.
+- **Sesión 27 · Cluster API y Hosted Control Planes:** Instalación de todos los productos y operación avanzada.
+- **Sesión 28 · Knative y serverless:** Plataforma serverless completa, Eventing avanzado y Virtual Kubelet profundo.
+- **Sesión 29 · Multi-cluster: Istio, Cilium y Submariner:** Desplegar las tres soluciones desde cero.
+- **Sesión 30 · Crossplane y recuperación con Velero:** Composition Functions avanzado, plataforma multicloud completa y DR de producción.
 
-**Ampliación de IaC:** posible cuarta clase de Terraform/OpenTofu con módulos propios, testing y automatización; solo con decisión expresa y revisión del reparto. No confundir profundización extra con la cobertura mínima de testing/CI que aún exige la descripción oficial.
-
+**Ampliación de IaC:** taller adicional de Terraform/OpenTofu centrado en diseño de módulos, testing avanzado y automatización.
