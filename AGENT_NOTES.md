@@ -25,7 +25,10 @@ Esta sección prevalece sobre las notas históricas inferiores. El usuario pide 
 
 - **Traefik/Istio aprobado, pasa a amarillo:** componentes preparados; entrada externa con Traefik (routing/TLS reutilizando cert-manager), comunicación entre servicios con Istio (mTLS y política de acceso). Modificar pocas reglas y observar resultados. Mostrar reparto entre dos versiones como preparación de Argo Rollouts, sin repetir el canary completo. Distinguir entrada de tráfico y service mesh.
 
-Siguiente rojo por revisar: escalado. No regenerar documentos aún.
+- **Escalado aprobado, pasa a amarillo:** aplicación sometida a carga; HPA como laboratorio principal (réplicas por CPU), VPA como consulta breve de recomendaciones sin ajustes automáticos que interfieran con HPA; KEDA con cola preparada para mostrar escalado por eventos; Karpenter con demostración preparada de provisión de nodos ante Pods pendientes y consolidación posterior. Mantener los cuatro componentes de la web. Explicar que KEDA usa HPA para el escalado de réplicas y evitar controladores compitiendo sobre el mismo workload durante los labs.
+- **Extras de escalado:** catálogo completo de triggers KEDA, métricas personalizadas complejas, tuning avanzado, políticas avanzadas de capacidad/Spot y optimización profunda de costes.
+
+Semáforo actual: 29 sesiones / 87h sin Proyecto Final. DevOps/PE, ExternalDNS/cert-manager y Knative en verde; el resto en amarillo bajo el alcance guiado/preparado o introductorio acordado. No quedan rojos con ese alcance, pero no implica resolución de los contenidos oficiales pendientes. M6 sigue provisional y su amarillo supone visión general/demos. No regenerar documentos aún.
 
 ### Extras fuera del alcance principal — registro consolidado
 
