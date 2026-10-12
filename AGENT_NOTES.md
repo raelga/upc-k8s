@@ -23,7 +23,29 @@ Esta sección prevalece sobre las notas históricas inferiores. El usuario pide 
 - **Trazas y correlación aprobado, pasa a amarillo:** dos servicios preparados; petición distribuida e instrumentación automática, sin programarla desde cero. Seguir traza por Collector hasta Tempo; provocar latencia y localizar el servicio responsable en Grafana; relacionar con métricas/logs con enlaces previamente configurados. Objetivo: entender y diagnosticar una petición distribuida.
 - **Fuera de esta sesión / ampliación:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación de Collector/Tempo en producción. OpenTelemetry, Collector, Tempo y correlación se mantienen en el contenido.
 
-Siguiente rojo por revisar: Traefik/Istio; después escalado. No regenerar documentos aún.
+- **Traefik/Istio aprobado, pasa a amarillo:** componentes preparados; entrada externa con Traefik (routing/TLS reutilizando cert-manager), comunicación entre servicios con Istio (mTLS y política de acceso). Modificar pocas reglas y observar resultados. Mostrar reparto entre dos versiones como preparación de Argo Rollouts, sin repetir el canary completo. Distinguir entrada de tráfico y service mesh.
+
+Siguiente rojo por revisar: escalado. No regenerar documentos aún.
+
+### Extras fuera del alcance principal — registro consolidado
+
+El usuario pide conservar explícitamente todo lo apartado como ampliaciones. No considerarlos tareas aprobadas para desarrollar ahora ni añadir sesiones automáticamente. Limitar profundidad práctica no elimina la cobertura conceptual prometida en la web.
+
+- **Cloud e IaC:** curso completo de HCL, recorrido completo por boto3/SDK de cada cloud, infraestructura diseñada autónomamente desde cero y catálogo exhaustivo de servicios (bases de datos, mensajería, serverless). Diseño avanzado de módulos propios, sesión adicional de IaC y laboratorio propio de Pulumi como posibles ampliaciones. Pulumi permanece como comparación breve si cabe. Estado remoto, variables, outputs y módulos existentes siguen en el recorrido principal.
+- **EKS/kOps:** dos despliegues construidos autónomamente y operación avanzada (actualizaciones/recuperación practicadas en profundidad). El recorrido principal despliega ambos con material preparado, explica responsabilidades y compara sobre la misma aplicación.
+- **Networking M3:** instalación y comparación de varios CNI, catálogo completo de rutas y networking avanzado. El principal conserva Services/CoreDNS/CNI/NetworkPolicy y un ejemplo Gateway API con explicación de Ingress. Traefik/Istio tiene su sesión principal posterior.
+- **Scheduling:** opciones avanzadas y catálogo exhaustivo; mantener scheduling básico y restricciones relevantes de almacenamiento en M3.
+- **Helm/Kustomize:** creación de charts complejos desde cero; el principal usa/adapta paquetes existentes y un chart que instala un operator.
+- **Vault:** HA, auto-unseal y operación en producción en profundidad; Vault/ESO deben seguir cubiertos en el principal por estar nombrados oficialmente.
+- **Métricas:** HA/federación de Prometheus y operación avanzada de Mimir. Mimir se presenta en el principal; no se elimina.
+- **Grafana/Loki/Alloy:** Grafana as Code y operación avanzada de Loki; Alloy se mantiene para recoger logs con configuración guiada/preparada.
+- **OpenTelemetry/Tempo:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación de Collector/Tempo en producción. Principal: instrumentación automática y diagnóstico/correlación preparados.
+- **Traefik/Istio:** instalación desde cero, catálogo de middlewares, routing TCP/UDP, tuning de Envoy y profundización en Ambient Mesh. Principal: routing/TLS de entrada, mTLS/política de acceso entre servicios y preparación del reparto de tráfico.
+- **ArgoCD (propuesta de alcance por afinar):** ApplicationSets avanzado, multi-tenancy y SSO como ampliaciones; mantener aplicaciones, sincronización, health y drift como eje práctico.
+- **Operators/Go (M6 provisional):** curso completo de Go, CLIs con Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero. Principal propuesto: leer/modificar un ejemplo y entender CRD/reconciliación/Kubebuilder/Operator SDK.
+
+**Contenido oficial pendiente de encaje, NO clasificar como extras prescindibles:** Git avanzado; testing/CI de Terraform; redes/DNS/CDN con Cloudflare; OIDC/admission controllers. PSA/Kyverno/Gatekeeper son posibles implementaciones, todavía sin decidir ubicación/profundidad. M6 queda pendiente de revisión final; no dar por cerrado el alcance de sus demos.
+
 
 ### M1–M2: sesiones 2–5 reorganizadas y aprobadas
 
