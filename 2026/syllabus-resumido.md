@@ -19,6 +19,24 @@ Enlaces: [syllabus detallado](syllabus-detallado.md) · [calendario](calendario.
 | PF · Proyecto Final | Fuera de las 30 | 6h adicionales | 1.5 | — |
 | **Total lectivo** | **30** | **90h** | **12 ECTS, incluido PF** | |
 
+## M1 · Formación transversal y créditos
+
+M1 combina una clase propia con programación para infraestructura integrada en las sesiones cloud, CI y operators. Comprende **9 horas lectivas de contenido: 3h propias y 6h integradas**, dentro de las 90h del curso.
+
+| Sesión | Contenido de M1 | Horas incluidas |
+|---|---|---:|
+| 1 · DevOps y Platform Engineering | Fundamentos DevOps, cultura, plataformas y métricas | 3h |
+| 2 · AWS, Terraform y Python | Python para consultar recursos; generación y revisión de código con IA | 1h |
+| 3 · Azure, Terraform y automatización Python | Adaptación de scripts, configuración y tratamiento de resultados | 1h |
+| 4 · GCP, estado remoto y comparación de IaC | Reutilización de la automatización y comparación de implementaciones | 1h |
+| 20 · Scripting y pipelines con Tekton | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
+| 26 · Operators con Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
+| **Total M1** | **Contenido propio y transversal** | **9h** |
+
+Las tablas de distribución asignan cada clase a un bloque principal; las horas transversales indican contenidos compartidos y no se suman de nuevo al total lectivo. La docencia de cada parte corresponde al profesor de esa sesión.
+
+Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluable. Este trabajo consiste en adaptar un script entre proveedores, añadir validaciones y manejo de errores, y modificar el ejemplo de Go explicando el comportamiento del controlador. Las evidencias se recogen durante las prácticas de las sesiones correspondientes.
+
 ## Carga docente
 
 | Docente | Sesiones lectivas | Horas |
@@ -41,9 +59,9 @@ Semáforo: 🟢 alcance cómodo; 🟡 ajustado con material preparado. No mide d
 | # | Bloque | Sesión | Docente | Carga |
 |---:|---|---|---|:---:|
 | 1 | M1 | DevOps y Platform Engineering | René | 🟢 |
-| 2 | M2 | AWS, Terraform y Python | Rael | 🟡 |
-| 3 | M2 | Azure, Terraform y automatización Python | Rael | 🟡 |
-| 4 | M2 | GCP, estado remoto y comparación de IaC | Rael | 🟡 |
+| 2 | M2 + M1 | AWS, Terraform y Python | Rael | 🟡 |
+| 3 | M2 + M1 | Azure, Terraform y automatización Python | Rael | 🟡 |
+| 4 | M2 + M1 | GCP, estado remoto y comparación de IaC | Rael | 🟡 |
 | 5 | M3 | Contenedores y ecosistema OCI | Rael | 🟡 |
 | 6 | M3 | Arquitectura, API, kind, autenticación y RBAC | Rael | 🟡 |
 | 7 | M3 | Workloads, configuración y recursos | Rael | 🟡 |
@@ -59,13 +77,13 @@ Semáforo: 🟢 alcance cómodo; 🟡 ajustado con material preparado. No mide d
 | 17 | M5 | Prometheus, PromQL y Alertmanager | David | 🟡 |
 | 18 | M5 | Grafana, Loki y Alloy | David | 🟡 |
 | 19 | M5 | OpenTelemetry, Collector, Tempo y correlación | David | 🟡 |
-| 20 | M5 | Scripting y pipelines con Tekton | Rael | 🟡 |
+| 20 | M5 + M1 | Scripting y pipelines con Tekton | Rael | 🟡 |
 | 21 | M5 | Git y Prow: colaboración y validaciones | Rael | 🟡 |
 | 22 | M5 | GitOps con ArgoCD | Rael | 🟡 |
 | 23 | M5 | Traefik e Istio | David | 🟡 |
 | 24 | M5 | Entrega progresiva con Argo Rollouts | David | 🟡 |
 | 25 | M5 | Escalado con HPA, VPA, KEDA y Karpenter | David | 🟡 |
-| 26 | M6 | Operators con Go y Kubebuilder/Operator SDK | Profesor UPC | 🟡 |
+| 26 | M6 + M1 | Operators con Go y Kubebuilder/Operator SDK | Profesor UPC | 🟡 |
 | 27 | M6 | Cluster API y Hosted Control Planes | Profesor UPC | 🟡 |
 | 28 | M6 | Knative y serverless | Profesor UPC | 🟢 |
 | 29 | M6 | Multi-cluster: Istio, Cilium y Submariner | Profesor UPC | 🟡 |

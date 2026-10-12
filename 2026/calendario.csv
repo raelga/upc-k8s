@@ -1,31 +1,31 @@
-sesion,fecha,horario,zona_horaria,modulo,titulo,docente,concentracion
-1,2026-11-03,18:00–21:00,Europe/Madrid,M1,DevOps y Platform Engineering,René,verde
-2,2026-11-05,18:00–21:00,Europe/Madrid,M2,"AWS, Terraform y Python",Rael,amarillo
-3,2026-11-10,18:00–21:00,Europe/Madrid,M2,"Azure, Terraform y automatización Python",Rael,amarillo
-4,2026-11-12,18:00–21:00,Europe/Madrid,M2,"GCP, estado remoto y comparación de IaC",Rael,amarillo
-5,2026-11-17,18:00–21:00,Europe/Madrid,M3,Contenedores y ecosistema OCI,Rael,amarillo
-6,2026-11-19,18:00–21:00,Europe/Madrid,M3,"Arquitectura, API, kind, autenticación y RBAC",Rael,amarillo
-7,2026-11-24,18:00–21:00,Europe/Madrid,M3,"Workloads, configuración y recursos",Rael,amarillo
-8,2026-11-26,18:00–21:00,Europe/Madrid,M3,"Persistencia, CSI y StatefulSets",Rael,amarillo
-9,2026-12-01,18:00–21:00,Europe/Madrid,M3,Networking y exposición de aplicaciones,Rael,amarillo
-10,2026-12-03,18:00–21:00,Europe/Madrid,M3,Clúster componente a componente,Rael,amarillo
-11,2026-12-10,18:00–21:00,Europe/Madrid,M3,Seguridad de imágenes y políticas de admisión,Rael,amarillo
-12,2026-12-15,18:00–21:00,Europe/Madrid,M4,EKS y kOps en AWS,Rael,amarillo
-13,2026-12-17,18:00–21:00,Europe/Madrid,M4,AKS y GKE,Rael,amarillo
-14,2026-12-22,18:00–21:00,Europe/Madrid,M4,Kustomize y Helm,Rael,amarillo
-15,2027-01-07,18:00–21:00,Europe/Madrid,M4,"DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager",Rael,verde
-16,2027-01-12,18:00–21:00,Europe/Madrid,M4,Secretos externos: Vault y External Secrets Operator,Rael,amarillo
-17,2027-01-14,18:00–21:00,Europe/Madrid,M5,"Prometheus, PromQL y Alertmanager",David,amarillo
-18,2027-01-19,18:00–21:00,Europe/Madrid,M5,"Grafana, Loki y Alloy",David,amarillo
-19,2027-01-21,18:00–21:00,Europe/Madrid,M5,"OpenTelemetry, Collector, Tempo y correlación",David,amarillo
-20,2027-01-26,18:00–21:00,Europe/Madrid,M5,Scripting y pipelines con Tekton,Rael,amarillo
-21,2027-01-28,18:00–21:00,Europe/Madrid,M5,Git y Prow: colaboración y validaciones,Rael,amarillo
-22,2027-02-02,18:00–21:00,Europe/Madrid,M5,GitOps con ArgoCD,Rael,amarillo
-23,2027-02-04,18:00–21:00,Europe/Madrid,M5,Traefik e Istio,David,amarillo
-24,2027-02-11,18:00–21:00,Europe/Madrid,M5,Entrega progresiva con Argo Rollouts,David,amarillo
-25,2027-02-16,18:00–21:00,Europe/Madrid,M5,"Escalado con HPA, VPA, KEDA y Karpenter",David,amarillo
-26,2027-02-18,18:00–21:00,Europe/Madrid,M6,Operators con Go y Kubebuilder/Operator SDK,Profesor UPC,amarillo
-27,2027-02-23,18:00–21:00,Europe/Madrid,M6,Cluster API y Hosted Control Planes,Profesor UPC,amarillo
-28,2027-02-25,18:00–21:00,Europe/Madrid,M6,Knative y serverless,Profesor UPC,verde
-29,2027-03-02,18:00–21:00,Europe/Madrid,M6,"Multi-cluster: Istio, Cilium y Submariner",Profesor UPC,amarillo
-30,2027-03-04,18:00–21:00,Europe/Madrid,M6,Crossplane y recuperación con Velero,Profesor UPC,amarillo
+sesion,fecha,horario,zona_horaria,modulo,titulo,docente,concentracion,contenido_m1,horas_m1_incluidas
+1,2026-11-03,18:00–21:00,Europe/Madrid,M1,DevOps y Platform Engineering,René,verde,"Fundamentos DevOps, cultura, plataformas y métricas",3
+2,2026-11-05,18:00–21:00,Europe/Madrid,M2,"AWS, Terraform y Python",Rael,amarillo,Python para consultar recursos; generación y revisión de código con IA,1
+3,2026-11-10,18:00–21:00,Europe/Madrid,M2,"Azure, Terraform y automatización Python",Rael,amarillo,"Adaptación de scripts, configuración y tratamiento de resultados",1
+4,2026-11-12,18:00–21:00,Europe/Madrid,M2,"GCP, estado remoto y comparación de IaC",Rael,amarillo,Reutilización de la automatización y comparación de implementaciones,1
+5,2026-11-17,18:00–21:00,Europe/Madrid,M3,Contenedores y ecosistema OCI,Rael,amarillo,,
+6,2026-11-19,18:00–21:00,Europe/Madrid,M3,"Arquitectura, API, kind, autenticación y RBAC",Rael,amarillo,,
+7,2026-11-24,18:00–21:00,Europe/Madrid,M3,"Workloads, configuración y recursos",Rael,amarillo,,
+8,2026-11-26,18:00–21:00,Europe/Madrid,M3,"Persistencia, CSI y StatefulSets",Rael,amarillo,,
+9,2026-12-01,18:00–21:00,Europe/Madrid,M3,Networking y exposición de aplicaciones,Rael,amarillo,,
+10,2026-12-03,18:00–21:00,Europe/Madrid,M3,Clúster componente a componente,Rael,amarillo,,
+11,2026-12-10,18:00–21:00,Europe/Madrid,M3,Seguridad de imágenes y políticas de admisión,Rael,amarillo,,
+12,2026-12-15,18:00–21:00,Europe/Madrid,M4,EKS y kOps en AWS,Rael,amarillo,,
+13,2026-12-17,18:00–21:00,Europe/Madrid,M4,AKS y GKE,Rael,amarillo,,
+14,2026-12-22,18:00–21:00,Europe/Madrid,M4,Kustomize y Helm,Rael,amarillo,,
+15,2027-01-07,18:00–21:00,Europe/Madrid,M4,"DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager",Rael,verde,,
+16,2027-01-12,18:00–21:00,Europe/Madrid,M4,Secretos externos: Vault y External Secrets Operator,Rael,amarillo,,
+17,2027-01-14,18:00–21:00,Europe/Madrid,M5,"Prometheus, PromQL y Alertmanager",David,amarillo,,
+18,2027-01-19,18:00–21:00,Europe/Madrid,M5,"Grafana, Loki y Alloy",David,amarillo,,
+19,2027-01-21,18:00–21:00,Europe/Madrid,M5,"OpenTelemetry, Collector, Tempo y correlación",David,amarillo,,
+20,2027-01-26,18:00–21:00,Europe/Madrid,M5,Scripting y pipelines con Tekton,Rael,amarillo,"Bash/Python, errores, validaciones y ejecución automatizada",1.5
+21,2027-01-28,18:00–21:00,Europe/Madrid,M5,Git y Prow: colaboración y validaciones,Rael,amarillo,,
+22,2027-02-02,18:00–21:00,Europe/Madrid,M5,GitOps con ArgoCD,Rael,amarillo,,
+23,2027-02-04,18:00–21:00,Europe/Madrid,M5,Traefik e Istio,David,amarillo,,
+24,2027-02-11,18:00–21:00,Europe/Madrid,M5,Entrega progresiva con Argo Rollouts,David,amarillo,,
+25,2027-02-16,18:00–21:00,Europe/Madrid,M5,"Escalado con HPA, VPA, KEDA y Karpenter",David,amarillo,,
+26,2027-02-18,18:00–21:00,Europe/Madrid,M6,Operators con Go y Kubebuilder/Operator SDK,Profesor UPC,amarillo,Go aplicado y lectura/modificación del controlador,1.5
+27,2027-02-23,18:00–21:00,Europe/Madrid,M6,Cluster API y Hosted Control Planes,Profesor UPC,amarillo,,
+28,2027-02-25,18:00–21:00,Europe/Madrid,M6,Knative y serverless,Profesor UPC,verde,,
+29,2027-03-02,18:00–21:00,Europe/Madrid,M6,"Multi-cluster: Istio, Cilium y Submariner",Profesor UPC,amarillo,,
+30,2027-03-04,18:00–21:00,Europe/Madrid,M6,Crossplane y recuperación con Velero,Profesor UPC,amarillo,,

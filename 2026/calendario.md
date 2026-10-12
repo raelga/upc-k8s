@@ -11,9 +11,9 @@ Enlaces: [syllabus resumido](syllabus-resumido.md) · [syllabus detallado](sylla
 | # | Fecha | Día | Bloque | Sesión | Horario | Docente | Carga |
 |---:|---|---|---|---|---|---|:---:|
 | 1 | 03/11/2026 | Martes | M1 | DevOps y Platform Engineering | 18:00–21:00 | René | 🟢 |
-| 2 | 05/11/2026 | Jueves | M2 | AWS, Terraform y Python | 18:00–21:00 | Rael | 🟡 |
-| 3 | 10/11/2026 | Martes | M2 | Azure, Terraform y automatización Python | 18:00–21:00 | Rael | 🟡 |
-| 4 | 12/11/2026 | Jueves | M2 | GCP, estado remoto y comparación de IaC | 18:00–21:00 | Rael | 🟡 |
+| 2 | 05/11/2026 | Jueves | M2 + M1 | AWS, Terraform y Python | 18:00–21:00 | Rael | 🟡 |
+| 3 | 10/11/2026 | Martes | M2 + M1 | Azure, Terraform y automatización Python | 18:00–21:00 | Rael | 🟡 |
+| 4 | 12/11/2026 | Jueves | M2 + M1 | GCP, estado remoto y comparación de IaC | 18:00–21:00 | Rael | 🟡 |
 | 5 | 17/11/2026 | Martes | M3 | Contenedores y ecosistema OCI | 18:00–21:00 | Rael | 🟡 |
 | 6 | 19/11/2026 | Jueves | M3 | Arquitectura, API, kind, autenticación y RBAC | 18:00–21:00 | Rael | 🟡 |
 | 7 | 24/11/2026 | Martes | M3 | Workloads, configuración y recursos | 18:00–21:00 | Rael | 🟡 |
@@ -29,13 +29,13 @@ Enlaces: [syllabus resumido](syllabus-resumido.md) · [syllabus detallado](sylla
 | 17 | 14/01/2027 | Jueves | M5 | Prometheus, PromQL y Alertmanager | 18:00–21:00 | David | 🟡 |
 | 18 | 19/01/2027 | Martes | M5 | Grafana, Loki y Alloy | 18:00–21:00 | David | 🟡 |
 | 19 | 21/01/2027 | Jueves | M5 | OpenTelemetry, Collector, Tempo y correlación | 18:00–21:00 | David | 🟡 |
-| 20 | 26/01/2027 | Martes | M5 | Scripting y pipelines con Tekton | 18:00–21:00 | Rael | 🟡 |
+| 20 | 26/01/2027 | Martes | M5 + M1 | Scripting y pipelines con Tekton | 18:00–21:00 | Rael | 🟡 |
 | 21 | 28/01/2027 | Jueves | M5 | Git y Prow: colaboración y validaciones | 18:00–21:00 | Rael | 🟡 |
 | 22 | 02/02/2027 | Martes | M5 | GitOps con ArgoCD | 18:00–21:00 | Rael | 🟡 |
 | 23 | 04/02/2027 | Jueves | M5 | Traefik e Istio | 18:00–21:00 | David | 🟡 |
 | 24 | 11/02/2027 | Jueves | M5 | Entrega progresiva con Argo Rollouts | 18:00–21:00 | David | 🟡 |
 | 25 | 16/02/2027 | Martes | M5 | Escalado con HPA, VPA, KEDA y Karpenter | 18:00–21:00 | David | 🟡 |
-| 26 | 18/02/2027 | Jueves | M6 | Operators con Go y Kubebuilder/Operator SDK | 18:00–21:00 | Profesor UPC | 🟡 |
+| 26 | 18/02/2027 | Jueves | M6 + M1 | Operators con Go y Kubebuilder/Operator SDK | 18:00–21:00 | Profesor UPC | 🟡 |
 | 27 | 23/02/2027 | Martes | M6 | Cluster API y Hosted Control Planes | 18:00–21:00 | Profesor UPC | 🟡 |
 | 28 | 25/02/2027 | Jueves | M6 | Knative y serverless | 18:00–21:00 | Profesor UPC | 🟢 |
 | 29 | 02/03/2027 | Martes | M6 | Multi-cluster: Istio, Cilium y Submariner | 18:00–21:00 | Profesor UPC | 🟡 |
@@ -75,6 +75,24 @@ El calendario excluye los festivos y periodos no lectivos indicados a continuaci
 | M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 26–30 (5) | 15h | 2 | Profesor UPC |
 | PF · Proyecto Final | Fuera de las 30 | 6h adicionales | 1.5 | — |
 | **Total lectivo** | **30** | **90h** | **12 ECTS, incluido PF** | |
+
+## M1 · Formación transversal y créditos
+
+M1 combina una clase propia con programación para infraestructura integrada en las sesiones cloud, CI y operators. Comprende **9 horas lectivas de contenido: 3h propias y 6h integradas**, dentro de las 90h del curso.
+
+| Sesión | Contenido de M1 | Horas incluidas |
+|---|---|---:|
+| 1 · DevOps y Platform Engineering | Fundamentos DevOps, cultura, plataformas y métricas | 3h |
+| 2 · AWS, Terraform y Python | Python para consultar recursos; generación y revisión de código con IA | 1h |
+| 3 · Azure, Terraform y automatización Python | Adaptación de scripts, configuración y tratamiento de resultados | 1h |
+| 4 · GCP, estado remoto y comparación de IaC | Reutilización de la automatización y comparación de implementaciones | 1h |
+| 20 · Scripting y pipelines con Tekton | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
+| 26 · Operators con Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
+| **Total M1** | **Contenido propio y transversal** | **9h** |
+
+Las tablas de distribución asignan cada clase a un bloque principal; las horas transversales indican contenidos compartidos y no se suman de nuevo al total lectivo. La docencia de cada parte corresponde al profesor de esa sesión.
+
+Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluable. Este trabajo consiste en adaptar un script entre proveedores, añadir validaciones y manejo de errores, y modificar el ejemplo de Go explicando el comportamiento del controlador. Las evidencias se recogen durante las prácticas de las sesiones correspondientes.
 
 ## Carga docente
 

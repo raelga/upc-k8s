@@ -18,7 +18,14 @@
       ],
       "lab": "Propuesta breve de plataforma para una empresa: usuarios, capacidades y criterios de éxito",
       "extras": "Implantación completa de Backstage y diseño organizativo en profundidad",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "transversal_contents": [
+        {
+          "module": "M1",
+          "hours": 3,
+          "scope": "Fundamentos DevOps, cultura, plataformas y métricas"
+        }
+      ]
     },
     {
       "number": 2,
@@ -35,7 +42,14 @@
       ],
       "lab": "Lanzar el ejemplo preparado, explicar mientras se despliega, modificar una variable, consultar recursos y verificar limpieza",
       "extras": "Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "transversal_contents": [
+        {
+          "module": "M1",
+          "hours": 1,
+          "scope": "Python para consultar recursos; generación y revisión de código con IA"
+        }
+      ]
     },
     {
       "number": 3,
@@ -52,7 +66,14 @@
       ],
       "lab": "Reproducir el caso común con configuración preparada y explicar equivalencias y diferencias",
       "extras": "SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados",
-      "date": "2026-11-10"
+      "date": "2026-11-10",
+      "transversal_contents": [
+        {
+          "module": "M1",
+          "hours": 1,
+          "scope": "Adaptación de scripts, configuración y tratamiento de resultados"
+        }
+      ]
     },
     {
       "number": 4,
@@ -69,7 +90,14 @@
       ],
       "lab": "Adaptar el caso preparado, consultar recursos y comparar identidad, red, estado y portabilidad",
       "extras": "Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados",
-      "date": "2026-11-12"
+      "date": "2026-11-12",
+      "transversal_contents": [
+        {
+          "module": "M1",
+          "hours": 1,
+          "scope": "Reutilización de la automatización y comparación de implementaciones"
+        }
+      ]
     },
     {
       "number": 5,
@@ -86,7 +114,8 @@
       ],
       "lab": "Construir una imagen pequeña y ejecutar/publicar la aplicación que servirá de hilo conductor",
       "extras": "Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en seguridad y Tekton",
-      "date": "2026-11-17"
+      "date": "2026-11-17",
+      "transversal_contents": []
     },
     {
       "number": 6,
@@ -104,7 +133,8 @@
       ],
       "lab": "Levantar kind, localizar componentes y comprobar una operación permitida y otra denegada",
       "extras": "Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero",
-      "date": "2026-11-19"
+      "date": "2026-11-19",
+      "transversal_contents": []
     },
     {
       "number": 7,
@@ -122,7 +152,8 @@
       ],
       "lab": "Modificar configuración, observar probes, actualizar la aplicación y comprobar asignación de recursos",
       "extras": "Catálogo exhaustivo de controladores y scheduling avanzado",
-      "date": "2026-11-24"
+      "date": "2026-11-24",
+      "transversal_contents": []
     },
     {
       "number": 8,
@@ -139,7 +170,8 @@
       ],
       "lab": "Añadir persistencia, recrear un Pod y verificar datos y comportamiento del workload",
       "extras": "Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada",
-      "date": "2026-11-26"
+      "date": "2026-11-26",
+      "transversal_contents": []
     },
     {
       "number": 9,
@@ -156,7 +188,8 @@
       ],
       "lab": "Con CNI/controlador preparados, exponer la aplicación, bloquear tráfico y permitir solo conexiones necesarias",
       "extras": "Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio",
-      "date": "2026-12-01"
+      "date": "2026-12-01",
+      "transversal_contents": []
     },
     {
       "number": 10,
@@ -172,7 +205,8 @@
       ],
       "lab": "Arrancar un clúster reducido con material preparado, unir un nodo y ejecutar un Pod",
       "extras": "Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada",
-      "date": "2026-12-03"
+      "date": "2026-12-03",
+      "transversal_contents": []
     },
     {
       "number": 11,
@@ -189,7 +223,8 @@
       ],
       "lab": "Revisar una imagen, rechazar un Pod privilegiado o que incumpla una política, corregirlo y comprobar admisión",
       "extras": "Firmas, SBOM, attestations y conexión automática entre escaneo/admisión; segundo motor de políticas completo",
-      "date": "2026-12-10"
+      "date": "2026-12-10",
+      "transversal_contents": []
     },
     {
       "number": 12,
@@ -206,7 +241,8 @@
       ],
       "lab": "Explicar durante ambos despliegues, solapar esperas, desplegar la misma aplicación y comparar; comprobar permisos y disponer de clústeres de respaldo",
       "extras": "Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad",
-      "date": "2026-12-15"
+      "date": "2026-12-15",
+      "transversal_contents": []
     },
     {
       "number": 13,
@@ -224,7 +260,8 @@
       ],
       "lab": "Demostración preparada de los mismos requisitos y comparación razonada con EKS",
       "extras": "Instalaciones completas independientes y catálogo de add-ons de ambos proveedores",
-      "date": "2026-12-17"
+      "date": "2026-12-17",
+      "transversal_contents": []
     },
     {
       "number": 14,
@@ -241,7 +278,8 @@
       ],
       "lab": "Adaptar la aplicación a dos entornos e instalar/configurar un chart, distinguiendo chart, operator y recursos gestionados",
       "extras": "Creación de charts complejos desde cero y catálogo de plugins",
-      "date": "2026-12-22"
+      "date": "2026-12-22",
+      "transversal_contents": []
     },
     {
       "number": 15,
@@ -259,7 +297,8 @@
       ],
       "lab": "Instalar componentes por Helm sobre el entorno anterior, publicar el registro y verificar HTTPS y renovación",
       "extras": "DNSSEC/DoH y operación DNS avanzada",
-      "date": "2027-01-07"
+      "date": "2027-01-07",
+      "transversal_contents": []
     },
     {
       "number": 16,
@@ -277,7 +316,8 @@
       ],
       "lab": "Aplicación consume secreto externo, modificarlo y comprobar sincronización y comportamiento de la aplicación",
       "extras": "HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state",
-      "date": "2027-01-12"
+      "date": "2027-01-12",
+      "transversal_contents": []
     },
     {
       "number": 17,
@@ -296,7 +336,8 @@
       ],
       "lab": "kube-prometheus-stack preparado, conectar la app, provocar errores/carga, consultar y comprobar una alerta",
       "extras": "HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre",
-      "date": "2027-01-14"
+      "date": "2027-01-14",
+      "transversal_contents": []
     },
     {
       "number": 18,
@@ -314,7 +355,8 @@
       ],
       "lab": "Provocar fallo, detectarlo en el dashboard y localizar logs del mismo intervalo con configuración guiada de Alloy",
       "extras": "Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy",
-      "date": "2027-01-19"
+      "date": "2027-01-19",
+      "transversal_contents": []
     },
     {
       "number": 19,
@@ -332,7 +374,8 @@
       ],
       "lab": "Dos servicios preparados, provocar latencia y recorrer métrica→traza→logs; Collector para trazas y Alloy para logs",
       "extras": "SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo",
-      "date": "2027-01-21"
+      "date": "2027-01-21",
+      "transversal_contents": []
     },
     {
       "number": 20,
@@ -351,7 +394,14 @@
       ],
       "lab": "Conectar tareas preparadas de build/test/scan/publicación y comprobar fallos y resultados",
       "extras": "Curso completo de Bash/Python; Triggers/Chains avanzados y attestations",
-      "date": "2027-01-26"
+      "date": "2027-01-26",
+      "transversal_contents": [
+        {
+          "module": "M1",
+          "hours": 1.5,
+          "scope": "Bash/Python, errores, validaciones y ejecución automatizada"
+        }
+      ]
     },
     {
       "number": 21,
@@ -367,7 +417,8 @@
       ],
       "lab": "Prow preparado, abrir un PR, observar validaciones y resolver un fallo antes del merge",
       "extras": "Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas",
-      "date": "2027-01-28"
+      "date": "2027-01-28",
+      "transversal_contents": []
     },
     {
       "number": 22,
@@ -384,7 +435,8 @@
       ],
       "lab": "Desplegar imagen producida por CI, modificar manifiesto mediante PR, observar sync y provocar drift manual",
       "extras": "ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves",
-      "date": "2027-02-02"
+      "date": "2027-02-02",
+      "transversal_contents": []
     },
     {
       "number": 23,
@@ -400,7 +452,8 @@
       ],
       "lab": "Componentes preparados, modificar pocas reglas, comprobar acceso y comunicación y observar reparto de tráfico",
       "extras": "Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo",
-      "date": "2027-02-04"
+      "date": "2027-02-04",
+      "transversal_contents": []
     },
     {
       "number": 24,
@@ -417,7 +470,8 @@
       ],
       "lab": "Canary principal sobre la misma app, provocar degradación y comprobar retorno; blue/green como comparación",
       "extras": "Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking",
-      "date": "2027-02-11"
+      "date": "2027-02-11",
+      "transversal_contents": []
     },
     {
       "number": 25,
@@ -434,7 +488,8 @@
       ],
       "lab": "Generar carga, observar HPA; consulta VPA; demos preparadas de cola KEDA y provisión/consolidación de nodos",
       "extras": "Catálogo triggers, métricas complejas, tuning, políticas Spot/capacidad y optimización profunda de costes; evitar controladores compitiendo",
-      "date": "2027-02-16"
+      "date": "2027-02-16",
+      "transversal_contents": []
     },
     {
       "number": 26,
@@ -450,7 +505,14 @@
       ],
       "lab": "Leer un operator preparado, crear un recurso, observar actuación y modificar un comportamiento pequeño",
       "extras": "Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero",
-      "date": "2027-02-18"
+      "date": "2027-02-18",
+      "transversal_contents": [
+        {
+          "module": "M1",
+          "hours": 1.5,
+          "scope": "Go aplicado y lectura/modificación del controlador"
+        }
+      ]
     },
     {
       "number": 27,
@@ -466,7 +528,8 @@
       ],
       "lab": "Demostraciones preparadas y comparación de responsabilidades, sin asumir integración universal de todas las herramientas",
       "extras": "Instalación de todos los productos y operación avanzada",
-      "date": "2027-02-23"
+      "date": "2027-02-23",
+      "transversal_contents": []
     },
     {
       "number": 28,
@@ -482,7 +545,8 @@
       ],
       "lab": "Publicar una función/servicio preparado, generar tráfico y observar escalado a cero",
       "extras": "Plataforma serverless completa, Eventing avanzado y Virtual Kubelet profundo",
-      "date": "2027-02-25"
+      "date": "2027-02-25",
+      "transversal_contents": []
     },
     {
       "number": 29,
@@ -500,7 +564,8 @@
       ],
       "lab": "Diagramas y demostración preparada de tráfico entre clústeres, comparando opciones",
       "extras": "Desplegar las tres soluciones desde cero",
-      "date": "2027-03-02"
+      "date": "2027-03-02",
+      "transversal_contents": []
     },
     {
       "number": 30,
@@ -516,7 +581,8 @@
       ],
       "lab": "Demos separadas de recurso cloud reconciliado y recuperación de aplicación; discutir dependencias, datos y RPO/RTO",
       "extras": "Composition Functions avanzado, plataforma multicloud completa y DR de producción",
-      "date": "2027-03-04"
+      "date": "2027-03-04",
+      "transversal_contents": []
     }
   ],
   "non_teaching_dates": {
@@ -534,5 +600,19 @@
   "project_dates": [
     "2027-03-09",
     "2027-03-11"
-  ]
+  ],
+  "transversal_modules": {
+    "M1": {
+      "ects": 1.5,
+      "contact_hours": 9,
+      "dedicated_hours": 3,
+      "integrated_hours": 6,
+      "included_in_lecture_hours": true,
+      "independent_work": [
+        "Adaptar un script entre proveedores",
+        "Añadir validaciones y manejo de errores",
+        "Modificar el ejemplo de Go y explicar el comportamiento del controlador"
+      ]
+    }
+  }
 }

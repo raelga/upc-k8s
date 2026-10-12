@@ -18,11 +18,31 @@ Semáforo: 🟢 alcance cómodo; 🟡 ajustado con material preparado. No mide d
 
 Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubernetes → observabilidad → CI/GitOps → entrega/escalado; comparar responsabilidades de operación; verificar configuraciones y permisos; y reconocer cuándo usar las tecnologías avanzadas de M6. El alcance guiado no equivale a dominio autónomo de todos los proveedores o productos.
 
+## M1 · Formación transversal y créditos
+
+M1 combina una clase propia con programación para infraestructura integrada en las sesiones cloud, CI y operators. Comprende **9 horas lectivas de contenido: 3h propias y 6h integradas**, dentro de las 90h del curso.
+
+| Sesión | Contenido de M1 | Horas incluidas |
+|---|---|---:|
+| 1 · DevOps y Platform Engineering | Fundamentos DevOps, cultura, plataformas y métricas | 3h |
+| 2 · AWS, Terraform y Python | Python para consultar recursos; generación y revisión de código con IA | 1h |
+| 3 · Azure, Terraform y automatización Python | Adaptación de scripts, configuración y tratamiento de resultados | 1h |
+| 4 · GCP, estado remoto y comparación de IaC | Reutilización de la automatización y comparación de implementaciones | 1h |
+| 20 · Scripting y pipelines con Tekton | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
+| 26 · Operators con Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
+| **Total M1** | **Contenido propio y transversal** | **9h** |
+
+Las tablas de distribución asignan cada clase a un bloque principal; las horas transversales indican contenidos compartidos y no se suman de nuevo al total lectivo. La docencia de cada parte corresponde al profesor de esa sesión.
+
+Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluable. Este trabajo consiste en adaptar un script entre proveedores, añadir validaciones y manejo de errores, y modificar el ejemplo de Go explicando el comportamiento del controlador. Las evidencias se recogen durante las prácticas de las sesiones correspondientes.
+
 ## M1 · Fundamentos DevOps, Platform Engineering y Programación para Infraestructura
 
-1 sesiones · 3h lectivas · 1.5 ECTS.
+1 sesión propia · 3h, más 6h transversales en otras sesiones · 1,5 ECTS.
 
 ### Sesión 1 · DevOps y Platform Engineering
+
+**Contenido de M1:** Fundamentos DevOps, cultura, plataformas y métricas. **Dedicación:** 3h incluidas en esta clase.
 
 **Fecha:** 03/11/2026 · 18:00–21:00 · **Docente:** René · **Concentración:** 🟢.
 
@@ -46,6 +66,8 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 ### Sesión 2 · AWS, Terraform y Python
 
+**Contenido de M1:** Python para consultar recursos; generación y revisión de código con IA. **Dedicación:** 1h incluidas en esta clase.
+
 **Fecha:** 05/11/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Entender una infraestructura AWS pequeña y verificar su funcionamiento mediante código.
@@ -65,6 +87,8 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 ### Sesión 3 · Azure, Terraform y automatización Python
 
+**Contenido de M1:** Adaptación de scripts, configuración y tratamiento de resultados. **Dedicación:** 1h incluidas en esta clase.
+
 **Fecha:** 10/11/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Transferir el patrón de AWS a Azure y reconocer diferencias de identidad y red.
@@ -83,6 +107,8 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 **Ampliación:** SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados.
 
 ### Sesión 4 · GCP, estado remoto y comparación de IaC
+
+**Contenido de M1:** Reutilización de la automatización y comparación de implementaciones. **Dedicación:** 1h incluidas en esta clase.
 
 **Fecha:** 12/11/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
@@ -410,6 +436,8 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 
 ### Sesión 20 · Scripting y pipelines con Tekton
 
+**Contenido de M1:** Bash/Python, errores, validaciones y ejecución automatizada. **Dedicación:** 1,5h incluidas en esta clase.
+
 **Fecha:** 26/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Automatizar tareas verificables y construir una imagen mediante pipeline.
@@ -533,6 +561,8 @@ Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubern
 **Enfoque del bloque:** problema → concepto → ejemplo → cuándo usarlo. Docencia: Profesor UPC.
 
 ### Sesión 26 · Operators con Go y Kubebuilder/Operator SDK
+
+**Contenido de M1:** Go aplicado y lectura/modificación del controlador. **Dedicación:** 1,5h incluidas en esta clase.
 
 **Fecha:** 18/02/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟡.
 

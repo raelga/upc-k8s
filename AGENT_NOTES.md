@@ -1,3 +1,7 @@
+## M1 transversal incorporado a la edición 2026
+
+Distribución aprobada: sesión 1=3h; AWS/Azure/GCP=1h de programación cada una; Tekton=1,5h; operators/Go=1,5h. Total M1=9h (3 propias + 6 integradas), sin duplicar horas ni cambiar fechas, profesores o el total de 90h. Los 1,5 ECTS incluyen trabajo autónomo evaluable de scripts, validaciones y modificación del ejemplo Go. Incorporado en syllabus, calendario, CSV y JSON de 2026. No atribuir ficticiamente 12h lectivas a M1.
+
 # Notas de sesion - Optimizacion de contenido del postgrado
 
 > Archivo de continuidad para retomar el trabajo en otra sesion. Resume el estado
