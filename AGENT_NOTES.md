@@ -8,6 +8,18 @@
 
 Esta sección prevalece sobre las notas históricas inferiores. El usuario pide trabajar localmente, registrar y commitear cada cambio aprobado, y regenerar todos los documentos al final. No ajustar por ahora el contenido para cuadrar horas o ECTS: cubrir el temario oficial copiado por el usuario desde https://upcschool.upc.edu/esp/estudis/formacio/curs/305300/platform-engineering-devops-kubernetes/.
 
+### Asignación docente acordada
+
+- **M1 (sesión 1): René.**
+- **M2 (sesiones 2–4), M3 (5–11) y M4 (12–16): Rael.**
+- **M5 observabilidad (17–19): David.** Prometheus/Alertmanager/Mimir; Grafana/Loki/Alloy; OpenTelemetry/Collector/Tempo/correlación.
+- **M5 Tekton (20), Git/Prow (21) y ArgoCD (22): Rael.**
+- **M5 networking Traefik/Istio (23), Argo Rollouts (24) y escalado (25): David.** Se asigna la sesión conjunta Traefik/Istio a David porque el usuario asignó Istio a David; si se divide el bloque, confirmar el reparto de Traefik.
+- **M6 (26–30): Profesor UPC — por confirmar.** Propuesta del usuario, no profesor individual confirmado.
+- Carga provisional: René 1 sesión / 3h; Rael 18 sesiones / 54h; David 6 sesiones / 18h; profesor UPC pendiente 5 sesiones / 15h. Total 30 sesiones / 90h.
+- Proyecto Final: asignación docente pendiente, fuera del cómputo lectivo.
+- Registrar en documentos al generar todo al final; por ahora solo notas y commit.
+
 ### Seguridad y Cloudflare — último acuerdo aprobado
 
 Esta sección prevalece sobre los repartos y pendientes anteriores.
