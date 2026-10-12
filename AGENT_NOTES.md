@@ -8,6 +8,20 @@
 
 Esta sección prevalece sobre las notas históricas inferiores. El usuario pide trabajar localmente, registrar y commitear cada cambio aprobado, y regenerar todos los documentos al final. No ajustar por ahora el contenido para cuadrar horas o ECTS: cubrir el temario oficial copiado por el usuario desde https://upcschool.upc.edu/esp/estudis/formacio/curs/305300/platform-engineering-devops-kubernetes/.
 
+### Últimos acuerdos: reparto y concentración (prevalecen sobre propuestas anteriores)
+
+- Reparto actual: M1 una sesión DevOps/PE; M2 tres sesiones por proveedor (AWS/Azure/GCP), con Terraform/OpenTofu integrado y Python progresivo. Se elimina la sesión independiente de automatización. Bash se aplica principalmente a scripting/Tekton.
+- M5: observabilidad (3), scripting/Tekton, Git/Prow, ArgoCD, Traefik/Istio, entrega progresiva, escalado: 9 sesiones. Tekton antes de Prow; introducir Git mínimo para trabajar el repositorio, colaboración/PR después. Usar Python también en la aplicación observada y las verificaciones/pipelines cuando aporte valor.
+- M3 seis, M4 cinco y M6 cinco provisionales: total 29 sesiones / 87h, Proyecto Final aparte; una sesión disponible. No confundir con los repartos históricos inferiores.
+- Pulumi al final de GCP: 10–15 min, comparar un recurso en HCL con Python (parámetros/dependencias/outputs/estado), sin instalación ni lab propio. Si no cabe, ampliación.
+- EKS/kOps pasa de rojo a amarillo: lanzar EKS con Terraform y explicar mientras se despliega; presentar y lanzar kOps con configuración preparada, solapando esperas si procede. Desplegar la misma aplicación y comparar operación, actualizaciones, disponibilidad, costes y recuperación. Permisos/infraestructura comprobados, clústeres de respaldo y limpieza. No buscar dos despliegues autónomos ni operación avanzada.
+- AWS pasa de rojo a amarillo: ejemplo Terraform preparado de identidad/red/VM/almacenamiento; explicar durante despliegue, modificar variable, revisar plan/aplicar y ejecutar consulta Python pequeña. Fuera del alcance de esta clase: curso completo de HCL/boto3, diseño autónomo desde cero y catálogo AWS (bases de datos/mensajería/serverless). Estado remoto y módulos se desarrollan después; testing/CI Terraform sigue pendiente de encaje oficial.
+- Arquitectura/API/kind/autenticación/RBAC: propuesta guiada alrededor de una petición kubectl; control plane/nodos, API/almacenamiento/reconciliación/Pod, kubeconfig/certificados/tokens/ServiceAccounts, Role/RoleBinding con permiso y denegación. OIDC y admisión conceptuales, configuración pendiente; internos y montaje en la sesión propia del clúster desde cero. Usuario pasó al siguiente rojo sin objeciones; no dar la ubicación de configuración OIDC/admisión por resuelta.
+- **Networking M3 aprobado, pasa a amarillo:** recorrer Pod→Pod (CNI), descubrimiento/acceso mediante Service/CoreDNS, exposición con un ejemplo Gateway API y explicación de Ingress, NetworkPolicy para bloquear/permitir lo necesario. Clúster con CNI y controlador de entrada preparados; una aplicación y manifiestos preparados.
+- **Fuera del laboratorio de networking M3:** instalación y comparación de varios CNI, catálogo completo de tipos de rutas y networking avanzado. Esto limita la práctica, no elimina Services/DNS/CNI/NetworkPolicy/Ingress/Gateway API del contenido. Traefik/Istio avanzado va a M5; comparativas de CNI y rutas adicionales quedan como ampliación. El usuario pide mantener explícitamente esta nota de exclusiones.
+
+Siguiente rojo por revisar: OpenTelemetry/Collector/Tempo y correlación; después Traefik/Istio y escalado. No regenerar documentos aún.
+
 ### M1–M2: sesiones 2–5 reorganizadas y aprobadas
 
 Este reparto sustituye la sesión aislada y concentrada de Bash/Python: programación e IaC se aprenden por capas, aplicadas a un mismo caso real durante cuatro sesiones. La sesión 1 de DevOps/Platform Engineering no cambia. Go se reserva para operators en M6.
