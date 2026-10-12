@@ -38,7 +38,15 @@ Tres sesiones sobre la misma aplicación, con continuidad del entorno Kubernetes
 
 Resultado pedagógico: 1) qué falla y cuándo actuar; 2) qué ocurrió cuando falló; 3) dónde se atasca la petición. Explicar el solapamiento entre Alloy y OTel Collector y el motivo de la configuración elegida para los labs. No presentar su reparto logs/trazas como una limitación de las herramientas.
 
-Siguiente bloque por revisar: Git/GitOps con ArgoCD, después Prow/Tekton. Todavía no aplicar ni generar documentos para estos acuerdos; las notas son el registro de continuidad.
+### M5: orden y separación acordados después de observabilidad
+
+- Git y CI con Prow/Tekton antes de GitOps con ArgoCD: código → PR → validación → imagen → despliegue. Prow preparado para no consumir la clase instalándolo; Tekton ejecuta pipelines. Git básico se introduce con los PR. Se mantienen provisionalmente dos sesiones para este bloque; la propuesta de tres (Git/Prow, Tekton, ArgoCD) NO quedó aprobada.
+- Después, networking avanzado con Traefik e Istio.
+- **Entrega progresiva en una sesión propia, después de networking:** canary y blue/green con Argo Rollouts, aprovechando ArgoCD, Prometheus y reparto de tráfico con Istio/Traefik. Lab: nueva versión, análisis de métricas y rollback automático.
+- **Escalado en otra sesión, después de entrega progresiva:** HPA/VPA, KEDA y Karpenter; distinguir escalado de Pods de capacidad de nodos. Lab: variar carga y observar/adaptar capacidad. No requiere networking avanzado como prerrequisito estricto, pero se mantiene ese orden pedagógico.
+- No forzar horas/ECTS; conservar todas las tecnologías del contenido oficial.
+
+Pendiente: afinar el alcance de Git/CI y ArgoCD, revisar networking y concretar las dos sesiones separadas; después M6. No aplicar ni generar documentos todavía; las notas son el registro de continuidad.
 
 ---
 
