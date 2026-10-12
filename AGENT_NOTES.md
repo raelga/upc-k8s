@@ -8,6 +8,25 @@
 
 Esta sección prevalece sobre las notas históricas inferiores. El usuario pide trabajar localmente, registrar y commitear cada cambio aprobado, y regenerar todos los documentos al final. No ajustar por ahora el contenido para cuadrar horas o ECTS: cubrir el temario oficial copiado por el usuario desde https://upcschool.upc.edu/esp/estudis/formacio/curs/305300/platform-engineering-devops-kubernetes/.
 
+### M1–M2: sesiones 2–5 reorganizadas y aprobadas
+
+Este reparto sustituye la sesión aislada y concentrada de Bash/Python: programación e IaC se aprenden por capas, aplicadas a un mismo caso real durante cuatro sesiones. La sesión 1 de DevOps/Platform Engineering no cambia. Go se reserva para operators en M6.
+
+2. Automatización local: preparar herramientas y caso práctico. Bash para ejecutar comandos y comprobar resultados; Python para leer configuración, consumir una API y generar un informe. Introducir asistencia de IA y revisión de resultados, sin intentar dominar ambos lenguajes en una clase.
+3. AWS: identidad, red, VM y almacenamiento. Terraform/OpenTofu para aprovisionar; Bash/AWS CLI para verificar y Python para consultar recursos. Introducir HCL, provider, recursos y flujo init/plan/apply/destroy conforme se necesitan.
+4. Azure: reproducir el caso y entender diferencias. Incorporar variables, outputs y uso de módulos existentes; adaptar verificaciones con Azure CLI y Python, usando ejemplos preparados.
+5. GCP: completar comparación entre proveedores. Reutilizar el patrón, introducir estado remoto y comparar brevemente con Pulumi (10–15 min, sin laboratorio propio).
+
+Caso común: crear infraestructura pequeña, consultar su estado y comprobar que funciona. Scripts pequeños preparados: no enseñar tres SDK completos ni recorrer catálogos de servicios. IA para escribir/adaptar código, comprobando permisos, resultados y limpieza de recursos. Kubernetes gestionado permanece en M4. Mantiene cuatro sesiones, sin añadir horas. La posible sesión independiente de IaC avanzado sigue como ampliación futura.
+
+### Cómputo lectivo corregido por el usuario
+
+El Proyecto Final NO computa en las 30 sesiones / 90 horas. Con el reparto provisional M1=2, M2=3, M3=6, M4=5, M5=8 y M6=5: 29 sesiones / 87h lectivas; queda una sesión / 3h disponible. Consolidación y defensa del proyecto se cuentan aparte. Las cifras históricas que incluían PF en las 90h quedan sustituidas.
+
+### M6: propuesta pendiente de retomar
+
+Enfoque de visión general, conceptos/casos de uso/comparación/demos. Último reparto provisional: operators con Go; Cluster API con Hosted Control Planes (HyperShift/vCluster/Kamaji); Knative; multi-cluster (Istio/Cilium/Submariner); Crossplane y Velero. El usuario ve sentido en juntar Cluster API con HCP; no tratar el resto del bloque como cerrado.
+
 ### M3 acordado: seis sesiones
 
 1. Contenedores y OCI.
