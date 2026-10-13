@@ -4,16 +4,12 @@
 
 UPC School · Live online · Castellano · 12 ECTS.
 
-30 sesiones lectivas de 3 horas, los martes y jueves de 18:00 a 21:00 (Europe/Madrid). Las actividades del Proyecto Final se realizan fuera de las 90 horas lectivas.
+30 sesiones de 3 horas, martes y jueves de 18:00 a 21:00 (Europe/Madrid). Inicio 03/11/2026; última clase de contenido 11/03/2027; presentación y defensa del Trabajo Final 18/03/2027 con René y Rael, incluida en las 90h. El desarrollo del proyecto es trabajo autónomo; el 16/03 no hay clase.
 
 - [Syllabus resumido](syllabus-resumido.md): estructura, docentes y sesiones.
 - [Syllabus detallado](syllabus-detallado.md): objetivos, contenidos, prácticas y ampliaciones.
-- [Calendario](calendario.md): clases, docentes, Proyecto Final, festivos y recuperación.
+- [Calendario](calendario.md): clases, docentes y días sin clase.
 - [Calendario CSV](calendario.csv): sesiones para importar en una hoja de cálculo.
-- [Datos del curso](curso.json): contenidos, fechas y docentes en formato estructurado.
+- [Datos del curso](curso.json): contenidos, fechas y docentes estructurados.
 
-El curso comienza el 3 de noviembre de 2026. La última clase lectiva se celebra el 4 de marzo de 2027; la consolidación y defensa del proyecto tienen lugar el 9 y el 11 de marzo. El 16 y el 18 de marzo se reservan para recuperación.
-
-Docencia: René (M1), Rael (M2–M4 y Tekton/Git/Prow/ArgoCD de M5), David (observabilidad, seguridad de imágenes y admisión, Traefik/Istio, entrega progresiva y escalado de M5) y Profesor UPC (M6).
-
-M1 integra 9 horas de contenido lectivo: 3h propias y 6h transversales en las clases de AWS, Azure, GCP, Tekton y operators. Sus 1,5 ECTS incluyen además trabajo autónomo evaluable. Las horas compartidas están incluidas en las 90h del curso.
+M1 integra 9h de contenido, incluidas en las 90h: 3h propias y 6h transversales en proveedores, Tekton y operators. Sus 1,5 ECTS incluyen trabajo autónomo evaluable.

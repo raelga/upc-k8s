@@ -1,3 +1,7 @@
+## Última publicación del curso 2026
+
+Reparto aprobado aplicado: 29 clases de contenido + presentación TFG con René/Rael dentro de las 30/90h. Última clase 11/03/2027; 09/03 y 16/03 sin clase; defensa 18/03. Navidad incluye 22/12 y 07/01 libres. Trivy en Tekton; sin sesión independiente seguridad. M6: operators/Go; OPA/Gatekeeper/Velero; CAPI/HCP; Knative/Virtual Kubelet; multi-cluster. Crossplane en infraestructura declarativa con Cloudflare/ExternalDNS/cert-manager. Títulos definitivos y M1 transversal en 2026. Rael 17 clases + TFG; David 6; René 1 + TFG; UPC 5. No mezclar con calendarios históricos inferiores ni con generador raíz.
+
 ## Seguridad trasladada y asignada a David
 
 Seguridad de imágenes y políticas de admisión se mueve a M5, justo antes de Traefik/Istio: sesión 22, 02/02/2027, David. M3 queda con 6 clases y M5 con 10. Rael: 17 clases/51h; David: 7/21h; René 1/3h y UPC 5/15h. Tekton pasa a sesión 19; las partes transversales de M1 mantienen 9h incluidas en las 90h.

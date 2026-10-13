@@ -2,53 +2,44 @@
 
 UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 
-El programa se desarrolla en **30 sesiones lectivas de 3 horas (90h)**, los martes y jueves de 18:00 a 21:00, en la zona horaria **Europe/Madrid**. El curso comienza el 03/11/2026 y finaliza el 18/03/2027. El Proyecto Final cuenta con actividades de consolidación y defensa adicionales a las 90 horas lectivas.
+**30 sesiones de 3 horas (90h)**, martes y jueves de 18:00 a 21:00, zona horaria **Europe/Madrid**. Inicio: **03/11/2026**. Fin: **18/03/2027**, con presentación y defensa del Trabajo Final. Las 29 clases de contenido terminan el **11/03/2027**; el desarrollo del proyecto es trabajo autónomo y el **16/03 no hay clase**.
 
-Enlaces: [syllabus resumido](syllabus-resumido.md) · [calendario](calendario.md).
+[Syllabus resumido](syllabus-resumido.md) · [Calendario](calendario.md).
 
-## Enfoque docente y prerrequisitos
+## Metodología y prerrequisitos
 
-Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Las sesiones de proveedores introducen los fundamentos cloud. Una misma aplicación Python con dos servicios conecta cloud, Kubernetes, observabilidad, CI y GitOps. Bash se practica en Tekton; Python aparece progresivamente en proveedores y automatización; Go se usa para comprender el operator. La IA ayuda a escribir/adaptar código que debe revisarse y verificarse.
+Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Las clases cloud introducen los recursos que se utilizarán para desplegar Kubernetes: identidad, instancias, redes, balanceadores y almacenamiento, seguidos de su aprovisionamiento como código. Python se practica progresivamente en proveedores; Bash en pipelines; Go en el ejemplo de operator. La IA apoya la escritura/adaptación de código, cuya ejecución y resultados se verifican.
 
-Laboratorios guiados con manifiestos/configuraciones preparados. Antes de clase se comprueban cuentas, permisos, cuotas, dominios y costes. Se preservan estados reutilizables; para despliegues lentos, especialmente EKS/kOps, se explican conceptos durante la espera y se dispone de un entorno alternativo preparado. Cada práctica cloud incluye limpieza. Secretos y credenciales no se guardan en repositorios, logs ni estado Terraform; crear el contenedor del secreto no implica cargar su valor mediante IaC.
+Una aplicación Python de dos servicios conecta Kubernetes, observabilidad, CI/GitOps, entrega y escalado. Laboratorios guiados con configuraciones preparadas; permisos, cuotas y costes comprobados; limpieza de recursos al finalizar. EKS/kOps se explican durante su despliegue con un entorno de respaldo disponible. M6 combina conceptos, comparación y demostraciones; operators tiene una clase completa. Los secretos se entregan mediante mecanismos externos y no se guardan en repositorios ni en el estado de Terraform.
 
-Semáforo: 🟢 alcance cómodo; 🟡 ajustado con material preparado. No mide dificultad de la herramienta ni garantiza tiempo de despliegue. Las amarillas de M6 suponen demostraciones, no implementaciones completas.
-
-## Resultados de aprendizaje
-
-Al terminar, el participante podrá explicar y aplicar un flujo cloud → Kubernetes → observabilidad → CI/GitOps → entrega/escalado; comparar responsabilidades de operación; verificar configuraciones y permisos; y reconocer cuándo usar las tecnologías avanzadas de M6. El alcance guiado no equivale a dominio autónomo de todos los proveedores o productos.
+Semáforo: 🟢 alcance cómodo; 🟡 ajustado con ejemplos preparados. El semáforo describe el alcance de la clase, no la dificultad intrínseca de la herramienta.
 
 ## M1 · Formación transversal y créditos
 
-M1 combina una clase propia con programación para infraestructura integrada en las sesiones cloud, CI y operators. Comprende **9 horas lectivas de contenido: 3h propias y 6h integradas**, dentro de las 90h del curso.
+M1 combina **3h propias y 6h integradas**: 9h de contenido incluidas en las 90h del curso. Los 1,5 ECTS incluyen además trabajo autónomo evaluable de adaptación de scripts entre proveedores, validaciones y modificación del ejemplo de Go.
 
-| Sesión | Contenido de M1 | Horas incluidas |
+| Sesión | Contenido transversal M1 | Horas incluidas |
 |---|---|---:|
-| 1 · DevOps y Platform Engineering | Fundamentos DevOps, cultura, plataformas y métricas | 3h |
-| 2 · AWS, Terraform y Python | Python para consultar recursos; generación y revisión de código con IA | 1h |
-| 3 · Azure, Terraform y automatización Python | Adaptación de scripts, configuración y tratamiento de resultados | 1h |
-| 4 · GCP, estado remoto y comparación de IaC | Reutilización de la automatización y comparación de implementaciones | 1h |
-| 19 · Scripting y pipelines con Tekton | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
-| 26 · Operators con Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
-| **Total M1** | **Contenido propio y transversal** | **9h** |
+| 1 · Fundamentos de DevOps y Platform Engineering | Fundamentos DevOps, cultura, plataformas y métricas | 3h |
+| 2 · AWS: fundamentos y aprovisionamiento como código | Python para consultar recursos; generación y revisión de código con IA | 1h |
+| 3 · Azure: fundamentos y aprovisionamiento como código | Adaptación de scripts, configuración y tratamiento de resultados | 1h |
+| 4 · GCP: fundamentos y aprovisionamiento como código | Reutilización de la automatización y comparación de implementaciones | 1h |
+| 19 · Automatización de pipelines: scripting, Tekton y Trivy | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
+| 25 · Desarrollo de operators: Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
 
-Las tablas de distribución asignan cada clase a un bloque principal; las horas transversales indican contenidos compartidos y no se suman de nuevo al total lectivo. La docencia de cada parte corresponde al profesor de esa sesión.
-
-Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluable. Este trabajo consiste en adaptar un script entre proveedores, añadir validaciones y manejo de errores, y modificar el ejemplo de Go explicando el comportamiento del controlador. Las evidencias se recogen durante las prácticas de las sesiones correspondientes.
+Las horas compartidas no se suman de nuevo al total. La docencia corresponde al profesor de cada clase.
 
 ## M1 · Fundamentos DevOps, Platform Engineering y Programación para Infraestructura
 
-1 sesión propia · 3h, más 6h transversales en otras sesiones · 1,5 ECTS.
+1 sesión · 3h · 1.5 ECTS.
 
-### Sesión 1 · DevOps y Platform Engineering
-
-**Contenido de M1:** Fundamentos DevOps, cultura, plataformas y métricas. **Dedicación:** 3h incluidas en esta clase.
+### Sesión 1 · Fundamentos de DevOps y Platform Engineering
 
 **Fecha:** 03/11/2026 · 18:00–21:00 · **Docente:** René · **Concentración:** 🟢.
 
-**Objetivo:** Relacionar DevOps, SRE y Platform Engineering con necesidades de una organización.
+**Contenido de M1:** Fundamentos DevOps, cultura, plataformas y métricas. **Dedicación:** 3h incluidas en esta clase.
 
-**Entrada:** Contexto inicial del programa.
+**Objetivo:** Relacionar DevOps, SRE y Platform Engineering con necesidades de una organización.
 
 **Contenido principal:**
 
@@ -62,17 +53,15 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 ## M2 · Cloud Computing Multicloud e Infraestructura como Código
 
-3 sesiones · 9h lectivas · 1 ECTS.
+3 sesiones · 9h · 1 ECTS.
 
-### Sesión 2 · AWS, Terraform y Python
-
-**Contenido de M1:** Python para consultar recursos; generación y revisión de código con IA. **Dedicación:** 1h incluidas en esta clase.
+### Sesión 2 · AWS: fundamentos y aprovisionamiento como código
 
 **Fecha:** 05/11/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
-**Objetivo:** Entender una infraestructura AWS pequeña y verificar su funcionamiento mediante código.
+**Contenido de M1:** Python para consultar recursos; generación y revisión de código con IA. **Dedicación:** 1h incluidas en esta clase.
 
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
+**Objetivo:** Entender una infraestructura AWS pequeña y verificar su funcionamiento mediante código.
 
 **Contenido principal:**
 
@@ -85,15 +74,13 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless.
 
-### Sesión 3 · Azure, Terraform y automatización Python
-
-**Contenido de M1:** Adaptación de scripts, configuración y tratamiento de resultados. **Dedicación:** 1h incluidas en esta clase.
+### Sesión 3 · Azure: fundamentos y aprovisionamiento como código
 
 **Fecha:** 10/11/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
-**Objetivo:** Transferir el patrón de AWS a Azure y reconocer diferencias de identidad y red.
+**Contenido de M1:** Adaptación de scripts, configuración y tratamiento de resultados. **Dedicación:** 1h incluidas en esta clase.
 
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
+**Objetivo:** Transferir el patrón de AWS a Azure y reconocer diferencias de identidad y red.
 
 **Contenido principal:**
 
@@ -106,15 +93,13 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados.
 
-### Sesión 4 · GCP, estado remoto y comparación de IaC
-
-**Contenido de M1:** Reutilización de la automatización y comparación de implementaciones. **Dedicación:** 1h incluidas en esta clase.
+### Sesión 4 · GCP: fundamentos y aprovisionamiento como código
 
 **Fecha:** 12/11/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
-**Objetivo:** Aplicar el caso común en GCP y comparar proveedores y formas de definir infraestructura.
+**Contenido de M1:** Reutilización de la automatización y comparación de implementaciones. **Dedicación:** 1h incluidas en esta clase.
 
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
+**Objetivo:** Aplicar el caso común en GCP y comparar proveedores y formas de definir infraestructura.
 
 **Contenido principal:**
 
@@ -129,15 +114,13 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 ## M3 · Contenedores y Kubernetes Core. Ecosistema OCI
 
-6 sesiones · 18h lectivas · 2 ECTS.
+6 sesiones · 18h · 2 ECTS.
 
-### Sesión 5 · Contenedores y ecosistema OCI
+### Sesión 5 · Contenedores y ecosistema OCI: imágenes, runtimes y registros
 
 **Fecha:** 17/11/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Construir, ejecutar y publicar una imagen entendiendo aislamiento y runtime.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -148,15 +131,13 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Práctica / evidencia:** Construir una imagen pequeña y ejecutar/publicar la aplicación que servirá de hilo conductor.
 
-**Ampliación:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en seguridad y Tekton.
+**Ampliación:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton.
 
-### Sesión 6 · Arquitectura, API, kind, autenticación y RBAC
+### Sesión 6 · Arquitectura de Kubernetes: API, autenticación y permisos
 
 **Fecha:** 19/11/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Seguir una petición kubectl y distinguir autenticación de autorización.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -170,13 +151,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero.
 
-### Sesión 7 · Workloads, configuración y recursos
+### Sesión 7 · Aplicaciones en Kubernetes: workloads, configuración y recursos
 
 **Fecha:** 24/11/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Desplegar una aplicación y gestionar su configuración y ciclo de vida.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -190,13 +169,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Catálogo exhaustivo de controladores y scheduling avanzado.
 
-### Sesión 8 · Persistencia, CSI y StatefulSets
+### Sesión 8 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado
 
 **Fecha:** 26/11/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Mantener datos y comprender las necesidades de workloads con estado.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -209,13 +186,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
 
-### Sesión 9 · Networking y exposición de aplicaciones
+### Sesión 9 · Networking en Kubernetes: comunicación y exposición de servicios
 
 **Fecha:** 01/12/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Seguir tráfico entre Pods, descubrir servicios y exponer la aplicación.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -228,13 +203,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
 
-### Sesión 10 · Clúster componente a componente
+### Sesión 10 · Construcción de un clúster Kubernetes componente a componente
 
 **Fecha:** 03/12/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Comprender cómo se ensamblan y autentican los componentes de Kubernetes.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -248,15 +221,13 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 ## M4 · Kubernetes en Producción y Ecosistema Cloud Native
 
-5 sesiones · 15h lectivas · 2 ECTS.
+5 sesiones · 15h · 2 ECTS.
 
-### Sesión 11 · EKS y kOps en AWS
+### Sesión 11 · Kubernetes en AWS: EKS y clústeres autogestionados con kOps
 
 **Fecha:** 10/12/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Comparar Kubernetes gestionado y autogestionado sobre la misma base AWS.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -269,13 +240,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad.
 
-### Sesión 12 · AKS y GKE
+### Sesión 12 · Kubernetes en Azure y GCP: AKS y GKE
 
 **Fecha:** 15/12/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Aplicar la comparación de operación cloud a Azure y GCP.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -289,13 +258,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Instalaciones completas independientes y catálogo de add-ons de ambos proveedores.
 
-### Sesión 13 · Kustomize y Helm
+### Sesión 13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm
 
 **Fecha:** 17/12/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Adaptar manifiestos y usar paquetes existentes.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -308,13 +275,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Creación de charts complejos desde cero y catálogo de plugins.
 
-### Sesión 14 · DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager
+### Sesión 14 · Infraestructura declarativa: DNS, certificados y recursos cloud
 
-**Fecha:** 22/12/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟢.
+**Fecha:** 12/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟢.
 
-**Objetivo:** Publicar una aplicación con dominio y certificados renovables.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
+**Objetivo:** Gestionar DNS, certificados y un recurso cloud mediante controladores declarativos.
 
 **Contenido principal:**
 
@@ -323,18 +288,17 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 - ExternalDNS.
 - Issuer/ClusterIssuer y ACME DNS-01.
 - Protección del token.
+- Crossplane: provider, managed resource y reconciliación; comparación breve con Terraform.
 
-**Práctica / evidencia:** Instalar componentes por Helm sobre el entorno anterior, publicar el registro y verificar HTTPS y renovación.
+**Práctica / evidencia:** Publicar DNS y verificar HTTPS con ExternalDNS/cert-manager sobre Cloudflare; demostrar con configuración preparada un recurso cloud gestionado por Crossplane.
 
-**Ampliación:** DNSSEC/DoH y operación DNS avanzada.
+**Ampliación:** DNSSEC/DoH, operación DNS avanzada, Crossplane Compositions/XRDs avanzados y Composition Functions.
 
-### Sesión 15 · Secretos externos: Vault y External Secrets Operator
+### Sesión 15 · Gestión de secretos externos: Vault y External Secrets Operator
 
-**Fecha:** 07/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
+**Fecha:** 14/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Separar secretos de manifiestos y aplicar identidad y permisos de acceso.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -350,15 +314,13 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 ## M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado
 
-10 sesiones · 30h lectivas · 2 ECTS.
+9 sesiones · 27h · 2 ECTS.
 
-### Sesión 16 · Prometheus, PromQL y Alertmanager
+### Sesión 16 · Métricas y alertas: Prometheus, PromQL y Alertmanager
 
-**Fecha:** 12/01/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
+**Fecha:** 19/01/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
 
 **Objetivo:** Detectar fallos mediante métricas y definir cuándo alertar.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -373,13 +335,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
 
-### Sesión 17 · Grafana, Loki y Alloy
+### Sesión 17 · Dashboards y logs: Grafana, Loki y Alloy
 
-**Fecha:** 14/01/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
+**Fecha:** 21/01/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
 
 **Objetivo:** Pasar de un síntoma en métricas a mensajes que explican el fallo.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -393,13 +353,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
 
-### Sesión 18 · OpenTelemetry, Collector, Tempo y correlación
+### Sesión 18 · Trazas distribuidas y correlación: OpenTelemetry y Tempo
 
-**Fecha:** 19/01/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
+**Fecha:** 26/01/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
 
 **Objetivo:** Localizar dónde se atasca una petición entre servicios.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -413,17 +371,15 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo.
 
-**Preparación específica:** propagación de contexto entre dos servicios, trace ID en logs y enlaces de Grafana comprobados. Alloy y Collector tienen capacidades solapadas: el reparto logs/trazas elegido es una decisión del lab, no una limitación de las herramientas.
+**Preparación:** trace ID en logs, propagación entre servicios y enlaces Grafana comprobados. Alloy y Collector tienen capacidades solapadas; el reparto logs/trazas facilita la continuidad del laboratorio.
 
-### Sesión 19 · Scripting y pipelines con Tekton
+### Sesión 19 · Automatización de pipelines: scripting, Tekton y Trivy
+
+**Fecha:** 28/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Contenido de M1:** Bash/Python, errores, validaciones y ejecución automatizada. **Dedicación:** 1,5h incluidas en esta clase.
 
-**Fecha:** 21/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
-
 **Objetivo:** Automatizar tareas verificables y construir una imagen mediante pipeline.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -433,20 +389,19 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 - Asistencia de IA y revisión.
 - Tasks, Pipelines, PipelineRuns y Workspaces.
 - Trivy en CI.
+- Escaneo Trivy: interpretación de resultados, umbral de fallo y bloqueo de publicación.
 
-**Práctica / evidencia:** Conectar tareas preparadas de build/test/scan/publicación y comprobar fallos y resultados.
+**Práctica / evidencia:** Conectar tareas preparadas build → test → scan → publicación; provocar un fallo de Trivy, interpretar el resultado, corregir la imagen y repetir el pipeline.
 
 **Ampliación:** Curso completo de Bash/Python; Triggers/Chains avanzados y attestations.
 
-**Continuidad:** introducir repositorio/commit mínimos antes del pipeline; PR y colaboración se desarrollan después con Prow. No asumir que todos los ProwJobs ejecutan Tekton automáticamente: usar un puente preparado o mostrar ambos sin prometer integración nativa universal.
+**Continuidad:** Git mínimo antes de ejecutar pipelines; colaboración mediante PR en la sesión posterior. Puente Prow/Tekton preparado: no asumir integración automática universal.
 
-### Sesión 20 · Git y Prow: colaboración y validaciones
+### Sesión 20 · Colaboración y validación de cambios: Git y Prow
 
-**Fecha:** 26/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
+**Fecha:** 02/02/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Conectar un cambio revisado con las comprobaciones conocidas de CI.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -458,13 +413,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas.
 
-### Sesión 21 · GitOps con ArgoCD
+### Sesión 21 · Despliegue declarativo y reconciliación: GitOps con ArgoCD
 
-**Fecha:** 28/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
+**Fecha:** 04/02/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Reconciliar el estado del repositorio con Kubernetes.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -477,32 +430,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves.
 
-### Sesión 22 · Seguridad de imágenes y políticas de admisión
+### Sesión 22 · Entrada de tráfico y service mesh: Traefik e Istio
 
-**Fecha:** 02/02/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
-
-**Objetivo:** Distinguir análisis de imagen y control de recursos admitidos.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
-
-**Contenido principal:**
-
-- Trivy e interpretación de vulnerabilidades.
-- PSA.
-- Kyverno como herramienta práctica.
-- OPA/Gatekeeper como comparación breve.
-
-**Práctica / evidencia:** Revisar una imagen, rechazar un Pod privilegiado o que incumpla una política, corregirlo y comprobar admisión.
-
-**Ampliación:** Firmas, SBOM, attestations y conexión automática entre escaneo/admisión; segundo motor de políticas completo.
-
-### Sesión 23 · Traefik e Istio
-
-**Fecha:** 04/02/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
+**Fecha:** 11/02/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
 
 **Objetivo:** Distinguir entrada externa y comunicación segura entre servicios.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -514,13 +446,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo.
 
-### Sesión 24 · Entrega progresiva con Argo Rollouts
+### Sesión 23 · Entrega progresiva: canary y blue/green con Argo Rollouts
 
-**Fecha:** 11/02/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
+**Fecha:** 16/02/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
 
 **Objetivo:** Desplegar versiones con métricas que deciden avance o rollback.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -533,13 +463,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking.
 
-### Sesión 25 · Escalado con HPA, VPA, KEDA y Karpenter
+### Sesión 24 · Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter
 
-**Fecha:** 16/02/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
+**Fecha:** 18/02/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
 
 **Objetivo:** Distinguir ajuste de recursos, réplicas y capacidad de nodos.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -552,23 +480,21 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Catálogo triggers, métricas complejas, tuning, políticas Spot/capacidad y optimización profunda de costes; evitar controladores compitiendo.
 
-**Precaución del lab:** no dejar HPA y KEDA compitiendo sobre el mismo workload; VPA en modo recomendación. Karpenter requiere infraestructura/permisos preparados y costes controlados.
+**Preparación:** VPA en recomendación; HPA y KEDA no compiten sobre el mismo workload. Karpenter con infraestructura y permisos preparados.
 
 ## M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster
 
-5 sesiones · 15h lectivas · 2 ECTS.
+5 sesiones · 15h · 2 ECTS.
 
-**Enfoque del bloque:** problema → concepto → ejemplo → cuándo usarlo. Docencia: Profesor UPC.
+Enfoque: problema → concepto → ejemplo → cuándo usarlo. Docencia: Profesor UPC.
 
-### Sesión 26 · Operators con Go y Kubebuilder/Operator SDK
+### Sesión 25 · Desarrollo de operators: Go y Kubebuilder/Operator SDK
+
+**Fecha:** 23/02/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟡.
 
 **Contenido de M1:** Go aplicado y lectura/modificación del controlador. **Dedicación:** 1,5h incluidas en esta clase.
 
-**Fecha:** 18/02/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟡.
-
 **Objetivo:** Reconocer cuándo un operator automatiza conocimiento operativo.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -580,13 +506,27 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero.
 
-### Sesión 27 · Cluster API y Hosted Control Planes
+### Sesión 26 · Políticas de admisión y recuperación: OPA/Gatekeeper y Velero
 
-**Fecha:** 23/02/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟡.
+**Fecha:** 25/02/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟡.
+
+**Objetivo:** Aplicar políticas de admisión y recuperar una aplicación tras una pérdida de recursos.
+
+**Contenido principal:**
+
+- Admisión de recursos; PSA como contexto y OPA/Gatekeeper como motor del ejemplo.
+- ConstraintTemplates y Constraints mediante una política preparada; rechazo y corrección de un recurso.
+- Velero: copia y restauración, alcance de recursos y datos, dependencias y límites de recuperación.
+
+**Práctica / evidencia:** Aplicar una política OPA/Gatekeeper, rechazar y corregir un recurso; realizar backup, borrar y restaurar una aplicación con Velero.
+
+**Ampliación:** Políticas Rego complejas, catálogo de políticas, recuperación productiva avanzada, firmas y attestations.
+
+### Sesión 27 · Gestión de clústeres: Cluster API y Hosted Control Planes
+
+**Fecha:** 02/03/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟡.
 
 **Objetivo:** Comparar automatización del ciclo de vida y ubicación del control plane.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -598,31 +538,27 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Instalación de todos los productos y operación avanzada.
 
-### Sesión 28 · Knative y serverless
+### Sesión 28 · Serverless en Kubernetes: Knative y Virtual Kubelet
 
-**Fecha:** 25/02/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟢.
+**Fecha:** 04/03/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟢.
 
 **Objetivo:** Entender cuándo usar ejecución orientada a demanda sobre Kubernetes.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
 - Knative Serving, revisions, routing y scale-to-zero.
 - Contexto serverless.
-- Introducción opcional a Virtual Kubelet.
+- Virtual Kubelet: nodos virtuales e integración con capacidad de ejecución externa; diferencias con Knative.
 
-**Práctica / evidencia:** Publicar una función/servicio preparado, generar tráfico y observar escalado a cero.
+**Práctica / evidencia:** Publicar un servicio Knative, observar revisions y scale-to-zero; demostrar con un entorno preparado el modelo de nodo virtual de Virtual Kubelet.
 
-**Ampliación:** Plataforma serverless completa, Eventing avanzado y Virtual Kubelet profundo.
+**Ampliación:** Knative Eventing avanzado, plataforma serverless completa y desarrollo de providers Virtual Kubelet.
 
-### Sesión 29 · Multi-cluster: Istio, Cilium y Submariner
+### Sesión 29 · Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner
 
-**Fecha:** 02/03/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟡.
+**Fecha:** 11/03/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟡.
 
 **Objetivo:** Comparar conectividad de servicios y redes entre clústeres.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
 
 **Contenido principal:**
 
@@ -636,67 +572,69 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Desplegar las tres soluciones desde cero.
 
-### Sesión 30 · Crossplane y recuperación con Velero
+## PF · Trabajo Final
 
-**Fecha:** 04/03/2027 · 18:00–21:00 · **Docente:** Profesor UPC · **Concentración:** 🟡.
+1 sesión · 3h · 1.5 ECTS.
 
-**Objetivo:** Distinguir aprovisionamiento declarativo y recuperación ante desastres.
+### Sesión 30 · Presentación y defensa del Trabajo Final
 
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
+**Fecha:** 18/03/2027 · 18:00–21:00 · **Docente:** René y Rael · **Concentración:** 🟡.
+
+**Objetivo:** Presentar y justificar una plataforma reproducible integrada durante el curso.
 
 **Contenido principal:**
 
-- Crossplane: providers, managed resources, compositions y XRDs.
-- Relación con IaC de M2 y M4.
-- Velero: backup/restore, alcance y límites.
+- Arquitectura, decisiones técnicas y resultados del proyecto.
+- Demo end-to-end: despliegue, diagnóstico y recuperación.
+- Defensa oral y preguntas.
 
-**Práctica / evidencia:** Demos separadas de recurso cloud reconciliado y recuperación de aplicación; discutir dependencias, datos y RPO/RTO.
+**Práctica / evidencia:** Presentación del repositorio y documentación, demostración funcional y defensa ante René y Rael.
 
-**Ampliación:** Composition Functions avanzado, plataforma multicloud completa y DR de producción.
+**Ampliación:** Ampliaciones voluntarias del proyecto; las tecnologías de profundización no son requisitos obligatorios.
 
-## Proyecto Final
+## Trabajo Final
 
-El proyecto integra progresivamente los resultados de las prácticas: infraestructura IaC en un proveedor, aplicación en Kubernetes, configuración con Helm/Kustomize, CI, ArgoCD, DNS/TLS, secretos externos, observabilidad, seguridad, entrega progresiva y escalado.
+Construcción progresiva de una plataforma a partir de las prácticas: IaC en un proveedor, aplicación Kubernetes, Helm/Kustomize, CI con escaneo, ArgoCD, DNS/TLS, secretos externos, métricas/logs/trazas, seguridad y escalado.
 
-**Entregables:** repositorio reproducible, memoria de arquitectura y decisiones técnicas, runbooks, demostración end-to-end con un escenario de fallo, diagnóstico y recuperación, y defensa oral.
+**Entregables:** repositorio reproducible, memoria de arquitectura y decisiones técnicas, runbooks, demo funcional con diagnóstico/recuperación y defensa oral. La evaluación considera funcionalidad, reproducibilidad, seguridad, observabilidad, justificación de decisiones, costes, documentación y defensa. Las ampliaciones avanzadas no son obligatorias.
 
-**Evaluación:** funcionalidad, reproducibilidad, seguridad, observabilidad, justificación de decisiones, control de costes, documentación y defensa. Las tecnologías tratadas como ampliación, como firmas/SBOM y configuraciones multi-cluster avanzadas, son opcionales en el proyecto.
-
-**Consolidación:** 09/03/2027, 18:00–21:00. **Presentación y defensa:** 11/03/2027, 18:00–21:00. Ambas actividades se realizan fuera de las 30 sesiones lectivas. El 16/03 y el 18/03 se reservan para recuperación.
+**Presentación y defensa:** sesión 30, **18/03/2027, 18:00–21:00**, con **René y Rael**, incluida en las 90h. Desarrollo y consolidación mediante trabajo autónomo durante el curso. La última clase de contenido es el 11/03 y el 16/03 queda libre para finalizar el proyecto.
 
 ## Contenidos de ampliación
 
 Material complementario para profundizar mediante trabajo autónomo o formación adicional.
 
-- **Sesión 1 · DevOps y Platform Engineering:** Implantación completa de Backstage y diseño organizativo en profundidad.
-- **Sesión 2 · AWS, Terraform y Python:** Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless.
-- **Sesión 3 · Azure, Terraform y automatización Python:** SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados.
-- **Sesión 4 · GCP, estado remoto y comparación de IaC:** Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados.
-- **Sesión 5 · Contenedores y ecosistema OCI:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en seguridad y Tekton.
-- **Sesión 6 · Arquitectura, API, kind, autenticación y RBAC:** Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero.
-- **Sesión 7 · Workloads, configuración y recursos:** Catálogo exhaustivo de controladores y scheduling avanzado.
-- **Sesión 8 · Persistencia, CSI y StatefulSets:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
-- **Sesión 9 · Networking y exposición de aplicaciones:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
-- **Sesión 10 · Clúster componente a componente:** Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada.
-- **Sesión 22 · Seguridad de imágenes y políticas de admisión:** Firmas, SBOM, attestations y conexión automática entre escaneo/admisión; segundo motor de políticas completo.
-- **Sesión 11 · EKS y kOps en AWS:** Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad.
-- **Sesión 12 · AKS y GKE:** Instalaciones completas independientes y catálogo de add-ons de ambos proveedores.
-- **Sesión 13 · Kustomize y Helm:** Creación de charts complejos desde cero y catálogo de plugins.
-- **Sesión 14 · DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager:** DNSSEC/DoH y operación DNS avanzada.
-- **Sesión 15 · Secretos externos: Vault y External Secrets Operator:** HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state.
-- **Sesión 16 · Prometheus, PromQL y Alertmanager:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
-- **Sesión 17 · Grafana, Loki y Alloy:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
-- **Sesión 18 · OpenTelemetry, Collector, Tempo y correlación:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo.
-- **Sesión 19 · Scripting y pipelines con Tekton:** Curso completo de Bash/Python; Triggers/Chains avanzados y attestations.
-- **Sesión 20 · Git y Prow: colaboración y validaciones:** Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas.
-- **Sesión 21 · GitOps con ArgoCD:** ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves.
-- **Sesión 23 · Traefik e Istio:** Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo.
-- **Sesión 24 · Entrega progresiva con Argo Rollouts:** Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking.
-- **Sesión 25 · Escalado con HPA, VPA, KEDA y Karpenter:** Catálogo triggers, métricas complejas, tuning, políticas Spot/capacidad y optimización profunda de costes; evitar controladores compitiendo.
-- **Sesión 26 · Operators con Go y Kubebuilder/Operator SDK:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero.
-- **Sesión 27 · Cluster API y Hosted Control Planes:** Instalación de todos los productos y operación avanzada.
-- **Sesión 28 · Knative y serverless:** Plataforma serverless completa, Eventing avanzado y Virtual Kubelet profundo.
-- **Sesión 29 · Multi-cluster: Istio, Cilium y Submariner:** Desplegar las tres soluciones desde cero.
-- **Sesión 30 · Crossplane y recuperación con Velero:** Composition Functions avanzado, plataforma multicloud completa y DR de producción.
+- **Sesión 1 · Fundamentos de DevOps y Platform Engineering:** Implantación completa de Backstage y diseño organizativo en profundidad.
+- **Sesión 2 · AWS: fundamentos y aprovisionamiento como código:** Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless.
+- **Sesión 3 · Azure: fundamentos y aprovisionamiento como código:** SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados.
+- **Sesión 4 · GCP: fundamentos y aprovisionamiento como código:** Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados.
+- **Sesión 5 · Contenedores y ecosistema OCI: imágenes, runtimes y registros:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton.
+- **Sesión 6 · Arquitectura de Kubernetes: API, autenticación y permisos:** Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero.
+- **Sesión 7 · Aplicaciones en Kubernetes: workloads, configuración y recursos:** Catálogo exhaustivo de controladores y scheduling avanzado.
+- **Sesión 8 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
+- **Sesión 9 · Networking en Kubernetes: comunicación y exposición de servicios:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
+- **Sesión 10 · Construcción de un clúster Kubernetes componente a componente:** Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada.
+- **Sesión 11 · Kubernetes en AWS: EKS y clústeres autogestionados con kOps:** Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad.
+- **Sesión 12 · Kubernetes en Azure y GCP: AKS y GKE:** Instalaciones completas independientes y catálogo de add-ons de ambos proveedores.
+- **Sesión 13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm:** Creación de charts complejos desde cero y catálogo de plugins.
+- **Sesión 14 · Infraestructura declarativa: DNS, certificados y recursos cloud:** DNSSEC/DoH, operación DNS avanzada, Crossplane Compositions/XRDs avanzados y Composition Functions.
+- **Sesión 15 · Gestión de secretos externos: Vault y External Secrets Operator:** HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state.
+- **Sesión 16 · Métricas y alertas: Prometheus, PromQL y Alertmanager:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
+- **Sesión 17 · Dashboards y logs: Grafana, Loki y Alloy:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
+- **Sesión 18 · Trazas distribuidas y correlación: OpenTelemetry y Tempo:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo.
+- **Sesión 19 · Automatización de pipelines: scripting, Tekton y Trivy:** Curso completo de Bash/Python; Triggers/Chains avanzados y attestations.
+- **Sesión 20 · Colaboración y validación de cambios: Git y Prow:** Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas.
+- **Sesión 21 · Despliegue declarativo y reconciliación: GitOps con ArgoCD:** ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves.
+- **Sesión 22 · Entrada de tráfico y service mesh: Traefik e Istio:** Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo.
+- **Sesión 23 · Entrega progresiva: canary y blue/green con Argo Rollouts:** Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking.
+- **Sesión 24 · Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter:** Catálogo triggers, métricas complejas, tuning, políticas Spot/capacidad y optimización profunda de costes; evitar controladores compitiendo.
+- **Sesión 25 · Desarrollo de operators: Go y Kubebuilder/Operator SDK:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero.
+- **Sesión 26 · Políticas de admisión y recuperación: OPA/Gatekeeper y Velero:** Políticas Rego complejas, catálogo de políticas, recuperación productiva avanzada, firmas y attestations.
+- **Sesión 27 · Gestión de clústeres: Cluster API y Hosted Control Planes:** Instalación de todos los productos y operación avanzada.
+- **Sesión 28 · Serverless en Kubernetes: Knative y Virtual Kubelet:** Knative Eventing avanzado, plataforma serverless completa y desarrollo de providers Virtual Kubelet.
+- **Sesión 29 · Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner:** Desplegar las tres soluciones desde cero.
+- **Sesión 30 · Presentación y defensa del Trabajo Final:** Ampliaciones voluntarias del proyecto; las tecnologías de profundización no son requisitos obligatorios.
 
-**Ampliación de IaC:** taller adicional de Terraform/OpenTofu centrado en diseño de módulos, testing avanzado y automatización.
+**IaC:** taller adicional de diseño de módulos, testing avanzado y automatización.
+
+**Seguridad:** políticas Kyverno avanzadas, firma, SBOM, attestations y conexión del análisis de imágenes con admisión; el principal conserva Trivy en Tekton y OPA/Gatekeeper con Velero.

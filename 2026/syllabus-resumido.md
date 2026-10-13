@@ -2,99 +2,96 @@
 
 UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 
-El programa se desarrolla en **30 sesiones lectivas de 3 horas (90h)**, los martes y jueves de 18:00 a 21:00, en la zona horaria **Europe/Madrid**. El curso comienza el 03/11/2026 y finaliza el 18/03/2027. El Proyecto Final cuenta con actividades de consolidación y defensa adicionales a las 90 horas lectivas.
+**30 sesiones de 3 horas (90h)**, martes y jueves de 18:00 a 21:00, zona horaria **Europe/Madrid**. Inicio: **03/11/2026**. Fin: **18/03/2027**, con presentación y defensa del Trabajo Final. Las 29 clases de contenido terminan el **11/03/2027**; el desarrollo del proyecto es trabajo autónomo y el **16/03 no hay clase**.
 
-Enlaces: [syllabus detallado](syllabus-detallado.md) · [calendario](calendario.md).
+[Syllabus detallado](syllabus-detallado.md) · [Calendario](calendario.md).
 
 ## Distribución
 
-| Bloque | Sesiones | Horas lectivas | ECTS | Docencia |
-|---|---:|---:|---:|---|
+| Bloque | Sesiones | Horas | ECTS | Docencia |
+|---|---|---:|---:|---|
 | M1 · Fundamentos DevOps, Platform Engineering y Programación para Infraestructura | 1 (1) | 3h | 1.5 | René |
 | M2 · Cloud Computing Multicloud e Infraestructura como Código | 2–4 (3) | 9h | 1 | Rael |
 | M3 · Contenedores y Kubernetes Core. Ecosistema OCI | 5–10 (6) | 18h | 2 | Rael |
 | M4 · Kubernetes en Producción y Ecosistema Cloud Native | 11–15 (5) | 15h | 2 | Rael |
-| M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado | 16–25 (10) | 30h | 2 | David, Rael |
-| M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 26–30 (5) | 15h | 2 | Profesor UPC |
-| PF · Proyecto Final | Fuera de las 30 | 6h adicionales | 1.5 | — |
-| **Total lectivo** | **30** | **90h** | **12 ECTS, incluido PF** | |
+| M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado | 16–24 (9) | 27h | 2 | David, Rael |
+| M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 25–29 (5) | 15h | 2 | Profesor UPC |
+| PF · Trabajo Final | 30 (1) | 3h | 1.5 | René y Rael |
+| **Total** | **30** | **90h** | **12** | |
+
+## Docencia
+
+| Docente | Clases de contenido | Horas de contenido | Presentación TFG |
+|---|---:|---:|---|
+| René | 1 | 3h | Sesión 30, junto a Rael (3h) |
+| Rael | 17 | 51h | Sesión 30, junto a René (3h) |
+| David | 6 | 18h | — |
+| Profesor UPC | 5 | 15h | — |
+
+La sesión conjunta del TFG suma 3h al curso, aunque cuenta como 3h de participación para cada uno de sus dos docentes.
+
+## Metodología y prerrequisitos
+
+Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Las clases cloud introducen los recursos que se utilizarán para desplegar Kubernetes: identidad, instancias, redes, balanceadores y almacenamiento, seguidos de su aprovisionamiento como código. Python se practica progresivamente en proveedores; Bash en pipelines; Go en el ejemplo de operator. La IA apoya la escritura/adaptación de código, cuya ejecución y resultados se verifican.
+
+Una aplicación Python de dos servicios conecta Kubernetes, observabilidad, CI/GitOps, entrega y escalado. Laboratorios guiados con configuraciones preparadas; permisos, cuotas y costes comprobados; limpieza de recursos al finalizar. EKS/kOps se explican durante su despliegue con un entorno de respaldo disponible. M6 combina conceptos, comparación y demostraciones; operators tiene una clase completa. Los secretos se entregan mediante mecanismos externos y no se guardan en repositorios ni en el estado de Terraform.
+
+Semáforo: 🟢 alcance cómodo; 🟡 ajustado con ejemplos preparados. El semáforo describe el alcance de la clase, no la dificultad intrínseca de la herramienta.
 
 ## M1 · Formación transversal y créditos
 
-M1 combina una clase propia con programación para infraestructura integrada en las sesiones cloud, CI y operators. Comprende **9 horas lectivas de contenido: 3h propias y 6h integradas**, dentro de las 90h del curso.
+M1 combina **3h propias y 6h integradas**: 9h de contenido incluidas en las 90h del curso. Los 1,5 ECTS incluyen además trabajo autónomo evaluable de adaptación de scripts entre proveedores, validaciones y modificación del ejemplo de Go.
 
-| Sesión | Contenido de M1 | Horas incluidas |
+| Sesión | Contenido transversal M1 | Horas incluidas |
 |---|---|---:|
-| 1 · DevOps y Platform Engineering | Fundamentos DevOps, cultura, plataformas y métricas | 3h |
-| 2 · AWS, Terraform y Python | Python para consultar recursos; generación y revisión de código con IA | 1h |
-| 3 · Azure, Terraform y automatización Python | Adaptación de scripts, configuración y tratamiento de resultados | 1h |
-| 4 · GCP, estado remoto y comparación de IaC | Reutilización de la automatización y comparación de implementaciones | 1h |
-| 19 · Scripting y pipelines con Tekton | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
-| 26 · Operators con Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
-| **Total M1** | **Contenido propio y transversal** | **9h** |
+| 1 · Fundamentos de DevOps y Platform Engineering | Fundamentos DevOps, cultura, plataformas y métricas | 3h |
+| 2 · AWS: fundamentos y aprovisionamiento como código | Python para consultar recursos; generación y revisión de código con IA | 1h |
+| 3 · Azure: fundamentos y aprovisionamiento como código | Adaptación de scripts, configuración y tratamiento de resultados | 1h |
+| 4 · GCP: fundamentos y aprovisionamiento como código | Reutilización de la automatización y comparación de implementaciones | 1h |
+| 19 · Automatización de pipelines: scripting, Tekton y Trivy | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
+| 25 · Desarrollo de operators: Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
 
-Las tablas de distribución asignan cada clase a un bloque principal; las horas transversales indican contenidos compartidos y no se suman de nuevo al total lectivo. La docencia de cada parte corresponde al profesor de esa sesión.
-
-Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluable. Este trabajo consiste en adaptar un script entre proveedores, añadir validaciones y manejo de errores, y modificar el ejemplo de Go explicando el comportamiento del controlador. Las evidencias se recogen durante las prácticas de las sesiones correspondientes.
-
-## Carga docente
-
-| Docente | Sesiones lectivas | Horas |
-|---|---:|---:|
-| René | 1 | 3h |
-| Rael | 17 | 51h |
-| David | 7 | 21h |
-| Profesor UPC | 5 | 15h |
-
-## Enfoque docente y prerrequisitos
-
-Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Las sesiones de proveedores introducen los fundamentos cloud. Una misma aplicación Python con dos servicios conecta cloud, Kubernetes, observabilidad, CI y GitOps. Bash se practica en Tekton; Python aparece progresivamente en proveedores y automatización; Go se usa para comprender el operator. La IA ayuda a escribir/adaptar código que debe revisarse y verificarse.
-
-Laboratorios guiados con manifiestos/configuraciones preparados. Antes de clase se comprueban cuentas, permisos, cuotas, dominios y costes. Se preservan estados reutilizables; para despliegues lentos, especialmente EKS/kOps, se explican conceptos durante la espera y se dispone de un entorno alternativo preparado. Cada práctica cloud incluye limpieza. Secretos y credenciales no se guardan en repositorios, logs ni estado Terraform; crear el contenedor del secreto no implica cargar su valor mediante IaC.
-
-Semáforo: 🟢 alcance cómodo; 🟡 ajustado con material preparado. No mide dificultad de la herramienta ni garantiza tiempo de despliegue. Las amarillas de M6 suponen demostraciones, no implementaciones completas.
+Las horas compartidas no se suman de nuevo al total. La docencia corresponde al profesor de cada clase.
 
 ## Sesiones
 
 | # | Bloque | Sesión | Docente | Carga |
 |---:|---|---|---|:---:|
-| 1 | M1 | DevOps y Platform Engineering | René | 🟢 |
-| 2 | M2 + M1 | AWS, Terraform y Python | Rael | 🟡 |
-| 3 | M2 + M1 | Azure, Terraform y automatización Python | Rael | 🟡 |
-| 4 | M2 + M1 | GCP, estado remoto y comparación de IaC | Rael | 🟡 |
-| 5 | M3 | Contenedores y ecosistema OCI | Rael | 🟡 |
-| 6 | M3 | Arquitectura, API, kind, autenticación y RBAC | Rael | 🟡 |
-| 7 | M3 | Workloads, configuración y recursos | Rael | 🟡 |
-| 8 | M3 | Persistencia, CSI y StatefulSets | Rael | 🟡 |
-| 9 | M3 | Networking y exposición de aplicaciones | Rael | 🟡 |
-| 10 | M3 | Clúster componente a componente | Rael | 🟡 |
-| 11 | M4 | EKS y kOps en AWS | Rael | 🟡 |
-| 12 | M4 | AKS y GKE | Rael | 🟡 |
-| 13 | M4 | Kustomize y Helm | Rael | 🟡 |
-| 14 | M4 | DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager | Rael | 🟢 |
-| 15 | M4 | Secretos externos: Vault y External Secrets Operator | Rael | 🟡 |
-| 16 | M5 | Prometheus, PromQL y Alertmanager | David | 🟡 |
-| 17 | M5 | Grafana, Loki y Alloy | David | 🟡 |
-| 18 | M5 | OpenTelemetry, Collector, Tempo y correlación | David | 🟡 |
-| 19 | M5 + M1 | Scripting y pipelines con Tekton | Rael | 🟡 |
-| 20 | M5 | Git y Prow: colaboración y validaciones | Rael | 🟡 |
-| 21 | M5 | GitOps con ArgoCD | Rael | 🟡 |
-| 22 | M5 | Seguridad de imágenes y políticas de admisión | David | 🟡 |
-| 23 | M5 | Traefik e Istio | David | 🟡 |
-| 24 | M5 | Entrega progresiva con Argo Rollouts | David | 🟡 |
-| 25 | M5 | Escalado con HPA, VPA, KEDA y Karpenter | David | 🟡 |
-| 26 | M6 + M1 | Operators con Go y Kubebuilder/Operator SDK | Profesor UPC | 🟡 |
-| 27 | M6 | Cluster API y Hosted Control Planes | Profesor UPC | 🟡 |
-| 28 | M6 | Knative y serverless | Profesor UPC | 🟢 |
-| 29 | M6 | Multi-cluster: Istio, Cilium y Submariner | Profesor UPC | 🟡 |
-| 30 | M6 | Crossplane y recuperación con Velero | Profesor UPC | 🟡 |
+| 1 | M1 | Fundamentos de DevOps y Platform Engineering | René | 🟢 |
+| 2 | M2 + M1 | AWS: fundamentos y aprovisionamiento como código | Rael | 🟡 |
+| 3 | M2 + M1 | Azure: fundamentos y aprovisionamiento como código | Rael | 🟡 |
+| 4 | M2 + M1 | GCP: fundamentos y aprovisionamiento como código | Rael | 🟡 |
+| 5 | M3 | Contenedores y ecosistema OCI: imágenes, runtimes y registros | Rael | 🟡 |
+| 6 | M3 | Arquitectura de Kubernetes: API, autenticación y permisos | Rael | 🟡 |
+| 7 | M3 | Aplicaciones en Kubernetes: workloads, configuración y recursos | Rael | 🟡 |
+| 8 | M3 | Persistencia en Kubernetes: almacenamiento y aplicaciones con estado | Rael | 🟡 |
+| 9 | M3 | Networking en Kubernetes: comunicación y exposición de servicios | Rael | 🟡 |
+| 10 | M3 | Construcción de un clúster Kubernetes componente a componente | Rael | 🟡 |
+| 11 | M4 | Kubernetes en AWS: EKS y clústeres autogestionados con kOps | Rael | 🟡 |
+| 12 | M4 | Kubernetes en Azure y GCP: AKS y GKE | Rael | 🟡 |
+| 13 | M4 | Configuración y empaquetado de aplicaciones: Kustomize y Helm | Rael | 🟡 |
+| 14 | M4 | Infraestructura declarativa: DNS, certificados y recursos cloud | Rael | 🟢 |
+| 15 | M4 | Gestión de secretos externos: Vault y External Secrets Operator | Rael | 🟡 |
+| 16 | M5 | Métricas y alertas: Prometheus, PromQL y Alertmanager | David | 🟡 |
+| 17 | M5 | Dashboards y logs: Grafana, Loki y Alloy | David | 🟡 |
+| 18 | M5 | Trazas distribuidas y correlación: OpenTelemetry y Tempo | David | 🟡 |
+| 19 | M5 + M1 | Automatización de pipelines: scripting, Tekton y Trivy | Rael | 🟡 |
+| 20 | M5 | Colaboración y validación de cambios: Git y Prow | Rael | 🟡 |
+| 21 | M5 | Despliegue declarativo y reconciliación: GitOps con ArgoCD | Rael | 🟡 |
+| 22 | M5 | Entrada de tráfico y service mesh: Traefik e Istio | David | 🟡 |
+| 23 | M5 | Entrega progresiva: canary y blue/green con Argo Rollouts | David | 🟡 |
+| 24 | M5 | Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter | David | 🟡 |
+| 25 | M6 + M1 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | Profesor UPC | 🟡 |
+| 26 | M6 | Políticas de admisión y recuperación: OPA/Gatekeeper y Velero | Profesor UPC | 🟡 |
+| 27 | M6 | Gestión de clústeres: Cluster API y Hosted Control Planes | Profesor UPC | 🟡 |
+| 28 | M6 | Serverless en Kubernetes: Knative y Virtual Kubelet | Profesor UPC | 🟢 |
+| 29 | M6 | Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner | Profesor UPC | 🟡 |
+| 30 | PF | Presentación y defensa del Trabajo Final | René y Rael | 🟡 |
 
-## Proyecto Final
+## Trabajo Final
 
-El proyecto integra progresivamente los resultados de las prácticas: infraestructura IaC en un proveedor, aplicación en Kubernetes, configuración con Helm/Kustomize, CI, ArgoCD, DNS/TLS, secretos externos, observabilidad, seguridad, entrega progresiva y escalado.
+Construcción progresiva de una plataforma a partir de las prácticas: IaC en un proveedor, aplicación Kubernetes, Helm/Kustomize, CI con escaneo, ArgoCD, DNS/TLS, secretos externos, métricas/logs/trazas, seguridad y escalado.
 
-**Entregables:** repositorio reproducible, memoria de arquitectura y decisiones técnicas, runbooks, demostración end-to-end con un escenario de fallo, diagnóstico y recuperación, y defensa oral.
+**Entregables:** repositorio reproducible, memoria de arquitectura y decisiones técnicas, runbooks, demo funcional con diagnóstico/recuperación y defensa oral. La evaluación considera funcionalidad, reproducibilidad, seguridad, observabilidad, justificación de decisiones, costes, documentación y defensa. Las ampliaciones avanzadas no son obligatorias.
 
-**Evaluación:** funcionalidad, reproducibilidad, seguridad, observabilidad, justificación de decisiones, control de costes, documentación y defensa. Las tecnologías tratadas como ampliación, como firmas/SBOM y configuraciones multi-cluster avanzadas, son opcionales en el proyecto.
-
-**Consolidación:** 09/03/2027, 18:00–21:00. **Presentación y defensa:** 11/03/2027, 18:00–21:00. Ambas actividades se realizan fuera de las 30 sesiones lectivas. El 16/03 y el 18/03 se reservan para recuperación.
+**Presentación y defensa:** sesión 30, **18/03/2027, 18:00–21:00**, con **René y Rael**, incluida en las 90h. Desarrollo y consolidación mediante trabajo autónomo durante el curso. La última clase de contenido es el 11/03 y el 16/03 queda libre para finalizar el proyecto.
