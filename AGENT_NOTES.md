@@ -1,3 +1,9 @@
+## Seguridad trasladada y asignada a David
+
+Seguridad de imágenes y políticas de admisión se mueve a M5, justo antes de Traefik/Istio: sesión 22, 02/02/2027, David. M3 queda con 6 clases y M5 con 10. Rael: 17 clases/51h; David: 7/21h; René 1/3h y UPC 5/15h. Tekton pasa a sesión 19; las partes transversales de M1 mantienen 9h incluidas en las 90h.
+
+Cambio de TFG todavía pendiente de aplicar al calendario: una presentación de 3h dentro de las 30 clases, dada por René y Rael; hay que recuperar una clase de contenido antes de reordenar el final. El usuario ha rechazado juntar Crossplane con operators/Go; no aplicar esa unión. Los documentos mantienen temporalmente la planificación anterior de PF hasta decidir el recorte.
+
 ## M1 transversal incorporado a la edición 2026
 
 Distribución aprobada: sesión 1=3h; AWS/Azure/GCP=1h de programación cada una; Tekton=1,5h; operators/Go=1,5h. Total M1=9h (3 propias + 6 integradas), sin duplicar horas ni cambiar fechas, profesores o el total de 90h. Los 1,5 ECTS incluyen trabajo autónomo evaluable de scripts, validaciones y modificación del ejemplo Go. Incorporado en syllabus, calendario, CSV y JSON de 2026. No atribuir ficticiamente 12h lectivas a M1.

@@ -28,7 +28,7 @@ M1 combina una clase propia con programación para infraestructura integrada en 
 | 2 · AWS, Terraform y Python | Python para consultar recursos; generación y revisión de código con IA | 1h |
 | 3 · Azure, Terraform y automatización Python | Adaptación de scripts, configuración y tratamiento de resultados | 1h |
 | 4 · GCP, estado remoto y comparación de IaC | Reutilización de la automatización y comparación de implementaciones | 1h |
-| 20 · Scripting y pipelines con Tekton | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
+| 19 · Scripting y pipelines con Tekton | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
 | 26 · Operators con Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
 | **Total M1** | **Contenido propio y transversal** | **9h** |
 
@@ -129,7 +129,7 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 ## M3 · Contenedores y Kubernetes Core. Ecosistema OCI
 
-7 sesiones · 21h lectivas · 2 ECTS.
+6 sesiones · 18h lectivas · 2 ECTS.
 
 ### Sesión 5 · Contenedores y ecosistema OCI
 
@@ -246,32 +246,13 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada.
 
-### Sesión 11 · Seguridad de imágenes y políticas de admisión
-
-**Fecha:** 10/12/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
-
-**Objetivo:** Distinguir análisis de imagen y control de recursos admitidos.
-
-**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
-
-**Contenido principal:**
-
-- Trivy e interpretación de vulnerabilidades.
-- PSA.
-- Kyverno como herramienta práctica.
-- OPA/Gatekeeper como comparación breve.
-
-**Práctica / evidencia:** Revisar una imagen, rechazar un Pod privilegiado o que incumpla una política, corregirlo y comprobar admisión.
-
-**Ampliación:** Firmas, SBOM, attestations y conexión automática entre escaneo/admisión; segundo motor de políticas completo.
-
 ## M4 · Kubernetes en Producción y Ecosistema Cloud Native
 
 5 sesiones · 15h lectivas · 2 ECTS.
 
-### Sesión 12 · EKS y kOps en AWS
+### Sesión 11 · EKS y kOps en AWS
 
-**Fecha:** 15/12/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
+**Fecha:** 10/12/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Comparar Kubernetes gestionado y autogestionado sobre la misma base AWS.
 
@@ -288,9 +269,9 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad.
 
-### Sesión 13 · AKS y GKE
+### Sesión 12 · AKS y GKE
 
-**Fecha:** 17/12/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
+**Fecha:** 15/12/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Aplicar la comparación de operación cloud a Azure y GCP.
 
@@ -308,9 +289,9 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Instalaciones completas independientes y catálogo de add-ons de ambos proveedores.
 
-### Sesión 14 · Kustomize y Helm
+### Sesión 13 · Kustomize y Helm
 
-**Fecha:** 22/12/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
+**Fecha:** 17/12/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Adaptar manifiestos y usar paquetes existentes.
 
@@ -327,9 +308,9 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Creación de charts complejos desde cero y catálogo de plugins.
 
-### Sesión 15 · DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager
+### Sesión 14 · DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager
 
-**Fecha:** 07/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟢.
+**Fecha:** 22/12/2026 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟢.
 
 **Objetivo:** Publicar una aplicación con dominio y certificados renovables.
 
@@ -347,9 +328,9 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** DNSSEC/DoH y operación DNS avanzada.
 
-### Sesión 16 · Secretos externos: Vault y External Secrets Operator
+### Sesión 15 · Secretos externos: Vault y External Secrets Operator
 
-**Fecha:** 12/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
+**Fecha:** 07/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Separar secretos de manifiestos y aplicar identidad y permisos de acceso.
 
@@ -369,11 +350,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 ## M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado
 
-9 sesiones · 27h lectivas · 2 ECTS.
+10 sesiones · 30h lectivas · 2 ECTS.
 
-### Sesión 17 · Prometheus, PromQL y Alertmanager
+### Sesión 16 · Prometheus, PromQL y Alertmanager
 
-**Fecha:** 14/01/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
+**Fecha:** 12/01/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
 
 **Objetivo:** Detectar fallos mediante métricas y definir cuándo alertar.
 
@@ -392,9 +373,9 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
 
-### Sesión 18 · Grafana, Loki y Alloy
+### Sesión 17 · Grafana, Loki y Alloy
 
-**Fecha:** 19/01/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
+**Fecha:** 14/01/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
 
 **Objetivo:** Pasar de un síntoma en métricas a mensajes que explican el fallo.
 
@@ -412,9 +393,9 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
 
-### Sesión 19 · OpenTelemetry, Collector, Tempo y correlación
+### Sesión 18 · OpenTelemetry, Collector, Tempo y correlación
 
-**Fecha:** 21/01/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
+**Fecha:** 19/01/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
 
 **Objetivo:** Localizar dónde se atasca una petición entre servicios.
 
@@ -434,11 +415,11 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Preparación específica:** propagación de contexto entre dos servicios, trace ID en logs y enlaces de Grafana comprobados. Alloy y Collector tienen capacidades solapadas: el reparto logs/trazas elegido es una decisión del lab, no una limitación de las herramientas.
 
-### Sesión 20 · Scripting y pipelines con Tekton
+### Sesión 19 · Scripting y pipelines con Tekton
 
 **Contenido de M1:** Bash/Python, errores, validaciones y ejecución automatizada. **Dedicación:** 1,5h incluidas en esta clase.
 
-**Fecha:** 26/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
+**Fecha:** 21/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Automatizar tareas verificables y construir una imagen mediante pipeline.
 
@@ -459,9 +440,9 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Continuidad:** introducir repositorio/commit mínimos antes del pipeline; PR y colaboración se desarrollan después con Prow. No asumir que todos los ProwJobs ejecutan Tekton automáticamente: usar un puente preparado o mostrar ambos sin prometer integración nativa universal.
 
-### Sesión 21 · Git y Prow: colaboración y validaciones
+### Sesión 20 · Git y Prow: colaboración y validaciones
 
-**Fecha:** 28/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
+**Fecha:** 26/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Conectar un cambio revisado con las comprobaciones conocidas de CI.
 
@@ -477,9 +458,9 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 
 **Ampliación:** Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas.
 
-### Sesión 22 · GitOps con ArgoCD
+### Sesión 21 · GitOps con ArgoCD
 
-**Fecha:** 02/02/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
+**Fecha:** 28/01/2027 · 18:00–21:00 · **Docente:** Rael · **Concentración:** 🟡.
 
 **Objetivo:** Reconciliar el estado del repositorio con Kubernetes.
 
@@ -495,6 +476,25 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 **Práctica / evidencia:** Desplegar imagen producida por CI, modificar manifiesto mediante PR, observar sync y provocar drift manual.
 
 **Ampliación:** ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves.
+
+### Sesión 22 · Seguridad de imágenes y políticas de admisión
+
+**Fecha:** 02/02/2027 · 18:00–21:00 · **Docente:** David · **Concentración:** 🟡.
+
+**Objetivo:** Distinguir análisis de imagen y control de recursos admitidos.
+
+**Entrada:** Fundamentos y prácticas de los bloques previos; material preparado según laboratorio.
+
+**Contenido principal:**
+
+- Trivy e interpretación de vulnerabilidades.
+- PSA.
+- Kyverno como herramienta práctica.
+- OPA/Gatekeeper como comparación breve.
+
+**Práctica / evidencia:** Revisar una imagen, rechazar un Pod privilegiado o que incumpla una política, corregirlo y comprobar admisión.
+
+**Ampliación:** Firmas, SBOM, attestations y conexión automática entre escaneo/admisión; segundo motor de políticas completo.
 
 ### Sesión 23 · Traefik e Istio
 
@@ -678,18 +678,18 @@ Material complementario para profundizar mediante trabajo autónomo o formación
 - **Sesión 8 · Persistencia, CSI y StatefulSets:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
 - **Sesión 9 · Networking y exposición de aplicaciones:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
 - **Sesión 10 · Clúster componente a componente:** Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada.
-- **Sesión 11 · Seguridad de imágenes y políticas de admisión:** Firmas, SBOM, attestations y conexión automática entre escaneo/admisión; segundo motor de políticas completo.
-- **Sesión 12 · EKS y kOps en AWS:** Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad.
-- **Sesión 13 · AKS y GKE:** Instalaciones completas independientes y catálogo de add-ons de ambos proveedores.
-- **Sesión 14 · Kustomize y Helm:** Creación de charts complejos desde cero y catálogo de plugins.
-- **Sesión 15 · DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager:** DNSSEC/DoH y operación DNS avanzada.
-- **Sesión 16 · Secretos externos: Vault y External Secrets Operator:** HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state.
-- **Sesión 17 · Prometheus, PromQL y Alertmanager:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
-- **Sesión 18 · Grafana, Loki y Alloy:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
-- **Sesión 19 · OpenTelemetry, Collector, Tempo y correlación:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo.
-- **Sesión 20 · Scripting y pipelines con Tekton:** Curso completo de Bash/Python; Triggers/Chains avanzados y attestations.
-- **Sesión 21 · Git y Prow: colaboración y validaciones:** Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas.
-- **Sesión 22 · GitOps con ArgoCD:** ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves.
+- **Sesión 22 · Seguridad de imágenes y políticas de admisión:** Firmas, SBOM, attestations y conexión automática entre escaneo/admisión; segundo motor de políticas completo.
+- **Sesión 11 · EKS y kOps en AWS:** Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad.
+- **Sesión 12 · AKS y GKE:** Instalaciones completas independientes y catálogo de add-ons de ambos proveedores.
+- **Sesión 13 · Kustomize y Helm:** Creación de charts complejos desde cero y catálogo de plugins.
+- **Sesión 14 · DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager:** DNSSEC/DoH y operación DNS avanzada.
+- **Sesión 15 · Secretos externos: Vault y External Secrets Operator:** HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state.
+- **Sesión 16 · Prometheus, PromQL y Alertmanager:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
+- **Sesión 17 · Grafana, Loki y Alloy:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
+- **Sesión 18 · OpenTelemetry, Collector, Tempo y correlación:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo.
+- **Sesión 19 · Scripting y pipelines con Tekton:** Curso completo de Bash/Python; Triggers/Chains avanzados y attestations.
+- **Sesión 20 · Git y Prow: colaboración y validaciones:** Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas.
+- **Sesión 21 · GitOps con ArgoCD:** ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves.
 - **Sesión 23 · Traefik e Istio:** Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo.
 - **Sesión 24 · Entrega progresiva con Argo Rollouts:** Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking.
 - **Sesión 25 · Escalado con HPA, VPA, KEDA y Karpenter:** Catálogo triggers, métricas complejas, tuning, políticas Spot/capacidad y optimización profunda de costes; evitar controladores compitiendo.

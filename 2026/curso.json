@@ -210,24 +210,6 @@
     },
     {
       "number": 11,
-      "module": "M3",
-      "title": "Seguridad de imágenes y políticas de admisión",
-      "teacher": "Rael",
-      "load": "amarillo",
-      "objective": "Distinguir análisis de imagen y control de recursos admitidos",
-      "contents": [
-        "Trivy e interpretación de vulnerabilidades",
-        "PSA",
-        "Kyverno como herramienta práctica",
-        "OPA/Gatekeeper como comparación breve"
-      ],
-      "lab": "Revisar una imagen, rechazar un Pod privilegiado o que incumpla una política, corregirlo y comprobar admisión",
-      "extras": "Firmas, SBOM, attestations y conexión automática entre escaneo/admisión; segundo motor de políticas completo",
-      "date": "2026-12-10",
-      "transversal_contents": []
-    },
-    {
-      "number": 12,
       "module": "M4",
       "title": "EKS y kOps en AWS",
       "teacher": "Rael",
@@ -241,11 +223,11 @@
       ],
       "lab": "Explicar durante ambos despliegues, solapar esperas, desplegar la misma aplicación y comparar; comprobar permisos y disponer de clústeres de respaldo",
       "extras": "Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad",
-      "date": "2026-12-15",
+      "date": "2026-12-10",
       "transversal_contents": []
     },
     {
-      "number": 13,
+      "number": 12,
       "module": "M4",
       "title": "AKS y GKE",
       "teacher": "Rael",
@@ -260,11 +242,11 @@
       ],
       "lab": "Demostración preparada de los mismos requisitos y comparación razonada con EKS",
       "extras": "Instalaciones completas independientes y catálogo de add-ons de ambos proveedores",
-      "date": "2026-12-17",
+      "date": "2026-12-15",
       "transversal_contents": []
     },
     {
-      "number": 14,
+      "number": 13,
       "module": "M4",
       "title": "Kustomize y Helm",
       "teacher": "Rael",
@@ -278,11 +260,11 @@
       ],
       "lab": "Adaptar la aplicación a dos entornos e instalar/configurar un chart, distinguiendo chart, operator y recursos gestionados",
       "extras": "Creación de charts complejos desde cero y catálogo de plugins",
-      "date": "2026-12-22",
+      "date": "2026-12-17",
       "transversal_contents": []
     },
     {
-      "number": 15,
+      "number": 14,
       "module": "M4",
       "title": "DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager",
       "teacher": "Rael",
@@ -297,11 +279,11 @@
       ],
       "lab": "Instalar componentes por Helm sobre el entorno anterior, publicar el registro y verificar HTTPS y renovación",
       "extras": "DNSSEC/DoH y operación DNS avanzada",
-      "date": "2027-01-07",
+      "date": "2026-12-22",
       "transversal_contents": []
     },
     {
-      "number": 16,
+      "number": 15,
       "module": "M4",
       "title": "Secretos externos: Vault y External Secrets Operator",
       "teacher": "Rael",
@@ -316,11 +298,11 @@
       ],
       "lab": "Aplicación consume secreto externo, modificarlo y comprobar sincronización y comportamiento de la aplicación",
       "extras": "HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state",
-      "date": "2027-01-12",
+      "date": "2027-01-07",
       "transversal_contents": []
     },
     {
-      "number": 17,
+      "number": 16,
       "module": "M5",
       "title": "Prometheus, PromQL y Alertmanager",
       "teacher": "David",
@@ -336,11 +318,11 @@
       ],
       "lab": "kube-prometheus-stack preparado, conectar la app, provocar errores/carga, consultar y comprobar una alerta",
       "extras": "HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre",
-      "date": "2027-01-14",
+      "date": "2027-01-12",
       "transversal_contents": []
     },
     {
-      "number": 18,
+      "number": 17,
       "module": "M5",
       "title": "Grafana, Loki y Alloy",
       "teacher": "David",
@@ -355,11 +337,11 @@
       ],
       "lab": "Provocar fallo, detectarlo en el dashboard y localizar logs del mismo intervalo con configuración guiada de Alloy",
       "extras": "Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy",
-      "date": "2027-01-19",
+      "date": "2027-01-14",
       "transversal_contents": []
     },
     {
-      "number": 19,
+      "number": 18,
       "module": "M5",
       "title": "OpenTelemetry, Collector, Tempo y correlación",
       "teacher": "David",
@@ -374,11 +356,11 @@
       ],
       "lab": "Dos servicios preparados, provocar latencia y recorrer métrica→traza→logs; Collector para trazas y Alloy para logs",
       "extras": "SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo",
-      "date": "2027-01-21",
+      "date": "2027-01-19",
       "transversal_contents": []
     },
     {
-      "number": 20,
+      "number": 19,
       "module": "M5",
       "title": "Scripting y pipelines con Tekton",
       "teacher": "Rael",
@@ -394,7 +376,7 @@
       ],
       "lab": "Conectar tareas preparadas de build/test/scan/publicación y comprobar fallos y resultados",
       "extras": "Curso completo de Bash/Python; Triggers/Chains avanzados y attestations",
-      "date": "2027-01-26",
+      "date": "2027-01-21",
       "transversal_contents": [
         {
           "module": "M1",
@@ -404,7 +386,7 @@
       ]
     },
     {
-      "number": 21,
+      "number": 20,
       "module": "M5",
       "title": "Git y Prow: colaboración y validaciones",
       "teacher": "Rael",
@@ -417,11 +399,11 @@
       ],
       "lab": "Prow preparado, abrir un PR, observar validaciones y resolver un fallo antes del merge",
       "extras": "Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas",
-      "date": "2027-01-28",
+      "date": "2027-01-26",
       "transversal_contents": []
     },
     {
-      "number": 22,
+      "number": 21,
       "module": "M5",
       "title": "GitOps con ArgoCD",
       "teacher": "Rael",
@@ -435,6 +417,24 @@
       ],
       "lab": "Desplegar imagen producida por CI, modificar manifiesto mediante PR, observar sync y provocar drift manual",
       "extras": "ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves",
+      "date": "2027-01-28",
+      "transversal_contents": []
+    },
+    {
+      "number": 22,
+      "module": "M5",
+      "title": "Seguridad de imágenes y políticas de admisión",
+      "teacher": "David",
+      "load": "amarillo",
+      "objective": "Distinguir análisis de imagen y control de recursos admitidos",
+      "contents": [
+        "Trivy e interpretación de vulnerabilidades",
+        "PSA",
+        "Kyverno como herramienta práctica",
+        "OPA/Gatekeeper como comparación breve"
+      ],
+      "lab": "Revisar una imagen, rechazar un Pod privilegiado o que incumpla una política, corregirlo y comprobar admisión",
+      "extras": "Firmas, SBOM, attestations y conexión automática entre escaneo/admisión; segundo motor de políticas completo",
       "date": "2027-02-02",
       "transversal_contents": []
     },

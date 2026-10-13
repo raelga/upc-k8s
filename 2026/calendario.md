@@ -20,18 +20,18 @@ Enlaces: [syllabus resumido](syllabus-resumido.md) · [syllabus detallado](sylla
 | 8 | 26/11/2026 | Jueves | M3 | Persistencia, CSI y StatefulSets | 18:00–21:00 | Rael | 🟡 |
 | 9 | 01/12/2026 | Martes | M3 | Networking y exposición de aplicaciones | 18:00–21:00 | Rael | 🟡 |
 | 10 | 03/12/2026 | Jueves | M3 | Clúster componente a componente | 18:00–21:00 | Rael | 🟡 |
-| 11 | 10/12/2026 | Jueves | M3 | Seguridad de imágenes y políticas de admisión | 18:00–21:00 | Rael | 🟡 |
-| 12 | 15/12/2026 | Martes | M4 | EKS y kOps en AWS | 18:00–21:00 | Rael | 🟡 |
-| 13 | 17/12/2026 | Jueves | M4 | AKS y GKE | 18:00–21:00 | Rael | 🟡 |
-| 14 | 22/12/2026 | Martes | M4 | Kustomize y Helm | 18:00–21:00 | Rael | 🟡 |
-| 15 | 07/01/2027 | Jueves | M4 | DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager | 18:00–21:00 | Rael | 🟢 |
-| 16 | 12/01/2027 | Martes | M4 | Secretos externos: Vault y External Secrets Operator | 18:00–21:00 | Rael | 🟡 |
-| 17 | 14/01/2027 | Jueves | M5 | Prometheus, PromQL y Alertmanager | 18:00–21:00 | David | 🟡 |
-| 18 | 19/01/2027 | Martes | M5 | Grafana, Loki y Alloy | 18:00–21:00 | David | 🟡 |
-| 19 | 21/01/2027 | Jueves | M5 | OpenTelemetry, Collector, Tempo y correlación | 18:00–21:00 | David | 🟡 |
-| 20 | 26/01/2027 | Martes | M5 + M1 | Scripting y pipelines con Tekton | 18:00–21:00 | Rael | 🟡 |
-| 21 | 28/01/2027 | Jueves | M5 | Git y Prow: colaboración y validaciones | 18:00–21:00 | Rael | 🟡 |
-| 22 | 02/02/2027 | Martes | M5 | GitOps con ArgoCD | 18:00–21:00 | Rael | 🟡 |
+| 11 | 10/12/2026 | Jueves | M4 | EKS y kOps en AWS | 18:00–21:00 | Rael | 🟡 |
+| 12 | 15/12/2026 | Martes | M4 | AKS y GKE | 18:00–21:00 | Rael | 🟡 |
+| 13 | 17/12/2026 | Jueves | M4 | Kustomize y Helm | 18:00–21:00 | Rael | 🟡 |
+| 14 | 22/12/2026 | Martes | M4 | DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager | 18:00–21:00 | Rael | 🟢 |
+| 15 | 07/01/2027 | Jueves | M4 | Secretos externos: Vault y External Secrets Operator | 18:00–21:00 | Rael | 🟡 |
+| 16 | 12/01/2027 | Martes | M5 | Prometheus, PromQL y Alertmanager | 18:00–21:00 | David | 🟡 |
+| 17 | 14/01/2027 | Jueves | M5 | Grafana, Loki y Alloy | 18:00–21:00 | David | 🟡 |
+| 18 | 19/01/2027 | Martes | M5 | OpenTelemetry, Collector, Tempo y correlación | 18:00–21:00 | David | 🟡 |
+| 19 | 21/01/2027 | Jueves | M5 + M1 | Scripting y pipelines con Tekton | 18:00–21:00 | Rael | 🟡 |
+| 20 | 26/01/2027 | Martes | M5 | Git y Prow: colaboración y validaciones | 18:00–21:00 | Rael | 🟡 |
+| 21 | 28/01/2027 | Jueves | M5 | GitOps con ArgoCD | 18:00–21:00 | Rael | 🟡 |
+| 22 | 02/02/2027 | Martes | M5 | Seguridad de imágenes y políticas de admisión | 18:00–21:00 | David | 🟡 |
 | 23 | 04/02/2027 | Jueves | M5 | Traefik e Istio | 18:00–21:00 | David | 🟡 |
 | 24 | 11/02/2027 | Jueves | M5 | Entrega progresiva con Argo Rollouts | 18:00–21:00 | David | 🟡 |
 | 25 | 16/02/2027 | Martes | M5 | Escalado con HPA, VPA, KEDA y Karpenter | 18:00–21:00 | David | 🟡 |
@@ -69,9 +69,9 @@ El calendario excluye los festivos y periodos no lectivos indicados a continuaci
 |---|---:|---:|---:|---|
 | M1 · Fundamentos DevOps, Platform Engineering y Programación para Infraestructura | 1 (1) | 3h | 1.5 | René |
 | M2 · Cloud Computing Multicloud e Infraestructura como Código | 2–4 (3) | 9h | 1 | Rael |
-| M3 · Contenedores y Kubernetes Core. Ecosistema OCI | 5–11 (7) | 21h | 2 | Rael |
-| M4 · Kubernetes en Producción y Ecosistema Cloud Native | 12–16 (5) | 15h | 2 | Rael |
-| M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado | 17–25 (9) | 27h | 2 | David, Rael |
+| M3 · Contenedores y Kubernetes Core. Ecosistema OCI | 5–10 (6) | 18h | 2 | Rael |
+| M4 · Kubernetes en Producción y Ecosistema Cloud Native | 11–15 (5) | 15h | 2 | Rael |
+| M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado | 16–25 (10) | 30h | 2 | David, Rael |
 | M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 26–30 (5) | 15h | 2 | Profesor UPC |
 | PF · Proyecto Final | Fuera de las 30 | 6h adicionales | 1.5 | — |
 | **Total lectivo** | **30** | **90h** | **12 ECTS, incluido PF** | |
@@ -86,7 +86,7 @@ M1 combina una clase propia con programación para infraestructura integrada en 
 | 2 · AWS, Terraform y Python | Python para consultar recursos; generación y revisión de código con IA | 1h |
 | 3 · Azure, Terraform y automatización Python | Adaptación de scripts, configuración y tratamiento de resultados | 1h |
 | 4 · GCP, estado remoto y comparación de IaC | Reutilización de la automatización y comparación de implementaciones | 1h |
-| 20 · Scripting y pipelines con Tekton | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
+| 19 · Scripting y pipelines con Tekton | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
 | 26 · Operators con Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
 | **Total M1** | **Contenido propio y transversal** | **9h** |
 
@@ -99,8 +99,8 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 | Docente | Sesiones lectivas | Horas |
 |---|---:|---:|
 | René | 1 | 3h |
-| Rael | 18 | 54h |
-| David | 6 | 18h |
+| Rael | 17 | 51h |
+| David | 7 | 21h |
 | Profesor UPC | 5 | 15h |
 
 La última sesión lectiva se celebra el **04/03/2027**. Todos los horarios corresponden a Europe/Madrid. Las actividades del Proyecto Final y las reservas quedan fuera de las 90h lectivas.

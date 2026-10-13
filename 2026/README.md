@@ -14,6 +14,6 @@ UPC School · Live online · Castellano · 12 ECTS.
 
 El curso comienza el 3 de noviembre de 2026. La última clase lectiva se celebra el 4 de marzo de 2027; la consolidación y defensa del proyecto tienen lugar el 9 y el 11 de marzo. El 16 y el 18 de marzo se reservan para recuperación.
 
-Docencia: René (M1), Rael (M2–M4 y Tekton/Git/Prow/ArgoCD de M5), David (observabilidad, Traefik/Istio, entrega progresiva y escalado de M5) y Profesor UPC (M6).
+Docencia: René (M1), Rael (M2–M4 y Tekton/Git/Prow/ArgoCD de M5), David (observabilidad, seguridad de imágenes y admisión, Traefik/Istio, entrega progresiva y escalado de M5) y Profesor UPC (M6).
 
 M1 integra 9 horas de contenido lectivo: 3h propias y 6h transversales en las clases de AWS, Azure, GCP, Tekton y operators. Sus 1,5 ECTS incluyen además trabajo autónomo evaluable. Las horas compartidas están incluidas en las 90h del curso.

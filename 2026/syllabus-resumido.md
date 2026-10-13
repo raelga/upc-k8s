@@ -12,9 +12,9 @@ Enlaces: [syllabus detallado](syllabus-detallado.md) · [calendario](calendario.
 |---|---:|---:|---:|---|
 | M1 · Fundamentos DevOps, Platform Engineering y Programación para Infraestructura | 1 (1) | 3h | 1.5 | René |
 | M2 · Cloud Computing Multicloud e Infraestructura como Código | 2–4 (3) | 9h | 1 | Rael |
-| M3 · Contenedores y Kubernetes Core. Ecosistema OCI | 5–11 (7) | 21h | 2 | Rael |
-| M4 · Kubernetes en Producción y Ecosistema Cloud Native | 12–16 (5) | 15h | 2 | Rael |
-| M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado | 17–25 (9) | 27h | 2 | David, Rael |
+| M3 · Contenedores y Kubernetes Core. Ecosistema OCI | 5–10 (6) | 18h | 2 | Rael |
+| M4 · Kubernetes en Producción y Ecosistema Cloud Native | 11–15 (5) | 15h | 2 | Rael |
+| M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado | 16–25 (10) | 30h | 2 | David, Rael |
 | M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 26–30 (5) | 15h | 2 | Profesor UPC |
 | PF · Proyecto Final | Fuera de las 30 | 6h adicionales | 1.5 | — |
 | **Total lectivo** | **30** | **90h** | **12 ECTS, incluido PF** | |
@@ -29,7 +29,7 @@ M1 combina una clase propia con programación para infraestructura integrada en 
 | 2 · AWS, Terraform y Python | Python para consultar recursos; generación y revisión de código con IA | 1h |
 | 3 · Azure, Terraform y automatización Python | Adaptación de scripts, configuración y tratamiento de resultados | 1h |
 | 4 · GCP, estado remoto y comparación de IaC | Reutilización de la automatización y comparación de implementaciones | 1h |
-| 20 · Scripting y pipelines con Tekton | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
+| 19 · Scripting y pipelines con Tekton | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
 | 26 · Operators con Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
 | **Total M1** | **Contenido propio y transversal** | **9h** |
 
@@ -42,8 +42,8 @@ Los **1,5 ECTS de M1** incluyen aprendizaje lectivo y trabajo autónomo evaluabl
 | Docente | Sesiones lectivas | Horas |
 |---|---:|---:|
 | René | 1 | 3h |
-| Rael | 18 | 54h |
-| David | 6 | 18h |
+| Rael | 17 | 51h |
+| David | 7 | 21h |
 | Profesor UPC | 5 | 15h |
 
 ## Enfoque docente y prerrequisitos
@@ -68,18 +68,18 @@ Semáforo: 🟢 alcance cómodo; 🟡 ajustado con material preparado. No mide d
 | 8 | M3 | Persistencia, CSI y StatefulSets | Rael | 🟡 |
 | 9 | M3 | Networking y exposición de aplicaciones | Rael | 🟡 |
 | 10 | M3 | Clúster componente a componente | Rael | 🟡 |
-| 11 | M3 | Seguridad de imágenes y políticas de admisión | Rael | 🟡 |
-| 12 | M4 | EKS y kOps en AWS | Rael | 🟡 |
-| 13 | M4 | AKS y GKE | Rael | 🟡 |
-| 14 | M4 | Kustomize y Helm | Rael | 🟡 |
-| 15 | M4 | DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager | Rael | 🟢 |
-| 16 | M4 | Secretos externos: Vault y External Secrets Operator | Rael | 🟡 |
-| 17 | M5 | Prometheus, PromQL y Alertmanager | David | 🟡 |
-| 18 | M5 | Grafana, Loki y Alloy | David | 🟡 |
-| 19 | M5 | OpenTelemetry, Collector, Tempo y correlación | David | 🟡 |
-| 20 | M5 + M1 | Scripting y pipelines con Tekton | Rael | 🟡 |
-| 21 | M5 | Git y Prow: colaboración y validaciones | Rael | 🟡 |
-| 22 | M5 | GitOps con ArgoCD | Rael | 🟡 |
+| 11 | M4 | EKS y kOps en AWS | Rael | 🟡 |
+| 12 | M4 | AKS y GKE | Rael | 🟡 |
+| 13 | M4 | Kustomize y Helm | Rael | 🟡 |
+| 14 | M4 | DNS y HTTPS con Cloudflare, ExternalDNS y cert-manager | Rael | 🟢 |
+| 15 | M4 | Secretos externos: Vault y External Secrets Operator | Rael | 🟡 |
+| 16 | M5 | Prometheus, PromQL y Alertmanager | David | 🟡 |
+| 17 | M5 | Grafana, Loki y Alloy | David | 🟡 |
+| 18 | M5 | OpenTelemetry, Collector, Tempo y correlación | David | 🟡 |
+| 19 | M5 + M1 | Scripting y pipelines con Tekton | Rael | 🟡 |
+| 20 | M5 | Git y Prow: colaboración y validaciones | Rael | 🟡 |
+| 21 | M5 | GitOps con ArgoCD | Rael | 🟡 |
+| 22 | M5 | Seguridad de imágenes y políticas de admisión | David | 🟡 |
 | 23 | M5 | Traefik e Istio | David | 🟡 |
 | 24 | M5 | Entrega progresiva con Argo Rollouts | David | 🟡 |
 | 25 | M5 | Escalado con HPA, VPA, KEDA y Karpenter | David | 🟡 |
