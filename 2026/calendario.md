@@ -2,7 +2,8 @@
 
 **Posgrado en Platform Engineering y DevOps con Kubernetes** · UPC School
 
-**Martes y jueves · 18:00–21:00 · Europe/Madrid**  
+**Martes y jueves · 18:00–21:00 · Europe/Madrid**
+
 30 sesiones · 90 horas · Del 3 de noviembre de 2026 al 18 de marzo de 2027.
 
 [Syllabus resumido](syllabus-resumido.md) · [Syllabus detallado](syllabus-detallado.md) · [Descargar CSV](calendario.csv)
@@ -30,7 +31,7 @@
 | Mar 15/12 | 12 | Kubernetes en Azure y GCP: AKS y GKE | Rael |
 | Jue 17/12 | 13 | Configuración y empaquetado de aplicaciones: Kustomize y Helm | Rael |
 
-**Descanso navideño:** del 22 de diciembre al 7 de enero, ambos incluidos.
+**Descanso navideño:** desde el 22 de diciembre; las clases se reanudan el martes 12 de enero.
 
 ## Enero 2027
 
@@ -42,8 +43,6 @@
 | Jue 21/01 | 17 | Dashboards y logs: Grafana, Loki y Alloy | David |
 | Mar 26/01 | 18 | Trazas distribuidas y correlación: OpenTelemetry y Tempo | David |
 | Jue 28/01 | 19 | Automatización de pipelines: scripting, Tekton y Trivy | Rael |
-
-Las clases se retoman el **martes 12 de enero**.
 
 ## Febrero 2027
 
@@ -71,7 +70,7 @@ Las clases se retoman el **martes 12 de enero**.
 ## Días sin clase
 
 - **8 de diciembre:** La Immaculada.
-- **22 de diciembre–7 de enero:** descanso de Navidad y Reyes.
+- **22 de diciembre–11 de enero:** descanso de Navidad y Reyes.
 - **9 de febrero:** festivo UPC.
 - **9 de marzo:** sin clase.
 - **16 de marzo:** trabajo autónomo para finalizar el TFG.
