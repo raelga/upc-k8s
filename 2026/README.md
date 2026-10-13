@@ -10,6 +10,7 @@ UPC School · Live online · Castellano · 12 ECTS.
 - [Syllabus detallado](syllabus-detallado.md): objetivos, contenidos, prácticas y ampliaciones.
 - [Calendario](calendario.md): clases, docentes y días sin clase.
 - [Calendario CSV](calendario.csv): sesiones para importar en una hoja de cálculo.
+- [Guía docente interna](guia-docente-interna.md): cobertura mínima, concentración y alcance de prácticas para el equipo docente.
 - [Datos del curso](curso.json): contenidos, fechas y docentes estructurados.
 
 M1 integra 9h de contenido, incluidas en las 90h: 3h propias y 6h transversales en proveedores, Tekton y operators. Sus 1,5 ECTS incluyen trabajo autónomo evaluable.

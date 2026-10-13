@@ -36,8 +36,6 @@ Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scriptin
 
 Una aplicación Python de dos servicios conecta Kubernetes, observabilidad, CI/GitOps, entrega y escalado. Laboratorios guiados con configuraciones preparadas; permisos, cuotas y costes comprobados; limpieza de recursos al finalizar. EKS/kOps se explican durante su despliegue con un entorno de respaldo disponible. M6 combina conceptos, comparación y demostraciones; operators tiene una clase completa. Los secretos se entregan mediante mecanismos externos y no se guardan en repositorios ni en el estado de Terraform.
 
-Semáforo: 🟢 alcance cómodo; 🟡 ajustado con ejemplos preparados. El semáforo describe el alcance de la clase, no la dificultad intrínseca de la herramienta.
-
 ## M1 · Formación transversal y créditos
 
 M1 combina **3h propias y 6h integradas**: 9h de contenido incluidas en las 90h del curso. Los 1,5 ECTS incluyen además trabajo autónomo evaluable de adaptación de scripts entre proveedores, validaciones y modificación del ejemplo de Go.
@@ -55,38 +53,38 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ## Sesiones
 
-| # | Bloque | Sesión | Docente | Carga |
-|---:|---|---|---|:---:|
-| 1 | M1 | Fundamentos de DevOps y Platform Engineering | René | 🟢 |
-| 2 | M2 + M1 | AWS: fundamentos y aprovisionamiento como código | Rael | 🟡 |
-| 3 | M2 + M1 | Azure: fundamentos y aprovisionamiento como código | Rael | 🟡 |
-| 4 | M2 + M1 | GCP: fundamentos y aprovisionamiento como código | Rael | 🟡 |
-| 5 | M3 | Contenedores y ecosistema OCI: imágenes, runtimes y registros | Rael | 🟡 |
-| 6 | M3 | Arquitectura de Kubernetes: API, autenticación y permisos | Rael | 🟡 |
-| 7 | M3 | Aplicaciones en Kubernetes: workloads, configuración y recursos | Rael | 🟡 |
-| 8 | M3 | Persistencia en Kubernetes: almacenamiento y aplicaciones con estado | Rael | 🟡 |
-| 9 | M3 | Networking en Kubernetes: comunicación y exposición de servicios | Rael | 🟡 |
-| 10 | M3 | Construcción de un clúster Kubernetes componente a componente | Rael | 🟡 |
-| 11 | M4 | Kubernetes en AWS: EKS y clústeres autogestionados con kOps | Rael | 🟡 |
-| 12 | M4 | Kubernetes en Azure y GCP: AKS y GKE | Rael | 🟡 |
-| 13 | M4 | Configuración y empaquetado de aplicaciones: Kustomize y Helm | Rael | 🟡 |
-| 14 | M4 | Infraestructura declarativa: DNS, certificados y recursos cloud | Rael | 🟢 |
-| 15 | M4 | Gestión de secretos externos: Vault y External Secrets Operator | Rael | 🟡 |
-| 16 | M5 | Métricas y alertas: Prometheus, PromQL y Alertmanager | David | 🟡 |
-| 17 | M5 | Dashboards y logs: Grafana, Loki y Alloy | David | 🟡 |
-| 18 | M5 | Trazas distribuidas y correlación: OpenTelemetry y Tempo | David | 🟡 |
-| 19 | M5 + M1 | Automatización de pipelines: scripting, Tekton y Trivy | Rael | 🟡 |
-| 20 | M5 | Colaboración y validación de cambios: Git y Prow | Rael | 🟡 |
-| 21 | M5 | Despliegue declarativo y reconciliación: GitOps con ArgoCD | Rael | 🟡 |
-| 22 | M5 | Entrada de tráfico y service mesh: Traefik e Istio | David | 🟡 |
-| 23 | M5 | Entrega progresiva: canary y blue/green con Argo Rollouts | David | 🟡 |
-| 24 | M5 | Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter | David | 🟡 |
-| 25 | M6 + M1 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | Profesor UPC | 🟡 |
-| 26 | M6 | Políticas de admisión y recuperación: OPA/Gatekeeper y Velero | Profesor UPC | 🟡 |
-| 27 | M6 | Gestión de clústeres: Cluster API y Hosted Control Planes | Profesor UPC | 🟡 |
-| 28 | M6 | Serverless en Kubernetes: Knative y Virtual Kubelet | Profesor UPC | 🟢 |
-| 29 | M6 | Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner | Profesor UPC | 🟡 |
-| 30 | PF | Presentación y defensa del Trabajo Final | René y Rael | 🟡 |
+| # | Bloque | Sesión | Docente |
+|---:|---|---|---|
+| 1 | M1 | Fundamentos de DevOps y Platform Engineering | René |
+| 2 | M2 + M1 | AWS: fundamentos y aprovisionamiento como código | Rael |
+| 3 | M2 + M1 | Azure: fundamentos y aprovisionamiento como código | Rael |
+| 4 | M2 + M1 | GCP: fundamentos y aprovisionamiento como código | Rael |
+| 5 | M3 | Contenedores y ecosistema OCI: imágenes, runtimes y registros | Rael |
+| 6 | M3 | Arquitectura de Kubernetes: API, autenticación y permisos | Rael |
+| 7 | M3 | Aplicaciones en Kubernetes: workloads, configuración y recursos | Rael |
+| 8 | M3 | Persistencia en Kubernetes: almacenamiento y aplicaciones con estado | Rael |
+| 9 | M3 | Networking en Kubernetes: comunicación y exposición de servicios | Rael |
+| 10 | M3 | Construcción de un clúster Kubernetes componente a componente | Rael |
+| 11 | M4 | Kubernetes en AWS: EKS y clústeres autogestionados con kOps | Rael |
+| 12 | M4 | Kubernetes en Azure y GCP: AKS y GKE | Rael |
+| 13 | M4 | Configuración y empaquetado de aplicaciones: Kustomize y Helm | Rael |
+| 14 | M4 | Infraestructura declarativa: DNS, certificados y recursos cloud | Rael |
+| 15 | M4 | Gestión de secretos externos: Vault y External Secrets Operator | Rael |
+| 16 | M5 | Métricas y alertas: Prometheus, PromQL y Alertmanager | David |
+| 17 | M5 | Dashboards y logs: Grafana, Loki y Alloy | David |
+| 18 | M5 | Trazas distribuidas y correlación: OpenTelemetry y Tempo | David |
+| 19 | M5 + M1 | Automatización de pipelines: scripting, Tekton y Trivy | Rael |
+| 20 | M5 | Colaboración y validación de cambios: Git y Prow | Rael |
+| 21 | M5 | Despliegue declarativo y reconciliación: GitOps con ArgoCD | Rael |
+| 22 | M5 | Entrada de tráfico y service mesh: Traefik e Istio | David |
+| 23 | M5 | Entrega progresiva: canary y blue/green con Argo Rollouts | David |
+| 24 | M5 | Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter | David |
+| 25 | M6 + M1 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | Profesor UPC |
+| 26 | M6 | Políticas de admisión y recuperación: OPA/Gatekeeper y Velero | Profesor UPC |
+| 27 | M6 | Gestión de clústeres: Cluster API y Hosted Control Planes | Profesor UPC |
+| 28 | M6 | Serverless en Kubernetes: Knative y Virtual Kubelet | Profesor UPC |
+| 29 | M6 | Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner | Profesor UPC |
+| 30 | PF | Presentación y defensa del Trabajo Final | René y Rael |
 
 ## Trabajo Final
 
