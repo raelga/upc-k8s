@@ -445,7 +445,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 25 · Desarrollo de operators: Go y Kubebuilder/Operator SDK
 
-**M6 · Profesor UPC · 3 horas · Concentración 🟡 Media**
+**M6 · Marc Catrisse · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -460,7 +460,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 26 · Políticas de admisión y recuperación: OPA/Gatekeeper y Velero
 
-**M6 · Profesor UPC · 3 horas · Concentración 🟡 Media**
+**M6 · Marc Catrisse · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -475,7 +475,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 27 · Gestión de clústeres: Cluster API y Hosted Control Planes
 
-**M6 · Profesor UPC · 3 horas · Concentración 🟡 Media**
+**M6 · Marc Catrisse · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -490,7 +490,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 28 · Serverless en Kubernetes: Knative y Virtual Kubelet
 
-**M6 · Profesor UPC · 3 horas · Concentración 🟢 Baja**
+**M6 · Marc Catrisse · 3 horas · Concentración 🟢 Baja**
 
 | Apartado | Contenido |
 |---|---|
@@ -505,7 +505,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 29 · Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner
 
-**M6 · Profesor UPC · 3 horas · Concentración 🟡 Media**
+**M6 · Marc Catrisse · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|

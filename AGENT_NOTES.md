@@ -1,3 +1,7 @@
+## Docente M6 confirmado
+
+Marc Catrisse sustituye la etiqueta Profesor UPC en las cinco sesiones de M6. Perfiles docentes aportados por el usuario incorporados al calendario y curso.json: Rael https://www.linkedin.com/in/rael/ (URL normalizada sin punto y coma final), David https://www.linkedin.com/in/duhowpi/, René https://www.linkedin.com/in/ren%C3%A9-serral-graci%C3%A0-9b219648/ y Marc https://www.linkedin.com/in/marc-catrisse-99b065128/. No cambiar fechas ni reparto de clases.
+
 ## Última publicación del curso 2026
 
 Reparto aprobado aplicado: 29 clases de contenido + presentación TFG con René/Rael dentro de las 30/90h. Última clase 11/03/2027; 09/03 y 16/03 sin clase; defensa 18/03. Navidad incluye 22/12 y 07/01 libres. Trivy en Tekton; sin sesión independiente seguridad. M6: operators/Go; OPA/Gatekeeper/Velero; CAPI/HCP; Knative/Virtual Kubelet; multi-cluster. Crossplane en infraestructura declarativa con Cloudflare/ExternalDNS/cert-manager. Títulos definitivos y M1 transversal en 2026. Rael 17 clases + TFG; David 6; René 1 + TFG; UPC 5. No mezclar con calendarios históricos inferiores ni con generador raíz.

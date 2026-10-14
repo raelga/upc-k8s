@@ -479,7 +479,7 @@
       "number": 25,
       "module": "M6",
       "title": "Desarrollo de operators: Go y Kubebuilder/Operator SDK",
-      "teacher": "Profesor UPC",
+      "teacher": "Marc Catrisse",
       "load": "amarillo",
       "objective": "Reconocer cuándo un operator automatiza conocimiento operativo",
       "contents": [
@@ -502,7 +502,7 @@
       "number": 26,
       "module": "M6",
       "title": "Políticas de admisión y recuperación: OPA/Gatekeeper y Velero",
-      "teacher": "Profesor UPC",
+      "teacher": "Marc Catrisse",
       "load": "amarillo",
       "objective": "Aplicar políticas de admisión y recuperar una aplicación tras una pérdida de recursos",
       "contents": [
@@ -519,7 +519,7 @@
       "number": 27,
       "module": "M6",
       "title": "Gestión de clústeres: Cluster API y Hosted Control Planes",
-      "teacher": "Profesor UPC",
+      "teacher": "Marc Catrisse",
       "load": "amarillo",
       "objective": "Comparar automatización del ciclo de vida y ubicación del control plane",
       "contents": [
@@ -536,7 +536,7 @@
       "number": 28,
       "module": "M6",
       "title": "Serverless en Kubernetes: Knative y Virtual Kubelet",
-      "teacher": "Profesor UPC",
+      "teacher": "Marc Catrisse",
       "load": "verde",
       "objective": "Entender cuándo usar ejecución orientada a demanda sobre Kubernetes",
       "contents": [
@@ -553,7 +553,7 @@
       "number": 29,
       "module": "M6",
       "title": "Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner",
-      "teacher": "Profesor UPC",
+      "teacher": "Marc Catrisse",
       "load": "amarillo",
       "objective": "Comparar conectividad de servicios y redes entre clústeres",
       "contents": [
@@ -625,5 +625,23 @@
     "development": "Trabajo autónomo e integración progresiva de las prácticas",
     "last_content_class": "2027-03-11",
     "preparation_day_without_class": "2027-03-16"
-  }
+  },
+  "teachers": [
+    {
+      "name": "René",
+      "linkedin": "https://www.linkedin.com/in/ren%C3%A9-serral-graci%C3%A0-9b219648/"
+    },
+    {
+      "name": "Rael",
+      "linkedin": "https://www.linkedin.com/in/rael/"
+    },
+    {
+      "name": "David",
+      "linkedin": "https://www.linkedin.com/in/duhowpi/"
+    },
+    {
+      "name": "Marc Catrisse",
+      "linkedin": "https://www.linkedin.com/in/marc-catrisse-99b065128/"
+    }
+  ]
 }

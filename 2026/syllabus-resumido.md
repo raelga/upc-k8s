@@ -15,7 +15,7 @@ UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 | M3 · Contenedores y Kubernetes Core. Ecosistema OCI | 5–10 (6) | 18h | 2 | Rael |
 | M4 · Kubernetes en Producción y Ecosistema Cloud Native | 11–15 (5) | 15h | 2 | Rael |
 | M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado | 16–24 (9) | 27h | 2 | David, Rael |
-| M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 25–29 (5) | 15h | 2 | Profesor UPC |
+| M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 25–29 (5) | 15h | 2 | Marc Catrisse |
 | PF · Trabajo Final | 30 (1) | 3h | 1.5 | René y Rael |
 | **Total** | **30** | **90h** | **12** | |
 
@@ -26,7 +26,7 @@ UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 | René | 1 | 3h | Sesión 30, junto a Rael (3h) |
 | Rael | 17 | 51h | Sesión 30, junto a René (3h) |
 | David | 6 | 18h | — |
-| Profesor UPC | 5 | 15h | — |
+| Marc Catrisse | 5 | 15h | — |
 
 La sesión conjunta del TFG suma 3h al curso, aunque cuenta como 3h de participación para cada uno de sus dos docentes.
 
@@ -79,11 +79,11 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 | 22 | M5 | Entrada de tráfico y service mesh: Traefik e Istio | David |
 | 23 | M5 | Entrega progresiva: canary y blue/green con Argo Rollouts | David |
 | 24 | M5 | Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter | David |
-| 25 | M6 + M1 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | Profesor UPC |
-| 26 | M6 | Políticas de admisión y recuperación: OPA/Gatekeeper y Velero | Profesor UPC |
-| 27 | M6 | Gestión de clústeres: Cluster API y Hosted Control Planes | Profesor UPC |
-| 28 | M6 | Serverless en Kubernetes: Knative y Virtual Kubelet | Profesor UPC |
-| 29 | M6 | Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner | Profesor UPC |
+| 25 | M6 + M1 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | Marc Catrisse |
+| 26 | M6 | Políticas de admisión y recuperación: OPA/Gatekeeper y Velero | Marc Catrisse |
+| 27 | M6 | Gestión de clústeres: Cluster API y Hosted Control Planes | Marc Catrisse |
+| 28 | M6 | Serverless en Kubernetes: Knative y Virtual Kubelet | Marc Catrisse |
+| 29 | M6 | Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner | Marc Catrisse |
 | 30 | PF | Presentación y defensa del Trabajo Final | René y Rael |
 
 ## Trabajo Final

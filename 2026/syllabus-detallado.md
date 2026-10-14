@@ -484,11 +484,11 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 5 sesiones · 15h · 2 ECTS.
 
-Enfoque: problema → concepto → ejemplo → cuándo usarlo. Docencia: Profesor UPC.
+Enfoque: problema → concepto → ejemplo → cuándo usarlo. Docencia: Marc Catrisse.
 
 ### Sesión 25 · Desarrollo de operators: Go y Kubebuilder/Operator SDK
 
-**Fecha:** 23/02/2027 · 18:00–21:00 · **Docente:** Profesor UPC.
+**Fecha:** 23/02/2027 · 18:00–21:00 · **Docente:** Marc Catrisse.
 
 **Contenido de M1:** Go aplicado y lectura/modificación del controlador. **Dedicación:** 1,5h incluidas en esta clase.
 
@@ -506,7 +506,7 @@ Enfoque: problema → concepto → ejemplo → cuándo usarlo. Docencia: Profeso
 
 ### Sesión 26 · Políticas de admisión y recuperación: OPA/Gatekeeper y Velero
 
-**Fecha:** 25/02/2027 · 18:00–21:00 · **Docente:** Profesor UPC.
+**Fecha:** 25/02/2027 · 18:00–21:00 · **Docente:** Marc Catrisse.
 
 **Objetivo:** Aplicar políticas de admisión y recuperar una aplicación tras una pérdida de recursos.
 
@@ -522,7 +522,7 @@ Enfoque: problema → concepto → ejemplo → cuándo usarlo. Docencia: Profeso
 
 ### Sesión 27 · Gestión de clústeres: Cluster API y Hosted Control Planes
 
-**Fecha:** 02/03/2027 · 18:00–21:00 · **Docente:** Profesor UPC.
+**Fecha:** 02/03/2027 · 18:00–21:00 · **Docente:** Marc Catrisse.
 
 **Objetivo:** Comparar automatización del ciclo de vida y ubicación del control plane.
 
@@ -538,7 +538,7 @@ Enfoque: problema → concepto → ejemplo → cuándo usarlo. Docencia: Profeso
 
 ### Sesión 28 · Serverless en Kubernetes: Knative y Virtual Kubelet
 
-**Fecha:** 04/03/2027 · 18:00–21:00 · **Docente:** Profesor UPC.
+**Fecha:** 04/03/2027 · 18:00–21:00 · **Docente:** Marc Catrisse.
 
 **Objetivo:** Entender cuándo usar ejecución orientada a demanda sobre Kubernetes.
 
@@ -554,7 +554,7 @@ Enfoque: problema → concepto → ejemplo → cuándo usarlo. Docencia: Profeso
 
 ### Sesión 29 · Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner
 
-**Fecha:** 11/03/2027 · 18:00–21:00 · **Docente:** Profesor UPC.
+**Fecha:** 11/03/2027 · 18:00–21:00 · **Docente:** Marc Catrisse.
 
 **Objetivo:** Comparar conectividad de servicios y redes entre clústeres.
 
