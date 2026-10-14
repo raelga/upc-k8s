@@ -33,7 +33,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 1 · Fundamentos de DevOps y Platform Engineering
 
-**Fecha:** 03/11/2026 · 18:00–21:00 · **Docente:** René.
+**Fecha:** 03/11/2026 · 18:00–21:00 · **Docente:** René Serral.
 
 **Contenido de M1:** Fundamentos DevOps, cultura, plataformas y métricas. **Dedicación:** 3h incluidas en esta clase.
 
@@ -55,7 +55,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 2 · AWS: fundamentos y aprovisionamiento como código
 
-**Fecha:** 05/11/2026 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 05/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Contenido de M1:** Python para consultar recursos; generación y revisión de código con IA. **Dedicación:** 1h incluidas en esta clase.
 
@@ -74,7 +74,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 3 · Azure: fundamentos y aprovisionamiento como código
 
-**Fecha:** 10/11/2026 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 10/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Contenido de M1:** Adaptación de scripts, configuración y tratamiento de resultados. **Dedicación:** 1h incluidas en esta clase.
 
@@ -93,7 +93,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 4 · GCP: fundamentos y aprovisionamiento como código
 
-**Fecha:** 12/11/2026 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 12/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Contenido de M1:** Reutilización de la automatización y comparación de implementaciones. **Dedicación:** 1h incluidas en esta clase.
 
@@ -116,7 +116,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 5 · Contenedores y ecosistema OCI: imágenes, runtimes y registros
 
-**Fecha:** 17/11/2026 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 17/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Construir, ejecutar y publicar una imagen entendiendo aislamiento y runtime.
 
@@ -133,7 +133,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 6 · Arquitectura de Kubernetes: API, autenticación y permisos
 
-**Fecha:** 19/11/2026 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 19/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Seguir una petición kubectl y distinguir autenticación de autorización.
 
@@ -151,7 +151,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 7 · Aplicaciones en Kubernetes: workloads, configuración y recursos
 
-**Fecha:** 24/11/2026 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 24/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Desplegar una aplicación y gestionar su configuración y ciclo de vida.
 
@@ -169,7 +169,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 8 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado
 
-**Fecha:** 26/11/2026 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 26/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Mantener datos y comprender las necesidades de workloads con estado.
 
@@ -186,7 +186,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 9 · Networking en Kubernetes: comunicación y exposición de servicios
 
-**Fecha:** 01/12/2026 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 01/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Seguir tráfico entre Pods, descubrir servicios y exponer la aplicación.
 
@@ -203,7 +203,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 10 · Construcción de un clúster Kubernetes componente a componente
 
-**Fecha:** 03/12/2026 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 03/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Comprender cómo se ensamblan y autentican los componentes de Kubernetes.
 
@@ -223,7 +223,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 11 · Kubernetes en AWS: EKS y clústeres autogestionados con kOps
 
-**Fecha:** 10/12/2026 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 10/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Comparar Kubernetes gestionado y autogestionado sobre la misma base AWS.
 
@@ -240,7 +240,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 12 · Kubernetes en Azure y GCP: AKS y GKE
 
-**Fecha:** 15/12/2026 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 15/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Aplicar la comparación de operación cloud a Azure y GCP.
 
@@ -258,7 +258,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm
 
-**Fecha:** 17/12/2026 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 17/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Adaptar manifiestos y usar paquetes existentes.
 
@@ -275,7 +275,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 14 · Infraestructura declarativa: DNS, certificados y recursos cloud
 
-**Fecha:** 12/01/2027 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 12/01/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Gestionar DNS, certificados y un recurso cloud mediante controladores declarativos.
 
@@ -294,7 +294,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 15 · Gestión de secretos externos: Vault y External Secrets Operator
 
-**Fecha:** 14/01/2027 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 14/01/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Separar secretos de manifiestos y aplicar identidad y permisos de acceso.
 
@@ -316,7 +316,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 16 · Métricas y alertas: Prometheus, PromQL y Alertmanager
 
-**Fecha:** 19/01/2027 · 18:00–21:00 · **Docente:** David.
+**Fecha:** 19/01/2027 · 18:00–21:00 · **Docente:** David Girón.
 
 **Objetivo:** Detectar fallos mediante métricas y definir cuándo alertar.
 
@@ -335,7 +335,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 17 · Dashboards y logs: Grafana, Loki y Alloy
 
-**Fecha:** 21/01/2027 · 18:00–21:00 · **Docente:** David.
+**Fecha:** 21/01/2027 · 18:00–21:00 · **Docente:** David Girón.
 
 **Objetivo:** Pasar de un síntoma en métricas a mensajes que explican el fallo.
 
@@ -353,7 +353,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 18 · Trazas distribuidas y correlación: OpenTelemetry y Tempo
 
-**Fecha:** 26/01/2027 · 18:00–21:00 · **Docente:** David.
+**Fecha:** 26/01/2027 · 18:00–21:00 · **Docente:** David Girón.
 
 **Objetivo:** Localizar dónde se atasca una petición entre servicios.
 
@@ -373,7 +373,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 19 · Automatización de pipelines: scripting, Tekton y Trivy
 
-**Fecha:** 28/01/2027 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 28/01/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Contenido de M1:** Bash/Python, errores, validaciones y ejecución automatizada. **Dedicación:** 1,5h incluidas en esta clase.
 
@@ -397,7 +397,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 20 · Colaboración y validación de cambios: Git y Prow
 
-**Fecha:** 02/02/2027 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 02/02/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Conectar un cambio revisado con las comprobaciones conocidas de CI.
 
@@ -413,7 +413,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 21 · Despliegue declarativo y reconciliación: GitOps con ArgoCD
 
-**Fecha:** 04/02/2027 · 18:00–21:00 · **Docente:** Rael.
+**Fecha:** 04/02/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Reconciliar el estado del repositorio con Kubernetes.
 
@@ -430,7 +430,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 22 · Entrada de tráfico y service mesh: Traefik e Istio
 
-**Fecha:** 11/02/2027 · 18:00–21:00 · **Docente:** David.
+**Fecha:** 11/02/2027 · 18:00–21:00 · **Docente:** David Girón.
 
 **Objetivo:** Distinguir entrada externa y comunicación segura entre servicios.
 
@@ -446,7 +446,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 23 · Entrega progresiva: canary y blue/green con Argo Rollouts
 
-**Fecha:** 16/02/2027 · 18:00–21:00 · **Docente:** David.
+**Fecha:** 16/02/2027 · 18:00–21:00 · **Docente:** David Girón.
 
 **Objetivo:** Desplegar versiones con métricas que deciden avance o rollback.
 
@@ -463,7 +463,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 24 · Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter
 
-**Fecha:** 18/02/2027 · 18:00–21:00 · **Docente:** David.
+**Fecha:** 18/02/2027 · 18:00–21:00 · **Docente:** David Girón.
 
 **Objetivo:** Distinguir ajuste de recursos, réplicas y capacidad de nodos.
 
@@ -576,7 +576,7 @@ Enfoque: problema → concepto → ejemplo → cuándo usarlo. Docencia: Marc Ca
 
 ### Sesión 30 · Presentación y defensa del Trabajo Final
 
-**Fecha:** 18/03/2027 · 18:00–21:00 · **Docente:** René y Rael.
+**Fecha:** 18/03/2027 · 18:00–21:00 · **Docente:** René Serral y Rael Garcia.
 
 **Objetivo:** Presentar y justificar una plataforma reproducible integrada durante el curso.
 
@@ -586,7 +586,7 @@ Enfoque: problema → concepto → ejemplo → cuándo usarlo. Docencia: Marc Ca
 - Demo end-to-end: despliegue, diagnóstico y recuperación.
 - Defensa oral y preguntas.
 
-**Práctica / evidencia:** Presentación del repositorio y documentación, demostración funcional y defensa ante René y Rael.
+**Práctica / evidencia:** Presentación del repositorio y documentación, demostración funcional y defensa ante René Serral y Rael Garcia.
 
 **Ampliación:** Ampliaciones voluntarias del proyecto; las tecnologías de profundización no son requisitos obligatorios.
 
@@ -596,7 +596,7 @@ Construcción progresiva de una plataforma a partir de las prácticas: IaC en un
 
 **Entregables:** repositorio reproducible, memoria de arquitectura y decisiones técnicas, runbooks, demo funcional con diagnóstico/recuperación y defensa oral. La evaluación considera funcionalidad, reproducibilidad, seguridad, observabilidad, justificación de decisiones, costes, documentación y defensa. Las ampliaciones avanzadas no son obligatorias.
 
-**Presentación y defensa:** sesión 30, **18/03/2027, 18:00–21:00**, con **René y Rael**, incluida en las 90h. Desarrollo y consolidación mediante trabajo autónomo durante el curso. La última clase de contenido es el 11/03 y el 16/03 queda libre para finalizar el proyecto.
+**Presentación y defensa:** sesión 30, **18/03/2027, 18:00–21:00**, con **René Serral y Rael Garcia**, incluida en las 90h. Desarrollo y consolidación mediante trabajo autónomo durante el curso. La última clase de contenido es el 11/03 y el 16/03 queda libre para finalizar el proyecto.
 
 ## Contenidos de ampliación
 

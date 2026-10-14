@@ -8,7 +8,7 @@
       "number": 1,
       "module": "M1",
       "title": "Fundamentos de DevOps y Platform Engineering",
-      "teacher": "René",
+      "teacher": "René Serral",
       "load": "verde",
       "objective": "Relacionar DevOps, SRE y Platform Engineering con necesidades de una organización",
       "contents": [
@@ -31,7 +31,7 @@
       "number": 2,
       "module": "M2",
       "title": "AWS: fundamentos y aprovisionamiento como código",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Entender una infraestructura AWS pequeña y verificar su funcionamiento mediante código",
       "contents": [
@@ -55,7 +55,7 @@
       "number": 3,
       "module": "M2",
       "title": "Azure: fundamentos y aprovisionamiento como código",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Transferir el patrón de AWS a Azure y reconocer diferencias de identidad y red",
       "contents": [
@@ -79,7 +79,7 @@
       "number": 4,
       "module": "M2",
       "title": "GCP: fundamentos y aprovisionamiento como código",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Aplicar el caso común en GCP y comparar proveedores y formas de definir infraestructura",
       "contents": [
@@ -103,7 +103,7 @@
       "number": 5,
       "module": "M3",
       "title": "Contenedores y ecosistema OCI: imágenes, runtimes y registros",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Construir, ejecutar y publicar una imagen entendiendo aislamiento y runtime",
       "contents": [
@@ -121,7 +121,7 @@
       "number": 6,
       "module": "M3",
       "title": "Arquitectura de Kubernetes: API, autenticación y permisos",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Seguir una petición kubectl y distinguir autenticación de autorización",
       "contents": [
@@ -140,7 +140,7 @@
       "number": 7,
       "module": "M3",
       "title": "Aplicaciones en Kubernetes: workloads, configuración y recursos",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Desplegar una aplicación y gestionar su configuración y ciclo de vida",
       "contents": [
@@ -159,7 +159,7 @@
       "number": 8,
       "module": "M3",
       "title": "Persistencia en Kubernetes: almacenamiento y aplicaciones con estado",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Mantener datos y comprender las necesidades de workloads con estado",
       "contents": [
@@ -177,7 +177,7 @@
       "number": 9,
       "module": "M3",
       "title": "Networking en Kubernetes: comunicación y exposición de servicios",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Seguir tráfico entre Pods, descubrir servicios y exponer la aplicación",
       "contents": [
@@ -195,7 +195,7 @@
       "number": 10,
       "module": "M3",
       "title": "Construcción de un clúster Kubernetes componente a componente",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Comprender cómo se ensamblan y autentican los componentes de Kubernetes",
       "contents": [
@@ -212,7 +212,7 @@
       "number": 11,
       "module": "M4",
       "title": "Kubernetes en AWS: EKS y clústeres autogestionados con kOps",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Comparar Kubernetes gestionado y autogestionado sobre la misma base AWS",
       "contents": [
@@ -230,7 +230,7 @@
       "number": 12,
       "module": "M4",
       "title": "Kubernetes en Azure y GCP: AKS y GKE",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Aplicar la comparación de operación cloud a Azure y GCP",
       "contents": [
@@ -249,7 +249,7 @@
       "number": 13,
       "module": "M4",
       "title": "Configuración y empaquetado de aplicaciones: Kustomize y Helm",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Adaptar manifiestos y usar paquetes existentes",
       "contents": [
@@ -267,7 +267,7 @@
       "number": 14,
       "module": "M4",
       "title": "Infraestructura declarativa: DNS, certificados y recursos cloud",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "verde",
       "objective": "Gestionar DNS, certificados y un recurso cloud mediante controladores declarativos",
       "contents": [
@@ -287,7 +287,7 @@
       "number": 15,
       "module": "M4",
       "title": "Gestión de secretos externos: Vault y External Secrets Operator",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Separar secretos de manifiestos y aplicar identidad y permisos de acceso",
       "contents": [
@@ -306,7 +306,7 @@
       "number": 16,
       "module": "M5",
       "title": "Métricas y alertas: Prometheus, PromQL y Alertmanager",
-      "teacher": "David",
+      "teacher": "David Girón",
       "load": "amarillo",
       "objective": "Detectar fallos mediante métricas y definir cuándo alertar",
       "contents": [
@@ -326,7 +326,7 @@
       "number": 17,
       "module": "M5",
       "title": "Dashboards y logs: Grafana, Loki y Alloy",
-      "teacher": "David",
+      "teacher": "David Girón",
       "load": "amarillo",
       "objective": "Pasar de un síntoma en métricas a mensajes que explican el fallo",
       "contents": [
@@ -345,7 +345,7 @@
       "number": 18,
       "module": "M5",
       "title": "Trazas distribuidas y correlación: OpenTelemetry y Tempo",
-      "teacher": "David",
+      "teacher": "David Girón",
       "load": "amarillo",
       "objective": "Localizar dónde se atasca una petición entre servicios",
       "contents": [
@@ -364,7 +364,7 @@
       "number": 19,
       "module": "M5",
       "title": "Automatización de pipelines: scripting, Tekton y Trivy",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Automatizar tareas verificables y construir una imagen mediante pipeline",
       "contents": [
@@ -391,7 +391,7 @@
       "number": 20,
       "module": "M5",
       "title": "Colaboración y validación de cambios: Git y Prow",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Conectar un cambio revisado con las comprobaciones conocidas de CI",
       "contents": [
@@ -408,7 +408,7 @@
       "number": 21,
       "module": "M5",
       "title": "Despliegue declarativo y reconciliación: GitOps con ArgoCD",
-      "teacher": "Rael",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Reconciliar el estado del repositorio con Kubernetes",
       "contents": [
@@ -426,7 +426,7 @@
       "number": 22,
       "module": "M5",
       "title": "Entrada de tráfico y service mesh: Traefik e Istio",
-      "teacher": "David",
+      "teacher": "David Girón",
       "load": "amarillo",
       "objective": "Distinguir entrada externa y comunicación segura entre servicios",
       "contents": [
@@ -443,7 +443,7 @@
       "number": 23,
       "module": "M5",
       "title": "Entrega progresiva: canary y blue/green con Argo Rollouts",
-      "teacher": "David",
+      "teacher": "David Girón",
       "load": "amarillo",
       "objective": "Desplegar versiones con métricas que deciden avance o rollback",
       "contents": [
@@ -461,7 +461,7 @@
       "number": 24,
       "module": "M5",
       "title": "Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter",
-      "teacher": "David",
+      "teacher": "David Girón",
       "load": "amarillo",
       "objective": "Distinguir ajuste de recursos, réplicas y capacidad de nodos",
       "contents": [
@@ -571,7 +571,7 @@
     {
       "module": "PF",
       "title": "Presentación y defensa del Trabajo Final",
-      "teacher": "René y Rael",
+      "teacher": "René Serral y Rael Garcia",
       "load": "amarillo",
       "objective": "Presentar y justificar una plataforma reproducible integrada durante el curso",
       "contents": [
@@ -579,7 +579,7 @@
         "Demo end-to-end: despliegue, diagnóstico y recuperación",
         "Defensa oral y preguntas"
       ],
-      "lab": "Presentación del repositorio y documentación, demostración funcional y defensa ante René y Rael",
+      "lab": "Presentación del repositorio y documentación, demostración funcional y defensa ante René Serral y Rael Garcia",
       "extras": "Ampliaciones voluntarias del proyecto; las tecnologías de profundización no son requisitos obligatorios",
       "transversal_contents": [],
       "number": 30,
@@ -619,8 +619,8 @@
   "project": {
     "presentation_session": 30,
     "teachers": [
-      "René",
-      "Rael"
+      "René Serral",
+      "Rael Garcia"
     ],
     "development": "Trabajo autónomo e integración progresiva de las prácticas",
     "last_content_class": "2027-03-11",
@@ -628,15 +628,15 @@
   },
   "teachers": [
     {
-      "name": "René",
+      "name": "René Serral",
       "linkedin": "https://www.linkedin.com/in/ren%C3%A9-serral-graci%C3%A0-9b219648/"
     },
     {
-      "name": "Rael",
+      "name": "Rael Garcia",
       "linkedin": "https://www.linkedin.com/in/rael/"
     },
     {
-      "name": "David",
+      "name": "David Girón",
       "linkedin": "https://www.linkedin.com/in/duhowpi/"
     },
     {

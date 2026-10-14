@@ -75,7 +75,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 01 · Fundamentos de DevOps y Platform Engineering
 
-**M1 · René · 3 horas · Concentración 🟢 Baja**
+**M1 · René Serral · 3 horas · Concentración 🟢 Baja**
 
 | Apartado | Contenido |
 |---|---|
@@ -92,7 +92,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 02 · AWS: fundamentos y aprovisionamiento como código
 
-**M2 · Rael · 3 horas · Concentración 🟡 Media**
+**M2 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -107,7 +107,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 03 · Azure: fundamentos y aprovisionamiento como código
 
-**M2 · Rael · 3 horas · Concentración 🟡 Media**
+**M2 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -122,7 +122,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 04 · GCP: fundamentos y aprovisionamiento como código
 
-**M2 · Rael · 3 horas · Concentración 🟡 Media**
+**M2 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -139,7 +139,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 05 · Contenedores y ecosistema OCI: imágenes, runtimes y registros
 
-**M3 · Rael · 3 horas · Concentración 🟡 Media**
+**M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -154,7 +154,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 06 · Arquitectura de Kubernetes: API, autenticación y permisos
 
-**M3 · Rael · 3 horas · Concentración 🟡 Media**
+**M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -169,7 +169,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 07 · Aplicaciones en Kubernetes: workloads, configuración y recursos
 
-**M3 · Rael · 3 horas · Concentración 🟡 Media**
+**M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -184,7 +184,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 08 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado
 
-**M3 · Rael · 3 horas · Concentración 🟡 Media**
+**M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -199,7 +199,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 09 · Networking en Kubernetes: comunicación y exposición de servicios
 
-**M3 · Rael · 3 horas · Concentración 🟡 Media**
+**M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -214,7 +214,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 10 · Construcción de un clúster Kubernetes componente a componente
 
-**M3 · Rael · 3 horas · Concentración 🟡 Media**
+**M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -231,7 +231,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 11 · Kubernetes en AWS: EKS y clústeres autogestionados con kOps
 
-**M4 · Rael · 3 horas · Concentración 🟡 Media**
+**M4 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -246,7 +246,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 12 · Kubernetes en Azure y GCP: AKS y GKE
 
-**M4 · Rael · 3 horas · Concentración 🟡 Media**
+**M4 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -261,7 +261,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm
 
-**M4 · Rael · 3 horas · Concentración 🟡 Media**
+**M4 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -276,7 +276,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 14 · Infraestructura declarativa: DNS, certificados y recursos cloud
 
-**M4 · Rael · 3 horas · Concentración 🟢 Baja**
+**M4 · Rael Garcia · 3 horas · Concentración 🟢 Baja**
 
 | Apartado | Contenido |
 |---|---|
@@ -291,7 +291,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 15 · Gestión de secretos externos: Vault y External Secrets Operator
 
-**M4 · Rael · 3 horas · Concentración 🟡 Media**
+**M4 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -308,7 +308,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 16 · Métricas y alertas: Prometheus, PromQL y Alertmanager
 
-**M5 · David · 3 horas · Concentración 🟡 Media**
+**M5 · David Girón · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -323,7 +323,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 17 · Dashboards y logs: Grafana, Loki y Alloy
 
-**M5 · David · 3 horas · Concentración 🟡 Media**
+**M5 · David Girón · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -338,7 +338,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 18 · Trazas distribuidas y correlación: OpenTelemetry y Tempo
 
-**M5 · David · 3 horas · Concentración 🟡 Media**
+**M5 · David Girón · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -353,7 +353,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 19 · Automatización de pipelines: scripting, Tekton y Trivy
 
-**M5 · Rael · 3 horas · Concentración 🟡 Media**
+**M5 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -368,7 +368,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 20 · Colaboración y validación de cambios: Git y Prow
 
-**M5 · Rael · 3 horas · Concentración 🟡 Media**
+**M5 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -383,7 +383,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 21 · Despliegue declarativo y reconciliación: GitOps con ArgoCD
 
-**M5 · Rael · 3 horas · Concentración 🟡 Media**
+**M5 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -398,7 +398,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 22 · Entrada de tráfico y service mesh: Traefik e Istio
 
-**M5 · David · 3 horas · Concentración 🟡 Media**
+**M5 · David Girón · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -413,7 +413,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 23 · Entrega progresiva: canary y blue/green con Argo Rollouts
 
-**M5 · David · 3 horas · Concentración 🟡 Media**
+**M5 · David Girón · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -428,7 +428,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 24 · Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter
 
-**M5 · David · 3 horas · Concentración 🟡 Media**
+**M5 · David Girón · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
@@ -522,13 +522,13 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 30 · Presentación y defensa del Trabajo Final
 
-**PF · René y Rael · 3 horas · Concentración 🟡 Media**
+**PF · René Serral y Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
 | **Cobertura requerida** | • Proyecto Final: presentación y defensa del trabajo integrador. La web nombra Proyecto Final; formato/defensa es el diseño docente del curso. |
 | **Resultado de aprendizaje** | Presentar y justificar una plataforma reproducible integrada durante el curso. |
-| **Actividad práctica** | Presentación del repositorio y documentación, demostración funcional y defensa ante René y Rael. |
-| **Alcance y profundidad** | Ajustar duración de demos y preguntas al número de equipos. Una sesión dentro de las 30/90h, impartida por René y Rael; trabajo autónomo previo. |
+| **Actividad práctica** | Presentación del repositorio y documentación, demostración funcional y defensa ante René Serral y Rael Garcia. |
+| **Alcance y profundidad** | Ajustar duración de demos y preguntas al número de equipos. Una sesión dentro de las 30/90h, impartida por René Serral y Rael Garcia; trabajo autónomo previo. |
 | **Requisitos de preparación** | Repositorio, memoria y demostración de cada equipo; orden y tiempos de defensa definidos. |
 | **Contenido complementario** | Ampliaciones voluntarias del proyecto; las tecnologías de profundización no son requisitos obligatorios.  |

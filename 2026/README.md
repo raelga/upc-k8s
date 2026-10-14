@@ -4,7 +4,7 @@
 
 UPC School · Live online · Castellano · 12 ECTS.
 
-30 sesiones de 3 horas, martes y jueves de 18:00 a 21:00 (Europe/Madrid). Inicio 03/11/2026; última clase de contenido 11/03/2027; presentación y defensa del Trabajo Final 18/03/2027 con René y Rael, incluida en las 90h. El desarrollo del proyecto es trabajo autónomo; el 16/03 no hay clase.
+30 sesiones de 3 horas, martes y jueves de 18:00 a 21:00 (Europe/Madrid). Inicio 03/11/2026; última clase de contenido 11/03/2027; presentación y defensa del Trabajo Final 18/03/2027 con René Serral y Rael Garcia, incluida en las 90h. El desarrollo del proyecto es trabajo autónomo; el 16/03 no hay clase.
 
 - [Syllabus resumido](syllabus-resumido.md): estructura, docentes y sesiones.
 - [Syllabus detallado](syllabus-detallado.md): objetivos, contenidos, prácticas y ampliaciones.
