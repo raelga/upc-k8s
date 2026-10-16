@@ -23,7 +23,7 @@ sesion,fecha,horario,zona_horaria,modulo,titulo,docente,concentracion,contenido_
 22,2027-02-11,18:00–21:00,Europe/Madrid,M5,Entrada de tráfico y service mesh: Traefik e Istio,David Girón,amarillo,,
 23,2027-02-16,18:00–21:00,Europe/Madrid,M5,Entrega progresiva: canary y blue/green con Argo Rollouts,David Girón,amarillo,,
 24,2027-02-18,18:00–21:00,Europe/Madrid,M5,"Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter",David Girón,amarillo,,
-25,2027-02-23,18:00–21:00,Europe/Madrid,M6,Desarrollo de operators: Go y Kubebuilder/Operator SDK,Marc Catrisse,amarillo,Go aplicado y lectura/modificación del controlador,1.5
+25,2027-02-23,18:00–21:00,Europe/Madrid,M6,Desarrollo de operators: Go y Kubebuilder/Operator SDK,Rael Garcia,amarillo,Go aplicado y lectura/modificación del controlador,1.5
 26,2027-02-25,18:00–21:00,Europe/Madrid,M6,Políticas de admisión y recuperación: OPA/Gatekeeper y Velero,Marc Catrisse,amarillo,,
 27,2027-03-02,18:00–21:00,Europe/Madrid,M6,Gestión de clústeres: Cluster API y Hosted Control Planes,Marc Catrisse,amarillo,,
 28,2027-03-04,18:00–21:00,Europe/Madrid,M6,Serverless en Kubernetes: Knative y Virtual Kubelet,Marc Catrisse,verde,,

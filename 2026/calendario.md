@@ -53,7 +53,7 @@
 | Jue 11/02 | 22 | Entrada de tráfico y service mesh: Traefik e Istio | [David Girón](https://www.linkedin.com/in/duhowpi/) |
 | Mar 16/02 | 23 | Entrega progresiva: canary y blue/green con Argo Rollouts | [David Girón](https://www.linkedin.com/in/duhowpi/) |
 | Jue 18/02 | 24 | Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter | [David Girón](https://www.linkedin.com/in/duhowpi/) |
-| Mar 23/02 | 25 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | [Marc Catrisse](https://www.linkedin.com/in/marc-catrisse-99b065128/) |
+| Mar 23/02 | 25 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Jue 25/02 | 26 | Políticas de admisión y recuperación: OPA/Gatekeeper y Velero | [Marc Catrisse](https://www.linkedin.com/in/marc-catrisse-99b065128/) |
 
 ## Marzo 2027

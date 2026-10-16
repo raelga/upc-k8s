@@ -479,7 +479,7 @@
       "number": 25,
       "module": "M6",
       "title": "Desarrollo de operators: Go y Kubebuilder/Operator SDK",
-      "teacher": "Marc Catrisse",
+      "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Reconocer cuándo un operator automatiza conocimiento operativo",
       "contents": [

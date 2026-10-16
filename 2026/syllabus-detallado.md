@@ -484,11 +484,11 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 5 sesiones · 15h · 2 ECTS.
 
-Enfoque: problema → concepto → ejemplo → cuándo usarlo. Docencia: Marc Catrisse.
+Enfoque: problema → concepto → ejemplo → cuándo usarlo. Docencia: Rael Garcia (operators) y Marc Catrisse (resto del bloque).
 
 ### Sesión 25 · Desarrollo de operators: Go y Kubebuilder/Operator SDK
 
-**Fecha:** 23/02/2027 · 18:00–21:00 · **Docente:** Marc Catrisse.
+**Fecha:** 23/02/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Contenido de M1:** Go aplicado y lectura/modificación del controlador. **Dedicación:** 1,5h incluidas en esta clase.
 

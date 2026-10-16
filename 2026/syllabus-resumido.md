@@ -15,7 +15,7 @@ UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 | M3 · Contenedores y Kubernetes Core. Ecosistema OCI | 5–10 (6) | 18h | 2 | Rael Garcia |
 | M4 · Kubernetes en Producción y Ecosistema Cloud Native | 11–15 (5) | 15h | 2 | Rael Garcia |
 | M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado | 16–24 (9) | 27h | 2 | David Girón, Rael Garcia |
-| M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 25–29 (5) | 15h | 2 | Marc Catrisse |
+| M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 25–29 (5) | 15h | 2 | Rael Garcia, Marc Catrisse |
 | PF · Trabajo Final | 30 (1) | 3h | 1.5 | René Serral y Rael Garcia |
 | **Total** | **30** | **90h** | **12** | |
 
@@ -24,9 +24,9 @@ UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 | Docente | Clases de contenido | Horas de contenido | Presentación TFG |
 |---|---:|---:|---|
 | René Serral | 1 | 3h | Sesión 30, junto a Rael Garcia (3h) |
-| Rael Garcia | 17 | 51h | Sesión 30, junto a René Serral (3h) |
+| Rael Garcia | 18 | 54h | Sesión 30, junto a René Serral (3h) |
 | David Girón | 6 | 18h | — |
-| Marc Catrisse | 5 | 15h | — |
+| Marc Catrisse | 4 | 12h | — |
 
 La sesión conjunta del TFG suma 3h al curso, aunque cuenta como 3h de participación para cada uno de sus dos docentes.
 
@@ -79,7 +79,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 | 22 | M5 | Entrada de tráfico y service mesh: Traefik e Istio | David Girón |
 | 23 | M5 | Entrega progresiva: canary y blue/green con Argo Rollouts | David Girón |
 | 24 | M5 | Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter | David Girón |
-| 25 | M6 + M1 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | Marc Catrisse |
+| 25 | M6 + M1 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | Rael Garcia |
 | 26 | M6 | Políticas de admisión y recuperación: OPA/Gatekeeper y Velero | Marc Catrisse |
 | 27 | M6 | Gestión de clústeres: Cluster API y Hosted Control Planes | Marc Catrisse |
 | 28 | M6 | Serverless en Kubernetes: Knative y Virtual Kubelet | Marc Catrisse |

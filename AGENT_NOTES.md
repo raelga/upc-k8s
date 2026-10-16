@@ -1,3 +1,7 @@
+## Cambio docente de operators
+
+Sesión 25, Desarrollo de operators: Go y Kubebuilder/Operator SDK (23/02/2027), asignada a Rael Garcia. Marc Catrisse conserva sesiones 26–29. Rael: 18 clases/54h de contenido más TFG compartido; Marc: 4/12h. Fechas, contenidos y total 30/90h sin cambios. Actualizados documentos y datos de 2026.
+
 ## Docente M6 confirmado
 
 Marc Catrisse sustituye la etiqueta Profesor UPC en las cinco sesiones de M6. Perfiles docentes aportados por el usuario incorporados al calendario y curso.json: Rael https://www.linkedin.com/in/rael/ (URL normalizada sin punto y coma final), David https://www.linkedin.com/in/duhowpi/, René https://www.linkedin.com/in/ren%C3%A9-serral-graci%C3%A0-9b219648/ y Marc https://www.linkedin.com/in/marc-catrisse-99b065128/. No cambiar fechas ni reparto de clases.

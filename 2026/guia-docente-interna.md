@@ -445,7 +445,7 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 25 · Desarrollo de operators: Go y Kubebuilder/Operator SDK
 
-**M6 · Marc Catrisse · 3 horas · Concentración 🟡 Media**
+**M6 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
