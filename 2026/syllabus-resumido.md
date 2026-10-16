@@ -36,6 +36,12 @@ Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scriptin
 
 Una aplicación Python de dos servicios conecta Kubernetes, observabilidad, CI/GitOps, entrega y escalado. Laboratorios guiados con configuraciones preparadas; permisos, cuotas y costes comprobados; limpieza de recursos al finalizar. EKS/kOps se explican durante su despliegue con un entorno de respaldo disponible. M6 combina conceptos, comparación y demostraciones; operators tiene una clase completa. Los secretos se entregan mediante mecanismos externos y no se guardan en repositorios ni en el estado de Terraform.
 
+## Costes y control del consumo cloud
+
+Las sesiones de AWS, Azure y GCP incluyen 15–20 minutos de consulta de facturación, filtros, presupuestos/alertas y limpieza del laboratorio. Se utilizan AWS Billing/Cost Explorer y AWS Budgets, Azure Cost Management y Cloud Billing de GCP. Los informes pueden tener retraso y las alertas no detienen automáticamente el gasto.
+
+En EKS/kOps y AKS/GKE se retoma el coste de control plane, nodos, balanceadores, discos y tráfico, comparando modalidades gestionadas y autogestionadas.
+
 ## M1 · Formación transversal y créditos
 
 M1 combina **3h propias y 6h integradas**: 9h de contenido incluidas en las 90h del curso. Los 1,5 ECTS incluyen además trabajo autónomo evaluable de adaptación de scripts entre proveedores, validaciones y modificación del ejemplo de Go.

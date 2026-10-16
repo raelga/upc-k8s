@@ -1,3 +1,7 @@
+## Consulta de costes integrada
+
+Añadidos 15–20 minutos al cierre de cada proveedor para Billing/Cost Explorer/Budgets (AWS), Cost Management (Azure) y Cloud Billing (GCP), filtros, alertas y limpieza. Explicar retraso de facturación y que los presupuestos no cortan automáticamente el gasto. Retomar costes de control plane/nodos/LB/discos/tráfico en EKS/kOps y AKS/GKE. Sin cambios de fechas, títulos, docentes ni 30/90h. Cobertura añadida por diseño docente, sin presentarla como exigencia textual de la web.
+
 ## Disponibilidad de Rael: calendario actualizado
 
 Acuerdo aplicado: operators después de Helm, sesión 14 el 12/01/2027. Tekton/Git-Prow/ArgoCD antes de observabilidad: sesiones 17–19, 21/01, 26/01 y 28/01 con Rael. Observabilidad sesiones 20–22, 02/02, 04/02 y 11/02 con David. Rael termina clases de contenido el 28/01, sin clases desde segunda semana de febrero; conserva defensa TFG 18/03. M1 transversal: sesiones 1,2,3,4,14,17. Total y docentes sin cambios. Esta nota prevalece sobre fechas provisionales inferiores.

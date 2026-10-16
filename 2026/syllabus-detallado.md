@@ -67,8 +67,11 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 - VPC, subredes, Security Groups, EC2 y S3, contexto de ECR.
 - HCL, provider, recursos, variables y plan/apply/destroy.
 - Consulta Python preparada e IA para adaptar código.
+- AWS Billing y Cost Explorer: consulta por servicio, región y etiquetas; presupuestos y alertas con AWS Budgets.
+- Revisión final de costes, presupuesto/alerta y limpieza de recursos (15–20 minutos).
+- Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto.
 
-**Práctica / evidencia:** Lanzar el ejemplo preparado, explicar mientras se despliega, modificar una variable, consultar recursos y verificar limpieza.
+**Práctica / evidencia:** Lanzar el ejemplo preparado, explicar mientras se despliega, modificar una variable, consultar recursos y verificar limpieza; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza.
 
 **Ampliación:** Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless.
 
@@ -86,8 +89,11 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 - VNet, NSG, VM y Blob Storage, contexto de ACR.
 - Variables, outputs y módulos existentes.
 - Adaptación del script Python.
+- Azure Cost Management: consulta por suscripción, grupo de recursos, servicio y etiquetas; presupuestos y alertas.
+- Revisión final de costes, presupuesto/alerta y limpieza de recursos (15–20 minutos).
+- Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto.
 
-**Práctica / evidencia:** Reproducir el caso común con configuración preparada y explicar equivalencias y diferencias.
+**Práctica / evidencia:** Reproducir el caso común con configuración preparada y explicar equivalencias y diferencias; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza.
 
 **Ampliación:** SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados.
 
@@ -105,8 +111,11 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 - VPC, firewall, Compute Engine y Cloud Storage, contexto de Artifact Registry.
 - Estado local/remoto, permisos y locking según backend.
 - Pulumi con Python frente a HCL durante 10–15 minutos.
+- Cloud Billing de GCP: informes por proyecto, servicio y etiquetas/labels según disponibilidad; presupuestos y alertas.
+- Revisión final de costes, presupuesto/alerta y limpieza de recursos (15–20 minutos).
+- Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto.
 
-**Práctica / evidencia:** Adaptar el caso preparado, consultar recursos y comparar identidad, red, estado y portabilidad.
+**Práctica / evidencia:** Adaptar el caso preparado, consultar recursos y comparar identidad, red, estado y portabilidad; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza.
 
 **Ampliación:** Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados.
 
@@ -233,8 +242,9 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 - KOps con configuración preparada.
 - Control plane, red, identidad y nodos.
 - Responsabilidades, upgrades, disponibilidad, costes y recuperación.
+- Costes Kubernetes en AWS: control plane EKS frente a autogestión con kOps, nodos, balanceadores, discos y tráfico.
 
-**Práctica / evidencia:** Explicar durante ambos despliegues, solapar esperas, desplegar la misma aplicación y comparar; comprobar permisos y disponer de clústeres de respaldo.
+**Práctica / evidencia:** Explicar durante ambos despliegues, solapar esperas, desplegar la misma aplicación y comparar; comprobar permisos y disponer de clústeres de respaldo; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza.
 
 **Ampliación:** Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad.
 
@@ -251,8 +261,9 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 - Pools de nodos.
 - Actualizaciones y responsabilidad operativa.
 - GKE Standard/Autopilot y opciones de AKS.
+- Costes Kubernetes en AKS/GKE: modalidades de control plane, nodos, balanceadores, discos y tráfico.
 
-**Práctica / evidencia:** Demostración preparada de los mismos requisitos y comparación razonada con EKS.
+**Práctica / evidencia:** Demostración preparada de los mismos requisitos y comparación razonada con EKS; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza.
 
 **Ampliación:** Instalaciones completas independientes y catálogo de add-ons de ambos proveedores.
 

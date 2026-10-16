@@ -74,9 +74,9 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 |---|---|
 | **Cobertura requerida** | • Recursos fundamentales AWS: computación, redes, almacenamiento, identidad y servicios gestionados.<br>• Aprovisionamiento declarativo con Terraform: HCL y recursos.<br>• Automatización con Python asistida por IA; contenido transversal de M1. |
 | **Resultado de aprendizaje** | Entender una infraestructura AWS pequeña y verificar su funcionamiento mediante código. |
-| **Actividad práctica** | Lanzar el ejemplo preparado, explicar mientras se despliega, modificar una variable, consultar recursos y verificar limpieza. |
-| **Alcance y profundidad** | Un ejemplo cloud pequeño, Python preparado y explicación durante aprovisionamiento. Python/CLI para comprobaciones; no sustituir recursos cloud por un catálogo de sintaxis. |
-| **Requisitos de preparación** | Cuenta AWS, permisos/cuotas, ejemplo Terraform, CLI y consulta Python comprobados. |
+| **Actividad práctica** | Lanzar el ejemplo preparado, explicar mientras se despliega, modificar una variable, consultar recursos y verificar limpieza; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza. |
+| **Alcance y profundidad** | Un ejemplo cloud pequeño, Python preparado y explicación durante aprovisionamiento. Python/CLI para comprobaciones; no sustituir recursos cloud por un catálogo de sintaxis. AWS Billing y Cost Explorer: consulta por servicio, región y etiquetas; presupuestos y alertas con AWS Budgets. Reservar 15–20 minutos al cierre para costes, alertas y limpieza. Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto. |
+| **Requisitos de preparación** | Cuenta AWS, permisos/cuotas, ejemplo Terraform, CLI y consulta Python comprobados. Acceso de lectura a facturación/costes y permisos para presupuestos; desglose de muestra si los recursos recién creados aún no aparecen. |
 | **Contenido complementario** | Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless. |
 
 <a id="sesion-03"></a>
@@ -89,9 +89,9 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 |---|---|
 | **Cobertura requerida** | • Recursos fundamentales Azure: computación, redes, almacenamiento, identidad y servicios gestionados.<br>• Terraform: parametrización y uso de módulos.<br>• Adaptación de automatización Python asistida por IA; contenido transversal de M1. |
 | **Resultado de aprendizaje** | Transferir el patrón de AWS a Azure y reconocer diferencias de identidad y red. |
-| **Actividad práctica** | Reproducir el caso común con configuración preparada y explicar equivalencias y diferencias. |
-| **Alcance y profundidad** | Reutilizar el patrón AWS; evitar enseñar el SDK completo. |
-| **Requisitos de preparación** | Cuenta Azure, permisos, configuración Terraform y adaptación Python del caso AWS. |
+| **Actividad práctica** | Reproducir el caso común con configuración preparada y explicar equivalencias y diferencias; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza. |
+| **Alcance y profundidad** | Reutilizar el patrón AWS; evitar enseñar el SDK completo. Azure Cost Management: consulta por suscripción, grupo de recursos, servicio y etiquetas; presupuestos y alertas. Reservar 15–20 minutos al cierre para costes, alertas y limpieza. Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto. |
+| **Requisitos de preparación** | Cuenta Azure, permisos, configuración Terraform y adaptación Python del caso AWS. Acceso de lectura a facturación/costes y permisos para presupuestos; desglose de muestra si los recursos recién creados aún no aparecen. |
 | **Contenido complementario** | SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados. |
 
 <a id="sesion-04"></a>
@@ -104,9 +104,9 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 |---|---|
 | **Cobertura requerida** | • Recursos fundamentales GCP: computación, redes, almacenamiento, identidad y servicios gestionados.<br>• Terraform: gestión del estado y comparación del aprovisionamiento multicloud.<br>• Automatización con Python; contenido transversal de M1. |
 | **Resultado de aprendizaje** | Aplicar el caso común en GCP y comparar proveedores y formas de definir infraestructura. |
-| **Actividad práctica** | Adaptar el caso preparado, consultar recursos y comparar identidad, red, estado y portabilidad. |
-| **Alcance y profundidad** | Reutilizar patrón y estado; Pulumi breve. Pulumi/OpenTofu son comparaciones complementarias; no están nombrados en la descripción publicada. |
-| **Requisitos de preparación** | Cuenta GCP, permisos, backend de estado y ejemplos comparativos preparados. |
+| **Actividad práctica** | Adaptar el caso preparado, consultar recursos y comparar identidad, red, estado y portabilidad; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza. |
+| **Alcance y profundidad** | Reutilizar patrón y estado; Pulumi breve. Pulumi/OpenTofu son comparaciones complementarias; no están nombrados en la descripción publicada. Cloud Billing de GCP: informes por proyecto, servicio y etiquetas/labels según disponibilidad; presupuestos y alertas. Reservar 15–20 minutos al cierre para costes, alertas y limpieza. Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto. |
+| **Requisitos de preparación** | Cuenta GCP, permisos, backend de estado y ejemplos comparativos preparados. Acceso de lectura a facturación/costes y permisos para presupuestos; desglose de muestra si los recursos recién creados aún no aparecen. |
 | **Contenido complementario** | Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados. |
 
 <a id="sesion-05"></a>
@@ -209,8 +209,8 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 |---|---|
 | **Cobertura requerida** | • Operación de EKS y de otros entornos Kubernetes. |
 | **Resultado de aprendizaje** | Comparar Kubernetes gestionado y autogestionado sobre la misma base AWS. |
-| **Actividad práctica** | Explicar durante ambos despliegues, solapar esperas, desplegar la misma aplicación y comparar; comprobar permisos y disponer de clústeres de respaldo. |
-| **Alcance y profundidad** | Permisos y cuotas comprobados; despliegues solapados y clústeres de respaldo. kOps es el ejemplo de entorno autogestionado; la web no exige kOps por nombre. |
+| **Actividad práctica** | Explicar durante ambos despliegues, solapar esperas, desplegar la misma aplicación y comparar; comprobar permisos y disponer de clústeres de respaldo; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza. |
+| **Alcance y profundidad** | Permisos y cuotas comprobados; despliegues solapados y clústeres de respaldo. kOps es el ejemplo de entorno autogestionado; la web no exige kOps por nombre. Costes Kubernetes en AWS: control plane EKS frente a autogestión con kOps, nodos, balanceadores, discos y tráfico. |
 | **Requisitos de preparación** | AWS/Terraform/kOps, permisos/cuotas y configuraciones comprobados; clústeres de respaldo. |
 | **Contenido complementario** | Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad. |
 
@@ -224,8 +224,8 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 |---|---|
 | **Cobertura requerida** | • Operación de AKS y GKE. |
 | **Resultado de aprendizaje** | Aplicar la comparación de operación cloud a Azure y GCP. |
-| **Actividad práctica** | Demostración preparada de los mismos requisitos y comparación razonada con EKS. |
-| **Alcance y profundidad** | Usar el caso común y el material preparado; priorizar comprobación del comportamiento frente a instalación exhaustiva. |
+| **Actividad práctica** | Demostración preparada de los mismos requisitos y comparación razonada con EKS; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza. |
+| **Alcance y profundidad** | Usar el caso común y el material preparado; priorizar comprobación del comportamiento frente a instalación exhaustiva. Costes Kubernetes en AKS/GKE: modalidades de control plane, nodos, balanceadores, discos y tráfico. |
 | **Requisitos de preparación** | Entornos AKS/GKE, acceso y configuraciones comparativas preparados. |
 | **Contenido complementario** | Instalaciones completas independientes y catálogo de add-ons de ambos proveedores. |
 

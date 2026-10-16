@@ -38,9 +38,12 @@
         "IAM, regiones y zonas",
         "VPC, subredes, Security Groups, EC2 y S3, contexto de ECR",
         "HCL, provider, recursos, variables y plan/apply/destroy",
-        "consulta Python preparada e IA para adaptar código"
+        "consulta Python preparada e IA para adaptar código",
+        "AWS Billing y Cost Explorer: consulta por servicio, región y etiquetas; presupuestos y alertas con AWS Budgets",
+        "Bloque final de 15–20 minutos: identificar costes del caso, aplicar filtros, configurar una alerta y limpiar recursos",
+        "Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto."
       ],
-      "lab": "Lanzar el ejemplo preparado, explicar mientras se despliega, modificar una variable, consultar recursos y verificar limpieza",
+      "lab": "Lanzar el ejemplo preparado, explicar mientras se despliega, modificar una variable, consultar recursos y verificar limpieza; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza",
       "extras": "Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless",
       "date": "2026-11-05",
       "transversal_contents": [
@@ -62,9 +65,12 @@
         "Entra ID, suscripciones, grupos de recursos y Managed Identities",
         "VNet, NSG, VM y Blob Storage, contexto de ACR",
         "variables, outputs y módulos existentes",
-        "adaptación del script Python"
+        "adaptación del script Python",
+        "Azure Cost Management: consulta por suscripción, grupo de recursos, servicio y etiquetas; presupuestos y alertas",
+        "Bloque final de 15–20 minutos: identificar costes del caso, aplicar filtros, configurar una alerta y limpiar recursos",
+        "Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto."
       ],
-      "lab": "Reproducir el caso común con configuración preparada y explicar equivalencias y diferencias",
+      "lab": "Reproducir el caso común con configuración preparada y explicar equivalencias y diferencias; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza",
       "extras": "SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados",
       "date": "2026-11-10",
       "transversal_contents": [
@@ -86,9 +92,12 @@
         "Proyectos, cuentas de servicio e IAM",
         "VPC, firewall, Compute Engine y Cloud Storage, contexto de Artifact Registry",
         "estado local/remoto, permisos y locking según backend",
-        "Pulumi con Python frente a HCL durante 10–15 minutos"
+        "Pulumi con Python frente a HCL durante 10–15 minutos",
+        "Cloud Billing de GCP: informes por proyecto, servicio y etiquetas/labels según disponibilidad; presupuestos y alertas",
+        "Bloque final de 15–20 minutos: identificar costes del caso, aplicar filtros, configurar una alerta y limpiar recursos",
+        "Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto."
       ],
-      "lab": "Adaptar el caso preparado, consultar recursos y comparar identidad, red, estado y portabilidad",
+      "lab": "Adaptar el caso preparado, consultar recursos y comparar identidad, red, estado y portabilidad; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza",
       "extras": "Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados",
       "date": "2026-11-12",
       "transversal_contents": [
@@ -219,9 +228,10 @@
         "Terraform para lanzar EKS",
         "kOps con configuración preparada",
         "control plane, red, identidad y nodos",
-        "responsabilidades, upgrades, disponibilidad, costes y recuperación"
+        "responsabilidades, upgrades, disponibilidad, costes y recuperación",
+        "Costes Kubernetes en AWS: control plane EKS frente a autogestión con kOps, nodos, balanceadores, discos y tráfico"
       ],
-      "lab": "Explicar durante ambos despliegues, solapar esperas, desplegar la misma aplicación y comparar; comprobar permisos y disponer de clústeres de respaldo",
+      "lab": "Explicar durante ambos despliegues, solapar esperas, desplegar la misma aplicación y comparar; comprobar permisos y disponer de clústeres de respaldo; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza",
       "extras": "Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad",
       "date": "2026-12-10",
       "transversal_contents": []
@@ -238,9 +248,10 @@
         "networking",
         "pools de nodos",
         "actualizaciones y responsabilidad operativa",
-        "GKE Standard/Autopilot y opciones de AKS"
+        "GKE Standard/Autopilot y opciones de AKS",
+        "Costes Kubernetes en AKS/GKE: modalidades de control plane, nodos, balanceadores, discos y tráfico"
       ],
-      "lab": "Demostración preparada de los mismos requisitos y comparación razonada con EKS",
+      "lab": "Demostración preparada de los mismos requisitos y comparación razonada con EKS; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza",
       "extras": "Instalaciones completas independientes y catálogo de add-ons de ambos proveedores",
       "date": "2026-12-15",
       "transversal_contents": []
