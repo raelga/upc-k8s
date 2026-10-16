@@ -37,23 +37,23 @@
 
 | Fecha | Nº | Sesión | Docente |
 |---|---:|---|---|
-| Mar 12/01 | 14 | Infraestructura declarativa: DNS, certificados y recursos cloud | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Jue 14/01 | 15 | Gestión de secretos externos: Vault y External Secrets Operator | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Mar 19/01 | 16 | Métricas y alertas: Prometheus, PromQL y Alertmanager | [David Girón](https://www.linkedin.com/in/duhowpi/) |
-| Jue 21/01 | 17 | Dashboards y logs: Grafana, Loki y Alloy | [David Girón](https://www.linkedin.com/in/duhowpi/) |
-| Mar 26/01 | 18 | Trazas distribuidas y correlación: OpenTelemetry y Tempo | [David Girón](https://www.linkedin.com/in/duhowpi/) |
-| Jue 28/01 | 19 | Automatización de pipelines: scripting, Tekton y Trivy | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Mar 12/01 | 14 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Jue 14/01 | 15 | Infraestructura declarativa: DNS, certificados y recursos cloud | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Mar 19/01 | 16 | Gestión de secretos externos: Vault y External Secrets Operator | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Jue 21/01 | 17 | Automatización de pipelines: scripting, Tekton y Trivy | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Mar 26/01 | 18 | Colaboración y validación de cambios: Git y Prow | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Jue 28/01 | 19 | Despliegue declarativo y reconciliación: GitOps con ArgoCD | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 
 ## Febrero 2027
 
 | Fecha | Nº | Sesión | Docente |
 |---|---:|---|---|
-| Mar 02/02 | 20 | Colaboración y validación de cambios: Git y Prow | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Jue 04/02 | 21 | Despliegue declarativo y reconciliación: GitOps con ArgoCD | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Jue 11/02 | 22 | Entrada de tráfico y service mesh: Traefik e Istio | [David Girón](https://www.linkedin.com/in/duhowpi/) |
-| Mar 16/02 | 23 | Entrega progresiva: canary y blue/green con Argo Rollouts | [David Girón](https://www.linkedin.com/in/duhowpi/) |
-| Jue 18/02 | 24 | Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter | [David Girón](https://www.linkedin.com/in/duhowpi/) |
-| Mar 23/02 | 25 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Mar 02/02 | 20 | Métricas y alertas: Prometheus, PromQL y Alertmanager | [David Girón](https://www.linkedin.com/in/duhowpi/) |
+| Jue 04/02 | 21 | Dashboards y logs: Grafana, Loki y Alloy | [David Girón](https://www.linkedin.com/in/duhowpi/) |
+| Jue 11/02 | 22 | Trazas distribuidas y correlación: OpenTelemetry y Tempo | [David Girón](https://www.linkedin.com/in/duhowpi/) |
+| Mar 16/02 | 23 | Entrada de tráfico y service mesh: Traefik e Istio | [David Girón](https://www.linkedin.com/in/duhowpi/) |
+| Jue 18/02 | 24 | Entrega progresiva: canary y blue/green con Argo Rollouts | [David Girón](https://www.linkedin.com/in/duhowpi/) |
+| Mar 23/02 | 25 | Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter | [David Girón](https://www.linkedin.com/in/duhowpi/) |
 | Jue 25/02 | 26 | Políticas de admisión y recuperación: OPA/Gatekeeper y Velero | [Marc Catrisse](https://www.linkedin.com/in/marc-catrisse-99b065128/) |
 
 ## Marzo 2027
@@ -77,7 +77,7 @@
 
 ## Contenido transversal
 
-Las sesiones **2, 3, 4, 19 y 25** incluyen programación para infraestructura de M1, además de la clase propia de la sesión 1. La distribución de contenidos y créditos se recoge en los syllabus.
+Las sesiones **2, 3, 4, 14 y 17** incluyen programación para infraestructura de M1, además de la clase propia de la sesión 1. La distribución de contenidos y créditos se recoge en los syllabus.
 
 ## Equipo docente
 

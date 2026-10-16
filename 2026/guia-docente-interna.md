@@ -10,66 +10,44 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ## Comprobaciones de cobertura prioritarias
 
-- **Git avanzado:** incluir un ejemplo profesional en sesión 20; PR/commits básicos no bastan por sí solos.
-- **Terraform:** HCL, estado y módulos en proveedores; testing y CI/CD conectados con sesión 19. No confundir CI de imágenes con validación de IaC.
-- **Cloudflare:** además de DNS/ACME, cubrir redes y explicar CDN en sesión 14.
+- **Git avanzado:** incluir un ejemplo profesional en sesión 18; PR/commits básicos no bastan por sí solos.
+- **Terraform:** HCL, estado y módulos en proveedores; testing y CI/CD conectados con sesión 17. No confundir CI de imágenes con validación de IaC.
+- **Cloudflare:** además de DNS/ACME, cubrir redes y explicar CDN en sesión 15.
 - **OIDC:** incluirlo expresamente en sesión 6; no limitar toda autenticación a certificados/tokens.
 - **Go e IA:** mantenerlos en el ejemplo de operators y sus evidencias de trabajo transversal M1.
 
 ## Índice de sesiones
 
-**M1 · Fundamentos DevOps y Platform Engineering**
-
-- [01 · Fundamentos de DevOps y Platform Engineering](#sesion-01)
-
-**M2 · Cloud e infraestructura como código**
-
-- [02 · AWS: fundamentos y aprovisionamiento como código](#sesion-02)
-- [03 · Azure: fundamentos y aprovisionamiento como código](#sesion-03)
-- [04 · GCP: fundamentos y aprovisionamiento como código](#sesion-04)
-
-**M3 · Kubernetes Core y OCI**
-
-- [05 · Contenedores y ecosistema OCI: imágenes, runtimes y registros](#sesion-05)
-- [06 · Arquitectura de Kubernetes: API, autenticación y permisos](#sesion-06)
-- [07 · Aplicaciones en Kubernetes: workloads, configuración y recursos](#sesion-07)
-- [08 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado](#sesion-08)
-- [09 · Networking en Kubernetes: comunicación y exposición de servicios](#sesion-09)
-- [10 · Construcción de un clúster Kubernetes componente a componente](#sesion-10)
-
-**M4 · Kubernetes en producción**
-
-- [11 · Kubernetes en AWS: EKS y clústeres autogestionados con kOps](#sesion-11)
-- [12 · Kubernetes en Azure y GCP: AKS y GKE](#sesion-12)
-- [13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm](#sesion-13)
-- [14 · Infraestructura declarativa: DNS, certificados y recursos cloud](#sesion-14)
-- [15 · Gestión de secretos externos: Vault y External Secrets Operator](#sesion-15)
-
-**M5 · Observabilidad, CI/GitOps y operación**
-
-- [16 · Métricas y alertas: Prometheus, PromQL y Alertmanager](#sesion-16)
-- [17 · Dashboards y logs: Grafana, Loki y Alloy](#sesion-17)
-- [18 · Trazas distribuidas y correlación: OpenTelemetry y Tempo](#sesion-18)
-- [19 · Automatización de pipelines: scripting, Tekton y Trivy](#sesion-19)
-- [20 · Colaboración y validación de cambios: Git y Prow](#sesion-20)
-- [21 · Despliegue declarativo y reconciliación: GitOps con ArgoCD](#sesion-21)
-- [22 · Entrada de tráfico y service mesh: Traefik e Istio](#sesion-22)
-- [23 · Entrega progresiva: canary y blue/green con Argo Rollouts](#sesion-23)
-- [24 · Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter](#sesion-24)
-
-**M6 · Platform Engineering avanzado**
-
-- [25 · Desarrollo de operators: Go y Kubebuilder/Operator SDK](#sesion-25)
-- [26 · Políticas de admisión y recuperación: OPA/Gatekeeper y Velero](#sesion-26)
-- [27 · Gestión de clústeres: Cluster API y Hosted Control Planes](#sesion-27)
-- [28 · Serverless en Kubernetes: Knative y Virtual Kubelet](#sesion-28)
-- [29 · Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner](#sesion-29)
-
-**PF · Trabajo Final**
-
-- [30 · Presentación y defensa del Trabajo Final](#sesion-30)
-
-## M1 · Fundamentos DevOps y Platform Engineering
+- [01 · Fundamentos de DevOps y Platform Engineering](#sesion-01) — M1
+- [02 · AWS: fundamentos y aprovisionamiento como código](#sesion-02) — M2
+- [03 · Azure: fundamentos y aprovisionamiento como código](#sesion-03) — M2
+- [04 · GCP: fundamentos y aprovisionamiento como código](#sesion-04) — M2
+- [05 · Contenedores y ecosistema OCI: imágenes, runtimes y registros](#sesion-05) — M3
+- [06 · Arquitectura de Kubernetes: API, autenticación y permisos](#sesion-06) — M3
+- [07 · Aplicaciones en Kubernetes: workloads, configuración y recursos](#sesion-07) — M3
+- [08 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado](#sesion-08) — M3
+- [09 · Networking en Kubernetes: comunicación y exposición de servicios](#sesion-09) — M3
+- [10 · Construcción de un clúster Kubernetes componente a componente](#sesion-10) — M3
+- [11 · Kubernetes en AWS: EKS y clústeres autogestionados con kOps](#sesion-11) — M4
+- [12 · Kubernetes en Azure y GCP: AKS y GKE](#sesion-12) — M4
+- [13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm](#sesion-13) — M4
+- [14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK](#sesion-14) — M6
+- [15 · Infraestructura declarativa: DNS, certificados y recursos cloud](#sesion-15) — M4
+- [16 · Gestión de secretos externos: Vault y External Secrets Operator](#sesion-16) — M4
+- [17 · Automatización de pipelines: scripting, Tekton y Trivy](#sesion-17) — M5
+- [18 · Colaboración y validación de cambios: Git y Prow](#sesion-18) — M5
+- [19 · Despliegue declarativo y reconciliación: GitOps con ArgoCD](#sesion-19) — M5
+- [20 · Métricas y alertas: Prometheus, PromQL y Alertmanager](#sesion-20) — M5
+- [21 · Dashboards y logs: Grafana, Loki y Alloy](#sesion-21) — M5
+- [22 · Trazas distribuidas y correlación: OpenTelemetry y Tempo](#sesion-22) — M5
+- [23 · Entrada de tráfico y service mesh: Traefik e Istio](#sesion-23) — M5
+- [24 · Entrega progresiva: canary y blue/green con Argo Rollouts](#sesion-24) — M5
+- [25 · Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter](#sesion-25) — M5
+- [26 · Políticas de admisión y recuperación: OPA/Gatekeeper y Velero](#sesion-26) — M6
+- [27 · Gestión de clústeres: Cluster API y Hosted Control Planes](#sesion-27) — M6
+- [28 · Serverless en Kubernetes: Knative y Virtual Kubelet](#sesion-28) — M6
+- [29 · Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner](#sesion-29) — M6
+- [30 · Presentación y defensa del Trabajo Final](#sesion-30) — PF
 
 <a id="sesion-01"></a>
 
@@ -85,8 +63,6 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 | **Alcance y profundidad** | Usar el caso común y el material preparado; priorizar comprobación del comportamiento frente a instalación exhaustiva. |
 | **Requisitos de preparación** | Caso de organización y plantilla de propuesta de plataforma. |
 | **Contenido complementario** | Implantación completa de Backstage y diseño organizativo en profundidad. |
-
-## M2 · Cloud e infraestructura como código
 
 <a id="sesion-02"></a>
 
@@ -132,8 +108,6 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 | **Alcance y profundidad** | Reutilizar patrón y estado; Pulumi breve. Pulumi/OpenTofu son comparaciones complementarias; no están nombrados en la descripción publicada. |
 | **Requisitos de preparación** | Cuenta GCP, permisos, backend de estado y ejemplos comparativos preparados. |
 | **Contenido complementario** | Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados. |
-
-## M3 · Kubernetes Core y OCI
 
 <a id="sesion-05"></a>
 
@@ -225,8 +199,6 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 | **Requisitos de preparación** | Máquinas de laboratorio, certificados y guion de arranque de componentes. |
 | **Contenido complementario** | Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada. |
 
-## M4 · Kubernetes en producción
-
 <a id="sesion-11"></a>
 
 ### 11 · Kubernetes en AWS: EKS y clústeres autogestionados con kOps
@@ -274,7 +246,22 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 <a id="sesion-14"></a>
 
-### 14 · Infraestructura declarativa: DNS, certificados y recursos cloud
+### 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK
+
+**M6 · Rael Garcia · 3 horas · Concentración 🟡 Media**
+
+| Apartado | Contenido |
+|---|---|
+| **Cobertura requerida** | • Construcción de operators personalizados con Kubebuilder/Operator SDK.<br>• Go aplicado a construcción de controladores; programación asistida por IA como parte transversal de M1. |
+| **Resultado de aprendizaje** | Reconocer cuándo un operator automatiza conocimiento operativo. |
+| **Actividad práctica** | Leer un operator preparado, crear un recurso, observar actuación y modificar un comportamiento pequeño. |
+| **Alcance y profundidad** | Ejemplo de operator preparado; no añadir Crossplane. La clase completa se reserva a operators; Go se aprende leyendo/modificando el ejemplo. |
+| **Requisitos de preparación** | Proyecto Go con Kubebuilder/Operator SDK, CRD y operator ejecutable preparados. |
+| **Contenido complementario** | Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero. |
+
+<a id="sesion-15"></a>
+
+### 15 · Infraestructura declarativa: DNS, certificados y recursos cloud
 
 **M4 · Rael Garcia · 3 horas · Concentración 🟢 Baja**
 
@@ -287,9 +274,9 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 | **Requisitos de preparación** | Dominio Cloudflare, permisos DNS, ExternalDNS/cert-manager y demo Crossplane preparados. |
 | **Contenido complementario** | DNSSEC/DoH, operación DNS avanzada, Crossplane Compositions/XRDs avanzados y Composition Functions. |
 
-<a id="sesion-15"></a>
+<a id="sesion-16"></a>
 
-### 15 · Gestión de secretos externos: Vault y External Secrets Operator
+### 16 · Gestión de secretos externos: Vault y External Secrets Operator
 
 **M4 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
@@ -302,56 +289,9 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 | **Requisitos de preparación** | Vault/ESO y autenticación Kubernetes disponibles; secreto de laboratorio y aplicación consumidora. |
 | **Contenido complementario** | HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state. |
 
-## M5 · Observabilidad, CI/GitOps y operación
-
-<a id="sesion-16"></a>
-
-### 16 · Métricas y alertas: Prometheus, PromQL y Alertmanager
-
-**M5 · David Girón · 3 horas · Concentración 🟡 Media**
-
-| Apartado | Contenido |
-|---|---|
-| **Cobertura requerida** | • Prometheus y Grafana como parte del stack de observabilidad.<br>• Mimir: explicar su función en el almacenamiento de métricas. |
-| **Resultado de aprendizaje** | Detectar fallos mediante métricas y definir cuándo alertar. |
-| **Actividad práctica** | kube-prometheus-stack preparado, conectar la app, provocar errores/carga, consultar y comprobar una alerta. |
-| **Alcance y profundidad** | Usar el caso común y el material preparado; priorizar comprobación del comportamiento frente a instalación exhaustiva. PromQL, Alertmanager y Operator desarrollan la práctica de métricas; Mimir permanece introductorio. |
-| **Requisitos de preparación** | kube-prometheus-stack, aplicación instrumentada y generador de carga preparados. |
-| **Contenido complementario** | HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre. |
-
 <a id="sesion-17"></a>
 
-### 17 · Dashboards y logs: Grafana, Loki y Alloy
-
-**M5 · David Girón · 3 horas · Concentración 🟡 Media**
-
-| Apartado | Contenido |
-|---|---|
-| **Cobertura requerida** | • Grafana y Loki para visualización y logs. |
-| **Resultado de aprendizaje** | Pasar de un síntoma en métricas a mensajes que explican el fallo. |
-| **Actividad práctica** | Provocar fallo, detectarlo en el dashboard y localizar logs del mismo intervalo con configuración guiada de Alloy. |
-| **Alcance y profundidad** | Usar el caso común y el material preparado; priorizar comprobación del comportamiento frente a instalación exhaustiva. Alloy es el recolector elegido, no una obligación explícita de la web. |
-| **Requisitos de preparación** | Grafana/Loki/Alloy, logs de Pods y dashboard inicial disponibles. |
-| **Contenido complementario** | Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy. |
-
-<a id="sesion-18"></a>
-
-### 18 · Trazas distribuidas y correlación: OpenTelemetry y Tempo
-
-**M5 · David Girón · 3 horas · Concentración 🟡 Media**
-
-| Apartado | Contenido |
-|---|---|
-| **Cobertura requerida** | • OpenTelemetry y Tempo como parte del stack de observabilidad completo. |
-| **Resultado de aprendizaje** | Localizar dónde se atasca una petición entre servicios. |
-| **Actividad práctica** | Dos servicios preparados, provocar latencia y recorrer métrica→traza→logs; Collector para trazas y Alloy para logs. |
-| **Alcance y profundidad** | Dos servicios preparados, instrumentación automática, trace ID y enlaces comprobados. Collector y correlación son el enfoque de práctica; no desarrollar un curso completo de SDK. |
-| **Requisitos de preparación** | Dos servicios con instrumentación, Collector/Tempo, trace ID en logs y enlaces Grafana comprobados. |
-| **Contenido complementario** | SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo. |
-
-<a id="sesion-19"></a>
-
-### 19 · Automatización de pipelines: scripting, Tekton y Trivy
+### 17 · Automatización de pipelines: scripting, Tekton y Trivy
 
 **M5 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
@@ -364,9 +304,9 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 | **Requisitos de preparación** | Tekton, registro y repositorio, tareas build/test/scan, Trivy y ejemplo de validación Terraform preparados. |
 | **Contenido complementario** | Curso completo de Bash/Python; Triggers/Chains avanzados y attestations. |
 
-<a id="sesion-20"></a>
+<a id="sesion-18"></a>
 
-### 20 · Colaboración y validación de cambios: Git y Prow
+### 18 · Colaboración y validación de cambios: Git y Prow
 
 **M5 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
@@ -379,9 +319,9 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 | **Requisitos de preparación** | Repositorio con PR, Prow y validaciones; ejemplo profesional Git preparado. |
 | **Contenido complementario** | Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas. |
 
-<a id="sesion-21"></a>
+<a id="sesion-19"></a>
 
-### 21 · Despliegue declarativo y reconciliación: GitOps con ArgoCD
+### 19 · Despliegue declarativo y reconciliación: GitOps con ArgoCD
 
 **M5 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
@@ -394,9 +334,54 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 | **Requisitos de preparación** | ArgoCD, repositorio de manifiestos y aplicación Helm/Kustomize disponibles. |
 | **Contenido complementario** | ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves. |
 
+<a id="sesion-20"></a>
+
+### 20 · Métricas y alertas: Prometheus, PromQL y Alertmanager
+
+**M5 · David Girón · 3 horas · Concentración 🟡 Media**
+
+| Apartado | Contenido |
+|---|---|
+| **Cobertura requerida** | • Prometheus y Grafana como parte del stack de observabilidad.<br>• Mimir: explicar su función en el almacenamiento de métricas. |
+| **Resultado de aprendizaje** | Detectar fallos mediante métricas y definir cuándo alertar. |
+| **Actividad práctica** | kube-prometheus-stack preparado, conectar la app, provocar errores/carga, consultar y comprobar una alerta. |
+| **Alcance y profundidad** | Usar el caso común y el material preparado; priorizar comprobación del comportamiento frente a instalación exhaustiva. PromQL, Alertmanager y Operator desarrollan la práctica de métricas; Mimir permanece introductorio. |
+| **Requisitos de preparación** | kube-prometheus-stack, aplicación instrumentada y generador de carga preparados. |
+| **Contenido complementario** | HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre. |
+
+<a id="sesion-21"></a>
+
+### 21 · Dashboards y logs: Grafana, Loki y Alloy
+
+**M5 · David Girón · 3 horas · Concentración 🟡 Media**
+
+| Apartado | Contenido |
+|---|---|
+| **Cobertura requerida** | • Grafana y Loki para visualización y logs. |
+| **Resultado de aprendizaje** | Pasar de un síntoma en métricas a mensajes que explican el fallo. |
+| **Actividad práctica** | Provocar fallo, detectarlo en el dashboard y localizar logs del mismo intervalo con configuración guiada de Alloy. |
+| **Alcance y profundidad** | Usar el caso común y el material preparado; priorizar comprobación del comportamiento frente a instalación exhaustiva. Alloy es el recolector elegido, no una obligación explícita de la web. |
+| **Requisitos de preparación** | Grafana/Loki/Alloy, logs de Pods y dashboard inicial disponibles. |
+| **Contenido complementario** | Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy. |
+
 <a id="sesion-22"></a>
 
-### 22 · Entrada de tráfico y service mesh: Traefik e Istio
+### 22 · Trazas distribuidas y correlación: OpenTelemetry y Tempo
+
+**M5 · David Girón · 3 horas · Concentración 🟡 Media**
+
+| Apartado | Contenido |
+|---|---|
+| **Cobertura requerida** | • OpenTelemetry y Tempo como parte del stack de observabilidad completo. |
+| **Resultado de aprendizaje** | Localizar dónde se atasca una petición entre servicios. |
+| **Actividad práctica** | Dos servicios preparados, provocar latencia y recorrer métrica→traza→logs; Collector para trazas y Alloy para logs. |
+| **Alcance y profundidad** | Dos servicios preparados, instrumentación automática, trace ID y enlaces comprobados. Collector y correlación son el enfoque de práctica; no desarrollar un curso completo de SDK. |
+| **Requisitos de preparación** | Dos servicios con instrumentación, Collector/Tempo, trace ID en logs y enlaces Grafana comprobados. |
+| **Contenido complementario** | SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo. |
+
+<a id="sesion-23"></a>
+
+### 23 · Entrada de tráfico y service mesh: Traefik e Istio
 
 **M5 · David Girón · 3 horas · Concentración 🟡 Media**
 
@@ -409,9 +394,9 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 | **Requisitos de preparación** | Traefik/Istio y cert-manager preparados; aplicación con dos versiones. |
 | **Contenido complementario** | Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo. |
 
-<a id="sesion-23"></a>
+<a id="sesion-24"></a>
 
-### 23 · Entrega progresiva: canary y blue/green con Argo Rollouts
+### 24 · Entrega progresiva: canary y blue/green con Argo Rollouts
 
 **M5 · David Girón · 3 horas · Concentración 🟡 Media**
 
@@ -424,9 +409,9 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 | **Requisitos de preparación** | Argo Rollouts, rutas de tráfico, Prometheus y escenario de degradación preparados. |
 | **Contenido complementario** | Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking. |
 
-<a id="sesion-24"></a>
+<a id="sesion-25"></a>
 
-### 24 · Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter
+### 25 · Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter
 
 **M5 · David Girón · 3 horas · Concentración 🟡 Media**
 
@@ -438,23 +423,6 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 | **Alcance y profundidad** | HPA como lab; VPA recomendaciones y demos KEDA/Karpenter sin competir por el mismo workload. |
 | **Requisitos de preparación** | Generador de carga, HPA, VPA en recomendación, cola KEDA y permisos Karpenter preparados. |
 | **Contenido complementario** | Catálogo triggers, métricas complejas, tuning, políticas Spot/capacidad y optimización profunda de costes; evitar controladores compitiendo. |
-
-## M6 · Platform Engineering avanzado
-
-<a id="sesion-25"></a>
-
-### 25 · Desarrollo de operators: Go y Kubebuilder/Operator SDK
-
-**M6 · Rael Garcia · 3 horas · Concentración 🟡 Media**
-
-| Apartado | Contenido |
-|---|---|
-| **Cobertura requerida** | • Construcción de operators personalizados con Kubebuilder/Operator SDK.<br>• Go aplicado a construcción de controladores; programación asistida por IA como parte transversal de M1. |
-| **Resultado de aprendizaje** | Reconocer cuándo un operator automatiza conocimiento operativo. |
-| **Actividad práctica** | Leer un operator preparado, crear un recurso, observar actuación y modificar un comportamiento pequeño. |
-| **Alcance y profundidad** | Ejemplo de operator preparado; no añadir Crossplane. La clase completa se reserva a operators; Go se aprende leyendo/modificando el ejemplo. |
-| **Requisitos de preparación** | Proyecto Go con Kubebuilder/Operator SDK, CRD y operator ejecutable preparados. |
-| **Contenido complementario** | Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero. |
 
 <a id="sesion-26"></a>
 
@@ -515,8 +483,6 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 | **Alcance y profundidad** | Comparación y ejemplo entre clústeres, no desplegar tres redes desde cero. |
 | **Requisitos de preparación** | Entorno/diagramas multi-cluster y conectividad entre clústeres comprobados. |
 | **Contenido complementario** | Desplegar las tres soluciones desde cero. |
-
-## PF · Trabajo Final
 
 <a id="sesion-30"></a>
 

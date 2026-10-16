@@ -22,8 +22,8 @@ M1 combina **3h propias y 6h integradas**: 9h de contenido incluidas en las 90h 
 | 2 · AWS: fundamentos y aprovisionamiento como código | Python para consultar recursos; generación y revisión de código con IA | 1h |
 | 3 · Azure: fundamentos y aprovisionamiento como código | Adaptación de scripts, configuración y tratamiento de resultados | 1h |
 | 4 · GCP: fundamentos y aprovisionamiento como código | Reutilización de la automatización y comparación de implementaciones | 1h |
-| 19 · Automatización de pipelines: scripting, Tekton y Trivy | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
-| 25 · Desarrollo de operators: Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
+| 17 · Automatización de pipelines: scripting, Tekton y Trivy | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
+| 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
 
 Las horas compartidas no se suman de nuevo al total. La docencia corresponde al profesor de cada clase.
 
@@ -273,9 +273,33 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Ampliación:** Creación de charts complejos desde cero y catálogo de plugins.
 
-### Sesión 14 · Infraestructura declarativa: DNS, certificados y recursos cloud
+## M6 · Operators — sesión intercalada
+
+Sesión de 3h impartida después de Kustomize y Helm. El bloque M6 suma 5 sesiones / 15h, con continuidad en las sesiones 26–29.
+
+### Sesión 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK
 
 **Fecha:** 12/01/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
+
+**Contenido de M1:** Go aplicado y lectura/modificación del controlador. **Dedicación:** 1,5h incluidas en esta clase.
+
+**Objetivo:** Reconocer cuándo un operator automatiza conocimiento operativo.
+
+**Contenido principal:**
+
+- CRD, estado deseado y reconciliación.
+- Go mínimo para leer tipos/structs/errores.
+- Organización de Kubebuilder/Operator SDK.
+
+**Práctica / evidencia:** Leer un operator preparado, crear un recurso, observar actuación y modificar un comportamiento pequeño.
+
+**Ampliación:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero.
+
+## M4 · Continuación
+
+### Sesión 15 · Infraestructura declarativa: DNS, certificados y recursos cloud
+
+**Fecha:** 14/01/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Gestionar DNS, certificados y un recurso cloud mediante controladores declarativos.
 
@@ -292,9 +316,9 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Ampliación:** DNSSEC/DoH, operación DNS avanzada, Crossplane Compositions/XRDs avanzados y Composition Functions.
 
-### Sesión 15 · Gestión de secretos externos: Vault y External Secrets Operator
+### Sesión 16 · Gestión de secretos externos: Vault y External Secrets Operator
 
-**Fecha:** 14/01/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
+**Fecha:** 19/01/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Separar secretos de manifiestos y aplicar identidad y permisos de acceso.
 
@@ -314,66 +338,9 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 9 sesiones · 27h · 2 ECTS.
 
-### Sesión 16 · Métricas y alertas: Prometheus, PromQL y Alertmanager
+### Sesión 17 · Automatización de pipelines: scripting, Tekton y Trivy
 
-**Fecha:** 19/01/2027 · 18:00–21:00 · **Docente:** David Girón.
-
-**Objetivo:** Detectar fallos mediante métricas y definir cuándo alertar.
-
-**Contenido principal:**
-
-- Contadores/histogramas, labels/cardinalidad.
-- Scraping/exporters.
-- Operator, ServiceMonitor/PodMonitor.
-- Tasas, errores, latencia y agregación.
-- Reglas, routing y silencios.
-- Introducción Mimir.
-
-**Práctica / evidencia:** kube-prometheus-stack preparado, conectar la app, provocar errores/carga, consultar y comprobar una alerta.
-
-**Ampliación:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
-
-### Sesión 17 · Dashboards y logs: Grafana, Loki y Alloy
-
-**Fecha:** 21/01/2027 · 18:00–21:00 · **Docente:** David Girón.
-
-**Objetivo:** Pasar de un síntoma en métricas a mensajes que explican el fallo.
-
-**Contenido principal:**
-
-- Datasources, paneles y variables.
-- Dashboard de tráfico/errores/latencia.
-- Labels frente a campos de logs.
-- Alloy para logs de Pods.
-- LogQL, Explore y JSON.
-
-**Práctica / evidencia:** Provocar fallo, detectarlo en el dashboard y localizar logs del mismo intervalo con configuración guiada de Alloy.
-
-**Ampliación:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
-
-### Sesión 18 · Trazas distribuidas y correlación: OpenTelemetry y Tempo
-
-**Fecha:** 26/01/2027 · 18:00–21:00 · **Docente:** David Girón.
-
-**Objetivo:** Localizar dónde se atasca una petición entre servicios.
-
-**Contenido principal:**
-
-- Spans, contexto y propagación.
-- Instrumentación automática.
-- Receivers/processors/exporters.
-- Tempo/Grafana.
-- Trace ID en logs, enlaces y exemplars cuando proceda.
-
-**Práctica / evidencia:** Dos servicios preparados, provocar latencia y recorrer métrica→traza→logs; Collector para trazas y Alloy para logs.
-
-**Ampliación:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo.
-
-**Preparación:** trace ID en logs, propagación entre servicios y enlaces Grafana comprobados. Alloy y Collector tienen capacidades solapadas; el reparto logs/trazas facilita la continuidad del laboratorio.
-
-### Sesión 19 · Automatización de pipelines: scripting, Tekton y Trivy
-
-**Fecha:** 28/01/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
+**Fecha:** 21/01/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Contenido de M1:** Bash/Python, errores, validaciones y ejecución automatizada. **Dedicación:** 1,5h incluidas en esta clase.
 
@@ -395,9 +362,9 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Continuidad:** Git mínimo antes de ejecutar pipelines; colaboración mediante PR en la sesión posterior. Puente Prow/Tekton preparado: no asumir integración automática universal.
 
-### Sesión 20 · Colaboración y validación de cambios: Git y Prow
+### Sesión 18 · Colaboración y validación de cambios: Git y Prow
 
-**Fecha:** 02/02/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
+**Fecha:** 26/01/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Conectar un cambio revisado con las comprobaciones conocidas de CI.
 
@@ -411,9 +378,9 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Ampliación:** Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas.
 
-### Sesión 21 · Despliegue declarativo y reconciliación: GitOps con ArgoCD
+### Sesión 19 · Despliegue declarativo y reconciliación: GitOps con ArgoCD
 
-**Fecha:** 04/02/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
+**Fecha:** 28/01/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Reconciliar el estado del repositorio con Kubernetes.
 
@@ -428,9 +395,66 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Ampliación:** ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves.
 
-### Sesión 22 · Entrada de tráfico y service mesh: Traefik e Istio
+### Sesión 20 · Métricas y alertas: Prometheus, PromQL y Alertmanager
+
+**Fecha:** 02/02/2027 · 18:00–21:00 · **Docente:** David Girón.
+
+**Objetivo:** Detectar fallos mediante métricas y definir cuándo alertar.
+
+**Contenido principal:**
+
+- Contadores/histogramas, labels/cardinalidad.
+- Scraping/exporters.
+- Operator, ServiceMonitor/PodMonitor.
+- Tasas, errores, latencia y agregación.
+- Reglas, routing y silencios.
+- Introducción Mimir.
+
+**Práctica / evidencia:** kube-prometheus-stack preparado, conectar la app, provocar errores/carga, consultar y comprobar una alerta.
+
+**Ampliación:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
+
+### Sesión 21 · Dashboards y logs: Grafana, Loki y Alloy
+
+**Fecha:** 04/02/2027 · 18:00–21:00 · **Docente:** David Girón.
+
+**Objetivo:** Pasar de un síntoma en métricas a mensajes que explican el fallo.
+
+**Contenido principal:**
+
+- Datasources, paneles y variables.
+- Dashboard de tráfico/errores/latencia.
+- Labels frente a campos de logs.
+- Alloy para logs de Pods.
+- LogQL, Explore y JSON.
+
+**Práctica / evidencia:** Provocar fallo, detectarlo en el dashboard y localizar logs del mismo intervalo con configuración guiada de Alloy.
+
+**Ampliación:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
+
+### Sesión 22 · Trazas distribuidas y correlación: OpenTelemetry y Tempo
 
 **Fecha:** 11/02/2027 · 18:00–21:00 · **Docente:** David Girón.
+
+**Objetivo:** Localizar dónde se atasca una petición entre servicios.
+
+**Contenido principal:**
+
+- Spans, contexto y propagación.
+- Instrumentación automática.
+- Receivers/processors/exporters.
+- Tempo/Grafana.
+- Trace ID en logs, enlaces y exemplars cuando proceda.
+
+**Práctica / evidencia:** Dos servicios preparados, provocar latencia y recorrer métrica→traza→logs; Collector para trazas y Alloy para logs.
+
+**Ampliación:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo.
+
+**Preparación:** trace ID en logs, propagación entre servicios y enlaces Grafana comprobados. Alloy y Collector tienen capacidades solapadas; el reparto logs/trazas facilita la continuidad del laboratorio.
+
+### Sesión 23 · Entrada de tráfico y service mesh: Traefik e Istio
+
+**Fecha:** 16/02/2027 · 18:00–21:00 · **Docente:** David Girón.
 
 **Objetivo:** Distinguir entrada externa y comunicación segura entre servicios.
 
@@ -444,9 +468,9 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Ampliación:** Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo.
 
-### Sesión 23 · Entrega progresiva: canary y blue/green con Argo Rollouts
+### Sesión 24 · Entrega progresiva: canary y blue/green con Argo Rollouts
 
-**Fecha:** 16/02/2027 · 18:00–21:00 · **Docente:** David Girón.
+**Fecha:** 18/02/2027 · 18:00–21:00 · **Docente:** David Girón.
 
 **Objetivo:** Desplegar versiones con métricas que deciden avance o rollback.
 
@@ -461,9 +485,9 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Ampliación:** Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking.
 
-### Sesión 24 · Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter
+### Sesión 25 · Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter
 
-**Fecha:** 18/02/2027 · 18:00–21:00 · **Docente:** David Girón.
+**Fecha:** 23/02/2027 · 18:00–21:00 · **Docente:** David Girón.
 
 **Objetivo:** Distinguir ajuste de recursos, réplicas y capacidad de nodos.
 
@@ -482,27 +506,9 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ## M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster
 
-5 sesiones · 15h · 2 ECTS.
+4 sesiones restantes · 12h · 2 ECTS.
 
-Enfoque: problema → concepto → ejemplo → cuándo usarlo. Docencia: Rael Garcia (operators) y Marc Catrisse (resto del bloque).
-
-### Sesión 25 · Desarrollo de operators: Go y Kubebuilder/Operator SDK
-
-**Fecha:** 23/02/2027 · 18:00–21:00 · **Docente:** Rael Garcia.
-
-**Contenido de M1:** Go aplicado y lectura/modificación del controlador. **Dedicación:** 1,5h incluidas en esta clase.
-
-**Objetivo:** Reconocer cuándo un operator automatiza conocimiento operativo.
-
-**Contenido principal:**
-
-- CRD, estado deseado y reconciliación.
-- Go mínimo para leer tipos/structs/errores.
-- Organización de Kubebuilder/Operator SDK.
-
-**Práctica / evidencia:** Leer un operator preparado, crear un recurso, observar actuación y modificar un comportamiento pequeño.
-
-**Ampliación:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero.
+Enfoque: problema → concepto → ejemplo → cuándo usarlo. Docencia: Marc Catrisse. La sesión de operators, impartida por Rael Garcia, se desarrolla previamente.
 
 ### Sesión 26 · Políticas de admisión y recuperación: OPA/Gatekeeper y Velero
 
@@ -615,18 +621,18 @@ Material complementario para profundizar mediante trabajo autónomo o formación
 - **Sesión 11 · Kubernetes en AWS: EKS y clústeres autogestionados con kOps:** Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad.
 - **Sesión 12 · Kubernetes en Azure y GCP: AKS y GKE:** Instalaciones completas independientes y catálogo de add-ons de ambos proveedores.
 - **Sesión 13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm:** Creación de charts complejos desde cero y catálogo de plugins.
-- **Sesión 14 · Infraestructura declarativa: DNS, certificados y recursos cloud:** DNSSEC/DoH, operación DNS avanzada, Crossplane Compositions/XRDs avanzados y Composition Functions.
-- **Sesión 15 · Gestión de secretos externos: Vault y External Secrets Operator:** HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state.
-- **Sesión 16 · Métricas y alertas: Prometheus, PromQL y Alertmanager:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
-- **Sesión 17 · Dashboards y logs: Grafana, Loki y Alloy:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
-- **Sesión 18 · Trazas distribuidas y correlación: OpenTelemetry y Tempo:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo.
-- **Sesión 19 · Automatización de pipelines: scripting, Tekton y Trivy:** Curso completo de Bash/Python; Triggers/Chains avanzados y attestations.
-- **Sesión 20 · Colaboración y validación de cambios: Git y Prow:** Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas.
-- **Sesión 21 · Despliegue declarativo y reconciliación: GitOps con ArgoCD:** ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves.
-- **Sesión 22 · Entrada de tráfico y service mesh: Traefik e Istio:** Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo.
-- **Sesión 23 · Entrega progresiva: canary y blue/green con Argo Rollouts:** Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking.
-- **Sesión 24 · Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter:** Catálogo triggers, métricas complejas, tuning, políticas Spot/capacidad y optimización profunda de costes; evitar controladores compitiendo.
-- **Sesión 25 · Desarrollo de operators: Go y Kubebuilder/Operator SDK:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero.
+- **Sesión 15 · Infraestructura declarativa: DNS, certificados y recursos cloud:** DNSSEC/DoH, operación DNS avanzada, Crossplane Compositions/XRDs avanzados y Composition Functions.
+- **Sesión 16 · Gestión de secretos externos: Vault y External Secrets Operator:** HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state.
+- **Sesión 20 · Métricas y alertas: Prometheus, PromQL y Alertmanager:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
+- **Sesión 21 · Dashboards y logs: Grafana, Loki y Alloy:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
+- **Sesión 22 · Trazas distribuidas y correlación: OpenTelemetry y Tempo:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo.
+- **Sesión 17 · Automatización de pipelines: scripting, Tekton y Trivy:** Curso completo de Bash/Python; Triggers/Chains avanzados y attestations.
+- **Sesión 18 · Colaboración y validación de cambios: Git y Prow:** Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas.
+- **Sesión 19 · Despliegue declarativo y reconciliación: GitOps con ArgoCD:** ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves.
+- **Sesión 23 · Entrada de tráfico y service mesh: Traefik e Istio:** Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo.
+- **Sesión 24 · Entrega progresiva: canary y blue/green con Argo Rollouts:** Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking.
+- **Sesión 25 · Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter:** Catálogo triggers, métricas complejas, tuning, políticas Spot/capacidad y optimización profunda de costes; evitar controladores compitiendo.
+- **Sesión 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero.
 - **Sesión 26 · Políticas de admisión y recuperación: OPA/Gatekeeper y Velero:** Políticas Rego complejas, catálogo de políticas, recuperación productiva avanzada, firmas y attestations.
 - **Sesión 27 · Gestión de clústeres: Cluster API y Hosted Control Planes:** Instalación de todos los productos y operación avanzada.
 - **Sesión 28 · Serverless en Kubernetes: Knative y Virtual Kubelet:** Knative Eventing avanzado, plataforma serverless completa y desarrollo de providers Virtual Kubelet.

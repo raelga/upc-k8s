@@ -1,3 +1,11 @@
+## Disponibilidad de Rael: calendario actualizado
+
+Acuerdo aplicado: operators después de Helm, sesión 14 el 12/01/2027. Tekton/Git-Prow/ArgoCD antes de observabilidad: sesiones 17–19, 21/01, 26/01 y 28/01 con Rael. Observabilidad sesiones 20–22, 02/02, 04/02 y 11/02 con David. Rael termina clases de contenido el 28/01, sin clases desde segunda semana de febrero; conserva defensa TFG 18/03. M1 transversal: sesiones 1,2,3,4,14,17. Total y docentes sin cambios. Esta nota prevalece sobre fechas provisionales inferiores.
+
+## Operators adelantado por disponibilidad docente
+
+Rael estará de vacaciones desde la segunda semana de febrero. Operators se mueve después de Kustomize/Helm: sesión 14, 12/01/2027, Rael Garcia, contenido curricular M6 intercalado en M4. Sesiones intermedias se desplazan una posición; última clase de Rael antes de vacaciones: ArgoCD, sesión 22, 04/02/2027. Conserva TFG 18/03. Marc mantiene 26–29. Sin cambios en 30/90h ni cobertura M1 (Tekton ahora 20, operators 14).
+
 ## Cambio docente de operators
 
 Sesión 25, Desarrollo de operators: Go y Kubebuilder/Operator SDK (23/02/2027), asignada a Rael Garcia. Marc Catrisse conserva sesiones 26–29. Rael: 18 clases/54h de contenido más TFG compartido; Marc: 4/12h. Fechas, contenidos y total 30/90h sin cambios. Actualizados documentos y datos de 2026.

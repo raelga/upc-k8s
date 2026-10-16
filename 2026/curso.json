@@ -265,6 +265,29 @@
     },
     {
       "number": 14,
+      "module": "M6",
+      "title": "Desarrollo de operators: Go y Kubebuilder/Operator SDK",
+      "teacher": "Rael Garcia",
+      "load": "amarillo",
+      "objective": "Reconocer cuándo un operator automatiza conocimiento operativo",
+      "contents": [
+        "CRD, estado deseado y reconciliación",
+        "Go mínimo para leer tipos/structs/errores",
+        "organización de Kubebuilder/Operator SDK"
+      ],
+      "lab": "Leer un operator preparado, crear un recurso, observar actuación y modificar un comportamiento pequeño",
+      "extras": "Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero",
+      "date": "2027-01-12",
+      "transversal_contents": [
+        {
+          "module": "M1",
+          "hours": 1.5,
+          "scope": "Go aplicado y lectura/modificación del controlador"
+        }
+      ]
+    },
+    {
+      "number": 15,
       "module": "M4",
       "title": "Infraestructura declarativa: DNS, certificados y recursos cloud",
       "teacher": "Rael Garcia",
@@ -280,11 +303,11 @@
       ],
       "lab": "Publicar DNS y verificar HTTPS con ExternalDNS/cert-manager sobre Cloudflare; demostrar con configuración preparada un recurso cloud gestionado por Crossplane",
       "extras": "DNSSEC/DoH, operación DNS avanzada, Crossplane Compositions/XRDs avanzados y Composition Functions",
-      "date": "2027-01-12",
+      "date": "2027-01-14",
       "transversal_contents": []
     },
     {
-      "number": 15,
+      "number": 16,
       "module": "M4",
       "title": "Gestión de secretos externos: Vault y External Secrets Operator",
       "teacher": "Rael Garcia",
@@ -299,69 +322,11 @@
       ],
       "lab": "Aplicación consume secreto externo, modificarlo y comprobar sincronización y comportamiento de la aplicación",
       "extras": "HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state",
-      "date": "2027-01-14",
-      "transversal_contents": []
-    },
-    {
-      "number": 16,
-      "module": "M5",
-      "title": "Métricas y alertas: Prometheus, PromQL y Alertmanager",
-      "teacher": "David Girón",
-      "load": "amarillo",
-      "objective": "Detectar fallos mediante métricas y definir cuándo alertar",
-      "contents": [
-        "Contadores/histogramas, labels/cardinalidad",
-        "scraping/exporters",
-        "Operator, ServiceMonitor/PodMonitor",
-        "tasas, errores, latencia y agregación",
-        "reglas, routing y silencios",
-        "introducción Mimir"
-      ],
-      "lab": "kube-prometheus-stack preparado, conectar la app, provocar errores/carga, consultar y comprobar una alerta",
-      "extras": "HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre",
       "date": "2027-01-19",
       "transversal_contents": []
     },
     {
       "number": 17,
-      "module": "M5",
-      "title": "Dashboards y logs: Grafana, Loki y Alloy",
-      "teacher": "David Girón",
-      "load": "amarillo",
-      "objective": "Pasar de un síntoma en métricas a mensajes que explican el fallo",
-      "contents": [
-        "Datasources, paneles y variables",
-        "dashboard de tráfico/errores/latencia",
-        "labels frente a campos de logs",
-        "Alloy para logs de Pods",
-        "LogQL, Explore y JSON"
-      ],
-      "lab": "Provocar fallo, detectarlo en el dashboard y localizar logs del mismo intervalo con configuración guiada de Alloy",
-      "extras": "Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy",
-      "date": "2027-01-21",
-      "transversal_contents": []
-    },
-    {
-      "number": 18,
-      "module": "M5",
-      "title": "Trazas distribuidas y correlación: OpenTelemetry y Tempo",
-      "teacher": "David Girón",
-      "load": "amarillo",
-      "objective": "Localizar dónde se atasca una petición entre servicios",
-      "contents": [
-        "Spans, contexto y propagación",
-        "instrumentación automática",
-        "receivers/processors/exporters",
-        "Tempo/Grafana",
-        "trace ID en logs, enlaces y exemplars cuando proceda"
-      ],
-      "lab": "Dos servicios preparados, provocar latencia y recorrer métrica→traza→logs; Collector para trazas y Alloy para logs",
-      "extras": "SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo",
-      "date": "2027-01-26",
-      "transversal_contents": []
-    },
-    {
-      "number": 19,
       "module": "M5",
       "title": "Automatización de pipelines: scripting, Tekton y Trivy",
       "teacher": "Rael Garcia",
@@ -378,7 +343,7 @@
       ],
       "lab": "Conectar tareas preparadas build → test → scan → publicación; provocar un fallo de Trivy, interpretar el resultado, corregir la imagen y repetir el pipeline",
       "extras": "Curso completo de Bash/Python; Triggers/Chains avanzados y attestations",
-      "date": "2027-01-28",
+      "date": "2027-01-21",
       "transversal_contents": [
         {
           "module": "M1",
@@ -388,7 +353,7 @@
       ]
     },
     {
-      "number": 20,
+      "number": 18,
       "module": "M5",
       "title": "Colaboración y validación de cambios: Git y Prow",
       "teacher": "Rael Garcia",
@@ -401,11 +366,11 @@
       ],
       "lab": "Prow preparado, abrir un PR, observar validaciones y resolver un fallo antes del merge",
       "extras": "Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas",
-      "date": "2027-02-02",
+      "date": "2027-01-26",
       "transversal_contents": []
     },
     {
-      "number": 21,
+      "number": 19,
       "module": "M5",
       "title": "Despliegue declarativo y reconciliación: GitOps con ArgoCD",
       "teacher": "Rael Garcia",
@@ -419,11 +384,69 @@
       ],
       "lab": "Desplegar imagen producida por CI, modificar manifiesto mediante PR, observar sync y provocar drift manual",
       "extras": "ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves",
+      "date": "2027-01-28",
+      "transversal_contents": []
+    },
+    {
+      "number": 20,
+      "module": "M5",
+      "title": "Métricas y alertas: Prometheus, PromQL y Alertmanager",
+      "teacher": "David Girón",
+      "load": "amarillo",
+      "objective": "Detectar fallos mediante métricas y definir cuándo alertar",
+      "contents": [
+        "Contadores/histogramas, labels/cardinalidad",
+        "scraping/exporters",
+        "Operator, ServiceMonitor/PodMonitor",
+        "tasas, errores, latencia y agregación",
+        "reglas, routing y silencios",
+        "introducción Mimir"
+      ],
+      "lab": "kube-prometheus-stack preparado, conectar la app, provocar errores/carga, consultar y comprobar una alerta",
+      "extras": "HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre",
+      "date": "2027-02-02",
+      "transversal_contents": []
+    },
+    {
+      "number": 21,
+      "module": "M5",
+      "title": "Dashboards y logs: Grafana, Loki y Alloy",
+      "teacher": "David Girón",
+      "load": "amarillo",
+      "objective": "Pasar de un síntoma en métricas a mensajes que explican el fallo",
+      "contents": [
+        "Datasources, paneles y variables",
+        "dashboard de tráfico/errores/latencia",
+        "labels frente a campos de logs",
+        "Alloy para logs de Pods",
+        "LogQL, Explore y JSON"
+      ],
+      "lab": "Provocar fallo, detectarlo en el dashboard y localizar logs del mismo intervalo con configuración guiada de Alloy",
+      "extras": "Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy",
       "date": "2027-02-04",
       "transversal_contents": []
     },
     {
       "number": 22,
+      "module": "M5",
+      "title": "Trazas distribuidas y correlación: OpenTelemetry y Tempo",
+      "teacher": "David Girón",
+      "load": "amarillo",
+      "objective": "Localizar dónde se atasca una petición entre servicios",
+      "contents": [
+        "Spans, contexto y propagación",
+        "instrumentación automática",
+        "receivers/processors/exporters",
+        "Tempo/Grafana",
+        "trace ID en logs, enlaces y exemplars cuando proceda"
+      ],
+      "lab": "Dos servicios preparados, provocar latencia y recorrer métrica→traza→logs; Collector para trazas y Alloy para logs",
+      "extras": "SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo",
+      "date": "2027-02-11",
+      "transversal_contents": []
+    },
+    {
+      "number": 23,
       "module": "M5",
       "title": "Entrada de tráfico y service mesh: Traefik e Istio",
       "teacher": "David Girón",
@@ -436,11 +459,11 @@
       ],
       "lab": "Componentes preparados, modificar pocas reglas, comprobar acceso y comunicación y observar reparto de tráfico",
       "extras": "Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo",
-      "date": "2027-02-11",
+      "date": "2027-02-16",
       "transversal_contents": []
     },
     {
-      "number": 23,
+      "number": 24,
       "module": "M5",
       "title": "Entrega progresiva: canary y blue/green con Argo Rollouts",
       "teacher": "David Girón",
@@ -454,11 +477,11 @@
       ],
       "lab": "Canary principal sobre la misma app, provocar degradación y comprobar retorno; blue/green como comparación",
       "extras": "Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking",
-      "date": "2027-02-16",
+      "date": "2027-02-18",
       "transversal_contents": []
     },
     {
-      "number": 24,
+      "number": 25,
       "module": "M5",
       "title": "Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter",
       "teacher": "David Girón",
@@ -472,31 +495,8 @@
       ],
       "lab": "Generar carga, observar HPA; consulta VPA; demos preparadas de cola KEDA y provisión/consolidación de nodos",
       "extras": "Catálogo triggers, métricas complejas, tuning, políticas Spot/capacidad y optimización profunda de costes; evitar controladores compitiendo",
-      "date": "2027-02-18",
-      "transversal_contents": []
-    },
-    {
-      "number": 25,
-      "module": "M6",
-      "title": "Desarrollo de operators: Go y Kubebuilder/Operator SDK",
-      "teacher": "Rael Garcia",
-      "load": "amarillo",
-      "objective": "Reconocer cuándo un operator automatiza conocimiento operativo",
-      "contents": [
-        "CRD, estado deseado y reconciliación",
-        "Go mínimo para leer tipos/structs/errores",
-        "organización de Kubebuilder/Operator SDK"
-      ],
-      "lab": "Leer un operator preparado, crear un recurso, observar actuación y modificar un comportamiento pequeño",
-      "extras": "Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero",
       "date": "2027-02-23",
-      "transversal_contents": [
-        {
-          "module": "M1",
-          "hours": 1.5,
-          "scope": "Go aplicado y lectura/modificación del controlador"
-        }
-      ]
+      "transversal_contents": []
     },
     {
       "number": 26,

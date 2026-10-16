@@ -13,9 +13,9 @@ UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 | M1 · Fundamentos DevOps, Platform Engineering y Programación para Infraestructura | 1 (1) | 3h | 1.5 | René Serral |
 | M2 · Cloud Computing Multicloud e Infraestructura como Código | 2–4 (3) | 9h | 1 | Rael Garcia |
 | M3 · Contenedores y Kubernetes Core. Ecosistema OCI | 5–10 (6) | 18h | 2 | Rael Garcia |
-| M4 · Kubernetes en Producción y Ecosistema Cloud Native | 11–15 (5) | 15h | 2 | Rael Garcia |
-| M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado | 16–24 (9) | 27h | 2 | David Girón, Rael Garcia |
-| M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 25–29 (5) | 15h | 2 | Rael Garcia, Marc Catrisse |
+| M4 · Kubernetes en Producción y Ecosistema Cloud Native | 11–13, 15–16 (5) | 15h | 2 | Rael Garcia |
+| M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado | 17–25 (9) | 27h | 2 | David Girón, Rael Garcia |
+| M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 14, 26–29 (5) | 15h | 2 | Rael Garcia, Marc Catrisse |
 | PF · Trabajo Final | 30 (1) | 3h | 1.5 | René Serral y Rael Garcia |
 | **Total** | **30** | **90h** | **12** | |
 
@@ -46,8 +46,8 @@ M1 combina **3h propias y 6h integradas**: 9h de contenido incluidas en las 90h 
 | 2 · AWS: fundamentos y aprovisionamiento como código | Python para consultar recursos; generación y revisión de código con IA | 1h |
 | 3 · Azure: fundamentos y aprovisionamiento como código | Adaptación de scripts, configuración y tratamiento de resultados | 1h |
 | 4 · GCP: fundamentos y aprovisionamiento como código | Reutilización de la automatización y comparación de implementaciones | 1h |
-| 19 · Automatización de pipelines: scripting, Tekton y Trivy | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
-| 25 · Desarrollo de operators: Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
+| 17 · Automatización de pipelines: scripting, Tekton y Trivy | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
+| 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
 
 Las horas compartidas no se suman de nuevo al total. La docencia corresponde al profesor de cada clase.
 
@@ -68,18 +68,18 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 | 11 | M4 | Kubernetes en AWS: EKS y clústeres autogestionados con kOps | Rael Garcia |
 | 12 | M4 | Kubernetes en Azure y GCP: AKS y GKE | Rael Garcia |
 | 13 | M4 | Configuración y empaquetado de aplicaciones: Kustomize y Helm | Rael Garcia |
-| 14 | M4 | Infraestructura declarativa: DNS, certificados y recursos cloud | Rael Garcia |
-| 15 | M4 | Gestión de secretos externos: Vault y External Secrets Operator | Rael Garcia |
-| 16 | M5 | Métricas y alertas: Prometheus, PromQL y Alertmanager | David Girón |
-| 17 | M5 | Dashboards y logs: Grafana, Loki y Alloy | David Girón |
-| 18 | M5 | Trazas distribuidas y correlación: OpenTelemetry y Tempo | David Girón |
-| 19 | M5 + M1 | Automatización de pipelines: scripting, Tekton y Trivy | Rael Garcia |
-| 20 | M5 | Colaboración y validación de cambios: Git y Prow | Rael Garcia |
-| 21 | M5 | Despliegue declarativo y reconciliación: GitOps con ArgoCD | Rael Garcia |
-| 22 | M5 | Entrada de tráfico y service mesh: Traefik e Istio | David Girón |
-| 23 | M5 | Entrega progresiva: canary y blue/green con Argo Rollouts | David Girón |
-| 24 | M5 | Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter | David Girón |
-| 25 | M6 + M1 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | Rael Garcia |
+| 14 | M6 + M1 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | Rael Garcia |
+| 15 | M4 | Infraestructura declarativa: DNS, certificados y recursos cloud | Rael Garcia |
+| 16 | M4 | Gestión de secretos externos: Vault y External Secrets Operator | Rael Garcia |
+| 17 | M5 + M1 | Automatización de pipelines: scripting, Tekton y Trivy | Rael Garcia |
+| 18 | M5 | Colaboración y validación de cambios: Git y Prow | Rael Garcia |
+| 19 | M5 | Despliegue declarativo y reconciliación: GitOps con ArgoCD | Rael Garcia |
+| 20 | M5 | Métricas y alertas: Prometheus, PromQL y Alertmanager | David Girón |
+| 21 | M5 | Dashboards y logs: Grafana, Loki y Alloy | David Girón |
+| 22 | M5 | Trazas distribuidas y correlación: OpenTelemetry y Tempo | David Girón |
+| 23 | M5 | Entrada de tráfico y service mesh: Traefik e Istio | David Girón |
+| 24 | M5 | Entrega progresiva: canary y blue/green con Argo Rollouts | David Girón |
+| 25 | M5 | Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter | David Girón |
 | 26 | M6 | Políticas de admisión y recuperación: OPA/Gatekeeper y Velero | Marc Catrisse |
 | 27 | M6 | Gestión de clústeres: Cluster API y Hosted Control Planes | Marc Catrisse |
 | 28 | M6 | Serverless en Kubernetes: Knative y Virtual Kubelet | Marc Catrisse |
@@ -93,3 +93,5 @@ Construcción progresiva de una plataforma a partir de las prácticas: IaC en un
 **Entregables:** repositorio reproducible, memoria de arquitectura y decisiones técnicas, runbooks, demo funcional con diagnóstico/recuperación y defensa oral. La evaluación considera funcionalidad, reproducibilidad, seguridad, observabilidad, justificación de decisiones, costes, documentación y defensa. Las ampliaciones avanzadas no son obligatorias.
 
 **Presentación y defensa:** sesión 30, **18/03/2027, 18:00–21:00**, con **René Serral y Rael Garcia**, incluida en las 90h. Desarrollo y consolidación mediante trabajo autónomo durante el curso. La última clase de contenido es el 11/03 y el 16/03 queda libre para finalizar el proyecto.
+
+La sesión de operators de M6 se imparte después de Kustomize y Helm; el resto de M6 continúa al final del programa.
