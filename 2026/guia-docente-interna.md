@@ -498,3 +498,16 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 | **Alcance y profundidad** | Ajustar duración de demos y preguntas al número de equipos. Una sesión dentro de las 30/90h, impartida por René Serral y Rael Garcia; trabajo autónomo previo. |
 | **Requisitos de preparación** | Repositorio, memoria y demostración de cada equipo; orden y tiempos de defensa definidos. |
 | **Contenido complementario** | Ampliaciones voluntarias del proyecto; las tecnologías de profundización no son requisitos obligatorios.  |
+
+## Referencias docentes y evaluación
+
+Bibliografía de apoyo recuperada del roadmap anterior; no añade contenidos obligatorios ni amplía las prácticas:
+
+- **M1:** *The Phoenix Project* (Kim, Behr, Spafford), *Team Topologies* (Skelton, Pais), *The DevOps Handbook* y documentación oficial de Bash y Python.
+- **M2:** documentación de AWS, Azure, GCP, Terraform y OpenTofu; Pulumi como referencia comparativa.
+- **M3:** *Kubernetes in Action* (Lukša), *Programming Kubernetes* (Hausenblas, Schimanski), documentación de Kubernetes y currículos CKA/CKAD/CKS.
+- **M4:** documentación de EKS/GKE/AKS, Helm, Kustomize, cert-manager, ExternalDNS, Crossplane y External Secrets Operator; currículo Vault Associate.
+- **M5:** documentación de Prometheus, Grafana, OpenTelemetry, Git, ArgoCD, Prow, Tekton, Istio, Argo Rollouts y KEDA.
+- **M6:** *Programming Kubernetes*, Kubebuilder Book y documentación de Cluster API, Knative, vCluster, HyperShift, Kamaji y Velero.
+
+Como criterios cualitativos de apoyo, valorar reproducibilidad, claridad de las decisiones, calidad del código, idempotencia y limpieza de recursos cloud, en coherencia con los entregables actuales. Los porcentajes 40/60 y las pruebas asociadas a sesiones históricas no se trasladan a esta edición. La evaluación del Trabajo Final se describe en el syllabus; esta recopilación no establece nuevas ponderaciones ni exige un operator propio o imágenes firmadas.
