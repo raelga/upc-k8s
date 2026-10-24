@@ -33,7 +33,9 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ### Sesión 1 · Fundamentos de DevOps y Platform Engineering
 
-**Fecha:** 03/11/2026 · 18:00–21:00 · **Docente:** René Serral.
+**Fecha:** 03/11/2026 · 18:00–21:00
+
+**Docentes:**<br>René Serral<br>Rael Garcia
 
 **Contenido de M1:** Fundamentos DevOps, cultura, plataformas y métricas. **Dedicación:** 3h incluidas en esta clase.
 
@@ -593,7 +595,9 @@ Enfoque: problema → concepto → ejemplo → cuándo usarlo. Docencia: Marc Ca
 
 ### Sesión 30 · Presentación y defensa del Trabajo Final
 
-**Fecha:** 18/03/2027 · 18:00–21:00 · **Docente:** René Serral y Rael Garcia.
+**Fecha:** 18/03/2027 · 18:00–21:00
+
+**Docentes:**<br>René Serral<br>Rael Garcia
 
 **Objetivo:** Presentar y justificar una plataforma reproducible integrada durante el curso.
 

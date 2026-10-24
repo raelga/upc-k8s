@@ -17,6 +17,7 @@ Entry profile: junior engineers/sysadmins with basic Linux, networking and scrip
 - Last content class: 11/03/2027. No class on 09/03 or 16/03; Christmas breaks include 22/12 and 07/01. See the edition calendar for all non-teaching dates.
 - Six thematic modules plus Proyecto Final. M1 comprises 9h within the 90h: 3 dedicated hours and 6 integrated hours (1h in each cloud-provider session, 1.5h Tekton, 1.5h operators). Do not double-count these hours. Its 1.5 ECTS include assessed autonomous work.
 - Confirmed instructors: René Serral, Rael Garcia, David Girón and Marc Catrisse. Preserve dates and assignments unless explicitly changed.
+- Sessions 1 (Fundamentos de DevOps y Platform Engineering) and 30 (final defense) are both co-taught by René Serral and Rael Garcia. Display one teacher per line; JSON teacher strings and quoted CSV fields use a newline for these shared sessions. Each session counts once toward course hours; content participation is René 1 class/3h and Rael 19 classes/57h, plus the shared defense for both.
 - Keep required core, guided lab and optional extensions distinct. Do not turn advanced extensions into mandatory project requirements.
 - Trivy belongs in Tekton; no separate security session. OPA/Gatekeeper and Velero belong in M6. Crossplane belongs with Cloudflare/ExternalDNS/cert-manager, not operators/Go. Snyk was explicitly excluded.
 - Preserve coverage of advanced Git, Terraform testing/CI, Cloudflare CDN, OIDC, Go and AI-assisted programming as detailed in the internal teaching guide.

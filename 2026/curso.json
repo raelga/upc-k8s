@@ -8,7 +8,7 @@
       "number": 1,
       "module": "M1",
       "title": "Fundamentos de DevOps y Platform Engineering",
-      "teacher": "René Serral",
+      "teacher": "René Serral\nRael Garcia",
       "load": "verde",
       "objective": "Relacionar DevOps, SRE y Platform Engineering con necesidades de una organización",
       "contents": [
@@ -582,7 +582,7 @@
     {
       "module": "PF",
       "title": "Presentación y defensa del Trabajo Final",
-      "teacher": "René Serral y Rael Garcia",
+      "teacher": "René Serral\nRael Garcia",
       "load": "amarillo",
       "objective": "Presentar y justificar una plataforma reproducible integrada durante el curso",
       "contents": [

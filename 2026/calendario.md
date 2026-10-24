@@ -12,7 +12,7 @@
 
 | Fecha | Nº | Sesión | Docente |
 |---|---:|---|---|
-| Mar 03/11 | 1 | Fundamentos de DevOps y Platform Engineering | [René Serral](https://www.linkedin.com/in/ren%C3%A9-serral-graci%C3%A0-9b219648/) |
+| Mar 03/11 | 1 | Fundamentos de DevOps y Platform Engineering | [René Serral](https://www.linkedin.com/in/ren%C3%A9-serral-graci%C3%A0-9b219648/)<br>[Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Jue 05/11 | 2 | AWS: fundamentos y aprovisionamiento como código | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Mar 10/11 | 3 | Azure: fundamentos y aprovisionamiento como código | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Jue 12/11 | 4 | GCP: fundamentos y aprovisionamiento como código | [Rael Garcia](https://www.linkedin.com/in/rael/) |
@@ -63,7 +63,7 @@
 | Mar 02/03 | 27 | Gestión de clústeres: Cluster API y Hosted Control Planes | [Marc Catrisse](https://www.linkedin.com/in/marc-catrisse-99b065128/) |
 | Jue 04/03 | 28 | Serverless en Kubernetes: Knative y Virtual Kubelet | [Marc Catrisse](https://www.linkedin.com/in/marc-catrisse-99b065128/) |
 | Jue 11/03 | 29 | Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner | [Marc Catrisse](https://www.linkedin.com/in/marc-catrisse-99b065128/) |
-| Jue 18/03 | 30 | **Presentación y defensa del Trabajo Final** | [René Serral](https://www.linkedin.com/in/ren%C3%A9-serral-graci%C3%A0-9b219648/) y [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Jue 18/03 | 30 | **Presentación y defensa del Trabajo Final** | [René Serral](https://www.linkedin.com/in/ren%C3%A9-serral-graci%C3%A0-9b219648/)<br>[Rael Garcia](https://www.linkedin.com/in/rael/) |
 
 **11 de marzo:** última clase de contenido. **18 de marzo:** presentación y defensa del TFG con René Serral y Rael Garcia, incluida en las 90 horas.
 

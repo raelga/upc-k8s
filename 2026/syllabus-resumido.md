@@ -10,13 +10,13 @@ UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 
 | Bloque | Sesiones | Horas | ECTS | Docencia |
 |---|---|---:|---:|---|
-| M1 · Fundamentos DevOps, Platform Engineering y Programación para Infraestructura | 1 (1) | 3h | 1.5 | René Serral |
+| M1 · Fundamentos DevOps, Platform Engineering y Programación para Infraestructura | 1 (1) | 3h | 1.5 | René Serral<br>Rael Garcia |
 | M2 · Cloud Computing Multicloud e Infraestructura como Código | 2–4 (3) | 9h | 1 | Rael Garcia |
 | M3 · Contenedores y Kubernetes Core. Ecosistema OCI | 5–10 (6) | 18h | 2 | Rael Garcia |
 | M4 · Kubernetes en Producción y Ecosistema Cloud Native | 11–13, 15–16 (5) | 15h | 2 | Rael Garcia |
 | M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado | 17–25 (9) | 27h | 2 | David Girón, Rael Garcia |
 | M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 14, 26–29 (5) | 15h | 2 | Rael Garcia, Marc Catrisse |
-| PF · Trabajo Final | 30 (1) | 3h | 1.5 | René Serral y Rael Garcia |
+| PF · Trabajo Final | 30 (1) | 3h | 1.5 | René Serral<br>Rael Garcia |
 | **Total** | **30** | **90h** | **12** | |
 
 ## Docencia
@@ -24,11 +24,11 @@ UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 | Docente | Clases de contenido | Horas de contenido | Presentación TFG |
 |---|---:|---:|---|
 | René Serral | 1 | 3h | Sesión 30, junto a Rael Garcia (3h) |
-| Rael Garcia | 18 | 54h | Sesión 30, junto a René Serral (3h) |
+| Rael Garcia | 19 | 57h | Sesión 30, junto a René Serral (3h) |
 | David Girón | 6 | 18h | — |
 | Marc Catrisse | 4 | 12h | — |
 
-La sesión conjunta del TFG suma 3h al curso, aunque cuenta como 3h de participación para cada uno de sus dos docentes.
+Las sesiones 1 y 30 son compartidas por René Serral y Rael Garcia. Cada una suma 3h al curso, aunque cuenta como 3h de participación para cada docente; las horas de participación docente no se suman para calcular las 90h del curso.
 
 ## Metodología y prerrequisitos
 
@@ -61,7 +61,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 | # | Bloque | Sesión | Docente |
 |---:|---|---|---|
-| 1 | M1 | Fundamentos de DevOps y Platform Engineering | René Serral |
+| 1 | M1 | Fundamentos de DevOps y Platform Engineering | René Serral<br>Rael Garcia |
 | 2 | M2 + M1 | AWS: fundamentos y aprovisionamiento como código | Rael Garcia |
 | 3 | M2 + M1 | Azure: fundamentos y aprovisionamiento como código | Rael Garcia |
 | 4 | M2 + M1 | GCP: fundamentos y aprovisionamiento como código | Rael Garcia |
@@ -90,7 +90,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 | 27 | M6 | Gestión de clústeres: Cluster API y Hosted Control Planes | Marc Catrisse |
 | 28 | M6 | Serverless en Kubernetes: Knative y Virtual Kubelet | Marc Catrisse |
 | 29 | M6 | Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner | Marc Catrisse |
-| 30 | PF | Presentación y defensa del Trabajo Final | René Serral y Rael Garcia |
+| 30 | PF | Presentación y defensa del Trabajo Final | René Serral<br>Rael Garcia |
 
 ## Trabajo Final
 

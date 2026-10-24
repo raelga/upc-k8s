@@ -1,5 +1,6 @@
 sesion,fecha,horario,zona_horaria,modulo,titulo,docente,concentracion,contenido_m1,horas_m1_incluidas
-1,2026-11-03,18:00–21:00,Europe/Madrid,M1,Fundamentos de DevOps y Platform Engineering,René Serral,verde,"Fundamentos DevOps, cultura, plataformas y métricas",3
+1,2026-11-03,18:00–21:00,Europe/Madrid,M1,Fundamentos de DevOps y Platform Engineering,"René Serral
+Rael Garcia",verde,"Fundamentos DevOps, cultura, plataformas y métricas",3
 2,2026-11-05,18:00–21:00,Europe/Madrid,M2,AWS: fundamentos y aprovisionamiento como código,Rael Garcia,amarillo,Python para consultar recursos; generación y revisión de código con IA,1
 3,2026-11-10,18:00–21:00,Europe/Madrid,M2,Azure: fundamentos y aprovisionamiento como código,Rael Garcia,amarillo,"Adaptación de scripts, configuración y tratamiento de resultados",1
 4,2026-11-12,18:00–21:00,Europe/Madrid,M2,GCP: fundamentos y aprovisionamiento como código,Rael Garcia,amarillo,Reutilización de la automatización y comparación de implementaciones,1
@@ -28,4 +29,5 @@ sesion,fecha,horario,zona_horaria,modulo,titulo,docente,concentracion,contenido_
 27,2027-03-02,18:00–21:00,Europe/Madrid,M6,Gestión de clústeres: Cluster API y Hosted Control Planes,Marc Catrisse,amarillo,,
 28,2027-03-04,18:00–21:00,Europe/Madrid,M6,Serverless en Kubernetes: Knative y Virtual Kubelet,Marc Catrisse,verde,,
 29,2027-03-11,18:00–21:00,Europe/Madrid,M6,"Conectividad multi-cluster: Istio, Cilium Cluster Mesh y Submariner",Marc Catrisse,amarillo,,
-30,2027-03-18,18:00–21:00,Europe/Madrid,PF,Presentación y defensa del Trabajo Final,René Serral y Rael Garcia,amarillo,,
+30,2027-03-18,18:00–21:00,Europe/Madrid,PF,Presentación y defensa del Trabajo Final,"René Serral
+Rael Garcia",amarillo,,

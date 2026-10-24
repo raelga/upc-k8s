@@ -53,7 +53,9 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 01 · Fundamentos de DevOps y Platform Engineering
 
-**M1 · René Serral · 3 horas · Concentración 🟢 Baja**
+**M1 · 3 horas · Concentración 🟢 Baja**
+
+**Docentes:**<br>René Serral<br>Rael Garcia
 
 | Apartado | Contenido |
 |---|---|
@@ -488,7 +490,9 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 ### 30 · Presentación y defensa del Trabajo Final
 
-**PF · René Serral y Rael Garcia · 3 horas · Concentración 🟡 Media**
+**PF · 3 horas · Concentración 🟡 Media**
+
+**Docentes:**<br>René Serral<br>Rael Garcia
 
 | Apartado | Contenido |
 |---|---|
