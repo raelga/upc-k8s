@@ -14,12 +14,14 @@
 |---|---:|---|---|
 | Mar 03/11 | 1 | Fundamentos de DevOps y Platform Engineering | [René Serral](https://www.linkedin.com/in/ren%C3%A9-serral-graci%C3%A0-9b219648/)<br>[Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Jue 05/11 | 2 | AWS: fundamentos y aprovisionamiento como código | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Mar 10/11 | 3 | Azure: fundamentos y aprovisionamiento como código | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Jue 12/11 | 4 | GCP: fundamentos y aprovisionamiento como código | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Mar 17/11 | 5 | Contenedores y ecosistema OCI: imágenes, runtimes y registros | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Mar 10/11 | 3 | Azure y GCP: transferencia multicloud e IaC | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Jue 12/11 | 4 | Contenedores I: imágenes, ejecución y registros | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Mar 17/11 | 5 | Contenedores II: redes, volúmenes, Compose y diagnóstico | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Jue 19/11 | 6 | Arquitectura de Kubernetes: API, autenticación y permisos | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Mar 24/11 | 7 | Aplicaciones en Kubernetes: workloads, configuración y recursos | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Jue 26/11 | 8 | Persistencia en Kubernetes: almacenamiento y aplicaciones con estado | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+
+**Sesión 1:** presentación de AWS Academy y comprobación de acceso y preparación del laboratorio. Las sesiones 2–3 presentan cloud/IaC: AWS como laboratorio principal y Azure/GCP como transferencia con demostraciones preparadas. Contenedores I y II ocupan las sesiones 4–5, con el entorno Academy validado previamente.
 
 ## Diciembre 2026
 
@@ -77,7 +79,7 @@
 
 ## Contenido transversal
 
-Las sesiones **2, 3, 4, 14 y 17** incluyen programación para infraestructura de M1, además de la clase propia de la sesión 1. La distribución de contenidos y créditos se recoge en los syllabus.
+Las sesiones **2, 3, 5, 14 y 17** incluyen programación para infraestructura de M1, además de la clase propia de la sesión 1. La distribución de contenidos y créditos se recoge en los syllabus.
 
 ## Equipo docente
 

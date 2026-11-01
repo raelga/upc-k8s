@@ -8,6 +8,10 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 30 clases / 90h, incluida la defensa. M1: 9h de contenido propio/transversal, sin duplicarlas en el cómputo.
 
+M3 reúne 7 sesiones / 21h (4–10); M2 reúne 2 sesiones / 6h (2–3), sin cambiar sus ECTS. La sesión 1 incluye la presentación y preparación de AWS Academy dentro de sus 3h compartidas. Las dos clases de contenedores requieren el acceso y entorno Academy preparados y verificados antes de sesión 4. AWS es el laboratorio principal de IaC; Azure y GCP se trabajan mediante demostraciones preparadas y análisis de equivalencias, no mediante dos despliegues completos del alumnado.
+
+La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consultar recursos; generación y revisión de código con IA»; sesión 3, 1h de «Adaptación de scripts, configuración y comparación entre proveedores»; sesión 5, 1h de «Validación Python de los servicios y revisión de código con IA»; operators (14), 1,5h; Tekton (17), 1,5h. Estas horas integradas ya forman parte de las sesiones respectivas.
+
 ## Comprobaciones de cobertura prioritarias
 
 - **Git avanzado:** incluir un ejemplo profesional en sesión 18; PR/commits básicos no bastan por sí solos.
@@ -20,9 +24,9 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 - [01 · Fundamentos de DevOps y Platform Engineering](#sesion-01) — M1
 - [02 · AWS: fundamentos y aprovisionamiento como código](#sesion-02) — M2
-- [03 · Azure: fundamentos y aprovisionamiento como código](#sesion-03) — M2
-- [04 · GCP: fundamentos y aprovisionamiento como código](#sesion-04) — M2
-- [05 · Contenedores y ecosistema OCI: imágenes, runtimes y registros](#sesion-05) — M3
+- [03 · Azure y GCP: transferencia multicloud e IaC](#sesion-03) — M2
+- [04 · Contenedores I: imágenes, ejecución y registros](#sesion-04) — M3
+- [05 · Contenedores II: redes, volúmenes, Compose y diagnóstico](#sesion-05) — M3
 - [06 · Arquitectura de Kubernetes: API, autenticación y permisos](#sesion-06) — M3
 - [07 · Aplicaciones en Kubernetes: workloads, configuración y recursos](#sesion-07) — M3
 - [08 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado](#sesion-08) — M3
@@ -59,11 +63,11 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Contextualización de DevOps y su evolución hacia Platform Engineering.<br>• Presentar la programación asistida por IA como práctica transversal del curso. |
-| **Resultado de aprendizaje** | Relacionar DevOps, SRE y Platform Engineering con necesidades de una organización. |
-| **Actividad práctica** | Propuesta breve de plataforma para una empresa: usuarios, capacidades y criterios de éxito. |
-| **Alcance y profundidad** | Usar el caso común y el material preparado; priorizar comprobación del comportamiento frente a instalación exhaustiva. |
-| **Requisitos de preparación** | Caso de organización y plantilla de propuesta de plataforma. |
+| **Cobertura requerida** | • Contextualización de DevOps y su evolución hacia Platform Engineering.<br>• Presentar la programación asistida por IA como práctica transversal del curso.<br>• Presentar AWS Academy y explicar el acceso y funcionamiento del laboratorio asignado. |
+| **Resultado de aprendizaje** | Relacionar DevOps, SRE y Platform Engineering con necesidades de una organización y acceder al entorno Academy siguiendo las instrucciones del laboratorio asignado. |
+| **Actividad práctica** | Propuesta breve de plataforma para una empresa: usuarios, capacidades y criterios de éxito. Recorrido guiado por Academy: acceder al curso y laboratorio, iniciarlo, localizar credenciales temporales e interpretar estado, tiempo, presupuesto y permisos. Explicar y practicar parada/finalización según las instrucciones del laboratorio, incluida la persistencia y limpieza de recursos. |
+| **Alcance y profundidad** | Integrar el recorrido introductorio de Academy en las 3h existentes, compartidas por René Serral y Rael Garcia, sin añadir horas. No asumir interfaz, tipo de laboratorio ni persistencia universales: mostrar el entorno realmente asignado. Priorizar la comprensión y preparación del laboratorio antes de los contenedores de sesión 4. |
+| **Requisitos de preparación** | Caso de organización y plantilla de propuesta de plataforma. Invitación al curso Academy enviada y acceso comprobado. El docente confirma el laboratorio exacto, sus instrucciones y límites y deja preparado y verificado antes de sesión 4 el entorno de contenedores: runtime disponible y permitido, CLI/Compose, registro, conectividad, puertos y cuotas; comprobar credenciales temporales y reglas de duración, persistencia y limpieza. |
 | **Contenido complementario** | Implantación completa de Backstage y diseño organizativo en profundidad. |
 
 <a id="sesion-02"></a>
@@ -74,57 +78,57 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Recursos fundamentales AWS: computación, redes, almacenamiento, identidad y servicios gestionados.<br>• Aprovisionamiento declarativo con Terraform: HCL y recursos.<br>• Automatización con Python asistida por IA; contenido transversal de M1. |
-| **Resultado de aprendizaje** | Entender una infraestructura AWS pequeña y verificar su funcionamiento mediante código. |
-| **Actividad práctica** | Lanzar el ejemplo preparado, explicar mientras se despliega, modificar una variable, consultar recursos y verificar limpieza; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza. |
-| **Alcance y profundidad** | Un ejemplo cloud pequeño, Python preparado y explicación durante aprovisionamiento. Python/CLI para comprobaciones; no sustituir recursos cloud por un catálogo de sintaxis. AWS Billing y Cost Explorer: consulta por servicio, región y etiquetas; presupuestos y alertas con AWS Budgets. Reservar 15–20 minutos al cierre para costes, alertas y limpieza. Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto. |
-| **Requisitos de preparación** | Cuenta AWS, permisos/cuotas, ejemplo Terraform, CLI y consulta Python comprobados. Acceso de lectura a facturación/costes y permisos para presupuestos; desglose de muestra si los recursos recién creados aún no aparecen. |
+| **Cobertura requerida** | • Recursos fundamentales AWS: computación, redes, almacenamiento, identidad, registros de imágenes y servicios gestionados.<br>• Terraform: HCL, providers, recursos y ciclo plan/apply/destroy.<br>• M1 integrado: 1h de «Python para consultar recursos; generación y revisión de código con IA». |
+| **Resultado de aprendizaje** | Aprovisionar una infraestructura AWS pequeña a partir del ejemplo preparado, interpretar el plan, verificar sus recursos mediante código y destruirlos de forma controlada. |
+| **Actividad práctica** | Laboratorio principal de IaC: leer y modificar HCL, ejecutar plan/apply, consultar recursos con Python/CLI y ejecutar destroy comprobando la limpieza. Generar o revisar el código Python con IA y verificar sus resultados. Identificar recursos facturables y consultar costes y presupuestos. |
+| **Alcance y profundidad** | Usar el entorno Academy presentado en sesión 1 y un ejemplo cloud pequeño y guiado, sin diseño desde cero; introducir variables, outputs y estado para sesión 3. Conservar 1h transversal M1 y 15–20 minutos para AWS Billing/Cost Explorer (consultas y filtros por servicio, región y etiquetas), AWS Budgets, alertas y limpieza. Si Academy restringe estas vistas, mostrarlas desde un entorno docente o con desgloses preparados. Los datos de facturación pueden aparecer con retraso; los presupuestos y sus alertas no detienen automáticamente el gasto. Tampoco interpretar el indicador de presupuesto del laboratorio como una garantía universal de parada automática. |
+| **Requisitos de preparación** | Acceso Academy preparado en sesión 1, permisos/cuotas, Terraform, CLI, ejemplo HCL y consulta Python comprobados. Seguir las reglas del laboratorio asignado sobre credenciales temporales, duración, persistencia y limpieza. Preparar acceso docente a facturación/presupuestos y desgloses de muestra cuando el laboratorio o los retrasos de facturación impidan consultarlos directamente. |
 | **Contenido complementario** | Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless. |
 
 <a id="sesion-03"></a>
 
-### 03 · Azure: fundamentos y aprovisionamiento como código
+### 03 · Azure y GCP: transferencia multicloud e IaC
 
 **M2 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Recursos fundamentales Azure: computación, redes, almacenamiento, identidad y servicios gestionados.<br>• Terraform: parametrización y uso de módulos.<br>• Adaptación de automatización Python asistida por IA; contenido transversal de M1. |
-| **Resultado de aprendizaje** | Transferir el patrón de AWS a Azure y reconocer diferencias de identidad y red. |
-| **Actividad práctica** | Reproducir el caso común con configuración preparada y explicar equivalencias y diferencias; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza. |
-| **Alcance y profundidad** | Reutilizar el patrón AWS; evitar enseñar el SDK completo. Azure Cost Management: consulta por suscripción, grupo de recursos, servicio y etiquetas; presupuestos y alertas. Reservar 15–20 minutos al cierre para costes, alertas y limpieza. Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto. |
-| **Requisitos de preparación** | Cuenta Azure, permisos, configuración Terraform y adaptación Python del caso AWS. Acceso de lectura a facturación/costes y permisos para presupuestos; desglose de muestra si los recursos recién creados aún no aparecen. |
-| **Contenido complementario** | SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados. |
+| **Cobertura requerida** | • Equivalencias y diferencias de Azure y GCP respecto a AWS: identidad, redes, computación, almacenamiento, registros de imágenes y servicios gestionados.<br>• Terraform: variables, outputs, módulos, estado remoto y locking; comparación del aprovisionamiento multicloud y límites de portabilidad.<br>• M1 integrado: 1h de «Adaptación de scripts, configuración y comparación entre proveedores». |
+| **Resultado de aprendizaje** | Transferir el patrón trabajado en AWS a Azure y GCP mediante análisis de configuración y demostraciones, justificar diferencias y adaptar scripts sin confundir una interfaz IaC común con recursos idénticos. |
+| **Actividad práctica** | Seguir demostraciones preparadas del caso común en Azure y GCP y elaborar una comparación de identidad, red, computación, almacenamiento y registros. Revisar variables, outputs, módulos, estado y bloqueo; adaptar scripts/configuración y contrastar las consultas y resultados preparados. Identificar recursos facturables y comprobar la limpieza en cada demostración. |
+| **Alcance y profundidad** | No exigir dos despliegues completos ni cuentas Azure/GCP al alumnado: el trabajo obligatorio es el análisis de equivalencias y la adaptación del material preparado. Reservar 1h al trabajo transversal M1. Reservar por separado 15–20 minutos para Azure Cost Management (consultas y filtros por suscripción, grupo de recursos, servicio y etiquetas; presupuestos y alertas; limpieza) y otros 15–20 minutos para GCP Cloud Billing (informes y filtros por proyecto, servicio y etiquetas/labels según disponibilidad; presupuestos y alertas; limpieza). En ambos proveedores, explicar los retrasos de facturación y que los presupuestos no detienen automáticamente el gasto. |
+| **Requisitos de preparación** | Entornos y cuentas docentes Azure/GCP con permisos, configuraciones Terraform, backend de estado y locking, scripts adaptados y resultados comparativos preparados. Acceso docente a facturación y presupuestos de ambos proveedores, desgloses de muestra y evidencias de las demostraciones para el análisis local del alumnado; sin alta obligatoria de cuentas estudiantiles. |
+| **Contenido complementario** | Comparación breve con Pulumi/OpenTofu, no nombrados en la descripción publicada; laboratorio propio de Pulumi, SDK completos, módulos propios avanzados y despliegues adicionales voluntarios. |
 
 <a id="sesion-04"></a>
 
-### 04 · GCP: fundamentos y aprovisionamiento como código
-
-**M2 · Rael Garcia · 3 horas · Concentración 🟡 Media**
-
-| Apartado | Contenido |
-|---|---|
-| **Cobertura requerida** | • Recursos fundamentales GCP: computación, redes, almacenamiento, identidad y servicios gestionados.<br>• Terraform: gestión del estado y comparación del aprovisionamiento multicloud.<br>• Automatización con Python; contenido transversal de M1. |
-| **Resultado de aprendizaje** | Aplicar el caso común en GCP y comparar proveedores y formas de definir infraestructura. |
-| **Actividad práctica** | Adaptar el caso preparado, consultar recursos y comparar identidad, red, estado y portabilidad; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza. |
-| **Alcance y profundidad** | Reutilizar patrón y estado; Pulumi breve. Pulumi/OpenTofu son comparaciones complementarias; no están nombrados en la descripción publicada. Cloud Billing de GCP: informes por proyecto, servicio y etiquetas/labels según disponibilidad; presupuestos y alertas. Reservar 15–20 minutos al cierre para costes, alertas y limpieza. Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto. |
-| **Requisitos de preparación** | Cuenta GCP, permisos, backend de estado y ejemplos comparativos preparados. Acceso de lectura a facturación/costes y permisos para presupuestos; desglose de muestra si los recursos recién creados aún no aparecen. |
-| **Contenido complementario** | Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados. |
-
-<a id="sesion-05"></a>
-
-### 05 · Contenedores y ecosistema OCI: imágenes, runtimes y registros
+### 04 · Contenedores I: imágenes, ejecución y registros
 
 **M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Ecosistema OCI: construcción de imágenes, runtimes, registros y seguridad. |
-| **Resultado de aprendizaje** | Construir, ejecutar y publicar una imagen entendiendo aislamiento y runtime. |
-| **Actividad práctica** | Construir una imagen pequeña y ejecutar/publicar la aplicación que servirá de hilo conductor. |
-| **Alcance y profundidad** | Usar el caso común y el material preparado; priorizar comprobación del comportamiento frente a instalación exhaustiva. Los productos concretos de build/runtime/escaneo son elecciones del laboratorio. |
-| **Requisitos de preparación** | Runtime de contenedores, registro y código de la aplicación disponibles. |
-| **Contenido complementario** | Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton. |
+| **Cobertura requerida** | • Ecosistema OCI: imágenes, construcción, ejecución y registros.<br>• Dockerfile, capas, etiquetado, publicación y descarga de imágenes.<br>• Puertos y variables de entorno; breve explicación de aislamiento con namespaces/cgroups y del papel del runtime. |
+| **Resultado de aprendizaje** | Construir, ejecutar y publicar una imagen local, distinguir imagen de contenedor y explicar su configuración y aislamiento básico. |
+| **Actividad práctica** | Construir la imagen de la aplicación común, ejecutarla localmente con puertos y variables de entorno, comprobar su respuesta y publicar/recuperar la imagen desde el registro. |
+| **Alcance y profundidad** | Priorizar el ciclo build/run/push/pull y la comprobación del comportamiento en el entorno preparado mediante Academy en sesión 1. Namespaces, cgroups y runtimes se presentan brevemente como fundamento, no como laboratorio de bajo nivel. Preparar la aplicación que se ampliará a dos servicios en sesión 5. |
+| **Requisitos de preparación** | Acceso y entorno Academy preparados en sesión 1 y verificados antes de esta clase; runtime compatible con OCI disponible y permitido, CLI comprobada, acceso al registro, código, conectividad, puertos y cuotas suficientes. Comprobar credenciales temporales y persistencia según el laboratorio asignado; no se requiere una cuenta cloud personal adicional. |
+| **Contenido complementario** | Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras. El escaneo se concreta en el pipeline Tekton. |
+
+<a id="sesion-05"></a>
+
+### 05 · Contenedores II: redes, volúmenes, Compose y diagnóstico
+
+**M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
+
+| Apartado | Contenido |
+|---|---|
+| **Cobertura requerida** | • Construcción multi-stage y separación de compilación y ejecución.<br>• Redes, resolución entre servicios, volúmenes y persistencia; definición de una aplicación de dos servicios con Compose.<br>• Logs, inspección y diagnóstico de fallos de conectividad, configuración y almacenamiento.<br>• M1 integrado: 1h de «Validación Python de los servicios y revisión de código con IA». |
+| **Resultado de aprendizaje** | Ejecutar y diagnosticar una aplicación local de dos servicios, comprobar su persistencia y validar mediante Python su funcionamiento sin aceptar sin revisión el código generado por IA. |
+| **Actividad práctica** | Adaptar el Dockerfile a multi-stage y levantar los dos servicios con Compose, red y volumen. Introducir y resolver fallos preparados de puertos/nombres, variables y persistencia mediante logs e inspección. Usar un script Python para validar la comunicación y las respuestas; generar o revisar cambios con IA y contrastarlos con las comprobaciones ejecutadas. |
+| **Alcance y profundidad** | Laboratorio local guiado sobre la aplicación común; distinguir los puertos publicados al host de la comunicación interna entre servicios y comprobar los datos tras recrear un contenedor. Reservar la hora transversal M1 para validación Python y revisión crítica de código con IA, no para un curso completo de Python. |
+| **Requisitos de preparación** | Entorno Academy preparado en sesión 1 y utilizado para contenedores en sesión 4, Compose disponible, imágenes/código de ambos servicios, Python y dependencias de validación instalados. Preparar fallos reproducibles y comprobar runtime permitido, acceso al registro, cuotas, credenciales temporales y persistencia según el laboratorio asignado; no se requiere una cuenta cloud personal adicional. |
+| **Contenido complementario** | Optimización avanzada de imágenes y redes, múltiples entornos Compose y diagnóstico de bajo nivel. |
 
 <a id="sesion-06"></a>
 

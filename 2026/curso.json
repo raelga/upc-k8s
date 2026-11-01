@@ -14,9 +14,12 @@
       "contents": [
         "CALMS y prácticas DevOps",
         "IDP, golden paths y experiencia de desarrollo",
-        "Team Topologies y métricas DORA"
+        "Team Topologies y métricas DORA",
+        "Presentación de AWS Academy: acceso al curso y al laboratorio, credenciales temporales, estado y ciclo de inicio/parada/finalización según el laboratorio asignado",
+        "Límites de tiempo, presupuesto y permisos; persistencia y limpieza según las instrucciones reales del laboratorio",
+        "Preparación y comprobación del entorno Academy para contenedores antes de la sesión 4: acceso, runtime compatible, registro y conectividad"
       ],
-      "lab": "Propuesta breve de plataforma para una empresa: usuarios, capacidades y criterios de éxito",
+      "lab": "Propuesta breve de plataforma para una empresa: usuarios, capacidades y criterios de éxito; comprobar el acceso a AWS Academy y recorrer el funcionamiento del laboratorio, dejando validada la preparación necesaria para contenedores",
       "extras": "Implantación completa de Backstage y diseño organizativo en profundidad",
       "date": "2026-11-03",
       "transversal_contents": [
@@ -38,7 +41,7 @@
         "IAM, regiones y zonas",
         "VPC, subredes, Security Groups, EC2 y S3, contexto de ECR",
         "HCL, provider, recursos, variables y plan/apply/destroy",
-        "consulta Python preparada e IA para adaptar código",
+        "Consulta Python preparada e IA para adaptar código",
         "AWS Billing y Cost Explorer: consulta por servicio, región y etiquetas; presupuestos y alertas con AWS Budgets",
         "Bloque final de 15–20 minutos: identificar costes del caso, aplicar filtros, configurar una alerta y limpiar recursos",
         "Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto."
@@ -57,74 +60,72 @@
     {
       "number": 3,
       "module": "M2",
-      "title": "Azure: fundamentos y aprovisionamiento como código",
+      "title": "Azure y GCP: transferencia multicloud e IaC",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Transferir el patrón de AWS a Azure y reconocer diferencias de identidad y red",
+      "objective": "Transferir el patrón AWS a Azure y GCP y justificar diferencias mediante ejemplos y demostraciones preparados",
       "contents": [
-        "Entra ID, suscripciones, grupos de recursos y Managed Identities",
-        "VNet, NSG, VM y Blob Storage, contexto de ACR",
-        "variables, outputs y módulos existentes",
-        "adaptación del script Python",
-        "Azure Cost Management: consulta por suscripción, grupo de recursos, servicio y etiquetas; presupuestos y alertas",
-        "Bloque final de 15–20 minutos: identificar costes del caso, aplicar filtros, configurar una alerta y limpiar recursos",
+        "Azure: Entra ID, suscripciones, grupos de recursos, Managed Identities, VNet, NSG, VM, Blob Storage y contexto de ACR",
+        "GCP: proyectos, cuentas de servicio, IAM, VPC, firewall, Compute Engine, Cloud Storage y contexto de Artifact Registry",
+        "Terraform/OpenTofu: variables, outputs, módulos existentes, estado local/remoto, permisos y locking según backend",
+        "Adaptación de scripts Python y comparación de identidad, red, configuración y resultados entre proveedores; 1h transversal de M1",
+        "Azure Cost Management: 15–20 minutos para consultas y filtros por suscripción, grupo de recursos, servicio y etiquetas; presupuestos, alertas y limpieza",
+        "Cloud Billing de GCP: 15–20 minutos para informes y filtros por proyecto, servicio y etiquetas/labels según disponibilidad; presupuestos, alertas y limpieza",
         "Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto."
       ],
-      "lab": "Reproducir el caso común con configuración preparada y explicar equivalencias y diferencias; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza",
-      "extras": "SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados",
+      "lab": "Comparar configuraciones preparadas de Azure y GCP con el caso AWS, adaptar una consulta Python e interpretar resultados de las demostraciones; revisar costes y evidencias de limpieza. No se exigen dos aprovisionamientos completos por alumno",
+      "extras": "Laboratorios completos en Azure y GCP; SDK completos; módulos propios avanzados; comparación Pulumi con Python frente a HCL",
       "date": "2026-11-10",
       "transversal_contents": [
         {
           "module": "M1",
           "hours": 1,
-          "scope": "Adaptación de scripts, configuración y tratamiento de resultados"
+          "scope": "Adaptación de scripts, configuración y comparación entre proveedores"
         }
       ]
     },
     {
       "number": 4,
-      "module": "M2",
-      "title": "GCP: fundamentos y aprovisionamiento como código",
-      "teacher": "Rael Garcia",
-      "load": "amarillo",
-      "objective": "Aplicar el caso común en GCP y comparar proveedores y formas de definir infraestructura",
-      "contents": [
-        "Proyectos, cuentas de servicio e IAM",
-        "VPC, firewall, Compute Engine y Cloud Storage, contexto de Artifact Registry",
-        "estado local/remoto, permisos y locking según backend",
-        "Pulumi con Python frente a HCL durante 10–15 minutos",
-        "Cloud Billing de GCP: informes por proyecto, servicio y etiquetas/labels según disponibilidad; presupuestos y alertas",
-        "Bloque final de 15–20 minutos: identificar costes del caso, aplicar filtros, configurar una alerta y limpiar recursos",
-        "Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto."
-      ],
-      "lab": "Adaptar el caso preparado, consultar recursos y comparar identidad, red, estado y portabilidad; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza",
-      "extras": "Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados",
-      "date": "2026-11-12",
-      "transversal_contents": [
-        {
-          "module": "M1",
-          "hours": 1,
-          "scope": "Reutilización de la automatización y comparación de implementaciones"
-        }
-      ]
-    },
-    {
-      "number": 5,
       "module": "M3",
-      "title": "Contenedores y ecosistema OCI: imágenes, runtimes y registros",
+      "title": "Contenedores I: imágenes, ejecución y registros",
       "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Construir, ejecutar y publicar una imagen entendiendo aislamiento y runtime",
       "contents": [
-        "Namespaces, cgroups y capas OCI",
-        "Dockerfile y build multi-stage",
-        "Docker/containerd/CRI-O y CRI",
-        "registros e higiene de imágenes"
+        "Aislamiento: namespaces, cgroups, capas OCI y runtimes como contexto breve",
+        "Dockerfile, build y ejecución en el entorno preparado de AWS Academy",
+        "Puertos, variables de entorno y configuración",
+        "Publicación en un registro accesible e higiene de imágenes"
       ],
-      "lab": "Construir una imagen pequeña y ejecutar/publicar la aplicación que servirá de hilo conductor",
+      "lab": "Con el acceso y entorno de AWS Academy preparados desde la sesión 1, construir una imagen pequeña, ejecutarla con puertos y variables y publicar/recuperar la imagen en el registro; el docente verifica runtime, conectividad y permisos del laboratorio asignado",
       "extras": "Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton",
-      "date": "2026-11-17",
+      "date": "2026-11-12",
       "transversal_contents": []
+    },
+    {
+      "number": 5,
+      "module": "M3",
+      "title": "Contenedores II: redes, volúmenes, Compose y diagnóstico",
+      "teacher": "Rael Garcia",
+      "load": "amarillo",
+      "objective": "Ejecutar y diagnosticar los dos servicios del caso común antes de introducir Kubernetes",
+      "contents": [
+        "Build multi-stage y reducción de la imagen",
+        "Redes, resolución entre servicios y volúmenes",
+        "Compose para ejecutar los dos servicios",
+        "Logs, inspección y diagnóstico de fallos de configuración y conectividad",
+        "Validación Python de los servicios y revisión de código con IA; 1h transversal de M1"
+      ],
+      "lab": "Ejecutar los dos servicios con Compose en el entorno Academy preparado, provocar y diagnosticar un fallo de red o configuración y verificar la recuperación con un script Python revisado con IA",
+      "extras": "Orquestación avanzada de Compose y catálogo de opciones; no anticipar Kubernetes",
+      "date": "2026-11-17",
+      "transversal_contents": [
+        {
+          "module": "M1",
+          "hours": 1,
+          "scope": "Validación Python de los servicios y revisión de código con IA"
+        }
+      ]
     },
     {
       "number": 6,

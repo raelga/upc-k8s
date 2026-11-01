@@ -11,8 +11,8 @@ UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 | Bloque | Sesiones | Horas | ECTS | Docencia |
 |---|---|---:|---:|---|
 | M1 · Fundamentos DevOps, Platform Engineering y Programación para Infraestructura | 1 (1) | 3h | 1.5 | René Serral<br>Rael Garcia |
-| M2 · Cloud Computing Multicloud e Infraestructura como Código | 2–4 (3) | 9h | 1 | Rael Garcia |
-| M3 · Contenedores y Kubernetes Core. Ecosistema OCI | 5–10 (6) | 18h | 2 | Rael Garcia |
+| M2 · Cloud Computing Multicloud e Infraestructura como Código | 2–3 (2) | 6h | 1 | Rael Garcia |
+| M3 · Contenedores y Kubernetes Core. Ecosistema OCI | 4–10 (7) | 21h | 2 | Rael Garcia |
 | M4 · Kubernetes en Producción y Ecosistema Cloud Native | 11–13, 15–16 (5) | 15h | 2 | Rael Garcia |
 | M5 · Observabilidad, GitOps, CI/CD y Networking Avanzado | 17–25 (9) | 27h | 2 | David Girón, Rael Garcia |
 | M6 · Platform Engineering Avanzado: Operators, Serverless y Multi-Cluster | 14, 26–29 (5) | 15h | 2 | Rael Garcia, Marc Catrisse |
@@ -32,13 +32,15 @@ Las sesiones 1 y 30 son compartidas por René Serral y Rael Garcia. Cada una sum
 
 ## Metodología y prerrequisitos
 
-Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Las clases cloud introducen los recursos que se utilizarán para desplegar Kubernetes: identidad, instancias, redes, balanceadores y almacenamiento, seguidos de su aprovisionamiento como código. Python se practica progresivamente en proveedores; Bash en pipelines; Go en el ejemplo de operator. La IA apoya la escritura/adaptación de código, cuya ejecución y resultados se verifican.
+Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Dos sesiones de contenedores preparan la ejecución de la aplicación en el entorno Academy validado antes de Kubernetes. AWS concentra el laboratorio guiado principal de IaC; Azure y GCP se trabajan mediante comparaciones y demostraciones preparadas, no mediante dos despliegues completos del alumnado. Se introducen identidad, redes, cómputo, almacenamiento y registros, y su aprovisionamiento como código. Python se practica en la validación de servicios y en proveedores; Bash en pipelines; Go en el ejemplo de operator. La IA apoya la escritura/adaptación de código, cuya ejecución y resultados se verifican.
 
-Una aplicación Python de dos servicios conecta Kubernetes, observabilidad, CI/GitOps, entrega y escalado. Laboratorios guiados con configuraciones preparadas; permisos, cuotas y costes comprobados; limpieza de recursos al finalizar. EKS/kOps se explican durante su despliegue con un entorno de respaldo disponible. M6 combina conceptos, comparación y demostraciones; operators tiene una clase completa. Los secretos se entregan mediante mecanismos externos y no se guardan en repositorios ni en el estado de Terraform.
+Una aplicación Python de dos servicios conecta contenedores, Kubernetes, observabilidad, CI/GitOps, entrega y escalado. Laboratorios guiados con configuraciones preparadas; permisos, cuotas y costes comprobados; limpieza de recursos al finalizar. EKS/kOps se explican durante su despliegue con un entorno de respaldo disponible. M6 combina conceptos, comparación y demostraciones; operators tiene una clase completa. Los secretos se entregan mediante mecanismos externos y no se guardan en repositorios ni en el estado de Terraform.
+
+La sesión 1 incluye, dentro de sus 3h de M1 y con docencia compartida, una presentación guiada de AWS Academy y del ciclo de trabajo del laboratorio asignado, sin asumir un tipo concreto de laboratorio. Se requiere invitación y acceso al curso; el docente comprueba previamente el entorno real, sus permisos, cuotas y límites. Se distinguen contenidos del curso y entorno de laboratorio, acceso temporal a la consola, estado del laboratorio y operaciones de inicio, parada y finalización disponibles; persistencia y limpieza se rigen por sus instrucciones, sin garantías universales de conservación ni de gasto. Al finalizar la sesión 1, o como prerrequisito antes de la 4, el docente valida el entorno Academy para contenedores: runtime disponible o instalado cuando esté permitido, acceso al registro y restricciones del laboratorio. Las sesiones 4–5 se ejecutan en ese entorno preparado, no en un entorno local independiente. Las sesiones 2–3 de cloud e IaC preceden a ambas sesiones de contenedores.
 
 ## Costes y control del consumo cloud
 
-Las sesiones de AWS, Azure y GCP incluyen 15–20 minutos de consulta de facturación, filtros, presupuestos/alertas y limpieza del laboratorio. Se utilizan AWS Billing/Cost Explorer y AWS Budgets, Azure Cost Management y Cloud Billing de GCP. Los informes pueden tener retraso y las alertas no detienen automáticamente el gasto.
+AWS reserva 15–20 minutos en la sesión 2 para consulta de facturación, filtros, presupuestos/alertas y limpieza; Azure y GCP reservan cada uno 15–20 minutos en la sesión 3. Se utilizan AWS Billing/Cost Explorer y AWS Budgets, Azure Cost Management y Cloud Billing de GCP. Los informes pueden tener retraso y las alertas no detienen automáticamente el gasto.
 
 En EKS/kOps y AKS/GKE se retoma el coste de control plane, nodos, balanceadores, discos y tráfico, comparando modalidades gestionadas y autogestionadas.
 
@@ -50,10 +52,10 @@ M1 combina **3h propias y 6h integradas**: 9h de contenido incluidas en las 90h 
 |---|---|---:|
 | 1 · Fundamentos de DevOps y Platform Engineering | Fundamentos DevOps, cultura, plataformas y métricas | 3h |
 | 2 · AWS: fundamentos y aprovisionamiento como código | Python para consultar recursos; generación y revisión de código con IA | 1h |
-| 3 · Azure: fundamentos y aprovisionamiento como código | Adaptación de scripts, configuración y tratamiento de resultados | 1h |
-| 4 · GCP: fundamentos y aprovisionamiento como código | Reutilización de la automatización y comparación de implementaciones | 1h |
-| 17 · Automatización de pipelines: scripting, Tekton y Trivy | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
+| 3 · Azure y GCP: transferencia multicloud e IaC | Adaptación de scripts, configuración y comparación entre proveedores | 1h |
+| 5 · Contenedores II: redes, volúmenes, Compose y diagnóstico | Validación Python de los servicios y revisión de código con IA | 1h |
 | 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
+| 17 · Automatización de pipelines: scripting, Tekton y Trivy | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
 
 Las horas compartidas no se suman de nuevo al total. La docencia corresponde al profesor de cada clase.
 
@@ -63,9 +65,9 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 |---:|---|---|---|
 | 1 | M1 | Fundamentos de DevOps y Platform Engineering | René Serral<br>Rael Garcia |
 | 2 | M2 + M1 | AWS: fundamentos y aprovisionamiento como código | Rael Garcia |
-| 3 | M2 + M1 | Azure: fundamentos y aprovisionamiento como código | Rael Garcia |
-| 4 | M2 + M1 | GCP: fundamentos y aprovisionamiento como código | Rael Garcia |
-| 5 | M3 | Contenedores y ecosistema OCI: imágenes, runtimes y registros | Rael Garcia |
+| 3 | M2 + M1 | Azure y GCP: transferencia multicloud e IaC | Rael Garcia |
+| 4 | M3 | Contenedores I: imágenes, ejecución y registros | Rael Garcia |
+| 5 | M3 + M1 | Contenedores II: redes, volúmenes, Compose y diagnóstico | Rael Garcia |
 | 6 | M3 | Arquitectura de Kubernetes: API, autenticación y permisos | Rael Garcia |
 | 7 | M3 | Aplicaciones en Kubernetes: workloads, configuración y recursos | Rael Garcia |
 | 8 | M3 | Persistencia en Kubernetes: almacenamiento y aplicaciones con estado | Rael Garcia |

@@ -8,9 +8,11 @@ UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 
 ## Metodología y prerrequisitos
 
-Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Las clases cloud introducen los recursos que se utilizarán para desplegar Kubernetes: identidad, instancias, redes, balanceadores y almacenamiento, seguidos de su aprovisionamiento como código. Python se practica progresivamente en proveedores; Bash en pipelines; Go en el ejemplo de operator. La IA apoya la escritura/adaptación de código, cuya ejecución y resultados se verifican.
+Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Dos sesiones de contenedores preparan la ejecución de la aplicación en el entorno Academy validado antes de Kubernetes. AWS concentra el laboratorio guiado principal de IaC; Azure y GCP se trabajan mediante comparaciones y demostraciones preparadas, no mediante dos despliegues completos del alumnado. Se introducen identidad, redes, cómputo, almacenamiento y registros, y su aprovisionamiento como código. Python se practica en la validación de servicios y en proveedores; Bash en pipelines; Go en el ejemplo de operator. La IA apoya la escritura/adaptación de código, cuya ejecución y resultados se verifican.
 
-Una aplicación Python de dos servicios conecta Kubernetes, observabilidad, CI/GitOps, entrega y escalado. Laboratorios guiados con configuraciones preparadas; permisos, cuotas y costes comprobados; limpieza de recursos al finalizar. EKS/kOps se explican durante su despliegue con un entorno de respaldo disponible. M6 combina conceptos, comparación y demostraciones; operators tiene una clase completa. Los secretos se entregan mediante mecanismos externos y no se guardan en repositorios ni en el estado de Terraform.
+Una aplicación Python de dos servicios conecta contenedores, Kubernetes, observabilidad, CI/GitOps, entrega y escalado. Laboratorios guiados con configuraciones preparadas; permisos, cuotas y costes comprobados; limpieza de recursos al finalizar. EKS/kOps se explican durante su despliegue con un entorno de respaldo disponible. M6 combina conceptos, comparación y demostraciones; operators tiene una clase completa. Los secretos se entregan mediante mecanismos externos y no se guardan en repositorios ni en el estado de Terraform.
+
+Para AWS Academy se requiere invitación y acceso al curso antes de la sesión 1. El docente verifica previamente el entorno real asignado, sus instrucciones, permisos, cuotas y límites, sin asumir un tipo concreto de laboratorio. Al finalizar la sesión 1, o como prerrequisito antes de la 4, valida el entorno de contenedores: runtime disponible o instalado cuando esté permitido, acceso al registro y restricciones del laboratorio. Las sesiones 4–5 se ejecutan en ese entorno Academy preparado, no en un entorno local independiente. Las sesiones 2–3 de cloud e IaC preceden a ambas sesiones de contenedores.
 
 ## M1 · Formación transversal y créditos
 
@@ -20,10 +22,10 @@ M1 combina **3h propias y 6h integradas**: 9h de contenido incluidas en las 90h 
 |---|---|---:|
 | 1 · Fundamentos de DevOps y Platform Engineering | Fundamentos DevOps, cultura, plataformas y métricas | 3h |
 | 2 · AWS: fundamentos y aprovisionamiento como código | Python para consultar recursos; generación y revisión de código con IA | 1h |
-| 3 · Azure: fundamentos y aprovisionamiento como código | Adaptación de scripts, configuración y tratamiento de resultados | 1h |
-| 4 · GCP: fundamentos y aprovisionamiento como código | Reutilización de la automatización y comparación de implementaciones | 1h |
-| 17 · Automatización de pipelines: scripting, Tekton y Trivy | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
+| 3 · Azure y GCP: transferencia multicloud e IaC | Adaptación de scripts, configuración y comparación entre proveedores | 1h |
+| 5 · Contenedores II: redes, volúmenes, Compose y diagnóstico | Validación Python de los servicios y revisión de código con IA | 1h |
 | 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
+| 17 · Automatización de pipelines: scripting, Tekton y Trivy | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
 
 Las horas compartidas no se suman de nuevo al total. La docencia corresponde al profesor de cada clase.
 
@@ -43,6 +45,11 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Contenido principal:**
 
+- Presentación obligatoria de AWS Academy dentro de las 3h de M1: distinguir contenidos del curso y entorno del laboratorio asignado; acceder al curso/laboratorio y comprobar su estado.
+- Recorrido por las operaciones disponibles de lanzamiento/inicio, parada y finalización según las instrucciones reales, sin presuponer nombres de botones; credenciales y sesión temporal de consola.
+- Permisos, cuotas y límites de presupuesto/tiempo mostrados; persistencia y limpieza según las instrucciones del laboratorio real, sin garantías universales de conservación ni de gasto.
+- Preparación y validación docente del runtime, acceso al registro y restricciones del entorno antes de la sesión 4, para las sesiones 4–5.
+
 - CALMS y prácticas DevOps.
 - IDP, golden paths y experiencia de desarrollo.
 - Team Topologies y métricas DORA.
@@ -53,7 +60,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ## M2 · Cloud Computing Multicloud e Infraestructura como Código
 
-3 sesiones · 9h · 1 ECTS.
+2 sesiones · 6h · 1 ECTS.
 
 ### Sesión 2 · AWS: fundamentos y aprovisionamiento como código
 
@@ -61,7 +68,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Contenido de M1:** Python para consultar recursos; generación y revisión de código con IA. **Dedicación:** 1h incluidas en esta clase.
 
-**Objetivo:** Entender una infraestructura AWS pequeña y verificar su funcionamiento mediante código.
+**Objetivo:** Entender una infraestructura AWS pequeña, aprovisionarla en el laboratorio principal de IaC y verificar su funcionamiento mediante código.
 
 **Contenido principal:**
 
@@ -73,74 +80,78 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 - Revisión final de costes, presupuesto/alerta y limpieza de recursos (15–20 minutos).
 - Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto.
 
-**Práctica / evidencia:** Lanzar el ejemplo preparado, explicar mientras se despliega, modificar una variable, consultar recursos y verificar limpieza; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza.
+**Práctica / evidencia:** Aprovisionar el ejemplo preparado con HCL, revisar el plan, aplicar un cambio de variable, consultar recursos con Python y destruirlos; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza.
 
 **Ampliación:** Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless.
 
-### Sesión 3 · Azure: fundamentos y aprovisionamiento como código
+### Sesión 3 · Azure y GCP: transferencia multicloud e IaC
 
 **Fecha:** 10/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Contenido de M1:** Adaptación de scripts, configuración y tratamiento de resultados. **Dedicación:** 1h incluidas en esta clase.
+**Contenido de M1:** Adaptación de scripts, configuración y comparación entre proveedores. **Dedicación:** 1h incluidas en esta clase.
 
-**Objetivo:** Transferir el patrón de AWS a Azure y reconocer diferencias de identidad y red.
+**Objetivo:** Transferir el patrón de AWS a Azure y GCP mediante comparaciones y demostraciones preparadas, sin realizar dos despliegues completos del alumnado.
 
 **Contenido principal:**
 
-- Entra ID, suscripciones, grupos de recursos y Managed Identities.
-- VNet, NSG, VM y Blob Storage, contexto de ACR.
-- Variables, outputs y módulos existentes.
-- Adaptación del script Python.
-- Azure Cost Management: consulta por suscripción, grupo de recursos, servicio y etiquetas; presupuestos y alertas.
-- Revisión final de costes, presupuesto/alerta y limpieza de recursos (15–20 minutos).
-- Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto.
+- Azure: Entra ID, suscripciones, grupos de recursos y Managed Identities; VNet, NSG, VM, Blob Storage y ACR.
+- GCP: proyectos, cuentas de servicio e IAM; VPC, firewall, Compute Engine, Cloud Storage y Artifact Registry.
+- Comparación de identidad, red, cómputo, almacenamiento y registros entre proveedores.
+- Variables, outputs y módulos existentes; estado local/remoto, permisos y locking según backend.
+- Adaptación de scripts Python y configuración; comparación de resultados y portabilidad.
+- Azure Cost Management: consultas por suscripción, grupo de recursos, servicio y etiquetas, presupuestos/alertas y limpieza (15–20 minutos).
+- Cloud Billing de GCP: informes por proyecto, servicio y etiquetas/labels según disponibilidad, presupuestos/alertas y limpieza (otros 15–20 minutos).
+- Los datos de facturación de ambos proveedores pueden aparecer con retraso; los presupuestos y alertas no detienen automáticamente el gasto.
 
-**Práctica / evidencia:** Reproducir el caso común con configuración preparada y explicar equivalencias y diferencias; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza.
+**Práctica / evidencia:** Comparar las demostraciones preparadas con AWS, adaptar un script y su configuración y explicar diferencias de identidad, red y estado; consultar costes y comprobar la limpieza por separado en Azure y GCP.
 
-**Ampliación:** SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados.
+**Ampliación:** Comparación de Pulumi con Python frente a HCL y laboratorio propio de Pulumi; SDK completos de Azure/GCP, módulos propios avanzados y despliegues completos independientes.
 
-### Sesión 4 · GCP: fundamentos y aprovisionamiento como código
+## M3 · Contenedores y ecosistema OCI. Introducción al bloque
+
+2 sesiones · 6h. Se imparten después de las dos sesiones de cloud e IaC; M3 continúa en las sesiones 6–10.
+
+### Sesión 4 · Contenedores I: imágenes, ejecución y registros
 
 **Fecha:** 12/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Contenido de M1:** Reutilización de la automatización y comparación de implementaciones. **Dedicación:** 1h incluidas en esta clase.
-
-**Objetivo:** Aplicar el caso común en GCP y comparar proveedores y formas de definir infraestructura.
+**Objetivo:** Construir, ejecutar y publicar una imagen en el entorno Academy preparado, entendiendo los fundamentos del aislamiento y el runtime.
 
 **Contenido principal:**
 
-- Proyectos, cuentas de servicio e IAM.
-- VPC, firewall, Compute Engine y Cloud Storage, contexto de Artifact Registry.
-- Estado local/remoto, permisos y locking según backend.
-- Pulumi con Python frente a HCL durante 10–15 minutos.
-- Cloud Billing de GCP: informes por proyecto, servicio y etiquetas/labels según disponibilidad; presupuestos y alertas.
-- Revisión final de costes, presupuesto/alerta y limpieza de recursos (15–20 minutos).
-- Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto.
+- Introducción breve a namespaces, cgroups, capas OCI y función del runtime.
+- Dockerfile y construcción de imágenes en el entorno preparado.
+- Ejecución de contenedores, puertos y variables de entorno.
+- Registros, publicación e higiene de imágenes.
 
-**Práctica / evidencia:** Adaptar el caso preparado, consultar recursos y comparar identidad, red, estado y portabilidad; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza.
+**Práctica / evidencia:** Construir una imagen de la aplicación, ejecutarla en el entorno Academy validado con puertos y configuración por variables de entorno y publicarla en un registro.
 
-**Ampliación:** Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados.
+**Ampliación:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton.
 
-## M3 · Contenedores y Kubernetes Core. Ecosistema OCI
-
-6 sesiones · 18h · 2 ECTS.
-
-### Sesión 5 · Contenedores y ecosistema OCI: imágenes, runtimes y registros
+### Sesión 5 · Contenedores II: redes, volúmenes, Compose y diagnóstico
 
 **Fecha:** 17/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Construir, ejecutar y publicar una imagen entendiendo aislamiento y runtime.
+**Contenido de M1:** Validación Python de los servicios y revisión de código con IA. **Dedicación:** 1h incluidas en esta clase.
+
+**Objetivo:** Ejecutar y diagnosticar una aplicación de dos servicios con comunicación y persistencia locales.
 
 **Contenido principal:**
 
-- Namespaces, cgroups y capas OCI.
-- Dockerfile y build multi-stage.
-- Docker/containerd/CRI-O y CRI.
-- Registros e higiene de imágenes.
+- Construcción multi-stage.
+- Redes y comunicación entre contenedores.
+- Volúmenes y persistencia.
+- Compose para la aplicación Python de dos servicios.
+- Logs, inspección y diagnóstico de fallos de configuración y conectividad.
+- Validación Python de los servicios y revisión de código asistida por IA, comprobando ejecución y resultados.
 
-**Práctica / evidencia:** Construir una imagen pequeña y ejecutar/publicar la aplicación que servirá de hilo conductor.
+**Práctica / evidencia:** Ejecutar los dos servicios con Compose, verificar comunicación y persistencia, diagnosticar un fallo preparado y validar los servicios mediante Python.
 
-**Ampliación:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton.
+**Ampliación:** Optimización avanzada de imágenes y escenarios complejos de Compose y diagnóstico.
+
+## M3 · Kubernetes Core. Continuación del bloque
+
+5 sesiones · 15h. Con las sesiones 4–5 de contenedores, M3 abarca las sesiones 4–10 y suma 7 sesiones · 21h · 2 ECTS.
 
 ### Sesión 6 · Arquitectura de Kubernetes: API, autenticación y permisos
 
@@ -625,9 +636,9 @@ Material complementario para profundizar mediante trabajo autónomo o formación
 
 - **Sesión 1 · Fundamentos de DevOps y Platform Engineering:** Implantación completa de Backstage y diseño organizativo en profundidad.
 - **Sesión 2 · AWS: fundamentos y aprovisionamiento como código:** Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless.
-- **Sesión 3 · Azure: fundamentos y aprovisionamiento como código:** SDK Azure completo; diseño avanzado de módulos; catálogo exhaustivo de servicios gestionados.
-- **Sesión 4 · GCP: fundamentos y aprovisionamiento como código:** Laboratorio propio de Pulumi; SDK completo; módulos propios avanzados.
-- **Sesión 5 · Contenedores y ecosistema OCI: imágenes, runtimes y registros:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton.
+- **Sesión 3 · Azure y GCP: transferencia multicloud e IaC:** Comparación de Pulumi con Python frente a HCL y laboratorio propio de Pulumi; SDK completos de Azure/GCP, módulos propios avanzados y despliegues completos independientes.
+- **Sesión 4 · Contenedores I: imágenes, ejecución y registros:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton.
+- **Sesión 5 · Contenedores II: redes, volúmenes, Compose y diagnóstico:** Optimización avanzada de imágenes y escenarios complejos de Compose y diagnóstico.
 - **Sesión 6 · Arquitectura de Kubernetes: API, autenticación y permisos:** Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero.
 - **Sesión 7 · Aplicaciones en Kubernetes: workloads, configuración y recursos:** Catálogo exhaustivo de controladores y scheduling avanzado.
 - **Sesión 8 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
@@ -636,18 +647,18 @@ Material complementario para profundizar mediante trabajo autónomo o formación
 - **Sesión 11 · Kubernetes en AWS: EKS y clústeres autogestionados con kOps:** Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad.
 - **Sesión 12 · Kubernetes en Azure y GCP: AKS y GKE:** Instalaciones completas independientes y catálogo de add-ons de ambos proveedores.
 - **Sesión 13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm:** Creación de charts complejos desde cero y catálogo de plugins.
+- **Sesión 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero.
 - **Sesión 15 · Infraestructura declarativa: DNS, certificados y recursos cloud:** DNSSEC/DoH, operación DNS avanzada, Crossplane Compositions/XRDs avanzados y Composition Functions.
 - **Sesión 16 · Gestión de secretos externos: Vault y External Secrets Operator:** HA/auto-unseal y operación Vault en producción; implantación completa de todos los backends; no exponer valores sensibles en Terraform state.
-- **Sesión 20 · Métricas y alertas: Prometheus, PromQL y Alertmanager:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
-- **Sesión 21 · Dashboards y logs: Grafana, Loki y Alloy:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
-- **Sesión 22 · Trazas distribuidas y correlación: OpenTelemetry y Tempo:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo.
 - **Sesión 17 · Automatización de pipelines: scripting, Tekton y Trivy:** Curso completo de Bash/Python; Triggers/Chains avanzados y attestations.
 - **Sesión 18 · Colaboración y validación de cambios: Git y Prow:** Instalación completa de Prow; internals/monorepos/operaciones Git avanzadas.
 - **Sesión 19 · Despliegue declarativo y reconciliación: GitOps con ArgoCD:** ApplicationSets avanzado, multi-tenancy, SSO y catálogo completo de hooks/waves.
+- **Sesión 20 · Métricas y alertas: Prometheus, PromQL y Alertmanager:** HA/federación y operación Mimir; reparto orientativo 20/30/40/25/55/10 min para métricas/recogida/PromQL/alertas/lab/cierre.
+- **Sesión 21 · Dashboards y logs: Grafana, Loki y Alloy:** Grafana as Code y operación avanzada de Loki; no enseñar todas las capacidades de Alloy.
+- **Sesión 22 · Trazas distribuidas y correlación: OpenTelemetry y Tempo:** SDK en profundidad, instrumentación manual completa, sampling avanzado y operación productiva de Collector/Tempo.
 - **Sesión 23 · Entrada de tráfico y service mesh: Traefik e Istio:** Instalación desde cero, catálogo de middlewares, TCP/UDP, tuning Envoy y Ambient Mesh profundo.
 - **Sesión 24 · Entrega progresiva: canary y blue/green con Argo Rollouts:** Feature flags/Flagger/OpenFeature y estrategias avanzadas; no repetir instalación de networking.
 - **Sesión 25 · Escalado de aplicaciones y nodos: HPA, VPA, KEDA y Karpenter:** Catálogo triggers, métricas complejas, tuning, políticas Spot/capacidad y optimización profunda de costes; evitar controladores compitiendo.
-- **Sesión 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero.
 - **Sesión 26 · Políticas de admisión y recuperación: OPA/Gatekeeper y Velero:** Políticas Rego complejas, catálogo de políticas, recuperación productiva avanzada, firmas y attestations.
 - **Sesión 27 · Gestión de clústeres: Cluster API y Hosted Control Planes:** Instalación de todos los productos y operación avanzada.
 - **Sesión 28 · Serverless en Kubernetes: Knative y Virtual Kubelet:** Knative Eventing avanzado, plataforma serverless completa y desarrollo de providers Virtual Kubelet.

@@ -13,4 +13,6 @@ UPC School · Live online · Castellano · 12 ECTS.
 - [Guía docente interna](guia-docente-interna.md): cobertura mínima, concentración y alcance de prácticas para el equipo docente.
 - [Datos del curso](curso.json): contenidos, fechas y docentes estructurados.
 
-M1 integra 9h de contenido, incluidas en las 90h: 3h propias y 6h transversales en proveedores, Tekton y operators. Sus 1,5 ECTS incluyen trabajo autónomo evaluable.
+M1 integra 9h de contenido, incluidas en las 90h: 3h propias y 6h transversales en Contenedores II, AWS, Azure/GCP, Tekton y operators. Sus 1,5 ECTS incluyen trabajo autónomo evaluable.
+
+La sesión 1 incluye la presentación de AWS Academy y la comprobación de acceso y preparación del laboratorio. AWS/IaC ocupa la sesión 2; Azure/GCP comparten la sesión 3 con demostraciones preparadas, sin exigir dos despliegues completos por alumno. Contenedores I y II se imparten después, en las sesiones 4–5, con el entorno Academy validado.
