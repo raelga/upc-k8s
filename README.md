@@ -12,6 +12,7 @@ UPC School · Live online · Castellano · 12 ECTS · 90 horas.
 
 - [Propuesta universitaria](docs/proposta-universitaria.md): textos en catalán para el formulario UPC; no sustituye al calendario docente vigente.
 - [Calendario académico de referencia](references/calendario-upc.pdf): calendario de grados utilizado como referencia de festivos; no es el calendario de este posgrado.
+- [Laboratorios del curso](https://github.com/raelga/kubernetes-talks/tree/main/course): código e instrucciones reutilizables de cloud, Terraform, contenedores y Kubernetes; este repositorio contiene únicamente la planificación de la edición.
 
 ## Mantenimiento
 

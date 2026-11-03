@@ -28,6 +28,7 @@ Entry profile: junior engineers/sysadmins with basic Linux, networking and scrip
 ## Repository layout
 
 - `2026/`: authoritative edition documents and structured data.
+- Teaching labs live only in `https://github.com/raelga/kubernetes-talks/tree/main/course`: cloud-provider labs in `cloud-providers/labs/`, Terraform introduction in `terraform/s3-state-intro/`. This repository links to them; do not duplicate executable labs under `2026/`. Session 2 AWS is Academy hands-on; session 3 Azure/GCP deploys only in instructor accounts and uses explicitly synthetic student fixtures. Keep real captures, credentials, Terraform states/plans and private configuration out of Git. Cloud resources must not be deployed as part of repository validation; report local/provider validation separately from actual account verification.
 - `docs/proposta-universitaria.md`: Catalan university proposal, not the teaching calendar. Preserve UPC form limits; proposal terminology uses Operator Framework.
 - `references/calendario-upc.pdf`: undergraduate academic-calendar reference, not the course calendar.
 - `README.md`: repository navigation and maintenance guidance.
