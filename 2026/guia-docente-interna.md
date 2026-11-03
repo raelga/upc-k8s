@@ -76,7 +76,7 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 
 **M2 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
-**Material:** [Laboratorio AWS/IaC](https://github.com/raelga/kubernetes-talks/tree/main/course/cloud-providers/labs/aws-iac) · [Preparación docente](https://github.com/raelga/kubernetes-talks/blob/main/course/cloud-providers/labs/aws-iac/instructor-guide.md) · [Introducción a Terraform: S3 y estado remoto](https://github.com/raelga/kubernetes-talks/tree/main/course/terraform/s3-state-intro), como preparación independiente, sin añadir horas al calendario.
+**Material:** [Laboratorio AWS/IaC](https://github.com/raelga/kubernetes-talks/tree/main/course/cloud-providers/labs/aws-iac) · [Preparación docente](https://github.com/raelga/kubernetes-talks/blob/main/course/cloud-providers/labs/aws-iac/instructor-guide.md) · [Introducción a Terraform: S3 y estado remoto](https://github.com/raelga/kubernetes-talks/tree/main/course/cloud-providers/labs/terraform-intro), como preparación independiente, sin añadir horas al calendario.
 
 | Apartado | Contenido |
 |---|---|

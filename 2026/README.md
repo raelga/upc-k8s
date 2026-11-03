@@ -13,7 +13,7 @@ UPC School · Live online · Castellano · 12 ECTS.
 - [Guía docente interna](guia-docente-interna.md): cobertura mínima, concentración y alcance de prácticas para el equipo docente.
 - [Datos del curso](curso.json): contenidos, fechas y docentes estructurados.
 - [Laboratorios cloud](https://github.com/raelga/kubernetes-talks/tree/main/course/cloud-providers): práctica AWS/Academy y transferencia Azure/GCP, con código, ejercicios y guías docentes.
-- [Introducción a Terraform: S3 y estado remoto](https://github.com/raelga/kubernetes-talks/tree/main/course/terraform/s3-state-intro): ejercicio independiente de buckets, cambios, drift y migración del estado.
+- [Introducción a Terraform: S3 y estado remoto](https://github.com/raelga/kubernetes-talks/tree/main/course/cloud-providers/labs/terraform-intro): ejercicio independiente de buckets, cambios, drift y migración del estado.
 
 M1 integra 9h de contenido, incluidas en las 90h: 3h propias y 6h transversales en Contenedores II, AWS, Azure/GCP, Tekton y operators. Sus 1,5 ECTS incluyen trabajo autónomo evaluable.
 
