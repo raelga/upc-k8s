@@ -76,7 +76,7 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 
 **M2 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
-**Material:** [Laboratorio AWS/IaC](https://github.com/raelga/kubernetes-talks/tree/main/course/cloud-providers/labs/aws-iac) · [Preparación docente](https://github.com/raelga/kubernetes-talks/blob/main/course/cloud-providers/labs/aws-iac/instructor-guide.md) · [Introducción a Terraform: S3 y estado remoto](https://github.com/raelga/kubernetes-talks/tree/main/course/cloud-providers/labs/terraform-intro), como preparación independiente, sin añadir horas al calendario.
+**Material:** [Fundamentos de EC2 y ALB](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/ec2-basics) · [WordPress y MySQL por etapas](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/wordpress) · [Introducción a Terraform: S3 y estado remoto](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/terraform-intro), como preparación independiente, sin añadir horas al calendario. Los recursos adicionales requieren permisos propios; no se presuponen disponibles en Academy.
 
 | Apartado | Contenido |
 |---|---|
@@ -93,7 +93,7 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 
 **M2 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
-**Material:** [Laboratorio de transferencia Azure/GCP](https://github.com/raelga/kubernetes-talks/tree/main/course/cloud-providers/labs/azure-gcp) · [Preparación docente](https://github.com/raelga/kubernetes-talks/blob/main/course/cloud-providers/labs/azure-gcp/instructor-guide.md).
+**Material:** [Laboratorio de transferencia Azure/GCP](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/azure-gcp) · [Referencia operativa](https://github.com/raelga/kubernetes-talks/blob/main/course/infra/labs/azure-gcp/instructor-guide.md).
 
 | Apartado | Contenido |
 |---|---|
