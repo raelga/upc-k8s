@@ -10,23 +10,23 @@
       "title": "Fundamentos de DevOps y Platform Engineering",
       "teacher": "René Serral\nRael Garcia",
       "load": "verde",
-      "objective": "Relacionar DevOps, SRE y Platform Engineering con necesidades de una organización",
+      "objective": "Distinguir DevOps, SRE y Platform Engineering, relacionar SLI, SLO y SLA e identificar los fundamentos de Terraform",
       "contents": [
-        "CALMS y prácticas DevOps",
-        "IDP, golden paths y experiencia de desarrollo",
-        "Team Topologies y métricas DORA",
+        "Evolución de Systems Engineer, DevOps, SRE y Platform Engineering; introducción al autoservicio y a la plataforma como producto",
+        "Fiabilidad de servicios: SLI, SLO y SLA; diferencias entre indicadores, objetivos y acuerdos de nivel de servicio",
+        "Introducción a Terraform e IaC: HCL, providers, plan, apply, state, módulos y Terraform Registry",
         "Presentación de AWS Academy: acceso al curso y al laboratorio, credenciales temporales, estado y ciclo de inicio/parada/finalización según el laboratorio asignado",
         "Límites de tiempo, presupuesto y permisos; persistencia y limpieza según las instrucciones reales del laboratorio",
         "Preparación y comprobación del entorno Academy para contenedores antes de la sesión 4: acceso, runtime compatible, registro y conectividad"
       ],
-      "lab": "Propuesta breve de plataforma para una empresa: usuarios, capacidades y criterios de éxito; comprobar el acceso a AWS Academy y recorrer el funcionamiento del laboratorio, dejando validada la preparación necesaria para contenedores",
+      "lab": "Repaso conceptual de roles, SLI/SLO/SLA y del flujo de Terraform; comprobar el acceso a AWS Academy y recorrer el funcionamiento del laboratorio, dejando validada la preparación necesaria para contenedores",
       "extras": "Implantación completa de Backstage y diseño organizativo en profundidad",
       "date": "2026-11-03",
       "transversal_contents": [
         {
           "module": "M1",
           "hours": 3,
-          "scope": "Fundamentos DevOps, cultura, plataformas y métricas"
+          "scope": "DevOps, SRE y Platform Engineering; SLI/SLO/SLA e introducción a Terraform"
         }
       ]
     },
@@ -36,17 +36,20 @@
       "title": "AWS: fundamentos y aprovisionamiento como código",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Entender una infraestructura AWS pequeña y verificar su funcionamiento mediante código",
+      "objective": "Usar Terraform para crear un bucket de estado remoto y aprovisionar EC2 en AWS Academy, distinguiendo infraestructura, seguridad y arranque de la aplicación",
       "contents": [
-        "IAM, regiones y zonas",
-        "VPC, subredes, Security Groups, EC2 y S3, contexto de ECR",
-        "HCL, provider, recursos, variables y plan/apply/destroy",
+        "AWS Academy: credenciales temporales, IAM, región configurada, zonas y límites del laboratorio",
+        "Terraform: HCL, providers, recursos, variables, outputs e init/plan/apply/state/destroy",
+        "S3 para el estado de Terraform: despliegue con estado local, inspección y migración al backend remoto reutilizado por los laboratorios",
+        "EC2: VPC, subredes, Security Groups, HTTP público, SSH restringible a la IP actual y bootstrap mediante user-data",
+        "Ejemplo inicial guiado de WordPress como contexto para el siguiente laboratorio de infraestructura",
+        "Contexto de ECR como registro de imágenes para las siguientes sesiones",
         "Consulta Python preparada e IA para adaptar código",
         "AWS Billing y Cost Explorer: consulta por servicio, región y etiquetas; presupuestos y alertas con AWS Budgets",
         "Bloque final de 15–20 minutos: identificar costes del caso, aplicar filtros, configurar una alerta y limpiar recursos",
         "Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto."
       ],
-      "lab": "Lanzar el ejemplo preparado, explicar mientras se despliega, modificar una variable, consultar recursos y verificar limpieza; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza",
+      "lab": "Crear e inspeccionar el bucket S3 de estado, migrarlo al backend remoto y reutilizarlo para EC2; practicar el ciclo de vida de Terraform, AWS CLI, HTTP y SSH. Revisar los costes y la limpieza conservando el bucket de estado compartido",
       "extras": "Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless",
       "date": "2026-11-05",
       "transversal_contents": [
@@ -60,20 +63,19 @@
     {
       "number": 3,
       "module": "M2",
-      "title": "Azure y GCP: transferencia multicloud e IaC",
+      "title": "AWS WordPress: de EC2 con estado a instancias reemplazables",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Transferir el patrón AWS a Azure y GCP y justificar diferencias mediante ejemplos y demostraciones preparados",
+      "objective": "Explicar la evolución de la infraestructura antes de Kubernetes mediante un despliegue guiado de WordPress en AWS",
       "contents": [
-        "Azure: Entra ID, suscripciones, grupos de recursos, Managed Identities, VNet, NSG, VM, Blob Storage y contexto de ACR",
-        "GCP: proyectos, cuentas de servicio, IAM, VPC, firewall, Compute Engine, Cloud Storage y contexto de Artifact Registry",
-        "Terraform/OpenTofu: variables, outputs, módulos existentes, estado local/remoto, permisos y locking según backend",
-        "Adaptación de scripts Python y comparación de identidad, red, configuración y resultados entre proveedores; 1h transversal de M1",
-        "Azure Cost Management: 15–20 minutos para consultas y filtros por suscripción, grupo de recursos, servicio y etiquetas; presupuestos, alertas y limpieza",
-        "Cloud Billing de GCP: 15–20 minutos para informes y filtros por proyecto, servicio y etiquetas/labels según disponibilidad; presupuestos, alertas y limpieza",
-        "Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto."
+        "EC2 con WordPress y MariaDB local: reemplazar la instancia y observar la pérdida de la base de datos y los archivos subidos",
+        "Migrar MySQL a RDS privado e introducir una Elastic IP; los registros de la base de datos persisten mientras los archivos subidos locales siguen siendo efímeros",
+        "Módulos de Terraform, outputs, grafos de dependencias y estados remotos independientes; reutilizar la red y la base de datos",
+        "ALB público y Auto Scaling: comprobaciones de salud, reemplazo, bootstrap y deriva de versiones",
+        "Introducir AMI versionadas con Packer y almacenamiento de archivos multimedia en S3",
+        "Proteger secretos y estado; revisar costes de AWS, presupuestos y limpieza"
       ],
-      "lab": "Comparar configuraciones preparadas de Azure y GCP con el caso AWS, adaptar una consulta Python e interpretar resultados de las demostraciones; revisar costes y evidencias de limpieza. No se exigen dos aprovisionamientos completos por alumno",
+      "lab": "Seguir la evolución guiada de 02-wordpress, inspeccionando la configuración y comparando la persistencia tras reemplazar la instancia; usar datos desechables y conservar el bucket de estado",
       "extras": "Laboratorios completos en Azure y GCP; SDK completos; módulos propios avanzados; comparación Pulumi con Python frente a HCL",
       "date": "2026-11-10",
       "transversal_contents": [
@@ -245,6 +247,8 @@
       "load": "amarillo",
       "objective": "Aplicar la comparación de operación cloud a Azure y GCP",
       "contents": [
+        "Fundamentos de Azure y GCP: identidad, redes, cómputo, almacenamiento y registros en comparación con AWS",
+        "Azure Cost Management y GCP Cloud Billing: 15–20 minutos por proveedor para filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto",
         "Identidad de workloads",
         "networking",
         "pools de nodos",

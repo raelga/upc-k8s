@@ -20,9 +20,9 @@ M1 combina **3h propias y 6h integradas**: 9h de contenido incluidas en las 90h 
 
 | Sesión | Contenido transversal M1 | Horas incluidas |
 |---|---|---:|
-| 1 · Fundamentos de DevOps y Platform Engineering | Fundamentos DevOps, cultura, plataformas y métricas | 3h |
+| 1 · Fundamentos de DevOps y Platform Engineering | DevOps, SRE y Platform Engineering; SLI/SLO/SLA e introducción a Terraform | 3h |
 | 2 · AWS: fundamentos y aprovisionamiento como código | Python para consultar recursos; generación y revisión de código con IA | 1h |
-| 3 · Azure y GCP: transferencia multicloud e IaC | Adaptación de scripts, configuración y comparación entre proveedores | 1h |
+| 3 · AWS WordPress: de EC2 con estado a instancias reemplazables | Adaptación de scripts, configuración y comparación entre proveedores | 1h |
 | 5 · Contenedores II: redes, volúmenes, Compose y diagnóstico | Validación Python de los servicios y revisión de código con IA | 1h |
 | 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
 | 17 · Automatización de pipelines: scripting, Tekton y Trivy | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
@@ -39,9 +39,9 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Docentes:**<br>René Serral<br>Rael Garcia
 
-**Contenido de M1:** Fundamentos DevOps, cultura, plataformas y métricas. **Dedicación:** 3h incluidas en esta clase.
+**Contenido de M1:** DevOps, SRE y Platform Engineering; SLI/SLO/SLA e introducción a Terraform. **Dedicación:** 3h incluidas en esta clase.
 
-**Objetivo:** Relacionar DevOps, SRE y Platform Engineering con necesidades de una organización.
+**Objetivo:** Distinguir DevOps, SRE y Platform Engineering, relacionar SLI, SLO y SLA e identificar los fundamentos de Terraform.
 
 **Contenido principal:**
 
@@ -50,11 +50,11 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 - Permisos, cuotas y límites de presupuesto/tiempo mostrados; persistencia y limpieza según las instrucciones del laboratorio real, sin garantías universales de conservación ni de gasto.
 - Preparación y validación docente del runtime, acceso al registro y restricciones del entorno antes de la sesión 4, para las sesiones 4–5.
 
-- CALMS y prácticas DevOps.
-- IDP, golden paths y experiencia de desarrollo.
-- Team Topologies y métricas DORA.
+- Evolución de Systems Engineer, DevOps, SRE y Platform Engineering; introducción al autoservicio y a la plataforma como producto.
+- Fiabilidad de servicios: SLI, SLO y SLA; diferencias entre indicadores, objetivos y acuerdos de nivel de servicio.
+- Introducción a Terraform e IaC: HCL, providers, `plan`, `apply`, state, módulos y Terraform Registry.
 
-**Práctica / evidencia:** Propuesta breve de plataforma para una empresa: usuarios, capacidades y criterios de éxito.
+**Práctica / evidencia:** Repaso conceptual de roles, SLI/SLO/SLA y del flujo de Terraform; comprobación del acceso y recorrido guiado por AWS Academy.
 
 **Ampliación:** Implantación completa de Backstage y diseño organizativo en profundidad.
 
@@ -68,44 +68,41 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Contenido de M1:** Python para consultar recursos; generación y revisión de código con IA. **Dedicación:** 1h incluidas en esta clase.
 
-**Objetivo:** Entender una infraestructura AWS pequeña, aprovisionarla en el laboratorio principal de IaC y verificar su funcionamiento mediante código.
+**Objetivo:** Usar Terraform para crear un bucket de estado remoto y aprovisionar EC2 en AWS Academy, distinguiendo infraestructura, seguridad y arranque de la aplicación.
 
 **Contenido principal:**
 
-- IAM, regiones y zonas.
-- VPC, subredes, Security Groups, EC2 y S3, contexto de ECR.
-- HCL, provider, recursos, variables y plan/apply/destroy.
+- AWS Academy: credenciales temporales, IAM, región configurada, zonas y límites del laboratorio.
+- Terraform: HCL, providers, recursos, variables, outputs e `init`/`plan`/`apply`/`state`/`destroy`.
+- S3 para el estado de Terraform: despliegue con estado local, inspección y migración al backend remoto reutilizado por los laboratorios.
+- EC2: VPC, subredes, Security Groups, HTTP público, SSH restringible a la IP actual y bootstrap mediante user-data.
+- Ejemplo inicial guiado de WordPress; la evolución por etapas se aborda en la sesión 3.
+- Contexto de ECR como registro de imágenes para las siguientes sesiones.
 - Consulta Python preparada e IA para adaptar código.
 - AWS Billing y Cost Explorer: consulta por servicio, región y etiquetas; presupuestos y alertas con AWS Budgets.
 - Revisión final de costes, presupuesto/alerta y limpieza de recursos (15–20 minutos).
 - Los datos de facturación pueden aparecer con retraso; una alerta de presupuesto no detiene automáticamente el gasto.
 
-**Práctica / evidencia:** Aprovisionar el ejemplo preparado con HCL, revisar el plan, aplicar un cambio de variable, consultar recursos con Python y destruirlos; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza.
+**Práctica / evidencia:** Crear y migrar el backend de S3, reutilizarlo para EC2, practicar con Terraform y AWS CLI, y revisar los costes y la limpieza.
 
 **Ampliación:** Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless.
 
-### Sesión 3 · Azure y GCP: transferencia multicloud e IaC
+### Sesión 3 · AWS WordPress: de EC2 con estado a instancias reemplazables
 
 **Fecha:** 10/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Contenido de M1:** Adaptación de scripts, configuración y comparación entre proveedores. **Dedicación:** 1h incluidas en esta clase.
 
-**Objetivo:** Transferir el patrón de AWS a Azure y GCP mediante comparaciones y demostraciones preparadas, sin realizar dos despliegues completos del alumnado.
+**Objetivo:** Explicar la evolución de la infraestructura antes de Kubernetes mediante un laboratorio guiado de WordPress en AWS.
 
-**Contenido principal:**
+**Contenido principal y laboratorio guiado:**
 
-- Azure: Entra ID, suscripciones, grupos de recursos y Managed Identities; VNet, NSG, VM, Blob Storage y ACR.
-- GCP: proyectos, cuentas de servicio e IAM; VPC, firewall, Compute Engine, Cloud Storage y Artifact Registry.
-- Comparación de identidad, red, cómputo, almacenamiento y registros entre proveedores.
-- Variables, outputs y módulos existentes; estado local/remoto, permisos y locking según backend.
-- Adaptación de scripts Python y configuración; comparación de resultados y portabilidad.
-- Azure Cost Management: consultas por suscripción, grupo de recursos, servicio y etiquetas, presupuestos/alertas y limpieza (15–20 minutos).
-- Cloud Billing de GCP: informes por proyecto, servicio y etiquetas/labels según disponibilidad, presupuestos/alertas y limpieza (otros 15–20 minutos).
-- Los datos de facturación de ambos proveedores pueden aparecer con retraso; los presupuestos y alertas no detienen automáticamente el gasto.
-
-**Práctica / evidencia:** Comparar las demostraciones preparadas con AWS, adaptar un script y su configuración y explicar diferencias de identidad, red y estado; consultar costes y comprobar la limpieza por separado en Azure y GCP.
-
-**Ampliación:** Comparación de Pulumi con Python frente a HCL y laboratorio propio de Pulumi; SDK completos de Azure/GCP, módulos propios avanzados y despliegues completos independientes.
+- WordPress y MariaDB en EC2: reemplazar la instancia y observar la pérdida de datos locales.
+- Migrar MySQL a RDS y usar una Elastic IP; comparar la persistencia de la base de datos y de los archivos subidos.
+- Reutilizar módulos de Terraform y después compartir outputs de red y base de datos entre estados separados.
+- Introducir un ALB y Auto Scaling, comprobaciones de salud, bootstrap y deriva de versiones.
+- Introducir AMI versionadas con Packer y almacenamiento de archivos multimedia en S3 como siguientes pasos arquitectónicos.
+- Usar datos desechables, proteger los secretos y el estado de Terraform, revisar los costes y limpiar los recursos.
 
 ## M3 · Contenedores y ecosistema OCI. Introducción al bloque
 
@@ -269,6 +266,8 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Contenido principal:**
 
+- Fundamentos de Azure y GCP: identidad, redes, cómputo, almacenamiento y registros en comparación con AWS.
+- Azure Cost Management y GCP Cloud Billing: 15–20 minutos por proveedor para filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto.
 - Identidad de workloads.
 - Networking.
 - Pools de nodos.
@@ -636,7 +635,7 @@ Material complementario para profundizar mediante trabajo autónomo o formación
 
 - **Sesión 1 · Fundamentos de DevOps y Platform Engineering:** Implantación completa de Backstage y diseño organizativo en profundidad.
 - **Sesión 2 · AWS: fundamentos y aprovisionamiento como código:** Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless.
-- **Sesión 3 · Azure y GCP: transferencia multicloud e IaC:** Comparación de Pulumi con Python frente a HCL y laboratorio propio de Pulumi; SDK completos de Azure/GCP, módulos propios avanzados y despliegues completos independientes.
+- **Sesión 3 · AWS WordPress:** Despliegues independientes adicionales y diseño avanzado de módulos.
 - **Sesión 4 · Contenedores I: imágenes, ejecución y registros:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton.
 - **Sesión 5 · Contenedores II: redes, volúmenes, Compose y diagnóstico:** Optimización avanzada de imágenes y escenarios complejos de Compose y diagnóstico.
 - **Sesión 6 · Arquitectura de Kubernetes: API, autenticación y permisos:** Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero.

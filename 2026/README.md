@@ -12,11 +12,9 @@ UPC School · Live online · Castellano · 12 ECTS.
 - [Calendario CSV](calendario.csv): sesiones para importar en una hoja de cálculo.
 - [Guía docente interna](guia-docente-interna.md): cobertura mínima, concentración y alcance de prácticas para el equipo docente.
 - [Datos del curso](curso.json): contenidos, fechas y docentes estructurados.
-- [Laboratorios de infraestructura](https://github.com/raelga/kubernetes-talks/tree/main/course/infra): Terraform, EC2 privado con ALB, WordPress/MySQL y comparación Azure/GCP.
+- [Laboratorios de infraestructura](https://github.com/raelga/kubernetes-talks/tree/main/course/infra): Terraform, EC2 y la evolución de WordPress por etapas.
 - [Introducción a Terraform: S3 y estado remoto](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/terraform-intro): ejercicio independiente de buckets, cambios, drift y migración del estado.
 
 M1 integra 9h de contenido, incluidas en las 90h: 3h propias y 6h transversales en Contenedores II, AWS, Azure/GCP, Tekton y operators. Sus 1,5 ECTS incluyen trabajo autónomo evaluable.
-
-La sesión 1 incluye la presentación de AWS Academy y la comprobación de acceso y preparación del laboratorio. AWS/IaC ocupa la sesión 2; Azure/GCP comparten la sesión 3 con demostraciones preparadas, sin exigir dos despliegues completos por alumno. Contenedores I y II se imparten después, en las sesiones 4–5, con el entorno Academy validado.
 
 El código y las instrucciones de los laboratorios se mantienen únicamente en `raelga/kubernetes-talks/course/`; este repositorio conserva la planificación y los enlaces, sin copias locales de los ejercicios. El laboratorio introductorio de Terraform es material de preparación, no una sesión adicional ni una ampliación automática de las 90h.

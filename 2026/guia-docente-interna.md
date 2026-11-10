@@ -24,7 +24,7 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 
 - [01 · Fundamentos de DevOps y Platform Engineering](#sesion-01) — M1
 - [02 · AWS: fundamentos y aprovisionamiento como código](#sesion-02) — M2
-- [03 · Azure y GCP: transferencia multicloud e IaC](#sesion-03) — M2
+- [03 · AWS WordPress: de EC2 con estado a instancias reemplazables](#sesion-03) — M2
 - [04 · Contenedores I: imágenes, ejecución y registros](#sesion-04) — M3
 - [05 · Contenedores II: redes, volúmenes, Compose y diagnóstico](#sesion-05) — M3
 - [06 · Arquitectura de Kubernetes: API, autenticación y permisos](#sesion-06) — M3
@@ -63,11 +63,11 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Contextualización de DevOps y su evolución hacia Platform Engineering.<br>• Presentar la programación asistida por IA como práctica transversal del curso.<br>• Presentar AWS Academy y explicar el acceso y funcionamiento del laboratorio asignado. |
-| **Resultado de aprendizaje** | Relacionar DevOps, SRE y Platform Engineering con necesidades de una organización y acceder al entorno Academy siguiendo las instrucciones del laboratorio asignado. |
-| **Actividad práctica** | Propuesta breve de plataforma para una empresa: usuarios, capacidades y criterios de éxito. Recorrido guiado por Academy: acceder al curso y laboratorio, iniciarlo, localizar credenciales temporales e interpretar estado, tiempo, presupuesto y permisos. Explicar y practicar parada/finalización según las instrucciones del laboratorio, incluida la persistencia y limpieza de recursos. |
+| **Cobertura requerida** | • Evolución de Systems Engineer, DevOps, SRE y Platform Engineering; autoservicio y plataforma como producto, a nivel introductorio.<br>• SLI, SLO y SLA: indicadores, objetivos y acuerdos de nivel de servicio.<br>• Introducción a Terraform e IaC: HCL, providers, plan/apply, state, módulos y Registry.<br>• Presentar la programación asistida por IA como práctica transversal del curso.<br>• Presentar AWS Academy y explicar el acceso y funcionamiento del laboratorio asignado. |
+| **Resultado de aprendizaje** | Distinguir DevOps, SRE y Platform Engineering, relacionar SLI, SLO y SLA, identificar los fundamentos de Terraform y acceder al entorno Academy siguiendo las instrucciones del laboratorio asignado. |
+| **Actividad práctica** | Repaso conceptual de roles, SLI/SLO/SLA y del flujo de Terraform. Recorrido guiado por Academy: acceder al curso y laboratorio, iniciarlo, localizar credenciales temporales e interpretar estado, tiempo, presupuesto y permisos. Explicar y practicar parada/finalización según las instrucciones del laboratorio, incluida la persistencia y limpieza de recursos. |
 | **Alcance y profundidad** | Integrar el recorrido introductorio de Academy en las 3h existentes, compartidas por René Serral y Rael Garcia, sin añadir horas. No asumir interfaz, tipo de laboratorio ni persistencia universales: mostrar el entorno realmente asignado. Priorizar la comprensión y preparación del laboratorio antes de los contenedores de sesión 4. |
-| **Requisitos de preparación** | Caso de organización y plantilla de propuesta de plataforma. Invitación al curso Academy enviada y acceso comprobado. El docente confirma el laboratorio exacto, sus instrucciones y límites y deja preparado y verificado antes de sesión 4 el entorno de contenedores: runtime disponible y permitido, CLI/Compose, registro, conectividad, puertos y cuotas; comprobar credenciales temporales y reglas de duración, persistencia y limpieza. |
+| **Requisitos de preparación** | Presentación introductoria de roles y Terraform: [diapositivas 1–9](https://docs.google.com/presentation/d/14q6t7KH7PqUf-ja0a4BbPE4IcS0NQ5ssL6CnASEItxg/htmlpresent), con DevOps, SRE y la tabla SLI/SLO/SLA. Invitación al curso Academy enviada y acceso comprobado. El docente confirma el laboratorio exacto, sus instrucciones y límites y deja preparado y verificado antes de sesión 4 el entorno de contenedores: runtime disponible y permitido, CLI/Compose, registro, conectividad, puertos y cuotas; comprobar credenciales temporales y reglas de duración, persistencia y limpieza. |
 | **Contenido complementario** | Implantación completa de Backstage y diseño organizativo en profundidad. |
 
 <a id="sesion-02"></a>
@@ -76,33 +76,31 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 
 **M2 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
-**Material:** [Fundamentos de EC2 y ALB](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/ec2-basics) · [WordPress y MySQL por etapas](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/wordpress) · [Introducción a Terraform: S3 y estado remoto](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/terraform-intro), como preparación independiente, sin añadir horas al calendario. Los recursos adicionales requieren permisos propios; no se presuponen disponibles en Academy.
+**Material:** [Estado de Terraform](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/aws/00-terraform-state) · [Fundamentos de EC2](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/aws/01-ec2-basics). Verificar permisos y cuotas de Academy.
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Recursos fundamentales AWS: computación, redes, almacenamiento, identidad, registros de imágenes y servicios gestionados.<br>• Terraform: HCL, providers, recursos y ciclo plan/apply/destroy.<br>• M1 integrado: 1h de «Python para consultar recursos; generación y revisión de código con IA». |
-| **Resultado de aprendizaje** | Aprovisionar una infraestructura AWS pequeña a partir del ejemplo preparado, interpretar el plan, verificar sus recursos mediante código y destruirlos de forma controlada. |
-| **Actividad práctica** | Laboratorio principal de IaC: leer y modificar HCL, ejecutar plan/apply, consultar recursos con Python/CLI y ejecutar destroy comprobando la limpieza. Generar o revisar el código Python con IA y verificar sus resultados. Identificar recursos facturables y consultar costes y presupuestos. |
+| **Cobertura requerida** | • Credenciales de AWS Academy, IAM, región, redes, cómputo y almacenamiento.<br>• Ciclo de vida de Terraform, variables, outputs y estado remoto.<br>• Conservar la hora integrada de M1 para consultas de recursos con Python y revisión de código asistida por IA. |
+| **Resultado de aprendizaje** | Crear y reutilizar un backend remoto de Terraform, aprovisionar EC2, interpretar el plan y el estado, comprobar acceso y bootstrap y destruir los recursos de cada laboratorio. |
+| **Actividad práctica** | Crear y migrar el backend de S3; reutilizarlo para EC2, inspeccionar el estado de Terraform y verificar el acceso. Revisar costes, presupuestos y limpieza; conservar el bucket de estado mientras sea necesario. |
 | **Alcance y profundidad** | Usar el entorno Academy presentado en sesión 1 y un ejemplo cloud pequeño y guiado, sin diseño desde cero; introducir variables, outputs y estado para sesión 3. Conservar 1h transversal M1 y 15–20 minutos para AWS Billing/Cost Explorer (consultas y filtros por servicio, región y etiquetas), AWS Budgets, alertas y limpieza. Si Academy restringe estas vistas, mostrarlas desde un entorno docente o con desgloses preparados. Los datos de facturación pueden aparecer con retraso; los presupuestos y sus alertas no detienen automáticamente el gasto. Tampoco interpretar el indicador de presupuesto del laboratorio como una garantía universal de parada automática. |
-| **Requisitos de preparación** | Acceso Academy preparado en sesión 1, permisos/cuotas, Terraform, CLI, ejemplo HCL y consulta Python comprobados. Seguir las reglas del laboratorio asignado sobre credenciales temporales, duración, persistencia y limpieza. Preparar acceso docente a facturación/presupuestos y desgloses de muestra cuando el laboratorio o los retrasos de facturación impidan consultarlos directamente. |
+| **Requisitos de preparación** | Acceso Academy preparado en sesión 1, permisos/cuotas, Terraform, AWS CLI y los tres laboratorios comprobados; verificar la VPC/subred pública y la clave vockey del laboratorio EC2, y LabInstanceProfile/LabRole, SSM y permisos RDS/Secrets Manager para la demo WordPress. Mantener la consulta Python preparada. Seguir las reglas del laboratorio sobre credenciales, duración, persistencia y limpieza. Preparar acceso docente a facturación/presupuestos y desgloses de muestra cuando el laboratorio o los retrasos de facturación impidan consultarlos directamente. |
 | **Contenido complementario** | Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless. |
 
 <a id="sesion-03"></a>
 
-### 03 · Azure y GCP: transferencia multicloud e IaC
+### 03 · AWS WordPress: de EC2 con estado a instancias reemplazables
 
 **M2 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
-**Material:** [Laboratorio de transferencia Azure/GCP](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/azure-gcp) · [Referencia operativa](https://github.com/raelga/kubernetes-talks/blob/main/course/infra/labs/azure-gcp/instructor-guide.md).
+**Material:** [02 · Evolución de WordPress](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/aws/02-wordpress).
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Equivalencias y diferencias de Azure y GCP respecto a AWS: identidad, redes, computación, almacenamiento, registros de imágenes y servicios gestionados.<br>• Terraform: variables, outputs, módulos, estado remoto y locking; comparación del aprovisionamiento multicloud y límites de portabilidad.<br>• M1 integrado: 1h de «Adaptación de scripts, configuración y comparación entre proveedores». |
-| **Resultado de aprendizaje** | Transferir el patrón trabajado en AWS a Azure y GCP mediante análisis de configuración y demostraciones, justificar diferencias y adaptar scripts sin confundir una interfaz IaC común con recursos idénticos. |
-| **Actividad práctica** | Seguir demostraciones preparadas del caso común en Azure y GCP y elaborar una comparación de identidad, red, computación, almacenamiento y registros. Revisar variables, outputs, módulos, estado y bloqueo; adaptar scripts/configuración y contrastar las consultas y resultados preparados. Identificar recursos facturables y comprobar la limpieza en cada demostración. |
-| **Alcance y profundidad** | No exigir dos despliegues completos ni cuentas Azure/GCP al alumnado: el trabajo obligatorio es el análisis de equivalencias y la adaptación del material preparado. Reservar 1h al trabajo transversal M1. Reservar por separado 15–20 minutos para Azure Cost Management (consultas y filtros por suscripción, grupo de recursos, servicio y etiquetas; presupuestos y alertas; limpieza) y otros 15–20 minutos para GCP Cloud Billing (informes y filtros por proyecto, servicio y etiquetas/labels según disponibilidad; presupuestos y alertas; limpieza). En ambos proveedores, explicar los retrasos de facturación y que los presupuestos no detienen automáticamente el gasto. |
-| **Requisitos de preparación** | Entornos y cuentas docentes Azure/GCP con permisos, configuraciones Terraform, backend de estado y locking, scripts adaptados y resultados comparativos preparados. Acceso docente a facturación y presupuestos de ambos proveedores, desgloses de muestra y evidencias de las demostraciones para el análisis local del alumnado; sin alta obligatoria de cuentas estudiantiles. |
-| **Contenido complementario** | Comparación breve con Pulumi/OpenTofu, no nombrados en la descripción publicada; laboratorio propio de Pulumi, SDK completos, módulos propios avanzados y despliegues adicionales voluntarios. |
+| **Cobertura requerida** | EC2/MariaDB local, RDS y Elastic IP, módulos y estados independientes, ALB/Auto Scaling, AMI versionadas con Packer y archivos multimedia en S3. |
+| **Resultado de aprendizaje** | Explicar qué persiste al reemplazar una instancia y por qué importan las imágenes inmutables y el almacenamiento externo antes de Kubernetes. |
+| **Actividad práctica** | Seguir la evolución, inspeccionar los outputs y el estado remoto de Terraform y comparar el reemplazo de instancias. Proteger secretos y estado; revisar costes y limpieza. |
+| **Alcance y profundidad** | Conservar la hora integrada de M1 para adaptación de scripts y configuración. |
 
 <a id="sesion-04"></a>
 
@@ -232,7 +230,7 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Operación de AKS y GKE. |
+| **Cobertura requerida** | Operación de AKS y GKE; identidad, redes, cómputo, almacenamiento y registros de Azure/GCP en comparación con AWS. Incluir 15–20 minutos por proveedor para consultas de costes, filtros, presupuestos/alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto. |
 | **Resultado de aprendizaje** | Aplicar la comparación de operación cloud a Azure y GCP. |
 | **Actividad práctica** | Demostración preparada de los mismos requisitos y comparación razonada con EKS; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza. |
 | **Alcance y profundidad** | Usar el caso común y el material preparado; priorizar comprobación del comportamiento frente a instalación exhaustiva. Costes Kubernetes en AKS/GKE: modalidades de control plane, nodos, balanceadores, discos y tráfico. |
