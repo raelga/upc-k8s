@@ -198,7 +198,7 @@
         "ejemplo Gateway API y relación con Ingress",
         "NetworkPolicy"
       ],
-      "lab": "Con CNI/controlador preparados, exponer la aplicación, bloquear tráfico y permitir solo conexiones necesarias",
+      "lab": "Usar primero un clúster EKS preparado para exponer la aplicación y observar la conectividad; después explicar CNI, Services, DNS, entrada y NetworkPolicy, bloqueando y permitiendo solo el tráfico necesario",
       "extras": "Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio",
       "date": "2026-12-01",
       "transversal_contents": []
@@ -223,41 +223,38 @@
     {
       "number": 11,
       "module": "M4",
-      "title": "Kubernetes en AWS: EKS y clústeres autogestionados con kOps",
+      "title": "Kubernetes en Azure: AKS",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Comparar Kubernetes gestionado y autogestionado sobre la misma base AWS",
+      "objective": "Comprender la operación de Kubernetes gestionado en Azure y compararla con EKS",
       "contents": [
-        "Terraform para lanzar EKS",
-        "kOps con configuración preparada",
-        "control plane, red, identidad y nodos",
-        "responsabilidades, upgrades, disponibilidad, costes y recuperación",
-        "Costes Kubernetes en AWS: control plane EKS frente a autogestión con kOps, nodos, balanceadores, discos y tráfico"
+        "Azure: identidad, redes, cómputo, almacenamiento y registros",
+        "AKS: control plane, identidad de workloads, networking y pools de nodos",
+        "actualizaciones, disponibilidad y responsabilidad operativa",
+        "Azure Cost Management: 15–20 minutos para consultas, filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto",
+        "costes de control plane, nodos, balanceadores, discos y tráfico"
       ],
-      "lab": "Explicar durante ambos despliegues, solapar esperas, desplegar la misma aplicación y comparar; comprobar permisos y disponer de clústeres de respaldo; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza",
-      "extras": "Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad",
+      "lab": "Demostración preparada de AKS en una cuenta docente y comparación con EKS; identificar recursos facturables, revisar costes y comprobar la limpieza",
+      "extras": "Instalación independiente y operación avanzada de AKS; comparación opcional con un clúster AWS autogestionado mediante kOps",
       "date": "2026-12-10",
       "transversal_contents": []
     },
     {
       "number": 12,
       "module": "M4",
-      "title": "Kubernetes en Azure y GCP: AKS y GKE",
+      "title": "Kubernetes en GCP: GKE",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Aplicar la comparación de operación cloud a Azure y GCP",
+      "objective": "Comprender la operación de Kubernetes gestionado en GCP y compararla con EKS y AKS",
       "contents": [
-        "Fundamentos de Azure y GCP: identidad, redes, cómputo, almacenamiento y registros en comparación con AWS",
-        "Azure Cost Management y GCP Cloud Billing: 15–20 minutos por proveedor para filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto",
-        "Identidad de workloads",
-        "networking",
-        "pools de nodos",
-        "actualizaciones y responsabilidad operativa",
-        "GKE Standard/Autopilot y opciones de AKS",
-        "Costes Kubernetes en AKS/GKE: modalidades de control plane, nodos, balanceadores, discos y tráfico"
+        "GCP: identidad, redes, cómputo, almacenamiento y registros",
+        "GKE Standard y Autopilot: control plane, identidad de workloads, networking y pools de nodos",
+        "actualizaciones, disponibilidad y responsabilidad operativa",
+        "GCP Cloud Billing: 15–20 minutos para consultas, filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto",
+        "costes de control plane, nodos, balanceadores, discos y tráfico"
       ],
-      "lab": "Demostración preparada de los mismos requisitos y comparación razonada con EKS; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza",
-      "extras": "Instalaciones completas independientes y catálogo de add-ons de ambos proveedores",
+      "lab": "Demostración preparada de GKE en una cuenta docente y comparación con EKS y AKS; identificar recursos facturables, revisar costes y comprobar la limpieza",
+      "extras": "Instalación independiente y operación avanzada de GKE; catálogo de add-ons",
       "date": "2026-12-15",
       "transversal_contents": []
     },

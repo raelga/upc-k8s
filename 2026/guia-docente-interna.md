@@ -32,8 +32,8 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 - [08 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado](#sesion-08) — M3
 - [09 · Networking en Kubernetes: comunicación y exposición de servicios](#sesion-09) — M3
 - [10 · Construcción de un clúster Kubernetes componente a componente](#sesion-10) — M3
-- [11 · Kubernetes en AWS: EKS y clústeres autogestionados con kOps](#sesion-11) — M4
-- [12 · Kubernetes en Azure y GCP: AKS y GKE](#sesion-12) — M4
+- [11 · Kubernetes en Azure: AKS](#sesion-11) — M4
+- [12 · Kubernetes en GCP: GKE](#sesion-12) — M4
 - [13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm](#sesion-13) — M4
 - [14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK](#sesion-14) — M6
 - [15 · Infraestructura declarativa: DNS, certificados y recursos cloud](#sesion-15) — M4
@@ -187,9 +187,9 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 |---|---|
 | **Cobertura requerida** | • Networking Kubernetes: Services, Ingress, Gateway API, CNI y Network Policies. |
 | **Resultado de aprendizaje** | Seguir tráfico entre Pods, descubrir servicios y exponer la aplicación. |
-| **Actividad práctica** | Con CNI/controlador preparados, exponer la aplicación, bloquear tráfico y permitir solo conexiones necesarias. |
+| **Actividad práctica** | Empezar con un clúster EKS preparado, exponer la aplicación y observar la conectividad. Después explicar el recorrido de red y aplicar políticas que bloqueen y permitan solo el tráfico necesario. |
 | **Alcance y profundidad** | CNI/controlador preparados; un recorrido y pocas políticas. CoreDNS y el CNI preparado permiten enseñar el recorrido sin comparar todos los productos. |
-| **Requisitos de preparación** | CNI compatible con NetworkPolicy, controlador de entrada y manifiestos preparados. |
+| **Requisitos de preparación** | Clúster EKS preparado, CNI compatible con NetworkPolicy, controlador de entrada y manifiestos comprobados; verificar costes y limpieza. |
 | **Contenido complementario** | Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio. |
 
 <a id="sesion-10"></a>
@@ -209,33 +209,33 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 
 <a id="sesion-11"></a>
 
-### 11 · Kubernetes en AWS: EKS y clústeres autogestionados con kOps
+### 11 · Kubernetes en Azure: AKS
 
 **M4 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Operación de EKS y de otros entornos Kubernetes. |
-| **Resultado de aprendizaje** | Comparar Kubernetes gestionado y autogestionado sobre la misma base AWS. |
-| **Actividad práctica** | Explicar durante ambos despliegues, solapar esperas, desplegar la misma aplicación y comparar; comprobar permisos y disponer de clústeres de respaldo; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza. |
-| **Alcance y profundidad** | Permisos y cuotas comprobados; despliegues solapados y clústeres de respaldo. kOps es el ejemplo de entorno autogestionado; la web no exige kOps por nombre. Costes Kubernetes en AWS: control plane EKS frente a autogestión con kOps, nodos, balanceadores, discos y tráfico. |
-| **Requisitos de preparación** | AWS/Terraform/kOps, permisos/cuotas y configuraciones comprobados; clústeres de respaldo. |
-| **Contenido complementario** | Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad. |
+| **Cobertura requerida** | Operación de AKS; identidad, redes, cómputo, almacenamiento y registros de Azure. Dedicar 15–20 minutos a consultas en Azure Cost Management, filtros, presupuestos/alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto. |
+| **Resultado de aprendizaje** | Comprender la operación de Kubernetes gestionado en Azure y compararla con EKS. |
+| **Actividad práctica** | Demostración preparada de AKS en una cuenta docente y comparación con EKS; identificar recursos facturables, revisar costes y comprobar la limpieza. |
+| **Alcance y profundidad** | Control plane, identidad de workloads, networking, pools de nodos, actualizaciones y responsabilidad operativa; costes de control plane, nodos, balanceadores, discos y tráfico. |
+| **Requisitos de preparación** | Cuenta docente, permisos, cuotas, entorno AKS y configuración comparativa preparados. |
+| **Contenido complementario** | Instalación independiente y operación avanzada de AKS; comparación opcional con un clúster AWS autogestionado mediante kOps. |
 
 <a id="sesion-12"></a>
 
-### 12 · Kubernetes en Azure y GCP: AKS y GKE
+### 12 · Kubernetes en GCP: GKE
 
 **M4 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | Operación de AKS y GKE; identidad, redes, cómputo, almacenamiento y registros de Azure/GCP en comparación con AWS. Incluir 15–20 minutos por proveedor para consultas de costes, filtros, presupuestos/alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto. |
-| **Resultado de aprendizaje** | Aplicar la comparación de operación cloud a Azure y GCP. |
-| **Actividad práctica** | Demostración preparada de los mismos requisitos y comparación razonada con EKS; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza. |
-| **Alcance y profundidad** | Usar el caso común y el material preparado; priorizar comprobación del comportamiento frente a instalación exhaustiva. Costes Kubernetes en AKS/GKE: modalidades de control plane, nodos, balanceadores, discos y tráfico. |
-| **Requisitos de preparación** | Entornos AKS/GKE, acceso y configuraciones comparativas preparados. |
-| **Contenido complementario** | Instalaciones completas independientes y catálogo de add-ons de ambos proveedores. |
+| **Cobertura requerida** | Operación de GKE; identidad, redes, cómputo, almacenamiento y registros de GCP. Dedicar 15–20 minutos a consultas en GCP Cloud Billing, filtros, presupuestos/alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto. |
+| **Resultado de aprendizaje** | Comprender la operación de Kubernetes gestionado en GCP y compararla con EKS y AKS. |
+| **Actividad práctica** | Demostración preparada de GKE en una cuenta docente y comparación con EKS y AKS; identificar recursos facturables, revisar costes y comprobar la limpieza. |
+| **Alcance y profundidad** | GKE Standard y Autopilot, control plane, identidad de workloads, networking, pools de nodos, actualizaciones y responsabilidad operativa; costes de control plane, nodos, balanceadores, discos y tráfico. |
+| **Requisitos de preparación** | Cuenta docente, permisos, cuotas, entorno GKE y configuración comparativa preparados. |
+| **Contenido complementario** | Instalación independiente y operación avanzada de GKE; catálogo de add-ons. |
 
 <a id="sesion-13"></a>
 

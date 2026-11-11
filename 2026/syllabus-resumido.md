@@ -34,7 +34,7 @@ Las sesiones 1 y 30 son compartidas por René Serral y Rael Garcia. Cada una sum
 
 Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Dos sesiones de contenedores preparan la ejecución de la aplicación en el entorno Academy validado antes de Kubernetes. AWS concentra el laboratorio guiado principal de IaC; Azure y GCP se trabajan mediante comparaciones y demostraciones preparadas, no mediante dos despliegues completos del alumnado. Se introducen identidad, redes, cómputo, almacenamiento y registros, y su aprovisionamiento como código. Python se practica en la validación de servicios y en proveedores; Bash en pipelines; Go en el ejemplo de operator. La IA apoya la escritura/adaptación de código, cuya ejecución y resultados se verifican.
 
-Una aplicación Python de dos servicios conecta contenedores, Kubernetes, observabilidad, CI/GitOps, entrega y escalado. Laboratorios guiados con configuraciones preparadas; permisos, cuotas y costes comprobados; limpieza de recursos al finalizar. EKS/kOps se explican durante su despliegue con un entorno de respaldo disponible. M6 combina conceptos, comparación y demostraciones; operators tiene una clase completa. Los secretos se entregan mediante mecanismos externos y no se guardan en repositorios ni en el estado de Terraform.
+Una aplicación Python de dos servicios conecta contenedores, Kubernetes, observabilidad, CI/GitOps, entrega y escalado. Laboratorios guiados con configuraciones preparadas; permisos, cuotas y costes comprobados; limpieza de recursos al finalizar. Se utiliza un clúster EKS preparado en networking y se comparan demostraciones preparadas de AKS y GKE. M6 combina conceptos, comparación y demostraciones; operators tiene una clase completa. Los secretos se entregan mediante mecanismos externos y no se guardan en repositorios ni en el estado de Terraform.
 
 La sesión 1 incluye, dentro de sus 3h de M1 y con docencia compartida, una presentación guiada de AWS Academy y del ciclo de trabajo del laboratorio asignado, sin asumir un tipo concreto de laboratorio. Se requiere invitación y acceso al curso; el docente comprueba previamente el entorno real, sus permisos, cuotas y límites. Se distinguen contenidos del curso y entorno de laboratorio, acceso temporal a la consola, estado del laboratorio y operaciones de inicio, parada y finalización disponibles; persistencia y limpieza se rigen por sus instrucciones, sin garantías universales de conservación ni de gasto. Al finalizar la sesión 1, o como prerrequisito antes de la 4, el docente valida el entorno Academy para contenedores: runtime disponible o instalado cuando esté permitido, acceso al registro y restricciones del laboratorio. Las sesiones 4–5 se ejecutan en ese entorno preparado, no en un entorno local independiente. Las sesiones 2–3 de cloud e IaC preceden a ambas sesiones de contenedores.
 
@@ -42,9 +42,9 @@ La sesión 1 incluye, dentro de sus 3h de M1 y con docencia compartida, una pres
 
 ## Costes y control del consumo cloud
 
-AWS reserva 15–20 minutos en la sesión 2 para facturación, filtros, presupuestos/alertas y limpieza. En la sesión 12 se dedican 15–20 minutos por proveedor a Azure Cost Management y GCP Cloud Billing; se explican el retraso de la facturación y que los presupuestos no detienen el gasto.
+AWS reserva 15–20 minutos en la sesión 2 para facturación, filtros, presupuestos/alertas y limpieza. Las sesiones 11 y 12 dedican respectivamente 15–20 minutos a Azure Cost Management y GCP Cloud Billing; se explican el retraso de la facturación y que los presupuestos no detienen el gasto.
 
-En EKS/kOps y AKS/GKE se retoma el coste de control plane, nodos, balanceadores, discos y tráfico, comparando modalidades gestionadas y autogestionadas.
+En AKS y GKE se retoma el coste de control plane, nodos, balanceadores, discos y tráfico.
 
 ## M1 · Formación transversal y créditos
 
@@ -75,8 +75,8 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 | 8 | M3 | Persistencia en Kubernetes: almacenamiento y aplicaciones con estado | Rael Garcia |
 | 9 | M3 | Networking en Kubernetes: comunicación y exposición de servicios | Rael Garcia |
 | 10 | M3 | Construcción de un clúster Kubernetes componente a componente | Rael Garcia |
-| 11 | M4 | Kubernetes en AWS: EKS y clústeres autogestionados con kOps | Rael Garcia |
-| 12 | M4 | Kubernetes en Azure y GCP: AKS y GKE | Rael Garcia |
+| 11 | M4 | Kubernetes en Azure: AKS | Rael Garcia |
+| 12 | M4 | Kubernetes en GCP: GKE | Rael Garcia |
 | 13 | M4 | Configuración y empaquetado de aplicaciones: Kustomize y Helm | Rael Garcia |
 | 14 | M6 + M1 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | Rael Garcia |
 | 15 | M4 | Infraestructura declarativa: DNS, certificados y recursos cloud | Rael Garcia |

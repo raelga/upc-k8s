@@ -10,7 +10,7 @@ UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 
 Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Dos sesiones de contenedores preparan la ejecución de la aplicación en el entorno Academy validado antes de Kubernetes. AWS concentra el laboratorio guiado principal de IaC; Azure y GCP se trabajan mediante comparaciones y demostraciones preparadas, no mediante dos despliegues completos del alumnado. Se introducen identidad, redes, cómputo, almacenamiento y registros, y su aprovisionamiento como código. Python se practica en la validación de servicios y en proveedores; Bash en pipelines; Go en el ejemplo de operator. La IA apoya la escritura/adaptación de código, cuya ejecución y resultados se verifican.
 
-Una aplicación Python de dos servicios conecta contenedores, Kubernetes, observabilidad, CI/GitOps, entrega y escalado. Laboratorios guiados con configuraciones preparadas; permisos, cuotas y costes comprobados; limpieza de recursos al finalizar. EKS/kOps se explican durante su despliegue con un entorno de respaldo disponible. M6 combina conceptos, comparación y demostraciones; operators tiene una clase completa. Los secretos se entregan mediante mecanismos externos y no se guardan en repositorios ni en el estado de Terraform.
+Una aplicación Python de dos servicios conecta contenedores, Kubernetes, observabilidad, CI/GitOps, entrega y escalado. Laboratorios guiados con configuraciones preparadas; permisos, cuotas y costes comprobados; limpieza de recursos al finalizar. Se utiliza un clúster EKS preparado en networking y se comparan demostraciones preparadas de AKS y GKE. M6 combina conceptos, comparación y demostraciones; operators tiene una clase completa. Los secretos se entregan mediante mecanismos externos y no se guardan en repositorios ni en el estado de Terraform.
 
 Para AWS Academy se requiere invitación y acceso al curso antes de la sesión 1. El docente verifica previamente el entorno real asignado, sus instrucciones, permisos, cuotas y límites, sin asumir un tipo concreto de laboratorio. Al finalizar la sesión 1, o como prerrequisito antes de la 4, valida el entorno de contenedores: runtime disponible o instalado cuando esté permitido, acceso al registro y restricciones del laboratorio. Las sesiones 4–5 se ejecutan en ese entorno Academy preparado, no en un entorno local independiente. Las sesiones 2–3 de cloud e IaC preceden a ambas sesiones de contenedores.
 
@@ -216,7 +216,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 - Ejemplo Gateway API y relación con Ingress.
 - NetworkPolicy.
 
-**Práctica / evidencia:** Con CNI/controlador preparados, exponer la aplicación, bloquear tráfico y permitir solo conexiones necesarias.
+**Práctica / evidencia:** Usar primero un clúster EKS preparado para exponer la aplicación y observar la conectividad; después explicar CNI, Services, DNS, entrada y NetworkPolicy, bloqueando y permitiendo solo las conexiones necesarias.
 
 **Ampliación:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
 
@@ -240,44 +240,41 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 5 sesiones · 15h · 2 ECTS.
 
-### Sesión 11 · Kubernetes en AWS: EKS y clústeres autogestionados con kOps
+### Sesión 11 · Kubernetes en Azure: AKS
 
 **Fecha:** 10/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Comparar Kubernetes gestionado y autogestionado sobre la misma base AWS.
+**Objetivo:** Comprender la operación de Kubernetes gestionado en Azure y compararla con EKS.
 
 **Contenido principal:**
 
-- Terraform para lanzar EKS.
-- KOps con configuración preparada.
-- Control plane, red, identidad y nodos.
-- Responsabilidades, upgrades, disponibilidad, costes y recuperación.
-- Costes Kubernetes en AWS: control plane EKS frente a autogestión con kOps, nodos, balanceadores, discos y tráfico.
+- Azure: identidad, redes, cómputo, almacenamiento y registros.
+- AKS: control plane, identidad de workloads, networking y pools de nodos.
+- Actualizaciones, disponibilidad y responsabilidad operativa.
+- Azure Cost Management: 15–20 minutos para consultas, filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto.
+- Costes de control plane, nodos, balanceadores, discos y tráfico.
 
-**Práctica / evidencia:** Explicar durante ambos despliegues, solapar esperas, desplegar la misma aplicación y comparar; comprobar permisos y disponer de clústeres de respaldo; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza.
+**Práctica / evidencia:** Demostración preparada de AKS en una cuenta docente y comparación con EKS; identificar recursos facturables, revisar costes y comprobar la limpieza.
 
-**Ampliación:** Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad.
+**Ampliación opcional:** Instalación independiente y operación avanzada de AKS; comparación con un clúster AWS autogestionado mediante kOps.
 
-### Sesión 12 · Kubernetes en Azure y GCP: AKS y GKE
+### Sesión 12 · Kubernetes en GCP: GKE
 
 **Fecha:** 15/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Aplicar la comparación de operación cloud a Azure y GCP.
+**Objetivo:** Comprender la operación de Kubernetes gestionado en GCP y compararla con EKS y AKS.
 
 **Contenido principal:**
 
-- Fundamentos de Azure y GCP: identidad, redes, cómputo, almacenamiento y registros en comparación con AWS.
-- Azure Cost Management y GCP Cloud Billing: 15–20 minutos por proveedor para filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto.
-- Identidad de workloads.
-- Networking.
-- Pools de nodos.
-- Actualizaciones y responsabilidad operativa.
-- GKE Standard/Autopilot y opciones de AKS.
-- Costes Kubernetes en AKS/GKE: modalidades de control plane, nodos, balanceadores, discos y tráfico.
+- GCP: identidad, redes, cómputo, almacenamiento y registros.
+- GKE Standard y Autopilot: control plane, identidad de workloads, networking y pools de nodos.
+- Actualizaciones, disponibilidad y responsabilidad operativa.
+- GCP Cloud Billing: 15–20 minutos para consultas, filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto.
+- Costes de control plane, nodos, balanceadores, discos y tráfico.
 
-**Práctica / evidencia:** Demostración preparada de los mismos requisitos y comparación razonada con EKS; identificar recursos facturables, revisar el desglose de costes y comprobar la limpieza.
+**Práctica / evidencia:** Demostración preparada de GKE en una cuenta docente y comparación con EKS y AKS; identificar recursos facturables, revisar costes y comprobar la limpieza.
 
-**Ampliación:** Instalaciones completas independientes y catálogo de add-ons de ambos proveedores.
+**Ampliación opcional:** Instalación independiente y operación avanzada de GKE; catálogo de add-ons.
 
 ### Sesión 13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm
 
@@ -643,8 +640,8 @@ Material complementario para profundizar mediante trabajo autónomo o formación
 - **Sesión 8 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
 - **Sesión 9 · Networking en Kubernetes: comunicación y exposición de servicios:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
 - **Sesión 10 · Construcción de un clúster Kubernetes componente a componente:** Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada.
-- **Sesión 11 · Kubernetes en AWS: EKS y clústeres autogestionados con kOps:** Dos despliegues diseñados autónomamente; operación avanzada practicada en profundidad.
-- **Sesión 12 · Kubernetes en Azure y GCP: AKS y GKE:** Instalaciones completas independientes y catálogo de add-ons de ambos proveedores.
+- **Sesión 11 · Kubernetes en Azure: AKS:** Instalación independiente y operación avanzada de AKS; comparación opcional con un clúster AWS autogestionado mediante kOps.
+- **Sesión 12 · Kubernetes en GCP: GKE:** Instalación independiente y operación avanzada de GKE; catálogo de add-ons.
 - **Sesión 13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm:** Creación de charts complejos desde cero y catálogo de plugins.
 - **Sesión 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero.
 - **Sesión 15 · Infraestructura declarativa: DNS, certificados y recursos cloud:** DNSSEC/DoH, operación DNS avanzada, Crossplane Compositions/XRDs avanzados y Composition Functions.

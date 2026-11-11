@@ -10,8 +10,8 @@ Rael Garcia",verde,"DevOps, SRE y Platform Engineering; SLI/SLO/SLA e introducci
 8,2026-11-26,18:00–21:00,Europe/Madrid,M3,Persistencia en Kubernetes: almacenamiento y aplicaciones con estado,Rael Garcia,amarillo,,
 9,2026-12-01,18:00–21:00,Europe/Madrid,M3,Networking en Kubernetes: comunicación y exposición de servicios,Rael Garcia,amarillo,,
 10,2026-12-03,18:00–21:00,Europe/Madrid,M3,Construcción de un clúster Kubernetes componente a componente,Rael Garcia,amarillo,,
-11,2026-12-10,18:00–21:00,Europe/Madrid,M4,Kubernetes en AWS: EKS y clústeres autogestionados con kOps,Rael Garcia,amarillo,,
-12,2026-12-15,18:00–21:00,Europe/Madrid,M4,Kubernetes en Azure y GCP: AKS y GKE,Rael Garcia,amarillo,,
+11,2026-12-10,18:00–21:00,Europe/Madrid,M4,Kubernetes en Azure: AKS,Rael Garcia,amarillo,,
+12,2026-12-15,18:00–21:00,Europe/Madrid,M4,Kubernetes en GCP: GKE,Rael Garcia,amarillo,,
 13,2026-12-17,18:00–21:00,Europe/Madrid,M4,Configuración y empaquetado de aplicaciones: Kustomize y Helm,Rael Garcia,amarillo,,
 14,2027-01-12,18:00–21:00,Europe/Madrid,M6,Desarrollo de operators: Go y Kubebuilder/Operator SDK,Rael Garcia,amarillo,Go aplicado y lectura/modificación del controlador,1.5
 15,2027-01-14,18:00–21:00,Europe/Madrid,M4,"Infraestructura declarativa: DNS, certificados y recursos cloud",Rael Garcia,verde,,
