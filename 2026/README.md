@@ -21,8 +21,3 @@ M1 integra 9h de contenido, incluidas en las 90h: 3h propias y 6h transversales 
 
 El código y las instrucciones de los laboratorios se mantienen únicamente en `raelga/kubernetes-talks/course/`; este repositorio conserva la planificación y los enlaces, sin copias locales de los ejercicios. El laboratorio introductorio de Terraform es material de preparación, no una sesión adicional ni una ampliación automática de las 90h.
 
-## Sesiones en vídeo
-
-| Sesión 1 · Fundamentos | Sesión 2 · AWS e infraestructura como código | Sesión 3 · De EC2 a Auto Scaling |
-| --- | --- | --- |
-| ![Sesión 1: DevOps y Platform Engineering](assets/thumbnails/youtube-session01-thumbnail.png) | ![Sesión 2: AWS e infraestructura como código](assets/thumbnails/youtube-session02-thumbnail.png) | ![Sesión 3: de EC2 a Auto Scaling](assets/thumbnails/youtube-session03-thumbnail.png) |
