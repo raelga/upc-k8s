@@ -13,10 +13,10 @@ Create a new thumbnail for each course video while keeping the visual identity e
 
 Before designing, inspect both original reference images and use them as the actual visual template, not merely as inspiration:
 
-- `youtube-session01-thumbnail.png` — Session 1 / Fundamentals
-- `youtube-session02-thumbnail.png` — Session 2 / Cloud, Infrastructure as Code
+- `2026/assets/thumbnails/youtube-session01-thumbnail.png` (relative to the repository root) — Session 1 / Fundamentals
+- `2026/assets/thumbnails/youtube-session02-thumbnail.png` (relative to the repository root) — Session 2 / Cloud, Infrastructure as Code
 
-These reference images are not included in this repository. Obtain them from the course owner or the user's Library before designing. Do not reconstruct the template from memory or from an unapproved later thumbnail. If the originals cannot be accessed, ask for them before designing.
+The original reference images are stored in this repository at the paths above. Inspect them directly before designing. Do not reconstruct the template from memory or from an unapproved later thumbnail.
 
 Treat elements shared by both thumbnails as the brand system. Preserve the navy left panel with the PE monogram, turquoise blocks, cream central panel, typography, layout, spacing, UPC School identity, and course-year treatment. Sample the actual images for their appearance and placement. Treat session number, topic label, headline, subtitle, and the topic-specific right panel as variable content. If the references differ, prefer the shared treatment; adapt a treatment only when it clearly belongs to one topic. For example, an orange AWS infrastructure panel can work for an AWS session without becoming a rule for other sessions.
 
