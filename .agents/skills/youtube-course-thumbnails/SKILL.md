@@ -11,12 +11,14 @@ Create a new thumbnail for each course video while keeping the visual identity e
 
 ## Reference designs
 
-Before designing, inspect both original reference images and use them as the actual visual template, not merely as inspiration:
+Before designing, inspect the original images in the repository's [2026 assets folder](../../../2026/assets/) and use them as the actual visual template, not merely as inspiration. Resolve all links below relative to this `SKILL.md`:
 
-- `2026/assets/thumbnails/youtube-session01-thumbnail.png` (relative to the repository root) — Session 1 / Fundamentals
-- `2026/assets/thumbnails/youtube-session02-thumbnail.png` (relative to the repository root) — Session 2 / Cloud, Infrastructure as Code
+- [Session 1 / Fundamentals](../../../2026/assets/thumbnails/youtube-session01-thumbnail.png)
+- [Session 2 / Cloud, Infrastructure as Code](../../../2026/assets/thumbnails/youtube-session02-thumbnail.png)
+- [Course banner](../../../2026/assets/branding/course-banner.png) — supporting brand reference
+- [Session 3 / AWS](../../../2026/assets/thumbnails/youtube-session03-thumbnail.png) — example of the approved orange AWS panel, not a replacement for the original templates
 
-The original reference images are stored in this repository at the paths above. Inspect them directly before designing. Do not reconstruct the template from memory or from an unapproved later thumbnail.
+Inspect the Session 1 and 2 originals directly before designing. Do not reconstruct the template from memory or from an unapproved later thumbnail.
 
 Treat elements shared by both thumbnails as the brand system. Preserve the navy left panel with the PE monogram, turquoise blocks, cream central panel, typography, layout, spacing, UPC School identity, and course-year treatment. Sample the actual images for their appearance and placement. Treat session number, topic label, headline, subtitle, and the topic-specific right panel as variable content. If the references differ, prefer the shared treatment; adapt a treatment only when it clearly belongs to one topic. For example, an orange AWS infrastructure panel can work for an AWS session without becoming a rule for other sessions.
 
