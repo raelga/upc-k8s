@@ -25,7 +25,7 @@
 
 | Fecha | Nº | Sesión | Docente |
 |---|---:|---|---|
-| Mar 01/12 | 9 | Networking en Kubernetes: comunicación y exposición de servicios | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Mar 01/12 | 9 | EKS y networking en Kubernetes: comunicación y exposición de servicios | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Jue 03/12 | 10 | Construcción de un clúster Kubernetes componente a componente | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Jue 10/12 | 11 | Kubernetes en Azure: AKS | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Mar 15/12 | 12 | Kubernetes en GCP: GKE | [Rael Garcia](https://www.linkedin.com/in/rael/) |

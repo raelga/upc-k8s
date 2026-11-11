@@ -188,7 +188,7 @@
     {
       "number": 9,
       "module": "M3",
-      "title": "Networking en Kubernetes: comunicación y exposición de servicios",
+      "title": "EKS y networking en Kubernetes: comunicación y exposición de servicios",
       "teacher": "Rael Garcia",
       "load": "amarillo",
       "objective": "Seguir tráfico entre Pods, descubrir servicios y exponer la aplicación",
@@ -198,7 +198,7 @@
         "ejemplo Gateway API y relación con Ingress",
         "NetworkPolicy"
       ],
-      "lab": "Usar primero un clúster EKS preparado para exponer la aplicación y observar la conectividad; después explicar CNI, Services, DNS, entrada y NetworkPolicy, bloqueando y permitiendo solo el tráfico necesario",
+      "lab": "Desplegar primero un clúster EKS con Terraform y exponer la aplicación; después explicar CNI, Services, DNS, entrada y NetworkPolicy, bloqueando y permitiendo solo el tráfico necesario. Disponer de un clúster preparado como respaldo",
       "extras": "Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio",
       "date": "2026-12-01",
       "transversal_contents": []

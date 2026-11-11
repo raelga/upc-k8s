@@ -73,7 +73,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 | 6 | M3 | Arquitectura de Kubernetes: API, autenticación y permisos | Rael Garcia |
 | 7 | M3 | Aplicaciones en Kubernetes: workloads, configuración y recursos | Rael Garcia |
 | 8 | M3 | Persistencia en Kubernetes: almacenamiento y aplicaciones con estado | Rael Garcia |
-| 9 | M3 | Networking en Kubernetes: comunicación y exposición de servicios | Rael Garcia |
+| 9 | M3 | EKS y networking en Kubernetes: comunicación y exposición de servicios | Rael Garcia |
 | 10 | M3 | Construcción de un clúster Kubernetes componente a componente | Rael Garcia |
 | 11 | M4 | Kubernetes en Azure: AKS | Rael Garcia |
 | 12 | M4 | Kubernetes en GCP: GKE | Rael Garcia |

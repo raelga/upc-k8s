@@ -203,7 +203,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Ampliación:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
 
-### Sesión 9 · Networking en Kubernetes: comunicación y exposición de servicios
+### Sesión 9 · EKS y networking en Kubernetes: comunicación y exposición de servicios
 
 **Fecha:** 01/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
@@ -216,7 +216,7 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 - Ejemplo Gateway API y relación con Ingress.
 - NetworkPolicy.
 
-**Práctica / evidencia:** Usar primero un clúster EKS preparado para exponer la aplicación y observar la conectividad; después explicar CNI, Services, DNS, entrada y NetworkPolicy, bloqueando y permitiendo solo las conexiones necesarias.
+**Práctica / evidencia:** Desplegar primero un clúster EKS con Terraform y exponer la aplicación; después explicar CNI, Services, DNS, entrada y NetworkPolicy, bloqueando y permitiendo solo las conexiones necesarias. Disponer de un clúster preparado como respaldo.
 
 **Ampliación:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
 
@@ -638,7 +638,7 @@ Material complementario para profundizar mediante trabajo autónomo o formación
 - **Sesión 6 · Arquitectura de Kubernetes: API, autenticación y permisos:** Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero.
 - **Sesión 7 · Aplicaciones en Kubernetes: workloads, configuración y recursos:** Catálogo exhaustivo de controladores y scheduling avanzado.
 - **Sesión 8 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
-- **Sesión 9 · Networking en Kubernetes: comunicación y exposición de servicios:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
+- **Sesión 9 · EKS y networking en Kubernetes: comunicación y exposición de servicios:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
 - **Sesión 10 · Construcción de un clúster Kubernetes componente a componente:** Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada.
 - **Sesión 11 · Kubernetes en Azure: AKS:** Instalación independiente y operación avanzada de AKS; comparación opcional con un clúster AWS autogestionado mediante kOps.
 - **Sesión 12 · Kubernetes en GCP: GKE:** Instalación independiente y operación avanzada de GKE; catálogo de add-ons.

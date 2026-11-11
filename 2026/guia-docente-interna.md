@@ -30,7 +30,7 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 - [06 · Arquitectura de Kubernetes: API, autenticación y permisos](#sesion-06) — M3
 - [07 · Aplicaciones en Kubernetes: workloads, configuración y recursos](#sesion-07) — M3
 - [08 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado](#sesion-08) — M3
-- [09 · Networking en Kubernetes: comunicación y exposición de servicios](#sesion-09) — M3
+- [09 · EKS y networking en Kubernetes: comunicación y exposición de servicios](#sesion-09) — M3
 - [10 · Construcción de un clúster Kubernetes componente a componente](#sesion-10) — M3
 - [11 · Kubernetes en Azure: AKS](#sesion-11) — M4
 - [12 · Kubernetes en GCP: GKE](#sesion-12) — M4
@@ -179,7 +179,7 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 
 <a id="sesion-09"></a>
 
-### 09 · Networking en Kubernetes: comunicación y exposición de servicios
+### 09 · EKS y networking en Kubernetes: comunicación y exposición de servicios
 
 **M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
@@ -187,9 +187,9 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 |---|---|
 | **Cobertura requerida** | • Networking Kubernetes: Services, Ingress, Gateway API, CNI y Network Policies. |
 | **Resultado de aprendizaje** | Seguir tráfico entre Pods, descubrir servicios y exponer la aplicación. |
-| **Actividad práctica** | Empezar con un clúster EKS preparado, exponer la aplicación y observar la conectividad. Después explicar el recorrido de red y aplicar políticas que bloqueen y permitan solo el tráfico necesario. |
+| **Actividad práctica** | Desplegar primero EKS con Terraform y exponer la aplicación. Después explicar el recorrido de red y aplicar políticas que bloqueen y permitan solo el tráfico necesario. |
 | **Alcance y profundidad** | CNI/controlador preparados; un recorrido y pocas políticas. CoreDNS y el CNI preparado permiten enseñar el recorrido sin comparar todos los productos. |
-| **Requisitos de preparación** | Clúster EKS preparado, CNI compatible con NetworkPolicy, controlador de entrada y manifiestos comprobados; verificar costes y limpieza. |
+| **Requisitos de preparación** | Terraform y permisos Academy comprobados, clúster EKS de respaldo, CNI compatible con NetworkPolicy, controlador de entrada y manifiestos preparados; verificar costes y limpieza. |
 | **Contenido complementario** | Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio. |
 
 <a id="sesion-10"></a>
