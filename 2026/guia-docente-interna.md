@@ -25,8 +25,8 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 - [01 · Fundamentos de DevOps y Platform Engineering](#sesion-01) — M1
 - [02 · AWS: fundamentos y aprovisionamiento como código](#sesion-02) — M2
 - [03 · AWS WordPress: de EC2 con estado a instancias reemplazables](#sesion-03) — M2
-- [04 · Contenedores I: imágenes, ejecución y registros](#sesion-04) — M3
-- [05 · Contenedores II: redes, volúmenes, Compose y diagnóstico](#sesion-05) — M3
+- [04 · Contenedores desde cero: namespaces, cgroups y runtime](#sesion-04) — M3
+- [05 · Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose](#sesion-05) — M3
 - [06 · Arquitectura de Kubernetes: API, autenticación y permisos](#sesion-06) — M3
 - [07 · Aplicaciones en Kubernetes: workloads, configuración y recursos](#sesion-07) — M3
 - [08 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado](#sesion-08) — M3
@@ -100,36 +100,36 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 | **Cobertura requerida** | EC2/MariaDB local, RDS y Elastic IP, módulos y estados independientes, ALB/Auto Scaling, AMI versionadas con Packer y archivos multimedia en S3. |
 | **Resultado de aprendizaje** | Explicar qué persiste al reemplazar una instancia y por qué importan las imágenes inmutables y el almacenamiento externo antes de Kubernetes. |
 | **Actividad práctica** | Seguir la evolución, inspeccionar los outputs y el estado remoto de Terraform y comparar el reemplazo de instancias. Proteger secretos y estado; revisar costes y limpieza. |
-| **Alcance y profundidad** | Conservar la hora integrada de M1 para adaptación de scripts y configuración. |
+| **Alcance y profundidad** | Conservar la hora integrada de M1 para adaptación de scripts y configuración. Completar excepcionalmente el cierre de EC2 a Auto Scaling, AMI y S3 en la sesión 4. |
 
 <a id="sesion-04"></a>
 
-### 04 · Contenedores I: imágenes, ejecución y registros
+### 04 · Contenedores desde cero: namespaces, cgroups y runtime
 
 **M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Ecosistema OCI: imágenes, construcción, ejecución y registros.<br>• Dockerfile, capas, etiquetado, publicación y descarga de imágenes.<br>• Puertos y variables de entorno; breve explicación de aislamiento con namespaces/cgroups y del papel del runtime. |
-| **Resultado de aprendizaje** | Construir, ejecutar y publicar una imagen local, distinguir imagen de contenedor y explicar su configuración y aislamiento básico. |
-| **Actividad práctica** | Construir la imagen de la aplicación común, ejecutarla localmente con puertos y variables de entorno, comprobar su respuesta y publicar/recuperar la imagen desde el registro. |
-| **Alcance y profundidad** | Priorizar el ciclo build/run/push/pull y la comprobación del comportamiento en el entorno preparado mediante Academy en sesión 1. Namespaces, cgroups y runtimes se presentan brevemente como fundamento, no como laboratorio de bajo nivel. Preparar la aplicación que se ampliará a dos servicios en sesión 5. |
-| **Requisitos de preparación** | Acceso y entorno Academy preparados en sesión 1 y verificados antes de esta clase; runtime compatible con OCI disponible y permitido, CLI comprobada, acceso al registro, código, conectividad, puertos y cuotas suficientes. Comprobar credenciales temporales y persistencia según el laboratorio asignado; no se requiere una cuenta cloud personal adicional. |
+| **Cobertura requerida** | • Cierre excepcional del laboratorio AWS WordPress: de EC2 a Auto Scaling, AMI versionadas y archivos multimedia en S3.<br>• Contenedores desde cero: namespaces, cgroups, aislamiento, sistema de ficheros y función del runtime.<br>• Introducción a imágenes y capas OCI. |
+| **Resultado de aprendizaje** | Explicar la evolución de WordPress y los mecanismos de aislamiento y ejecución que sustentan los contenedores. |
+| **Actividad práctica** | Completar el cierre guiado del laboratorio AWS y explorar namespaces, cgroups y runtime en el entorno preparado. |
+| **Alcance y profundidad** | Reservar parte de la misma sesión para el cierre excepcional de AWS; dedicar el resto a los fundamentos de contenedores desde cero. El ciclo Docker build/run/push/pull y la aplicación de dos servicios se trabajan en sesión 5. |
+| **Requisitos de preparación** | Laboratorio WordPress y entorno Academy preparados; verificar runtime compatible, CLI, conectividad, permisos y cuotas. Comprobar credenciales temporales y persistencia según el laboratorio asignado; no se requiere una cuenta cloud personal adicional. |
 | **Contenido complementario** | Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras. El escaneo se concreta en el pipeline Tekton. |
 
 <a id="sesion-05"></a>
 
-### 05 · Contenedores II: redes, volúmenes, Compose y diagnóstico
+### 05 · Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose
 
 **M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Construcción multi-stage y separación de compilación y ejecución.<br>• Redes, resolución entre servicios, volúmenes y persistencia; definición de una aplicación de dos servicios con Compose.<br>• Logs, inspección y diagnóstico de fallos de conectividad, configuración y almacenamiento.<br>• M1 integrado: 1h de «Validación Python de los servicios y revisión de código con IA». |
-| **Resultado de aprendizaje** | Ejecutar y diagnosticar una aplicación local de dos servicios, comprobar su persistencia y validar mediante Python su funcionamiento sin aceptar sin revisión el código generado por IA. |
-| **Actividad práctica** | Adaptar el Dockerfile a multi-stage y levantar los dos servicios con Compose, red y volumen. Introducir y resolver fallos preparados de puertos/nombres, variables y persistencia mediante logs e inspección. Usar un script Python para validar la comunicación y las respuestas; generar o revisar cambios con IA y contrastarlos con las comprobaciones ejecutadas. |
+| **Cobertura requerida** | • Docker, sistema de ficheros y capas OCI; Dockerfile, construcción multi-stage, etiquetado y publicación/descarga de imágenes.<br>• Ejecución, puertos y variables; redes, resolución entre servicios, volúmenes y persistencia; aplicación de dos servicios con Compose.<br>• Logs, inspección y diagnóstico de fallos de conectividad, configuración y almacenamiento.<br>• M1 integrado: 1h de «Validación Python de los servicios y revisión de código con IA». |
+| **Resultado de aprendizaje** | Construir, ejecutar y publicar una imagen y diagnosticar una aplicación local de dos servicios, comprobar su persistencia y validar mediante Python su funcionamiento sin aceptar sin revisión el código generado por IA. |
+| **Actividad práctica** | Construir y publicar la imagen de la aplicación, trabajar el Dockerfile multi-stage y levantar los dos servicios con Compose, red y volumen. Introducir y resolver fallos preparados de puertos/nombres, variables y persistencia mediante logs e inspección. Usar un script Python para validar la comunicación y las respuestas; generar o revisar cambios con IA y contrastarlos con las comprobaciones ejecutadas. |
 | **Alcance y profundidad** | Laboratorio local guiado sobre la aplicación común; distinguir los puertos publicados al host de la comunicación interna entre servicios y comprobar los datos tras recrear un contenedor. Reservar la hora transversal M1 para validación Python y revisión crítica de código con IA, no para un curso completo de Python. |
-| **Requisitos de preparación** | Entorno Academy preparado en sesión 1 y utilizado para contenedores en sesión 4, Compose disponible, imágenes/código de ambos servicios, Python y dependencias de validación instalados. Preparar fallos reproducibles y comprobar runtime permitido, acceso al registro, cuotas, credenciales temporales y persistencia según el laboratorio asignado; no se requiere una cuenta cloud personal adicional. |
+| **Requisitos de preparación** | Entorno Academy preparado en sesión 1 y validado para contenedores, Compose disponible, imágenes/código de ambos servicios, Python y dependencias de validación instalados. Preparar fallos reproducibles y comprobar runtime permitido, acceso al registro, cuotas, credenciales temporales y persistencia según el laboratorio asignado; no se requiere una cuenta cloud personal adicional. |
 | **Contenido complementario** | Optimización avanzada de imágenes y redes, múltiples entornos Compose y diagnóstico de bajo nivel. |
 
 <a id="sesion-06"></a>

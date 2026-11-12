@@ -3,8 +3,8 @@ sesion,fecha,horario,zona_horaria,modulo,titulo,docente,concentracion,contenido_
 Rael Garcia",verde,"DevOps, SRE y Platform Engineering; SLI/SLO/SLA e introducción a Terraform",3
 2,2026-11-05,18:00–21:00,Europe/Madrid,M2,AWS: fundamentos y aprovisionamiento como código,Rael Garcia,amarillo,Python para consultar recursos; generación y revisión de código con IA,1
 3,2026-11-10,18:00–21:00,Europe/Madrid,M2,AWS WordPress: de EC2 con estado a instancias reemplazables,Rael Garcia,amarillo,"Adaptación de scripts, configuración y comparación entre proveedores",1
-4,2026-11-12,18:00–21:00,Europe/Madrid,M3,"Contenedores I: imágenes, ejecución y registros",Rael Garcia,amarillo,,
-5,2026-11-17,18:00–21:00,Europe/Madrid,M3,"Contenedores II: redes, volúmenes, Compose y diagnóstico",Rael Garcia,amarillo,Validación Python de los servicios y revisión de código con IA,1
+4,2026-11-12,18:00–21:00,Europe/Madrid,M3,"Contenedores desde cero: namespaces, cgroups y runtime; cierre excepcional de AWS WordPress: EC2, Auto Scaling, AMI y S3",Rael Garcia,amarillo,,
+5,2026-11-17,18:00–21:00,Europe/Madrid,M3,"Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose",Rael Garcia,amarillo,Validación Python de los servicios y revisión de código con IA,1
 6,2026-11-19,18:00–21:00,Europe/Madrid,M3,"Arquitectura de Kubernetes: API, autenticación y permisos",Rael Garcia,amarillo,,
 7,2026-11-24,18:00–21:00,Europe/Madrid,M3,"Aplicaciones en Kubernetes: workloads, configuración y recursos",Rael Garcia,amarillo,,
 8,2026-11-26,18:00–21:00,Europe/Madrid,M3,Persistencia en Kubernetes: almacenamiento y aplicaciones con estado,Rael Garcia,amarillo,,

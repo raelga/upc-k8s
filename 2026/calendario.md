@@ -15,8 +15,9 @@
 | Mar 03/11 | 1 | Fundamentos de DevOps y Platform Engineering | [René Serral](https://www.linkedin.com/in/ren%C3%A9-serral-graci%C3%A0-9b219648/)<br>[Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Jue 05/11 | 2 | AWS: fundamentos y aprovisionamiento como código | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Mar 10/11 | 3 | AWS WordPress: de EC2 con estado a instancias reemplazables | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Jue 12/11 | 4 | Contenedores I: imágenes, ejecución y registros | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Mar 17/11 | 5 | Contenedores II: redes, volúmenes, Compose y diagnóstico | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Jue 12/11 | 4 | Cierre excepcional del laboratorio de AWS: de EC2 a Auto Scaling, AMI y S3 | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| ↳ Jue 12/11 | ↳ 4 | Contenedores desde cero: namespaces, cgroups y runtime | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Mar 17/11 | 5 | Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Jue 19/11 | 6 | Arquitectura de Kubernetes: API, autenticación y permisos | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Mar 24/11 | 7 | Aplicaciones en Kubernetes: workloads, configuración y recursos | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Jue 26/11 | 8 | Persistencia en Kubernetes: almacenamiento y aplicaciones con estado | [Rael Garcia](https://www.linkedin.com/in/rael/) |

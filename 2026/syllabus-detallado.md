@@ -23,7 +23,7 @@ M1 combina **3h propias y 6h integradas**: 9h de contenido incluidas en las 90h 
 | 1 · Fundamentos de DevOps y Platform Engineering | DevOps, SRE y Platform Engineering; SLI/SLO/SLA e introducción a Terraform | 3h |
 | 2 · AWS: fundamentos y aprovisionamiento como código | Python para consultar recursos; generación y revisión de código con IA | 1h |
 | 3 · AWS WordPress: de EC2 con estado a instancias reemplazables | Adaptación de scripts, configuración y comparación entre proveedores | 1h |
-| 5 · Contenedores II: redes, volúmenes, Compose y diagnóstico | Validación Python de los servicios y revisión de código con IA | 1h |
+| 5 · Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose | Validación Python de los servicios y revisión de código con IA | 1h |
 | 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
 | 17 · Automatización de pipelines: scripting, Tekton y Trivy | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
 
@@ -100,49 +100,50 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 - WordPress y MariaDB en EC2: reemplazar la instancia y observar la pérdida de datos locales.
 - Migrar MySQL a RDS y usar una Elastic IP; comparar la persistencia de la base de datos y de los archivos subidos.
 - Reutilizar módulos de Terraform y después compartir outputs de red y base de datos entre estados separados.
-- Introducir un ALB y Auto Scaling, comprobaciones de salud, bootstrap y deriva de versiones.
-- Introducir AMI versionadas con Packer y almacenamiento de archivos multimedia en S3 como siguientes pasos arquitectónicos.
+- Introducir un ALB y Auto Scaling, comprobaciones de salud, bootstrap y deriva de versiones; completar el cierre excepcional en la sesión 4.
+- Introducir AMI versionadas con Packer y almacenamiento de archivos multimedia en S3, cuyo cierre se aborda en la sesión 4.
 - Usar datos desechables, proteger los secretos y el estado de Terraform, revisar los costes y limpiar los recursos.
 
 ## M3 · Contenedores y ecosistema OCI. Introducción al bloque
 
 2 sesiones · 6h. Se imparten después de las dos sesiones de cloud e IaC; M3 continúa en las sesiones 6–10.
 
-### Sesión 4 · Contenedores I: imágenes, ejecución y registros
+### Sesión 4 · Contenedores desde cero: namespaces, cgroups y runtime
 
 **Fecha:** 12/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Construir, ejecutar y publicar una imagen en el entorno Academy preparado, entendiendo los fundamentos del aislamiento y el runtime.
+**Objetivo:** Cerrar excepcionalmente el laboratorio AWS de WordPress y comprender los fundamentos del aislamiento y la ejecución de contenedores.
 
 **Contenido principal:**
 
-- Introducción breve a namespaces, cgroups, capas OCI y función del runtime.
-- Dockerfile y construcción de imágenes en el entorno preparado.
-- Ejecución de contenedores, puertos y variables de entorno.
-- Registros, publicación e higiene de imágenes.
+- Cierre excepcional de WordPress en AWS: de EC2 a Auto Scaling, AMI versionadas y archivos multimedia en S3.
+- Contenedores desde cero: namespaces, cgroups y aislamiento de procesos y recursos.
+- Función del runtime y relación entre procesos, sistema de ficheros y contenedores.
+- Introducción a imágenes y capas OCI como preparación para Docker.
 
-**Práctica / evidencia:** Construir una imagen de la aplicación, ejecutarla en el entorno Academy validado con puertos y configuración por variables de entorno y publicarla en un registro.
+**Práctica / evidencia:** Completar el cierre guiado del laboratorio AWS y explorar los mecanismos de aislamiento y ejecución en el entorno Academy validado.
 
 **Ampliación:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton.
 
-### Sesión 5 · Contenedores II: redes, volúmenes, Compose y diagnóstico
+### Sesión 5 · Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose
 
 **Fecha:** 17/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Contenido de M1:** Validación Python de los servicios y revisión de código con IA. **Dedicación:** 1h incluidas en esta clase.
 
-**Objetivo:** Ejecutar y diagnosticar una aplicación de dos servicios con comunicación y persistencia locales.
+**Objetivo:** Construir y publicar una imagen Docker y ejecutar y diagnosticar una aplicación de dos servicios con comunicación y persistencia locales.
 
 **Contenido principal:**
 
-- Construcción multi-stage.
+- Docker, sistema de ficheros y capas OCI; Dockerfile, construcción multi-stage y publicación en un registro.
+- Ejecución de contenedores, puertos y variables de entorno.
 - Redes y comunicación entre contenedores.
 - Volúmenes y persistencia.
 - Compose para la aplicación Python de dos servicios.
 - Logs, inspección y diagnóstico de fallos de configuración y conectividad.
 - Validación Python de los servicios y revisión de código asistida por IA, comprobando ejecución y resultados.
 
-**Práctica / evidencia:** Ejecutar los dos servicios con Compose, verificar comunicación y persistencia, diagnosticar un fallo preparado y validar los servicios mediante Python.
+**Práctica / evidencia:** Construir, ejecutar y publicar una imagen; ejecutar los dos servicios con Compose, verificar comunicación y persistencia, diagnosticar un fallo preparado y validar los servicios mediante Python.
 
 **Ampliación:** Optimización avanzada de imágenes y escenarios complejos de Compose y diagnóstico.
 
@@ -633,8 +634,8 @@ Material complementario para profundizar mediante trabajo autónomo o formación
 - **Sesión 1 · Fundamentos de DevOps y Platform Engineering:** Implantación completa de Backstage y diseño organizativo en profundidad.
 - **Sesión 2 · AWS: fundamentos y aprovisionamiento como código:** Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless.
 - **Sesión 3 · AWS WordPress:** Despliegues independientes adicionales y diseño avanzado de módulos.
-- **Sesión 4 · Contenedores I: imágenes, ejecución y registros:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton.
-- **Sesión 5 · Contenedores II: redes, volúmenes, Compose y diagnóstico:** Optimización avanzada de imágenes y escenarios complejos de Compose y diagnóstico.
+- **Sesión 4 · Contenedores desde cero: namespaces, cgroups y runtime:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton.
+- **Sesión 5 · Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose:** Optimización avanzada de imágenes y escenarios complejos de Compose y diagnóstico.
 - **Sesión 6 · Arquitectura de Kubernetes: API, autenticación y permisos:** Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero.
 - **Sesión 7 · Aplicaciones en Kubernetes: workloads, configuración y recursos:** Catálogo exhaustivo de controladores y scheduling avanzado.
 - **Sesión 8 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.

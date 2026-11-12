@@ -89,17 +89,17 @@
     {
       "number": 4,
       "module": "M3",
-      "title": "Contenedores I: imágenes, ejecución y registros",
+      "title": "Contenedores desde cero: namespaces, cgroups y runtime",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Construir, ejecutar y publicar una imagen entendiendo aislamiento y runtime",
+      "objective": "Cerrar excepcionalmente el laboratorio AWS de WordPress y comprender los fundamentos de aislamiento y ejecución de contenedores",
       "contents": [
-        "Aislamiento: namespaces, cgroups, capas OCI y runtimes como contexto breve",
-        "Dockerfile, build y ejecución en el entorno preparado de AWS Academy",
-        "Puertos, variables de entorno y configuración",
-        "Publicación en un registro accesible e higiene de imágenes"
+        "Cierre excepcional del laboratorio AWS de WordPress: evolución de EC2 a Auto Scaling, AMI versionadas y archivos multimedia en S3",
+        "Contenedores desde cero: aislamiento con namespaces y límites de recursos con cgroups",
+        "Función del runtime y relación entre procesos, sistema de ficheros y contenedores",
+        "Introducción a imágenes y capas OCI como preparación para Docker"
       ],
-      "lab": "Con el acceso y entorno de AWS Academy preparados desde la sesión 1, construir una imagen pequeña, ejecutarla con puertos y variables y publicar/recuperar la imagen en el registro; el docente verifica runtime, conectividad y permisos del laboratorio asignado",
+      "lab": "Completar el cierre guiado de WordPress y explorar los mecanismos de aislamiento y ejecución con el entorno Academy preparado; el docente verifica runtime, conectividad y permisos del laboratorio asignado",
       "extras": "Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton",
       "date": "2026-11-12",
       "transversal_contents": []
@@ -107,18 +107,19 @@
     {
       "number": 5,
       "module": "M3",
-      "title": "Contenedores II: redes, volúmenes, Compose y diagnóstico",
+      "title": "Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Ejecutar y diagnosticar los dos servicios del caso común antes de introducir Kubernetes",
+      "objective": "Construir imágenes Docker y ejecutar y diagnosticar los dos servicios del caso común antes de introducir Kubernetes",
       "contents": [
-        "Build multi-stage y reducción de la imagen",
+        "Docker, sistema de ficheros, capas OCI, Dockerfile y construcción multi-stage",
+        "Ejecución, puertos, variables de entorno, publicación y recuperación de imágenes en un registro",
         "Redes, resolución entre servicios y volúmenes",
         "Compose para ejecutar los dos servicios",
         "Logs, inspección y diagnóstico de fallos de configuración y conectividad",
         "Validación Python de los servicios y revisión de código con IA; 1h transversal de M1"
       ],
-      "lab": "Ejecutar los dos servicios con Compose en el entorno Academy preparado, provocar y diagnosticar un fallo de red o configuración y verificar la recuperación con un script Python revisado con IA",
+      "lab": "Construir, ejecutar y publicar una imagen; ejecutar los dos servicios con Compose en el entorno Academy preparado, provocar y diagnosticar un fallo de red o configuración y verificar la recuperación con un script Python revisado con IA",
       "extras": "Orquestación avanzada de Compose y catálogo de opciones; no anticipar Kubernetes",
       "date": "2026-11-17",
       "transversal_contents": [
