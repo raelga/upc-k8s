@@ -102,7 +102,7 @@
       "extras": "Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton",
       "date": "2026-11-12",
       "transversal_contents": [],
-      "original_title": "Contenedores desde cero: namespaces, cgroups y runtime"
+      "original_title": "Cierre de AWS y contenedores desde cero"
     },
     {
       "number": 5,
@@ -147,7 +147,7 @@
       "extras": "Runtimes alternativos y builds in-cluster; firma/SBOM opcionales; escaneo en Tekton",
       "date": "2026-11-19",
       "transversal_contents": [],
-      "original_title": "Arquitectura de Kubernetes: API, autenticación y permisos"
+      "original_title": "Arquitectura de Kubernetes"
     },
     {
       "number": 7,

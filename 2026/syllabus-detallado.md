@@ -595,7 +595,7 @@ Material complementario para profundizar mediante trabajo autónomo o formación
 - **Sesión 3 · AWS WordPress:** Despliegues independientes adicionales y diseño avanzado de módulos.
 - **Sesión 4 · Contenedores desde cero: namespaces, cgroups y runtime:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton.
 - **Sesión 5 · Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose:** Optimización avanzada de imágenes y escenarios complejos de Compose y diagnóstico.
-- **Sesión 6 · Arquitectura de Kubernetes: API, autenticación y permisos:** Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero.
+- **Sesión 6 · Arquitectura de Kubernetes:** Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero.
 - **Sesión 7 · Aplicaciones en Kubernetes: workloads, configuración y recursos:** Catálogo exhaustivo de controladores y scheduling avanzado.
 - **Sesión 8 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
 - **Sesión 9 · EKS y networking en Kubernetes: comunicación y exposición de servicios:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
