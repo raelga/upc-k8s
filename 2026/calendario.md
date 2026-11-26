@@ -17,19 +17,21 @@
 | Mar 10/11 | 3 | AWS WordPress: de EC2 con estado a instancias reemplazables | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Jue 12/11 | 4 | Cierre excepcional del laboratorio de AWS: de EC2 a Auto Scaling, AMI y S3 | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | ↳ Jue 12/11 | ↳ 4 | Contenedores desde cero: namespaces, cgroups y runtime | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Mar 17/11 | 5 | Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Jue 19/11 | 6 | Arquitectura de Kubernetes: API, autenticación y permisos | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Mar 24/11 | 7 | Aplicaciones en Kubernetes: workloads, configuración y recursos | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Jue 26/11 | 8 | Persistencia en Kubernetes: almacenamiento y aplicaciones con estado | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Mar 17/11 | 5 | Contenedores II: Dockerfile, imágenes, capas, overlay/copy-on-write, multi-stage, namespaces y cgroups | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Jue 19/11 | 6 | Aislamiento, ECR y Compose; arquitectura Kubernetes, controladores y kind | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Mar 24/11 | 7 | kind, kubectl, namespaces, labels, annotations, selectors, Pods y requests/limits; introducción a init containers y probes | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Jue 26/11 | 8 | Workloads, configuración, recursos y práctica pendiente de init containers y probes | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+
+La práctica de init containers y probes queda pendiente para la sesión 8. La hora transversal M1 de validación Python y revisión con IA asignada a la sesión 5 está pendiente de confirmar; no se contabiliza como impartida.
 
 ## Diciembre 2026
 
 | Fecha | Nº | Sesión | Docente |
 |---|---:|---|---|
-| Mar 01/12 | 9 | EKS y networking en Kubernetes: comunicación y exposición de servicios | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Jue 03/12 | 10 | Construcción de un clúster Kubernetes componente a componente | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Jue 10/12 | 11 | Kubernetes en Azure: AKS | [Rael Garcia](https://www.linkedin.com/in/rael/) |
-| Mar 15/12 | 12 | Kubernetes en GCP: GKE | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Mar 01/12 | 9 | Persistencia en Kubernetes: almacenamiento y aplicaciones con estado | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Jue 03/12 | 10 | EKS y networking en Kubernetes: comunicación y exposición de servicios | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Jue 10/12 | 11 | Construcción de un clúster: componentes, autenticación, RBAC y OIDC | [Rael Garcia](https://www.linkedin.com/in/rael/) |
+| Mar 15/12 | 12 | AKS y GKE: demostraciones preparadas y costes, 15–20 minutos por proveedor | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 | Jue 17/12 | 13 | Configuración y empaquetado de aplicaciones: Kustomize y Helm | [Rael Garcia](https://www.linkedin.com/in/rael/) |
 
 **Descanso navideño:** desde el 22 de diciembre; las clases se reanudan el martes 12 de enero.
