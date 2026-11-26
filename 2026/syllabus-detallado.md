@@ -125,21 +125,25 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Ampliación:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton.
 
-### Sesión 5 · Contenedores II: Dockerfile, imágenes y aislamiento
+### Sesión 5 · Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose
 
 **Fecha:** 17/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Contenido de M1:** Validación Python de los servicios y revisión de código con IA. **Dedicación:** 1h incluidas en esta clase, pendiente de confirmar y completar si no se impartió.
+**Contenido de M1:** Validación Python de los servicios y revisión de código con IA. **Dedicación:** 1h incluidas en esta clase.
 
-**Objetivo:** Comprender imágenes y aislamiento y construir una imagen Docker reproducible.
+**Objetivo:** Construir y publicar una imagen Docker y ejecutar y diagnosticar una aplicación de dos servicios con comunicación y persistencia locales.
 
 **Contenido principal:**
 
-- Dockerfile, imágenes y capas overlay con copy-on-write; construcción multi-stage.
-- Namespaces y cgroups como mecanismos de aislamiento.
-- M1: la validación Python de servicios y revisión de código con IA permanece pendiente de confirmación; conservar la hora integrada y completarla si no se impartió.
+- Docker, sistema de ficheros y capas OCI; Dockerfile, construcción multi-stage y publicación en un registro.
+- Ejecución de contenedores, puertos y variables de entorno.
+- Redes y comunicación entre contenedores.
+- Volúmenes y persistencia.
+- Compose para la aplicación Python de dos servicios.
+- Logs, inspección y diagnóstico de fallos de configuración y conectividad.
+- Validación Python de los servicios y revisión de código asistida por IA, comprobando ejecución y resultados.
 
-**Práctica / evidencia:** Construir y examinar imágenes y sus capas; contrastar el aislamiento de procesos y recursos.
+**Práctica / evidencia:** Construir, ejecutar y publicar una imagen; ejecutar los dos servicios con Compose, verificar comunicación y persistencia, diagnosticar un fallo preparado y validar los servicios mediante Python.
 
 **Ampliación:** Optimización avanzada de imágenes y escenarios complejos de Compose y diagnóstico.
 
@@ -147,45 +151,45 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 5 sesiones · 15h. Con las sesiones 4–5 de contenedores, M3 abarca las sesiones 4–10 y suma 7 sesiones · 21h · 2 ECTS.
 
-### Sesión 6 · Contenedores y arquitectura de Kubernetes: ECR, Compose y controladores
+### Sesión 6 · Arquitectura de Kubernetes: API, autenticación y permisos
 
 **Fecha:** 19/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Profundizar en contenedores e introducir la arquitectura y reconciliación de Kubernetes.
+**Objetivo:** Seguir una petición kubectl y distinguir autenticación de autorización.
 
-**Contenido principal:** Aislamiento de contenedores, registro ECR y Compose; arquitectura de Kubernetes, controladores y reconciliación; introducción a kind.
+**Contenido principal:**
 
-**Práctica / evidencia:** Trabajar con imágenes y Compose y explorar la arquitectura de un clúster kind.
+- Control plane y nodos.
+- API, etcd, reconciliación y ejecución de Pods.
+- Kubeconfig, certificados, tokens y ServiceAccounts.
+- Role/RoleBinding.
+- OIDC y admisión conceptual.
 
-**Ampliación:** Configuraciones avanzadas de Compose y diagnóstico de aislamiento.
+**Práctica / evidencia:** Levantar kind, localizar componentes y comprobar una operación permitida y otra denegada.
 
-### Sesión 7 · Kubernetes: kind, kubectl y fundamentos de Pods
+**Ampliación:** Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero.
+
+### Sesión 7 · Aplicaciones en Kubernetes: workloads, configuración y recursos
 
 **Fecha:** 24/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Explorar un clúster y los objetos básicos que organizan y ejecutan aplicaciones.
-
-**Contenido principal:** kind y kubectl; namespaces, labels, annotations y selectors; Pods, requests y limits; introducción a init containers y probes.
-
-**Práctica / evidencia:** Explorar el clúster y sus objetos con kubectl; la práctica de init containers y probes queda pendiente para la sesión 8.
-
-**Ampliación:** Scheduling avanzado y diagnóstico detallado de recursos.
-
-### Sesión 8 · Aplicaciones en Kubernetes: workloads, configuración, probes y recursos
-
-**Fecha:** 26/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
-
 **Objetivo:** Desplegar una aplicación y gestionar su configuración y ciclo de vida.
 
-**Contenido principal:** Pods, Deployments, Jobs y CronJobs; ConfigMap y Secret; init containers y probes; requests/limits y scheduling básico.
+**Contenido principal:**
 
-**Práctica / evidencia:** Completar la práctica pendiente de init containers y probes; modificar configuración, actualizar la aplicación y comprobar asignación de recursos.
+- Pods, Deployments, Jobs y CronJobs.
+- ConfigMap/Secret.
+- Probes.
+- Requests/limits y scheduling básico.
+- Namespaces, labels y selectors.
+
+**Práctica / evidencia:** Modificar configuración, observar probes, actualizar la aplicación y comprobar asignación de recursos.
 
 **Ampliación:** Catálogo exhaustivo de controladores y scheduling avanzado.
 
-### Sesión 9 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado
+### Sesión 8 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado
 
-**Fecha:** 01/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
+**Fecha:** 26/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Mantener datos y comprender las necesidades de workloads con estado.
 
@@ -200,9 +204,9 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Ampliación:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
 
-### Sesión 10 · EKS y networking en Kubernetes: comunicación y exposición de servicios
+### Sesión 9 · EKS y networking en Kubernetes: comunicación y exposición de servicios
 
-**Fecha:** 03/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
+**Fecha:** 01/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
 **Objetivo:** Seguir tráfico entre Pods, descubrir servicios y exponer la aplicación.
 
@@ -217,44 +221,61 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Ampliación:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
 
-## M4 · Kubernetes en Producción y Ecosistema Cloud Native
+### Sesión 10 · Construcción de un clúster Kubernetes componente a componente
 
-5 sesiones · 15h · 2 ECTS.
+**Fecha:** 03/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-### Sesión 11 · Construcción de un clúster Kubernetes, RBAC y OIDC
-
-**Fecha:** 10/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
-
-**Objetivo:** Comprender cómo se ensamblan y autentican los componentes de Kubernetes y distinguir autenticación y autorización.
+**Objetivo:** Comprender cómo se ensamblan y autentican los componentes de Kubernetes.
 
 **Contenido principal:**
 
 - PKI, etcd, kube-apiserver, scheduler y controller-manager.
-- Kubelet, runtime, kube-proxy, unión de un nodo y TLS bootstrapping.
-- Kubeconfig, certificados, tokens y ServiceAccounts; OIDC y admisión conceptual.
-- RBAC: Role y RoleBinding.
+- Kubelet, runtime y kube-proxy.
+- Unión de un nodo y TLS bootstrapping.
 
-**Práctica / evidencia:** Arrancar un clúster reducido con material preparado, unir un nodo y ejecutar un Pod; comprobar una operación permitida y otra denegada.
+**Práctica / evidencia:** Arrancar un clúster reducido con material preparado, unir un nodo y ejecutar un Pod.
 
-**Ampliación:** Kubernetes the hard way completo sin ayudas; operación HA, recuperación e integración OIDC avanzadas.
+**Ampliación:** Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada.
 
-### Sesión 12 · Kubernetes gestionado en Azure y GCP: AKS y GKE
+## M4 · Kubernetes en Producción y Ecosistema Cloud Native
 
-**Fecha:** 15/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
+5 sesiones · 15h · 2 ECTS.
 
-**Objetivo:** Comparar Kubernetes gestionado en Azure y GCP con EKS.
+### Sesión 11 · Kubernetes en Azure: AKS
+
+**Fecha:** 10/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
+
+**Objetivo:** Comprender la operación de Kubernetes gestionado en Azure y compararla con EKS.
 
 **Contenido principal:**
 
-- Identidad, redes, cómputo, almacenamiento y registros de Azure y GCP.
-- AKS y GKE Standard/Autopilot: control plane, identidad de workloads, networking y pools de nodos.
+- Azure: identidad, redes, cómputo, almacenamiento y registros.
+- AKS: control plane, identidad de workloads, networking y pools de nodos.
 - Actualizaciones, disponibilidad y responsabilidad operativa.
-- Reservar 15–20 minutos por proveedor para consultas y filtros, presupuestos, alertas y limpieza en Azure Cost Management y GCP Cloud Billing. La facturación puede retrasarse y los presupuestos no detienen el gasto.
+- Azure Cost Management: 15–20 minutos para consultas, filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto.
 - Costes de control plane, nodos, balanceadores, discos y tráfico.
 
-**Práctica / evidencia:** Demostraciones preparadas de AKS y GKE en cuentas docentes y comparación con EKS; identificar recursos facturables, revisar costes y comprobar la limpieza. No se exigen dos despliegues del alumnado.
+**Práctica / evidencia:** Demostración preparada de AKS en una cuenta docente y comparación con EKS; identificar recursos facturables, revisar costes y comprobar la limpieza.
 
-**Ampliación opcional:** Instalación independiente y operación avanzada de AKS/GKE; catálogo de add-ons y comparación con un clúster AWS autogestionado mediante kOps.
+**Ampliación opcional:** Instalación independiente y operación avanzada de AKS; comparación con un clúster AWS autogestionado mediante kOps.
+
+### Sesión 12 · Kubernetes en GCP: GKE
+
+**Fecha:** 15/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
+
+**Objetivo:** Comprender la operación de Kubernetes gestionado en GCP y compararla con EKS y AKS.
+
+**Contenido principal:**
+
+- GCP: identidad, redes, cómputo, almacenamiento y registros.
+- GKE Standard y Autopilot: control plane, identidad de workloads, networking y pools de nodos.
+- Actualizaciones, disponibilidad y responsabilidad operativa.
+- GCP Cloud Billing: 15–20 minutos para consultas, filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto.
+- Costes de control plane, nodos, balanceadores, discos y tráfico.
+
+**Práctica / evidencia:** Demostración preparada de GKE en una cuenta docente y comparación con EKS y AKS; identificar recursos facturables, revisar costes y comprobar la limpieza.
+
+**Ampliación opcional:** Instalación independiente y operación avanzada de GKE; catálogo de add-ons.
 
 ### Sesión 13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm
 
@@ -614,14 +635,14 @@ Material complementario para profundizar mediante trabajo autónomo o formación
 - **Sesión 2 · AWS: fundamentos y aprovisionamiento como código:** Curso completo de HCL/boto3; diseño autónomo desde cero; catálogo exhaustivo de bases de datos, mensajería y serverless.
 - **Sesión 3 · AWS WordPress:** Despliegues independientes adicionales y diseño avanzado de módulos.
 - **Sesión 4 · Contenedores desde cero: namespaces, cgroups y runtime:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton.
-- **Sesión 5 · Contenedores II:** Optimización avanzada de imágenes.
-- **Sesión 6 · Contenedores y arquitectura de Kubernetes:** Configuraciones avanzadas de Compose y diagnóstico de aislamiento.
-- **Sesión 7 · Kubernetes: kind, kubectl y fundamentos de Pods:** Scheduling avanzado y diagnóstico detallado de recursos.
-- **Sesión 8 · Aplicaciones en Kubernetes:** Catálogo exhaustivo de controladores y scheduling avanzado.
-- **Sesión 9 · Persistencia en Kubernetes:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
-- **Sesión 10 · EKS y networking:** Instalación/comparación de múltiples CNI; networking avanzado se desarrolla con Traefik/Istio.
-- **Sesión 11 · Construcción de clúster, RBAC y OIDC:** Kubernetes the hard way completo; operación HA, recuperación e integración OIDC avanzadas.
-- **Sesión 12 · AKS y GKE:** Instalación independiente y operación avanzada; catálogo de add-ons y comparación opcional con kOps.
+- **Sesión 5 · Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose:** Optimización avanzada de imágenes y escenarios complejos de Compose y diagnóstico.
+- **Sesión 6 · Arquitectura de Kubernetes: API, autenticación y permisos:** Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero.
+- **Sesión 7 · Aplicaciones en Kubernetes: workloads, configuración y recursos:** Catálogo exhaustivo de controladores y scheduling avanzado.
+- **Sesión 8 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
+- **Sesión 9 · EKS y networking en Kubernetes: comunicación y exposición de servicios:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
+- **Sesión 10 · Construcción de un clúster Kubernetes componente a componente:** Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada.
+- **Sesión 11 · Kubernetes en Azure: AKS:** Instalación independiente y operación avanzada de AKS; comparación opcional con un clúster AWS autogestionado mediante kOps.
+- **Sesión 12 · Kubernetes en GCP: GKE:** Instalación independiente y operación avanzada de GKE; catálogo de add-ons.
 - **Sesión 13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm:** Creación de charts complejos desde cero y catálogo de plugins.
 - **Sesión 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK:** Curso Go, Cobra/Viper, concurrencia avanzada y operator desarrollado desde cero.
 - **Sesión 15 · Infraestructura declarativa: DNS, certificados y recursos cloud:** DNSSEC/DoH, operación DNS avanzada, Crossplane Compositions/XRDs avanzados y Composition Functions.

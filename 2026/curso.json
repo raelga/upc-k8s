@@ -107,66 +107,50 @@
     {
       "number": 5,
       "module": "M3",
-      "title": "Contenedores II: imágenes Docker y mecanismos de aislamiento",
+      "title": "Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Comprender la construcción de imágenes y los mecanismos de aislamiento de contenedores",
+      "objective": "Construir imágenes Docker y ejecutar y diagnosticar los dos servicios del caso común antes de introducir Kubernetes",
       "contents": [
-        "Dockerfile, imágenes y capas",
-        "Overlay y copy-on-write",
-        "Construcciones multi-stage",
-        "Namespaces y cgroups",
-        "Validación Python de los servicios y revisión de código con IA: 1h transversal de M1 pendiente de confirmar"
+        "Docker, sistema de ficheros, capas OCI, Dockerfile y construcción multi-stage",
+        "Ejecución, puertos, variables de entorno, publicación y recuperación de imágenes en un registro",
+        "Redes, resolución entre servicios y volúmenes",
+        "Compose para ejecutar los dos servicios",
+        "Logs, inspección y diagnóstico de fallos de configuración y conectividad",
+        "Validación Python de los servicios y revisión de código con IA; 1h transversal de M1"
       ],
-      "lab": "Trabajar con Dockerfiles e imágenes, sus capas y construcciones multi-stage",
-      "extras": "Optimización avanzada de imágenes",
+      "lab": "Construir, ejecutar y publicar una imagen; ejecutar los dos servicios con Compose en el entorno Academy preparado, provocar y diagnosticar un fallo de red o configuración y verificar la recuperación con un script Python revisado con IA",
+      "extras": "Orquestación avanzada de Compose y catálogo de opciones; no anticipar Kubernetes",
       "date": "2026-11-17",
       "transversal_contents": [
         {
           "module": "M1",
           "hours": 1,
-          "scope": "Validación Python de los servicios y revisión de código con IA: pendiente de confirmar"
+          "scope": "Validación Python de los servicios y revisión de código con IA"
         }
       ]
     },
     {
       "number": 6,
       "module": "M3",
-      "title": "Contenedores y arquitectura de Kubernetes: aislamiento, ECR, Compose y controladores",
+      "title": "Arquitectura de Kubernetes: API, autenticación y permisos",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Relacionar los mecanismos de contenedores con la arquitectura y reconciliación de Kubernetes",
+      "objective": "Seguir una petición kubectl y distinguir autenticación de autorización",
       "contents": [
-        "Aislamiento de contenedores",
-        "Registro de imágenes ECR y Compose",
-        "Arquitectura de Kubernetes y controladores",
-        "Introducción al entorno kind"
+        "Control plane y nodos",
+        "API, etcd, reconciliación y ejecución de Pods",
+        "kubeconfig, certificados, tokens y ServiceAccounts",
+        "Role/RoleBinding",
+        "OIDC y admisión conceptual"
       ],
-      "lab": "Explorar ECR y Compose y preparar un clúster kind",
-      "extras": "El montaje interno, RBAC y OIDC se abordan en la sesión de clúster desde cero",
+      "lab": "Levantar kind, localizar componentes y comprobar una operación permitida y otra denegada",
+      "extras": "Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero",
       "date": "2026-11-19",
       "transversal_contents": []
     },
     {
       "number": 7,
-      "module": "M3",
-      "title": "Primeros pasos con Kubernetes: kind, kubectl y Pods",
-      "teacher": "Rael Garcia",
-      "load": "amarillo",
-      "objective": "Explorar recursos básicos de Kubernetes con kind y kubectl",
-      "contents": [
-        "kind y kubectl",
-        "namespaces, labels, annotations y selectors",
-        "Pods y requests/limits",
-        "Introducción a init containers y probes; práctica pendiente"
-      ],
-      "lab": "Explorar el clúster y sus recursos con kubectl; la práctica de init containers y probes queda pendiente",
-      "extras": "Scheduling avanzado",
-      "date": "2026-11-24",
-      "transversal_contents": []
-    },
-    {
-      "number": 8,
       "module": "M3",
       "title": "Aplicaciones en Kubernetes: workloads, configuración y recursos",
       "teacher": "Rael Garcia",
@@ -174,18 +158,18 @@
       "objective": "Desplegar una aplicación y gestionar su configuración y ciclo de vida",
       "contents": [
         "Pods, Deployments, Jobs y CronJobs",
-        "ConfigMap y Secret",
-        "init containers y probes de arranque, disponibilidad y preparación",
+        "ConfigMap/Secret",
+        "probes",
         "requests/limits y scheduling básico",
         "namespaces, labels y selectors"
       ],
-      "lab": "Modificar configuración, practicar init containers y probes pendientes de la sesión 7, actualizar la aplicación y comprobar asignación de recursos",
+      "lab": "Modificar configuración, observar probes, actualizar la aplicación y comprobar asignación de recursos",
       "extras": "Catálogo exhaustivo de controladores y scheduling avanzado",
-      "date": "2026-11-26",
+      "date": "2026-11-24",
       "transversal_contents": []
     },
     {
-      "number": 9,
+      "number": 8,
       "module": "M3",
       "title": "Persistencia en Kubernetes: almacenamiento y aplicaciones con estado",
       "teacher": "Rael Garcia",
@@ -199,11 +183,11 @@
       ],
       "lab": "Añadir persistencia, recrear un Pod y verificar datos y comportamiento del workload",
       "extras": "Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada",
-      "date": "2026-12-01",
+      "date": "2026-11-26",
       "transversal_contents": []
     },
     {
-      "number": 10,
+      "number": 9,
       "module": "M3",
       "title": "EKS y networking en Kubernetes: comunicación y exposición de servicios",
       "teacher": "Rael Garcia",
@@ -213,49 +197,65 @@
         "CNI en Pod→Pod",
         "Services y CoreDNS",
         "ejemplo Gateway API y relación con Ingress",
-        "NetworkPolicy",
-        "costes de control plane, nodos, balanceadores, discos y tráfico"
+        "NetworkPolicy"
       ],
       "lab": "Desplegar primero un clúster EKS con Terraform y exponer la aplicación; después explicar CNI, Services, DNS, entrada y NetworkPolicy, bloqueando y permitiendo solo el tráfico necesario. Disponer de un clúster preparado como respaldo",
       "extras": "Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio",
+      "date": "2026-12-01",
+      "transversal_contents": []
+    },
+    {
+      "number": 10,
+      "module": "M3",
+      "title": "Construcción de un clúster Kubernetes componente a componente",
+      "teacher": "Rael Garcia",
+      "load": "amarillo",
+      "objective": "Comprender cómo se ensamblan y autentican los componentes de Kubernetes",
+      "contents": [
+        "PKI, etcd, kube-apiserver, scheduler y controller-manager",
+        "kubelet, runtime y kube-proxy",
+        "unión de un nodo y TLS bootstrapping"
+      ],
+      "lab": "Arrancar un clúster reducido con material preparado, unir un nodo y ejecutar un Pod",
+      "extras": "Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada",
       "date": "2026-12-03",
       "transversal_contents": []
     },
     {
       "number": 11,
       "module": "M4",
-      "title": "Construcción de un clúster Kubernetes: componentes, autenticación y permisos",
+      "title": "Kubernetes en Azure: AKS",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Comprender cómo se ensamblan y autentican los componentes de Kubernetes y distinguir autenticación y autorización",
+      "objective": "Comprender la operación de Kubernetes gestionado en Azure y compararla con EKS",
       "contents": [
-        "PKI, etcd, kube-apiserver, scheduler y controller-manager",
-        "kubelet, runtime y kube-proxy",
-        "unión de un nodo y TLS bootstrapping",
-        "kubeconfig, certificados, tokens, ServiceAccounts y OIDC",
-        "Role, RoleBinding y admisión conceptual"
+        "Azure: identidad, redes, cómputo, almacenamiento y registros",
+        "AKS: control plane, identidad de workloads, networking y pools de nodos",
+        "actualizaciones, disponibilidad y responsabilidad operativa",
+        "Azure Cost Management: 15–20 minutos para consultas, filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto",
+        "costes de control plane, nodos, balanceadores, discos y tráfico"
       ],
-      "lab": "Arrancar un clúster reducido con material preparado, unir un nodo, ejecutar un Pod y comprobar una operación permitida y otra denegada mediante RBAC",
-      "extras": "Kubernetes the hard way completo sin ayudas; integración OIDC avanzada, operación HA y recuperación avanzada",
+      "lab": "Demostración preparada de AKS en una cuenta docente y comparación con EKS; identificar recursos facturables, revisar costes y comprobar la limpieza",
+      "extras": "Instalación independiente y operación avanzada de AKS; comparación opcional con un clúster AWS autogestionado mediante kOps",
       "date": "2026-12-10",
       "transversal_contents": []
     },
     {
       "number": 12,
       "module": "M4",
-      "title": "Kubernetes gestionado en Azure y GCP: AKS y GKE",
+      "title": "Kubernetes en GCP: GKE",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Comparar la operación de Kubernetes gestionado en Azure y GCP con EKS",
+      "objective": "Comprender la operación de Kubernetes gestionado en GCP y compararla con EKS y AKS",
       "contents": [
-        "Azure y GCP: identidad, redes, cómputo, almacenamiento y registros",
-        "AKS y GKE Standard y Autopilot: control plane, identidad de workloads, networking y pools de nodos",
+        "GCP: identidad, redes, cómputo, almacenamiento y registros",
+        "GKE Standard y Autopilot: control plane, identidad de workloads, networking y pools de nodos",
         "actualizaciones, disponibilidad y responsabilidad operativa",
-        "Azure Cost Management y GCP Cloud Billing: 15–20 minutos por proveedor para consultas, filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto",
+        "GCP Cloud Billing: 15–20 minutos para consultas, filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto",
         "costes de control plane, nodos, balanceadores, discos y tráfico"
       ],
-      "lab": "Demostraciones preparadas de AKS y GKE en cuentas docentes y comparación con EKS; identificar recursos facturables, revisar costes y comprobar la limpieza, sin exigir despliegues individuales",
-      "extras": "Instalación independiente y operación avanzada de AKS y GKE; comparación opcional con un clúster AWS autogestionado mediante kOps",
+      "lab": "Demostración preparada de GKE en una cuenta docente y comparación con EKS y AKS; identificar recursos facturables, revisar costes y comprobar la limpieza",
+      "extras": "Instalación independiente y operación avanzada de GKE; catálogo de add-ons",
       "date": "2026-12-15",
       "transversal_contents": []
     },
