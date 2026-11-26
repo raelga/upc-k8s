@@ -89,175 +89,180 @@
     {
       "number": 4,
       "module": "M3",
-      "title": "Contenedores desde cero: namespaces, cgroups y runtime",
+      "title": "Fundamentos de contenedores",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Cerrar excepcionalmente el laboratorio AWS de WordPress y comprender los fundamentos de aislamiento y ejecución de contenedores",
+      "objective": "Comprender el aislamiento y la ejecución de contenedores tras cerrar el laboratorio AWS.",
       "contents": [
-        "Cierre excepcional del laboratorio AWS de WordPress: evolución de EC2 a Auto Scaling, AMI versionadas y archivos multimedia en S3",
-        "Contenedores desde cero: aislamiento con namespaces y límites de recursos con cgroups",
-        "Función del runtime y relación entre procesos, sistema de ficheros y contenedores",
-        "Introducción a imágenes y capas OCI como preparación para Docker"
+        "Cierre excepcional de AWS WordPress: EC2, Auto Scaling, AMI y S3",
+        "Namespaces, cgroups, procesos, aislamiento y límites de recursos",
+        "Runtime, sistema de ficheros e introducción a imágenes y capas OCI"
       ],
-      "lab": "Completar el cierre guiado de WordPress y explorar los mecanismos de aislamiento y ejecución con el entorno Academy preparado; el docente verifica runtime, conectividad y permisos del laboratorio asignado",
+      "lab": "Completar el cierre guiado de WordPress y explorar aislamiento y ejecución en el entorno Academy preparado; el docente verifica runtime, conectividad y permisos.",
       "extras": "Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton",
       "date": "2026-11-12",
-      "transversal_contents": []
+      "transversal_contents": [],
+      "original_title": "Contenedores desde cero: namespaces, cgroups y runtime"
     },
     {
       "number": 5,
       "module": "M3",
-      "title": "Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose",
+      "title": "Imágenes y contenedores",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Construir imágenes Docker y ejecutar y diagnosticar los dos servicios del caso común antes de introducir Kubernetes",
+      "objective": "Construir imágenes y ejecutar servicios con Docker.",
       "contents": [
-        "Docker, sistema de ficheros, capas OCI, Dockerfile y construcción multi-stage",
-        "Ejecución, puertos, variables de entorno, publicación y recuperación de imágenes en un registro",
-        "Redes, resolución entre servicios y volúmenes",
-        "Compose para ejecutar los dos servicios",
-        "Logs, inspección y diagnóstico de fallos de configuración y conectividad",
-        "Validación Python de los servicios y revisión de código con IA; 1h transversal de M1"
+        "Docker gestiona namespaces y cgroups para aislar y limitar contenedores",
+        "Imágenes, capas OCI, Dockerfile y construcción multi-stage",
+        "Ejecución, puertos, variables, registro, redes y volúmenes",
+        "Compose, logs, inspección y diagnóstico",
+        "Validación Python de servicios y revisión con IA: 1h transversal M1 pendiente de confirmar"
       ],
-      "lab": "Construir, ejecutar y publicar una imagen; ejecutar los dos servicios con Compose en el entorno Academy preparado, provocar y diagnosticar un fallo de red o configuración y verificar la recuperación con un script Python revisado con IA",
+      "lab": "Construir y publicar una imagen, ejecutar servicios con Compose y diagnosticar un fallo; validación Python con IA pendiente de confirmar.",
       "extras": "Orquestación avanzada de Compose y catálogo de opciones; no anticipar Kubernetes",
       "date": "2026-11-17",
       "transversal_contents": [
         {
           "module": "M1",
           "hours": 1,
-          "scope": "Validación Python de los servicios y revisión de código con IA"
+          "scope": "Validación Python de los servicios y revisión de código con IA (1h pendiente de confirmar)"
         }
-      ]
+      ],
+      "original_title": "Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose"
     },
     {
       "number": 6,
       "module": "M3",
-      "title": "Arquitectura de Kubernetes: API, autenticación y permisos",
+      "title": "De contenedores a Kubernetes",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Seguir una petición kubectl y distinguir autenticación de autorización",
+      "objective": "Relacionar contenedores y orquestación e introducir Kubernetes.",
       "contents": [
-        "Control plane y nodos",
-        "API, etcd, reconciliación y ejecución de Pods",
-        "kubeconfig, certificados, tokens y ServiceAccounts",
-        "Role/RoleBinding",
-        "OIDC y admisión conceptual"
+        "Limitaciones de la ejecución manual y necesidad de orquestación",
+        "Arquitectura: control plane, nodos, API, etcd y reconciliación",
+        "Pods y ejecución de contenedores",
+        "Introducción a kind al finalizar la sesión"
       ],
-      "lab": "Levantar kind, localizar componentes y comprobar una operación permitida y otra denegada",
-      "extras": "Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero",
+      "lab": "Preparar un clúster kind al final de la sesión.",
+      "extras": "Runtimes alternativos y builds in-cluster; firma/SBOM opcionales; escaneo en Tekton",
       "date": "2026-11-19",
-      "transversal_contents": []
+      "transversal_contents": [],
+      "original_title": "Arquitectura de Kubernetes: API, autenticación y permisos"
     },
     {
       "number": 7,
       "module": "M3",
-      "title": "Aplicaciones en Kubernetes: workloads, configuración y recursos",
+      "title": "Fundamentos de Kubernetes",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Desplegar una aplicación y gestionar su configuración y ciclo de vida",
+      "objective": "Comprender los objetos básicos y los recursos de Kubernetes.",
       "contents": [
-        "Pods, Deployments, Jobs y CronJobs",
-        "ConfigMap/Secret",
-        "probes",
-        "requests/limits y scheduling básico",
-        "namespaces, labels y selectors"
+        "Namespaces, labels, annotations y selectores",
+        "Pods y manifiestos",
+        "Requests, limits y scheduling básico",
+        "Introducción a probes"
       ],
-      "lab": "Modificar configuración, observar probes, actualizar la aplicación y comprobar asignación de recursos",
+      "lab": "Explorar objetos y ejecutar Pods con límites de recursos e introducir probes.",
       "extras": "Catálogo exhaustivo de controladores y scheduling avanzado",
       "date": "2026-11-24",
-      "transversal_contents": []
+      "transversal_contents": [],
+      "original_title": "Aplicaciones en Kubernetes: workloads, configuración y recursos"
     },
     {
       "number": 8,
       "module": "M3",
-      "title": "Persistencia en Kubernetes: almacenamiento y aplicaciones con estado",
+      "title": "Workloads y configuración en Kubernetes",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Mantener datos y comprender las necesidades de workloads con estado",
+      "objective": "Desplegar una aplicación y gestionar su configuración y ciclo de vida.",
       "contents": [
-        "Volúmenes, PV/PVC, StorageClass y aprovisionamiento dinámico",
-        "función de CSI",
-        "StatefulSet",
-        "afinidad y restricciones de ubicación relevantes para almacenamiento"
+        "Preparación del entorno y ReplicaSets",
+        "Probes y ciclo de vida",
+        "Deployments y actualización de aplicaciones",
+        "ConfigMaps y Secrets",
+        "Jobs y CronJobs: práctica guiada si hay tiempo o demostración docente"
       ],
-      "lab": "Añadir persistencia, recrear un Pod y verificar datos y comportamiento del workload",
-      "extras": "Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada",
+      "lab": "Preparar el entorno, observar ReplicaSets y probes, actualizar una aplicación con Deployment y configurar ConfigMaps y Secrets; practicar Jobs y CronJobs si hay tiempo o seguir la demostración docente.",
+      "extras": "Opcionales: selectores y adopción de Pods, rolling update manual con ReplicaSets, actualización en vivo de ConfigMap, StatefulSet, DaemonSet, scheduling y estrategias de despliegue; práctica de Jobs y CronJobs si queda tiempo",
       "date": "2026-11-26",
-      "transversal_contents": []
+      "transversal_contents": [],
+      "original_title": "Persistencia en Kubernetes: almacenamiento y aplicaciones con estado"
     },
     {
       "number": 9,
       "module": "M3",
-      "title": "EKS y networking en Kubernetes: comunicación y exposición de servicios",
+      "title": "Persistencia en Kubernetes: almacenamiento y aplicaciones con estado",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Seguir tráfico entre Pods, descubrir servicios y exponer la aplicación",
+      "objective": "Mantener datos y comprender workloads con estado.",
       "contents": [
-        "CNI en Pod→Pod",
-        "Services y CoreDNS",
-        "ejemplo Gateway API y relación con Ingress",
-        "NetworkPolicy"
+        "Volúmenes, PV/PVC, StorageClass y aprovisionamiento dinámico",
+        "CSI y StatefulSet",
+        "Afinidad y restricciones de ubicación relevantes para almacenamiento"
       ],
-      "lab": "Desplegar primero un clúster EKS con Terraform y exponer la aplicación; después explicar CNI, Services, DNS, entrada y NetworkPolicy, bloqueando y permitiendo solo el tráfico necesario. Disponer de un clúster preparado como respaldo",
-      "extras": "Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio",
+      "lab": "Añadir persistencia, recrear un Pod y verificar datos y comportamiento.",
+      "extras": "Snapshots/cloning y afinidad avanzados",
       "date": "2026-12-01",
-      "transversal_contents": []
+      "transversal_contents": [],
+      "original_title": "EKS y networking en Kubernetes: comunicación y exposición de servicios"
     },
     {
       "number": 10,
       "module": "M3",
-      "title": "Construcción de un clúster Kubernetes componente a componente",
+      "title": "EKS y networking en Kubernetes: comunicación y exposición de servicios",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Comprender cómo se ensamblan y autentican los componentes de Kubernetes",
+      "objective": "Seguir tráfico entre Pods, descubrir servicios y exponer la aplicación.",
       "contents": [
-        "PKI, etcd, kube-apiserver, scheduler y controller-manager",
-        "kubelet, runtime y kube-proxy",
-        "unión de un nodo y TLS bootstrapping"
+        "EKS con Terraform y costes de control plane, nodos, balanceadores, discos y tráfico",
+        "CNI en Pod→Pod, Services y CoreDNS",
+        "Gateway API, Ingress y NetworkPolicy"
       ],
-      "lab": "Arrancar un clúster reducido con material preparado, unir un nodo y ejecutar un Pod",
-      "extras": "Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada",
+      "lab": "Desplegar EKS con Terraform y exponer la aplicación; explicar y probar conectividad y políticas, con clúster preparado como respaldo.",
+      "extras": "Comparación de múltiples CNI y networking avanzado",
       "date": "2026-12-03",
-      "transversal_contents": []
+      "transversal_contents": [],
+      "original_title": "Construcción de un clúster Kubernetes componente a componente"
     },
     {
       "number": 11,
       "module": "M4",
-      "title": "Kubernetes en Azure: AKS",
+      "title": "Construcción de un clúster Kubernetes y RBAC",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Comprender la operación de Kubernetes gestionado en Azure y compararla con EKS",
+      "objective": "Comprender cómo se ensamblan y autentican los componentes y cómo se autorizan las peticiones.",
       "contents": [
-        "Azure: identidad, redes, cómputo, almacenamiento y registros",
-        "AKS: control plane, identidad de workloads, networking y pools de nodos",
-        "actualizaciones, disponibilidad y responsabilidad operativa",
-        "Azure Cost Management: 15–20 minutos para consultas, filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto",
-        "costes de control plane, nodos, balanceadores, discos y tráfico"
+        "PKI, etcd, API server, scheduler y controller-manager",
+        "kubelet, runtime, kube-proxy y unión de nodos con TLS bootstrapping",
+        "kubeconfig, certificados, tokens y ServiceAccounts",
+        "Autenticación, autorización, Role/RoleBinding, OIDC y admisión conceptual"
       ],
-      "lab": "Demostración preparada de AKS en una cuenta docente y comparación con EKS; identificar recursos facturables, revisar costes y comprobar la limpieza",
-      "extras": "Instalación independiente y operación avanzada de AKS; comparación opcional con un clúster AWS autogestionado mediante kOps",
+      "lab": "Arrancar un clúster reducido con material preparado, unir un nodo y comprobar operaciones permitidas y denegadas.",
+      "extras": "OIDC avanzado, Kubernetes the hard way completo, HA y recuperación avanzada",
       "date": "2026-12-10",
-      "transversal_contents": []
+      "transversal_contents": [],
+      "original_title": "Kubernetes en Azure: AKS"
     },
     {
       "number": 12,
       "module": "M4",
-      "title": "Kubernetes en GCP: GKE",
+      "title": "Kubernetes gestionado en Azure y GCP: AKS y GKE",
       "teacher": "Rael Garcia",
       "load": "amarillo",
-      "objective": "Comprender la operación de Kubernetes gestionado en GCP y compararla con EKS y AKS",
+      "objective": "Comparar AKS y GKE con EKS mediante demostraciones preparadas.",
       "contents": [
-        "GCP: identidad, redes, cómputo, almacenamiento y registros",
-        "GKE Standard y Autopilot: control plane, identidad de workloads, networking y pools de nodos",
-        "actualizaciones, disponibilidad y responsabilidad operativa",
-        "GCP Cloud Billing: 15–20 minutos para consultas, filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto",
-        "costes de control plane, nodos, balanceadores, discos y tráfico"
+        "Azure: identidad, redes, cómputo, almacenamiento, registros y AKS",
+        "GCP: identidad, redes, cómputo, almacenamiento, registros y GKE Standard y Autopilot",
+        "Control plane, identidad de workloads, networking, nodos, actualizaciones y responsabilidad operativa",
+        "Azure Cost Management: 15–20 minutos para consultas, filtros, presupuestos, alertas y limpieza",
+        "GCP Cloud Billing: 15–20 minutos para consultas, filtros, presupuestos, alertas y limpieza",
+        "Costes de control plane, nodos, balanceadores, discos y tráfico; la facturación puede retrasarse y los presupuestos no detienen el gasto"
       ],
-      "lab": "Demostración preparada de GKE en una cuenta docente y comparación con EKS y AKS; identificar recursos facturables, revisar costes y comprobar la limpieza",
-      "extras": "Instalación independiente y operación avanzada de GKE; catálogo de add-ons",
+      "lab": "Demostraciones preparadas de AKS y GKE en cuentas docentes, sin despliegues obligatorios del alumnado; comparar con EKS, revisar costes y comprobar limpieza.",
+      "extras": "Instalación independiente y operación avanzada de AKS y GKE; comparación opcional con kOps",
       "date": "2026-12-15",
-      "transversal_contents": []
+      "transversal_contents": [],
+      "original_title": "Kubernetes en GCP: GKE"
     },
     {
       "number": 13,

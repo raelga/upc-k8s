@@ -32,17 +32,19 @@ Las sesiones 1 y 30 son compartidas por René Serral y Rael Garcia. Cada una sum
 
 ## Metodología y prerrequisitos
 
-Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Dos sesiones de contenedores preparan la ejecución de la aplicación en el entorno Academy validado antes de Kubernetes. AWS concentra el laboratorio guiado principal de IaC; Azure y GCP se trabajan mediante comparaciones y demostraciones preparadas, no mediante dos despliegues completos del alumnado. Se introducen identidad, redes, cómputo, almacenamiento y registros, y su aprovisionamiento como código. Python se practica en la validación de servicios y en proveedores; Bash en pipelines; Go en el ejemplo de operator. La IA apoya la escritura/adaptación de código, cuya ejecución y resultados se verifican.
+Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Tres sesiones de contenedores preparan el paso a Kubernetes. AWS concentra el laboratorio guiado principal de IaC; Azure y GCP se trabajan mediante comparaciones y demostraciones preparadas, no mediante dos despliegues completos del alumnado. Se introducen identidad, redes, cómputo, almacenamiento y registros, y su aprovisionamiento como código. Python se practica en proveedores y está previsto para validación de servicios; Bash en pipelines; Go en el ejemplo de operator. La IA apoya la escritura y revisión de código.
 
 Una aplicación Python de dos servicios conecta contenedores, Kubernetes, observabilidad, CI/GitOps, entrega y escalado. Laboratorios guiados con configuraciones preparadas; permisos, cuotas y costes comprobados; limpieza de recursos al finalizar. Se utiliza un clúster EKS preparado en networking y se comparan demostraciones preparadas de AKS y GKE. M6 combina conceptos, comparación y demostraciones; operators tiene una clase completa. Los secretos se entregan mediante mecanismos externos y no se guardan en repositorios ni en el estado de Terraform.
 
 La sesión 1 incluye, dentro de sus 3h de M1 y con docencia compartida, una presentación guiada de AWS Academy y del ciclo de trabajo del laboratorio asignado, sin asumir un tipo concreto de laboratorio. Se requiere invitación y acceso al curso; el docente comprueba previamente el entorno real, sus permisos, cuotas y límites. Se distinguen contenidos del curso y entorno de laboratorio, acceso temporal a la consola, estado del laboratorio y operaciones de inicio, parada y finalización disponibles; persistencia y limpieza se rigen por sus instrucciones, sin garantías universales de conservación ni de gasto. Al finalizar la sesión 1, o como prerrequisito antes de la 4, el docente valida el entorno Academy para contenedores: runtime disponible o instalado cuando esté permitido, acceso al registro y restricciones del laboratorio. Las sesiones 4–5 se ejecutan en ese entorno preparado, no en un entorno local independiente. Las sesiones 2–3 de cloud e IaC preceden a ambas sesiones de contenedores.
 
-**Primeras sesiones:** El 05/11 se practica el estado de Terraform y EC2 en AWS Academy. El 10/11 se sigue la [evolución de WordPress](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/aws/02-wordpress); el 12/11 se completa excepcionalmente su cierre de EC2 a Auto Scaling, AMI versionadas y archivos multimedia en S3, junto a contenedores desde cero. El 17/11 se trabajan Docker, sistema de ficheros, imágenes, redes, volúmenes y Compose.
+**Primeras sesiones:** El 05/11 se practica Terraform y EC2 en AWS Academy. El 10/11 se sigue la [evolución de WordPress](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/aws/02-wordpress); el 12/11 se completa su cierre con Auto Scaling, AMI y S3 junto a fundamentos de contenedores. La sesión 5 aborda imágenes y contenedores; la 6 conecta ECR y Compose con kind.
+
+La sesión 8 prioriza la preparación del entorno, ReplicaSets, probes, Deployments, ConfigMaps y Secrets. Jobs y CronJobs se practican de forma guiada si queda tiempo; de lo contrario, el docente los demuestra. La persistencia se aborda en la sesión 9.
 
 ## Costes y control del consumo cloud
 
-AWS reserva 15–20 minutos en la sesión 2 para facturación, filtros, presupuestos/alertas y limpieza. Las sesiones 11 y 12 dedican respectivamente 15–20 minutos a Azure Cost Management y GCP Cloud Billing; se explican el retraso de la facturación y que los presupuestos no detienen el gasto.
+AWS reserva 15–20 minutos en la sesión 2 para facturación, filtros, presupuestos/alertas y limpieza. La sesión 12 dedica 15–20 minutos a cada proveedor en Azure Cost Management y GCP Cloud Billing; se explican el retraso de la facturación y que los presupuestos no detienen el gasto.
 
 En AKS y GKE se retoma el coste de control plane, nodos, balanceadores, discos y tráfico.
 
@@ -55,7 +57,7 @@ M1 combina **3h propias y 6h integradas**: 9h de contenido incluidas en las 90h 
 | 1 · Fundamentos de DevOps y Platform Engineering | DevOps, SRE y Platform Engineering; SLI/SLO/SLA e introducción a Terraform | 3h |
 | 2 · AWS: fundamentos y aprovisionamiento como código | Python para consultar recursos; generación y revisión de código con IA | 1h |
 | 3 · AWS WordPress: de EC2 con estado a instancias reemplazables | Adaptación de scripts, configuración y comparación entre proveedores | 1h |
-| 5 · Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose | Validación Python de los servicios y revisión de código con IA | 1h |
+| 5 · Imágenes y contenedores | Validación Python de los servicios y revisión de código con IA: pendiente de confirmar | 1h |
 | 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
 | 17 · Automatización de pipelines: scripting, Tekton y Trivy | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
 
@@ -68,15 +70,15 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 | 1 | M1 | Fundamentos de DevOps y Platform Engineering | René Serral<br>Rael Garcia |
 | 2 | M2 + M1 | AWS: fundamentos y aprovisionamiento como código | Rael Garcia |
 | 3 | M2 + M1 | AWS WordPress: de EC2 con estado a instancias reemplazables | Rael Garcia |
-| 4 | M3 | Contenedores desde cero: namespaces, cgroups y runtime; cierre excepcional de AWS WordPress: EC2, Auto Scaling, AMI y S3 | Rael Garcia |
-| 5 | M3 + M1 | Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose | Rael Garcia |
-| 6 | M3 | Arquitectura de Kubernetes: API, autenticación y permisos | Rael Garcia |
-| 7 | M3 | Aplicaciones en Kubernetes: workloads, configuración y recursos | Rael Garcia |
-| 8 | M3 | Persistencia en Kubernetes: almacenamiento y aplicaciones con estado | Rael Garcia |
-| 9 | M3 | EKS y networking en Kubernetes: comunicación y exposición de servicios | Rael Garcia |
-| 10 | M3 | Construcción de un clúster Kubernetes componente a componente | Rael Garcia |
-| 11 | M4 | Kubernetes en Azure: AKS | Rael Garcia |
-| 12 | M4 | Kubernetes en GCP: GKE | Rael Garcia |
+| 4 | M3 | Fundamentos de contenedores y cierre de AWS WordPress | Rael Garcia |
+| 5 | M3 + M1 | Imágenes y contenedores | Rael Garcia |
+| 6 | M3 | De contenedores a Kubernetes | Rael Garcia |
+| 7 | M3 | Fundamentos de Kubernetes | Rael Garcia |
+| 8 | M3 | Aplicaciones y configuración en Kubernetes | Rael Garcia |
+| 9 | M3 | Persistencia en Kubernetes | Rael Garcia |
+| 10 | M3 | EKS y networking en Kubernetes | Rael Garcia |
+| 11 | M4 | Construcción y seguridad de un clúster Kubernetes | Rael Garcia |
+| 12 | M4 | Kubernetes gestionado: AKS y GKE | Rael Garcia |
 | 13 | M4 | Configuración y empaquetado de aplicaciones: Kustomize y Helm | Rael Garcia |
 | 14 | M6 + M1 | Desarrollo de operators: Go y Kubebuilder/Operator SDK | Rael Garcia |
 | 15 | M4 | Infraestructura declarativa: DNS, certificados y recursos cloud | Rael Garcia |

@@ -8,9 +8,9 @@ Fuente: descripción de asignaturas transcrita de https://upcschool.upc.edu/esp/
 
 30 clases / 90h, incluida la defensa. M1: 9h de contenido propio/transversal, sin duplicarlas en el cómputo.
 
-M3 reúne 7 sesiones / 21h (4–10); M2 reúne 2 sesiones / 6h (2–3), sin cambiar sus ECTS. La sesión 1 incluye la presentación y preparación de AWS Academy dentro de sus 3h compartidas. Las dos clases de contenedores requieren el acceso y entorno Academy preparados y verificados antes de sesión 4. AWS es el laboratorio principal de IaC; Azure y GCP se trabajan mediante demostraciones preparadas y análisis de equivalencias, no mediante dos despliegues completos del alumnado.
+M3 reúne 7 sesiones / 21h (4–10); M2 reúne 2 sesiones / 6h (2–3), sin cambiar sus ECTS. La sesión 1 incluye la preparación de AWS Academy dentro de sus 3h compartidas. Las tres clases de contenedores requieren el entorno preparado y verificado antes de sesión 4. AWS es el laboratorio principal de IaC; Azure y GCP se trabajan mediante demostraciones preparadas y análisis de equivalencias, no mediante dos despliegues completos del alumnado.
 
-La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consultar recursos; generación y revisión de código con IA»; sesión 3, 1h de «Adaptación de scripts, configuración y comparación entre proveedores»; sesión 5, 1h de «Validación Python de los servicios y revisión de código con IA»; operators (14), 1,5h; Tekton (17), 1,5h. Estas horas integradas ya forman parte de las sesiones respectivas.
+La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de Python e IA; sesión 3, 1h de adaptación de scripts; sesión 5, 1h prevista de validación Python y revisión de código con IA, pendiente de confirmar; operators (14), 1,5h; Tekton (17), 1,5h. Estas horas integradas ya forman parte de las sesiones respectivas.
 
 ## Comprobaciones de cobertura prioritarias
 
@@ -25,15 +25,15 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 - [01 · Fundamentos de DevOps y Platform Engineering](#sesion-01) — M1
 - [02 · AWS: fundamentos y aprovisionamiento como código](#sesion-02) — M2
 - [03 · AWS WordPress: de EC2 con estado a instancias reemplazables](#sesion-03) — M2
-- [04 · Contenedores desde cero: namespaces, cgroups y runtime](#sesion-04) — M3
-- [05 · Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose](#sesion-05) — M3
-- [06 · Arquitectura de Kubernetes: API, autenticación y permisos](#sesion-06) — M3
-- [07 · Aplicaciones en Kubernetes: workloads, configuración y recursos](#sesion-07) — M3
-- [08 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado](#sesion-08) — M3
-- [09 · EKS y networking en Kubernetes: comunicación y exposición de servicios](#sesion-09) — M3
-- [10 · Construcción de un clúster Kubernetes componente a componente](#sesion-10) — M3
-- [11 · Kubernetes en Azure: AKS](#sesion-11) — M4
-- [12 · Kubernetes en GCP: GKE](#sesion-12) — M4
+- [04 · Fundamentos de contenedores](#sesion-04) — M3
+- [05 · Imágenes y contenedores](#sesion-05) — M3
+- [06 · De contenedores a Kubernetes](#sesion-06) — M3
+- [07 · Fundamentos de Kubernetes](#sesion-07) — M3
+- [08 · Aplicaciones y configuración en Kubernetes](#sesion-08) — M3
+- [09 · Persistencia en Kubernetes](#sesion-09) — M3
+- [10 · EKS y networking en Kubernetes](#sesion-10) — M3
+- [11 · Construcción y seguridad de un clúster Kubernetes](#sesion-11) — M4
+- [12 · Kubernetes gestionado: AKS y GKE](#sesion-12) — M4
 - [13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm](#sesion-13) — M4
 - [14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK](#sesion-14) — M6
 - [15 · Infraestructura declarativa: DNS, certificados y recursos cloud](#sesion-15) — M4
@@ -104,7 +104,7 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 
 <a id="sesion-04"></a>
 
-### 04 · Contenedores desde cero: namespaces, cgroups y runtime
+### 04 · Fundamentos de contenedores
 
 **M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
@@ -113,129 +113,123 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de «Python para consult
 | **Cobertura requerida** | • Cierre excepcional del laboratorio AWS WordPress: de EC2 a Auto Scaling, AMI versionadas y archivos multimedia en S3.<br>• Contenedores desde cero: namespaces, cgroups, aislamiento, sistema de ficheros y función del runtime.<br>• Introducción a imágenes y capas OCI. |
 | **Resultado de aprendizaje** | Explicar la evolución de WordPress y los mecanismos de aislamiento y ejecución que sustentan los contenedores. |
 | **Actividad práctica** | Completar el cierre guiado del laboratorio AWS y explorar namespaces, cgroups y runtime en el entorno preparado. |
-| **Alcance y profundidad** | Reservar parte de la misma sesión para el cierre excepcional de AWS; dedicar el resto a los fundamentos de contenedores desde cero. El ciclo Docker build/run/push/pull y la aplicación de dos servicios se trabajan en sesión 5. |
+| **Alcance y profundidad** | Reservar parte de la sesión para el cierre excepcional de AWS y el resto para fundamentos. El ciclo Docker se trabaja en sesión 5 y Compose en sesión 6. |
 | **Requisitos de preparación** | Laboratorio WordPress y entorno Academy preparados; verificar runtime compatible, CLI, conectividad, permisos y cuotas. Comprobar credenciales temporales y persistencia según el laboratorio asignado; no se requiere una cuenta cloud personal adicional. |
 | **Contenido complementario** | Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras. El escaneo se concreta en el pipeline Tekton. |
 
 <a id="sesion-05"></a>
 
-### 05 · Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose
+### 05 · Imágenes y contenedores
 
 **M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Docker, sistema de ficheros y capas OCI; Dockerfile, construcción multi-stage, etiquetado y publicación/descarga de imágenes.<br>• Ejecución, puertos y variables; redes, resolución entre servicios, volúmenes y persistencia; aplicación de dos servicios con Compose.<br>• Logs, inspección y diagnóstico de fallos de conectividad, configuración y almacenamiento.<br>• M1 integrado: 1h de «Validación Python de los servicios y revisión de código con IA». |
-| **Resultado de aprendizaje** | Construir, ejecutar y publicar una imagen y diagnosticar una aplicación local de dos servicios, comprobar su persistencia y validar mediante Python su funcionamiento sin aceptar sin revisión el código generado por IA. |
-| **Actividad práctica** | Construir y publicar la imagen de la aplicación, trabajar el Dockerfile multi-stage y levantar los dos servicios con Compose, red y volumen. Introducir y resolver fallos preparados de puertos/nombres, variables y persistencia mediante logs e inspección. Usar un script Python para validar la comunicación y las respuestas; generar o revisar cambios con IA y contrastarlos con las comprobaciones ejecutadas. |
-| **Alcance y profundidad** | Laboratorio local guiado sobre la aplicación común; distinguir los puertos publicados al host de la comunicación interna entre servicios y comprobar los datos tras recrear un contenedor. Reservar la hora transversal M1 para validación Python y revisión crítica de código con IA, no para un curso completo de Python. |
-| **Requisitos de preparación** | Entorno Academy preparado en sesión 1 y validado para contenedores, Compose disponible, imágenes/código de ambos servicios, Python y dependencias de validación instalados. Preparar fallos reproducibles y comprobar runtime permitido, acceso al registro, cuotas, credenciales temporales y persistencia según el laboratorio asignado; no se requiere una cuenta cloud personal adicional. |
-| **Contenido complementario** | Optimización avanzada de imágenes y redes, múltiples entornos Compose y diagnóstico de bajo nivel. |
+| **Cobertura requerida** | Docker, capas OCI, Dockerfile multi-stage, construcción, etiquetado y publicación; cómo Docker utiliza namespaces y cgroups; ejecución, puertos, variables, redes, volúmenes, logs e inspección. M1: 1h prevista de validación Python y revisión de código con IA, pendiente de confirmar. |
+| **Resultado de aprendizaje** | Construir y ejecutar imágenes y explicar el aislamiento y los límites de recursos. |
+| **Actividad práctica** | Construir, ejecutar y publicar una imagen y diagnosticar su ejecución. La actividad M1 no consta como realizada. |
+| **Requisitos de preparación** | Entorno Academy validado, runtime y registro accesibles, código y Dockerfile preparados; comprobar permisos, cuotas y credenciales. |
+| **Contenido complementario** | Optimización avanzada de imágenes. |
 
 <a id="sesion-06"></a>
 
-### 06 · Arquitectura de Kubernetes: API, autenticación y permisos
+### 06 · De contenedores a Kubernetes
 
 **M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Arquitectura Kubernetes: plano de control y relación con los nodos.<br>• Autenticación/autorización: RBAC y OIDC. |
-| **Resultado de aprendizaje** | Seguir una petición kubectl y distinguir autenticación de autorización. |
-| **Actividad práctica** | Levantar kind, localizar componentes y comprobar una operación permitida y otra denegada. |
-| **Alcance y profundidad** | Seguir una petición kubectl; no repetir el montaje manual. kind es el entorno local elegido; el requisito es explicar arquitectura, RBAC y OIDC. |
-| **Requisitos de preparación** | kind, kubectl, kubeconfig y ejemplos de Role/RoleBinding preparados. |
-| **Contenido complementario** | Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero. |
+| **Cobertura requerida** | ECR, publicación y descarga; Compose, redes, volúmenes y aplicación de dos servicios; transición a Kubernetes con kind. |
+| **Resultado de aprendizaje** | Conectar imágenes y servicios multicontenedor con un clúster Kubernetes. |
+| **Actividad práctica** | Publicar en ECR, levantar y diagnosticar los servicios con Compose y preparar kind. |
+| **Requisitos de preparación** | Runtime y Compose, permisos ECR, imágenes, código, kind y kubectl preparados. |
+| **Contenido complementario** | Escenarios complejos de Compose. |
 
 <a id="sesion-07"></a>
 
-### 07 · Aplicaciones en Kubernetes: workloads, configuración y recursos
+### 07 · Fundamentos de Kubernetes
 
 **M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Workloads, configuración y scheduling como bloques fundamentales de Kubernetes. |
-| **Resultado de aprendizaje** | Desplegar una aplicación y gestionar su configuración y ciclo de vida. |
-| **Actividad práctica** | Modificar configuración, observar probes, actualizar la aplicación y comprobar asignación de recursos. |
-| **Alcance y profundidad** | Usar el caso común y el material preparado; priorizar comprobación del comportamiento frente a instalación exhaustiva. |
-| **Requisitos de preparación** | Clúster local, imagen de la aplicación y manifiestos de workloads/configuración. |
-| **Contenido complementario** | Catálogo exhaustivo de controladores y scheduling avanzado. |
+| **Cobertura requerida** | Control plane, nodos, API, etcd y reconciliación; namespaces, labels, annotations, selectors, Pods, requests/limits e introducción a probes. |
+| **Resultado de aprendizaje** | Explicar arquitectura y objetos fundamentales de Kubernetes. |
+| **Actividad práctica** | Explorar kind y crear y examinar Pods, metadatos, recursos y probes. |
+| **Requisitos de preparación** | kind, kubectl y manifiestos preparados. |
+| **Contenido complementario** | Scheduling avanzado. |
 
 <a id="sesion-08"></a>
 
-### 08 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado
+### 08 · Aplicaciones y configuración en Kubernetes
 
 **M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Almacenamiento Kubernetes: PV/PVC y CSI. |
-| **Resultado de aprendizaje** | Mantener datos y comprender las necesidades de workloads con estado. |
-| **Actividad práctica** | Añadir persistencia, recrear un Pod y verificar datos y comportamiento del workload. |
-| **Alcance y profundidad** | Usar el caso común y el material preparado; priorizar comprobación del comportamiento frente a instalación exhaustiva. |
-| **Requisitos de preparación** | StorageClass y driver CSI disponibles; ejemplo con datos persistentes. |
-| **Contenido complementario** | Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada. |
+| **Cobertura requerida** | Preparación del entorno, ReplicaSets, probes, Deployments, ConfigMaps y Secrets; Jobs y CronJobs, al menos mediante demostración docente. |
+| **Resultado de aprendizaje** | Gestionar la configuración y ciclo de vida de una aplicación. |
+| **Actividad práctica** | Preparar el entorno, observar ReplicaSets y probes, actualizar una aplicación con Deployment y configurar ConfigMaps y Secrets. Si queda tiempo, practicar Jobs y CronJobs de forma guiada; en caso contrario, demostrarlos. |
+| **Requisitos de preparación** | Clúster, kubectl, imagen y manifiestos preparados. |
+| **Contenido complementario** | Selectores y adopción de Pods, rolling update manual con ReplicaSets, actualización en vivo de ConfigMap, StatefulSet, DaemonSet, scheduling y estrategias de despliegue; práctica de Jobs y CronJobs si queda tiempo. |
+
+**Distribución orientativa (180 min):** 15 min preparación de kind; 25 min ReplicaSets (crear, escalar y observar el reemplazo de un Pod eliminado); 25 min probes readiness y liveness; 10 min descanso; 45 min Deployment de cats (Service, port-forward, rollout y rollback); 30 min ConfigMap y Secret sencillos; 15 min Jobs/CronJobs guiados o demostración si falta tiempo; 15 min recapitulación y limpieza.
 
 <a id="sesion-09"></a>
 
-### 09 · EKS y networking en Kubernetes: comunicación y exposición de servicios
+### 09 · Persistencia en Kubernetes
 
 **M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Networking Kubernetes: Services, Ingress, Gateway API, CNI y Network Policies. |
-| **Resultado de aprendizaje** | Seguir tráfico entre Pods, descubrir servicios y exponer la aplicación. |
-| **Actividad práctica** | Desplegar primero EKS con Terraform y exponer la aplicación. Después explicar el recorrido de red y aplicar políticas que bloqueen y permitan solo el tráfico necesario. |
-| **Alcance y profundidad** | CNI/controlador preparados; un recorrido y pocas políticas. CoreDNS y el CNI preparado permiten enseñar el recorrido sin comparar todos los productos. |
-| **Requisitos de preparación** | Terraform y permisos Academy comprobados, clúster EKS de respaldo, CNI compatible con NetworkPolicy, controlador de entrada y manifiestos preparados; verificar costes y limpieza. |
-| **Contenido complementario** | Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio. |
+| **Cobertura requerida** | Volúmenes, PV/PVC, StorageClass, CSI, StatefulSet y afinidad de almacenamiento. |
+| **Resultado de aprendizaje** | Mantener datos y comprender workloads con estado. |
+| **Actividad práctica** | Añadir persistencia, recrear un Pod y verificar datos. |
+| **Requisitos de preparación** | StorageClass y driver CSI disponibles; ejemplo con datos persistentes. |
+| **Contenido complementario** | Snapshots/cloning y afinidad avanzada. |
 
 <a id="sesion-10"></a>
 
-### 10 · Construcción de un clúster Kubernetes componente a componente
+### 10 · EKS y networking en Kubernetes
 
 **M3 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | • Construcción de un clúster Kubernetes componente a componente. |
-| **Resultado de aprendizaje** | Comprender cómo se ensamblan y autentican los componentes de Kubernetes. |
-| **Actividad práctica** | Arrancar un clúster reducido con material preparado, unir un nodo y ejecutar un Pod. |
-| **Alcance y profundidad** | Usar el caso común y el material preparado; priorizar comprobación del comportamiento frente a instalación exhaustiva. |
-| **Requisitos de preparación** | Máquinas de laboratorio, certificados y guion de arranque de componentes. |
-| **Contenido complementario** | Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada. |
+| **Cobertura requerida** | EKS, CNI, Services, CoreDNS, Ingress, Gateway API y NetworkPolicy. |
+| **Resultado de aprendizaje** | Seguir tráfico entre Pods y exponer la aplicación. |
+| **Actividad práctica** | Desplegar EKS con Terraform, exponer la aplicación y aplicar políticas de red; disponer de clúster de respaldo. |
+| **Requisitos de preparación** | Permisos y cuotas Academy, Terraform, clúster de respaldo, CNI y controlador de entrada; verificar costes y limpieza. |
+| **Contenido complementario** | Comparación de CNI y rutas avanzadas. |
 
 <a id="sesion-11"></a>
 
-### 11 · Kubernetes en Azure: AKS
+### 11 · Construcción y seguridad de un clúster Kubernetes
 
 **M4 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | Operación de AKS; identidad, redes, cómputo, almacenamiento y registros de Azure. Dedicar 15–20 minutos a consultas en Azure Cost Management, filtros, presupuestos/alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto. |
-| **Resultado de aprendizaje** | Comprender la operación de Kubernetes gestionado en Azure y compararla con EKS. |
-| **Actividad práctica** | Demostración preparada de AKS en una cuenta docente y comparación con EKS; identificar recursos facturables, revisar costes y comprobar la limpieza. |
-| **Alcance y profundidad** | Control plane, identidad de workloads, networking, pools de nodos, actualizaciones y responsabilidad operativa; costes de control plane, nodos, balanceadores, discos y tráfico. |
-| **Requisitos de preparación** | Cuenta docente, permisos, cuotas, entorno AKS y configuración comparativa preparados. |
-| **Contenido complementario** | Instalación independiente y operación avanzada de AKS; comparación opcional con un clúster AWS autogestionado mediante kOps. |
+| **Cobertura requerida** | Construcción componente a componente: PKI, etcd, API, scheduler, controller-manager, kubelet, runtime, kube-proxy, unión y TLS bootstrapping; kubeconfig, certificados, tokens, ServiceAccounts, RBAC, OIDC y admisión. |
+| **Resultado de aprendizaje** | Comprender el ensamblaje y distinguir autenticación de autorización. |
+| **Actividad práctica** | Arrancar un clúster reducido con material preparado, unir un nodo, ejecutar un Pod y comprobar operaciones permitidas y denegadas. |
+| **Requisitos de preparación** | Máquinas, certificados, guion y ejemplos RBAC preparados. |
+| **Contenido complementario** | Montaje completo sin ayudas, HA, recuperación e integración OIDC avanzada. |
 
 <a id="sesion-12"></a>
 
-### 12 · Kubernetes en GCP: GKE
+### 12 · Kubernetes gestionado: AKS y GKE
 
 **M4 · Rael Garcia · 3 horas · Concentración 🟡 Media**
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | Operación de GKE; identidad, redes, cómputo, almacenamiento y registros de GCP. Dedicar 15–20 minutos a consultas en GCP Cloud Billing, filtros, presupuestos/alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto. |
-| **Resultado de aprendizaje** | Comprender la operación de Kubernetes gestionado en GCP y compararla con EKS y AKS. |
-| **Actividad práctica** | Demostración preparada de GKE en una cuenta docente y comparación con EKS y AKS; identificar recursos facturables, revisar costes y comprobar la limpieza. |
-| **Alcance y profundidad** | GKE Standard y Autopilot, control plane, identidad de workloads, networking, pools de nodos, actualizaciones y responsabilidad operativa; costes de control plane, nodos, balanceadores, discos y tráfico. |
-| **Requisitos de preparación** | Cuenta docente, permisos, cuotas, entorno GKE y configuración comparativa preparados. |
-| **Contenido complementario** | Instalación independiente y operación avanzada de GKE; catálogo de add-ons. |
+| **Cobertura requerida** | AKS y GKE, identidad, redes, cómputo, almacenamiento y registros; control plane, identidad de workloads, pools, actualizaciones, responsabilidad operativa y GKE Standard/Autopilot. Reservar 15–20 minutos por proveedor para consultas, filtros, presupuestos, alertas y limpieza en Azure Cost Management y GCP Cloud Billing; facturación retrasada y presupuestos que no detienen gasto. Revisar costes de control plane, nodos, balanceadores, discos y tráfico. |
+| **Resultado de aprendizaje** | Comparar Kubernetes gestionado en Azure y GCP con EKS. |
+| **Actividad práctica** | Demostraciones preparadas en cuentas docentes; comparar, identificar costes y comprobar limpieza sin exigir despliegues del alumnado. |
+| **Requisitos de preparación** | Cuentas docentes, permisos, cuotas y entornos AKS/GKE preparados. |
+| **Contenido complementario** | Instalación independiente, operación avanzada y comparación opcional con kOps. |
 
 <a id="sesion-13"></a>
 

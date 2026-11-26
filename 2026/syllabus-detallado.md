@@ -8,7 +8,7 @@ UPC School · Curso 305300 · Live online · Castellano · 12 ECTS.
 
 ## Metodología y prerrequisitos
 
-Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Dos sesiones de contenedores preparan la ejecución de la aplicación en el entorno Academy validado antes de Kubernetes. AWS concentra el laboratorio guiado principal de IaC; Azure y GCP se trabajan mediante comparaciones y demostraciones preparadas, no mediante dos despliegues completos del alumnado. Se introducen identidad, redes, cómputo, almacenamiento y registros, y su aprovisionamiento como código. Python se practica en la validación de servicios y en proveedores; Bash en pipelines; Go en el ejemplo de operator. La IA apoya la escritura/adaptación de código, cuya ejecución y resultados se verifican.
+Dirigido a perfiles junior con conocimientos básicos de Linux, redes y scripting. Tres sesiones de contenedores preparan el paso a Kubernetes. AWS concentra el laboratorio guiado principal de IaC; Azure y GCP se trabajan mediante comparaciones y demostraciones preparadas, no mediante dos despliegues completos del alumnado. Se introducen identidad, redes, cómputo, almacenamiento y registros, y su aprovisionamiento como código. Python se practica en proveedores y está previsto para validación de servicios; Bash en pipelines y Go en operators. La IA apoya la escritura y revisión de código.
 
 Una aplicación Python de dos servicios conecta contenedores, Kubernetes, observabilidad, CI/GitOps, entrega y escalado. Laboratorios guiados con configuraciones preparadas; permisos, cuotas y costes comprobados; limpieza de recursos al finalizar. Se utiliza un clúster EKS preparado en networking y se comparan demostraciones preparadas de AKS y GKE. M6 combina conceptos, comparación y demostraciones; operators tiene una clase completa. Los secretos se entregan mediante mecanismos externos y no se guardan en repositorios ni en el estado de Terraform.
 
@@ -23,7 +23,7 @@ M1 combina **3h propias y 6h integradas**: 9h de contenido incluidas en las 90h 
 | 1 · Fundamentos de DevOps y Platform Engineering | DevOps, SRE y Platform Engineering; SLI/SLO/SLA e introducción a Terraform | 3h |
 | 2 · AWS: fundamentos y aprovisionamiento como código | Python para consultar recursos; generación y revisión de código con IA | 1h |
 | 3 · AWS WordPress: de EC2 con estado a instancias reemplazables | Adaptación de scripts, configuración y comparación entre proveedores | 1h |
-| 5 · Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose | Validación Python de los servicios y revisión de código con IA | 1h |
+| 5 · Imágenes y contenedores | Validación Python de los servicios y revisión de código con IA: pendiente de confirmar | 1h |
 | 14 · Desarrollo de operators: Go y Kubebuilder/Operator SDK | Go aplicado y lectura/modificación del controlador | 1,5h |
 | 17 · Automatización de pipelines: scripting, Tekton y Trivy | Bash/Python, errores, validaciones y ejecución automatizada | 1,5h |
 
@@ -106,9 +106,9 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 ## M3 · Contenedores y ecosistema OCI. Introducción al bloque
 
-2 sesiones · 6h. Se imparten después de las dos sesiones de cloud e IaC; M3 continúa en las sesiones 6–10.
+Las sesiones 4–6 forman el bloque de contenedores; M3 continúa en las sesiones 7–10.
 
-### Sesión 4 · Contenedores desde cero: namespaces, cgroups y runtime
+### Sesión 4 · Fundamentos de contenedores
 
 **Fecha:** 12/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
@@ -125,157 +125,116 @@ Las horas compartidas no se suman de nuevo al total. La docencia corresponde al 
 
 **Ampliación:** Catálogo de runtimes alternativos y builds in-cluster; firma/SBOM como extras, escaneo se concreta en el pipeline Tekton.
 
-### Sesión 5 · Contenedores II: Docker, sistema de ficheros, redes, volúmenes y Compose
+### Sesión 5 · Imágenes y contenedores
 
 **Fecha:** 17/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Contenido de M1:** Validación Python de los servicios y revisión de código con IA. **Dedicación:** 1h incluidas en esta clase.
+**Contenido de M1:** 1h prevista para validación Python de los servicios y revisión de código con IA; realización pendiente de confirmar.
 
-**Objetivo:** Construir y publicar una imagen Docker y ejecutar y diagnosticar una aplicación de dos servicios con comunicación y persistencia locales.
+**Objetivo:** Construir y publicar una imagen Docker y comprender cómo Docker utiliza namespaces y cgroups.
 
 **Contenido principal:**
 
 - Docker, sistema de ficheros y capas OCI; Dockerfile, construcción multi-stage y publicación en un registro.
-- Ejecución de contenedores, puertos y variables de entorno.
-- Redes y comunicación entre contenedores.
-- Volúmenes y persistencia.
-- Compose para la aplicación Python de dos servicios.
-- Logs, inspección y diagnóstico de fallos de configuración y conectividad.
-- Validación Python de los servicios y revisión de código asistida por IA, comprobando ejecución y resultados.
+- Cómo Docker utiliza namespaces y cgroups para aislar procesos y limitar recursos.
+- Ejecución de contenedores, puertos, variables, redes, volúmenes, logs e inspección.
+- M1 previsto, pendiente de confirmar: validación Python de servicios y revisión de código asistida por IA.
 
-**Práctica / evidencia:** Construir, ejecutar y publicar una imagen; ejecutar los dos servicios con Compose, verificar comunicación y persistencia, diagnosticar un fallo preparado y validar los servicios mediante Python.
+**Práctica / evidencia:** Construir, ejecutar y publicar una imagen y diagnosticar su ejecución.
 
-**Ampliación:** Optimización avanzada de imágenes y escenarios complejos de Compose y diagnóstico.
+**Ampliación:** Optimización avanzada de imágenes.
 
-## M3 · Kubernetes Core. Continuación del bloque
+## M3 · Contenedores y Kubernetes Core. Continuación del bloque
 
-5 sesiones · 15h. Con las sesiones 4–5 de contenedores, M3 abarca las sesiones 4–10 y suma 7 sesiones · 21h · 2 ECTS.
+M3 abarca las sesiones 4–10 y suma 7 sesiones · 21h · 2 ECTS.
 
-### Sesión 6 · Arquitectura de Kubernetes: API, autenticación y permisos
+### Sesión 6 · De contenedores a Kubernetes
 
 **Fecha:** 19/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Seguir una petición kubectl y distinguir autenticación de autorización.
+**Objetivo:** Conectar imágenes, registros y aplicaciones multicontenedor con Kubernetes.
 
-**Contenido principal:**
+**Contenido principal:** ECR, publicación y descarga de imágenes; Compose, redes, volúmenes y diagnóstico de la aplicación de dos servicios; introducción a kind y al paso de Compose a Kubernetes.
 
-- Control plane y nodos.
-- API, etcd, reconciliación y ejecución de Pods.
-- Kubeconfig, certificados, tokens y ServiceAccounts.
-- Role/RoleBinding.
-- OIDC y admisión conceptual.
+**Práctica / evidencia:** Publicar una imagen en ECR, ejecutar y diagnosticar los servicios con Compose y preparar un clúster kind.
 
-**Práctica / evidencia:** Levantar kind, localizar componentes y comprobar una operación permitida y otra denegada.
+**Ampliación:** Escenarios complejos de Compose y diagnóstico.
 
-**Ampliación:** Integración OIDC avanzada; el montaje interno se aborda en la sesión de clúster desde cero.
-
-### Sesión 7 · Aplicaciones en Kubernetes: workloads, configuración y recursos
+### Sesión 7 · Fundamentos de Kubernetes
 
 **Fecha:** 24/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Desplegar una aplicación y gestionar su configuración y ciclo de vida.
+**Objetivo:** Comprender la arquitectura y los objetos básicos de Kubernetes.
 
-**Contenido principal:**
+**Contenido principal:** Control plane, nodos, API, etcd y reconciliación; namespaces, labels, annotations, selectors y Pods; requests y limits; introducción a probes.
 
-- Pods, Deployments, Jobs y CronJobs.
-- ConfigMap/Secret.
-- Probes.
-- Requests/limits y scheduling básico.
-- Namespaces, labels y selectors.
+**Práctica / evidencia:** Explorar kind, crear y examinar Pods, sus metadatos, recursos y probes.
 
-**Práctica / evidencia:** Modificar configuración, observar probes, actualizar la aplicación y comprobar asignación de recursos.
+**Ampliación:** Scheduling avanzado.
 
-**Ampliación:** Catálogo exhaustivo de controladores y scheduling avanzado.
-
-### Sesión 8 · Persistencia en Kubernetes: almacenamiento y aplicaciones con estado
+### Sesión 8 · Aplicaciones y configuración en Kubernetes
 
 **Fecha:** 26/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Mantener datos y comprender las necesidades de workloads con estado.
+**Objetivo:** Desplegar una aplicación y gestionar su configuración y ciclo de vida.
 
-**Contenido principal:**
+**Contenido principal:** Preparación del entorno, ReplicaSets, probes, Deployments, ConfigMaps y Secrets; Jobs y CronJobs, al menos mediante demostración docente.
 
-- Volúmenes, PV/PVC, StorageClass y aprovisionamiento dinámico.
-- Función de CSI.
-- StatefulSet.
-- Afinidad y restricciones de ubicación relevantes para almacenamiento.
+**Práctica / evidencia:** Preparar el entorno, observar ReplicaSets y probes, actualizar una aplicación con Deployment y configurar ConfigMaps y Secrets. Si queda tiempo, practicar Jobs y CronJobs de forma guiada; en caso contrario, seguir la demostración docente.
 
-**Práctica / evidencia:** Añadir persistencia, recrear un Pod y verificar datos y comportamiento del workload.
+**Ampliación opcional:** Selectores y adopción de Pods, rolling update manual con ReplicaSets, actualización en vivo de ConfigMap, StatefulSet, DaemonSet, scheduling y estrategias de despliegue; práctica de Jobs y CronJobs si queda tiempo.
 
-**Ampliación:** Snapshots/cloning avanzados; comparación exhaustiva de drivers y afinidad avanzada.
-
-### Sesión 9 · EKS y networking en Kubernetes: comunicación y exposición de servicios
+### Sesión 9 · Persistencia en Kubernetes
 
 **Fecha:** 01/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Seguir tráfico entre Pods, descubrir servicios y exponer la aplicación.
+**Objetivo:** Mantener datos y comprender las necesidades de workloads con estado.
 
-**Contenido principal:**
+**Contenido principal:** Volúmenes, PV/PVC, StorageClass, aprovisionamiento dinámico, CSI, StatefulSet y afinidad relevante para almacenamiento.
 
-- CNI en Pod→Pod.
-- Services y CoreDNS.
-- Ejemplo Gateway API y relación con Ingress.
-- NetworkPolicy.
+**Práctica / evidencia:** Añadir persistencia, recrear un Pod y verificar datos y comportamiento del workload.
 
-**Práctica / evidencia:** Desplegar primero un clúster EKS con Terraform y exponer la aplicación; después explicar CNI, Services, DNS, entrada y NetworkPolicy, bloqueando y permitiendo solo las conexiones necesarias. Disponer de un clúster preparado como respaldo.
+**Ampliación:** Snapshots/cloning y afinidad avanzada.
 
-**Ampliación:** Instalación/comparación de múltiples CNI; catálogo completo de rutas; networking avanzado se desarrolla con Traefik/Istio.
-
-### Sesión 10 · Construcción de un clúster Kubernetes componente a componente
+### Sesión 10 · EKS y networking en Kubernetes
 
 **Fecha:** 03/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Comprender cómo se ensamblan y autentican los componentes de Kubernetes.
+**Objetivo:** Seguir tráfico entre Pods, descubrir servicios y exponer la aplicación.
 
-**Contenido principal:**
+**Contenido principal:** EKS, CNI, Services, CoreDNS, Gateway API, Ingress y NetworkPolicy.
 
-- PKI, etcd, kube-apiserver, scheduler y controller-manager.
-- Kubelet, runtime y kube-proxy.
-- Unión de un nodo y TLS bootstrapping.
+**Práctica / evidencia:** Desplegar EKS con Terraform y exponer la aplicación; explicar el recorrido de red y aplicar políticas. Disponer de un clúster preparado como respaldo.
 
-**Práctica / evidencia:** Arrancar un clúster reducido con material preparado, unir un nodo y ejecutar un Pod.
-
-**Ampliación:** Kubernetes the hard way completo sin ayudas; operación HA y recuperación avanzada.
+**Ampliación:** Comparación de CNI y rutas avanzadas.
 
 ## M4 · Kubernetes en Producción y Ecosistema Cloud Native
 
 5 sesiones · 15h · 2 ECTS.
 
-### Sesión 11 · Kubernetes en Azure: AKS
+### Sesión 11 · Construcción y seguridad de un clúster Kubernetes
 
 **Fecha:** 10/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Comprender la operación de Kubernetes gestionado en Azure y compararla con EKS.
+**Objetivo:** Comprender cómo se ensamblan y autentican los componentes y distinguir autenticación de autorización.
 
-**Contenido principal:**
+**Contenido principal:** PKI, etcd, kube-apiserver, scheduler, controller-manager, kubelet, runtime y kube-proxy; unión de nodos y TLS bootstrapping; kubeconfig, certificados, tokens, ServiceAccounts, RBAC, OIDC y admisión conceptual.
 
-- Azure: identidad, redes, cómputo, almacenamiento y registros.
-- AKS: control plane, identidad de workloads, networking y pools de nodos.
-- Actualizaciones, disponibilidad y responsabilidad operativa.
-- Azure Cost Management: 15–20 minutos para consultas, filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto.
-- Costes de control plane, nodos, balanceadores, discos y tráfico.
+**Práctica / evidencia:** Arrancar un clúster reducido con material preparado, unir un nodo, ejecutar un Pod y comprobar una operación permitida y otra denegada.
 
-**Práctica / evidencia:** Demostración preparada de AKS en una cuenta docente y comparación con EKS; identificar recursos facturables, revisar costes y comprobar la limpieza.
+**Ampliación:** Kubernetes the hard way completo, HA, recuperación e integración OIDC avanzada.
 
-**Ampliación opcional:** Instalación independiente y operación avanzada de AKS; comparación con un clúster AWS autogestionado mediante kOps.
-
-### Sesión 12 · Kubernetes en GCP: GKE
+### Sesión 12 · Kubernetes gestionado: AKS y GKE
 
 **Fecha:** 15/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Comprender la operación de Kubernetes gestionado en GCP y compararla con EKS y AKS.
+**Objetivo:** Comparar EKS, AKS y GKE mediante demostraciones preparadas.
 
-**Contenido principal:**
+**Contenido principal:** Identidad, redes, cómputo, almacenamiento y registros de Azure y GCP; control plane, identidad de workloads, networking, pools de nodos, actualizaciones y responsabilidad operativa; GKE Standard y Autopilot. Dedicar 15–20 minutos por proveedor a Azure Cost Management y GCP Cloud Billing: consultas, filtros, presupuestos, alertas y limpieza. Revisar costes de control plane, nodos, balanceadores, discos y tráfico; la facturación puede retrasarse y los presupuestos no detienen el gasto.
 
-- GCP: identidad, redes, cómputo, almacenamiento y registros.
-- GKE Standard y Autopilot: control plane, identidad de workloads, networking y pools de nodos.
-- Actualizaciones, disponibilidad y responsabilidad operativa.
-- GCP Cloud Billing: 15–20 minutos para consultas, filtros, presupuestos, alertas y limpieza; la facturación puede retrasarse y los presupuestos no detienen el gasto.
-- Costes de control plane, nodos, balanceadores, discos y tráfico.
+**Práctica / evidencia:** Demostraciones preparadas de AKS y GKE en cuentas docentes, comparación con EKS, identificación de recursos facturables y comprobación de limpieza; no se exigen despliegues completos del alumnado.
 
-**Práctica / evidencia:** Demostración preparada de GKE en una cuenta docente y comparación con EKS y AKS; identificar recursos facturables, revisar costes y comprobar la limpieza.
-
-**Ampliación opcional:** Instalación independiente y operación avanzada de GKE; catálogo de add-ons.
+**Ampliación opcional:** Instalación independiente y operación avanzada de AKS y GKE; comparación con un clúster AWS autogestionado mediante kOps.
 
 ### Sesión 13 · Configuración y empaquetado de aplicaciones: Kustomize y Helm
 
