@@ -167,13 +167,9 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de Python e IA; sesión 
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | Preparación del entorno, ReplicaSets, probes, Deployments, ConfigMaps y Secrets; Jobs y CronJobs, al menos mediante demostración docente. |
-| **Resultado de aprendizaje** | Gestionar la configuración y ciclo de vida de una aplicación. |
-| **Actividad práctica** | Preparar el entorno, observar ReplicaSets y probes, actualizar una aplicación con Deployment y configurar ConfigMaps y Secrets. Si queda tiempo, practicar Jobs y CronJobs de forma guiada; en caso contrario, demostrarlos. |
-| **Requisitos de preparación** | Clúster, kubectl, imagen y manifiestos preparados. |
-| **Contenido complementario** | Selectores y adopción de Pods, rolling update manual con ReplicaSets, actualización en vivo de ConfigMap, StatefulSet, DaemonSet, scheduling y estrategias de despliegue; práctica de Jobs y CronJobs si queda tiempo. |
-
-**Distribución orientativa (180 min):** 15 min preparación de kind; 25 min ReplicaSets (crear, escalar y observar el reemplazo de un Pod eliminado); 25 min probes readiness y liveness; 10 min descanso; 45 min Deployment de cats (Service, port-forward, rollout y rollback); 30 min ConfigMap y Secret sencillos; 15 min Jobs/CronJobs guiados o demostración si falta tiempo; 15 min recapitulación y limpieza.
+| **Contenido abordado** | Probes, ReplicaSets y almacenamiento. |
+| **Continuación** | Deployments, ConfigMaps, Secrets, Jobs y CronJobs quedan programados para la sesión 9. |
+| **Contenido complementario** | Selectores y adopción de Pods, rolling update manual con ReplicaSets, StatefulSet, DaemonSet, scheduling y estrategias de despliegue. |
 
 <a id="sesion-09"></a>
 
@@ -183,11 +179,11 @@ La distribución de M1 es: sesión 1, 3h; sesión 2, 1h de Python e IA; sesión 
 
 | Apartado | Contenido |
 |---|---|
-| **Cobertura requerida** | Volúmenes, PV/PVC, StorageClass, CSI, StatefulSet y afinidad de almacenamiento. |
-| **Resultado de aprendizaje** | Mantener datos y comprender workloads con estado. |
-| **Actividad práctica** | Añadir persistencia, recrear un Pod y verificar datos. |
-| **Requisitos de preparación** | StorageClass y driver CSI disponibles; ejemplo con datos persistentes. |
-| **Contenido complementario** | Snapshots/cloning y afinidad avanzada. |
+| **Cobertura requerida** | Deployments, ConfigMaps y Secrets; Jobs y CronJobs, al menos mediante demostración docente. Retomar persistencia: volúmenes, PV/PVC, StorageClass, aprovisionamiento dinámico, CSI, StatefulSet y afinidad de almacenamiento. |
+| **Resultado de aprendizaje** | Gestionar aplicaciones y su configuración, mantener datos y comprender workloads con estado. |
+| **Actividad práctica** | Actualizar una aplicación con Deployment y configurar ConfigMaps y Secrets; practicar Jobs y CronJobs de forma guiada si queda tiempo o demostrarlos. Añadir persistencia, recrear un Pod y verificar datos. |
+| **Requisitos de preparación** | Clúster, kubectl, imagen y manifiestos preparados; StorageClass y driver CSI disponibles y ejemplo con datos persistentes. |
+| **Contenido complementario** | Actualización en vivo de ConfigMap, práctica adicional de Jobs y CronJobs, snapshots/cloning y afinidad avanzada. |
 
 <a id="sesion-10"></a>
 

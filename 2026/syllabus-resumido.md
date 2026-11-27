@@ -40,7 +40,7 @@ La sesión 1 incluye, dentro de sus 3h de M1 y con docencia compartida, una pres
 
 **Primeras sesiones:** El 05/11 se practica Terraform y EC2 en AWS Academy. El 10/11 se sigue la [evolución de WordPress](https://github.com/raelga/kubernetes-talks/tree/main/course/infra/labs/aws/02-wordpress); el 12/11 se completa su cierre con Auto Scaling, AMI y S3 junto a fundamentos de contenedores. La sesión 5 aborda imágenes y contenedores; la 6 conecta ECR y Compose con kind.
 
-La sesión 8 prioriza la preparación del entorno, ReplicaSets, probes, Deployments, ConfigMaps y Secrets. Jobs y CronJobs se practican de forma guiada si queda tiempo; de lo contrario, el docente los demuestra. La persistencia se aborda en la sesión 9.
+La sesión 8 abordó probes, ReplicaSets y almacenamiento. En la sesión 9 se retoma la persistencia y quedan programados Deployments, ConfigMaps, Secrets, Jobs y CronJobs.
 
 ## Costes y control del consumo cloud
 

@@ -176,25 +176,23 @@ M3 abarca las sesiones 4–10 y suma 7 sesiones · 21h · 2 ECTS.
 
 **Fecha:** 26/11/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Desplegar una aplicación y gestionar su configuración y ciclo de vida.
+**Contenido abordado:** Probes, ReplicaSets y almacenamiento.
 
-**Contenido principal:** Preparación del entorno, ReplicaSets, probes, Deployments, ConfigMaps y Secrets; Jobs y CronJobs, al menos mediante demostración docente.
+**Continuación:** Deployments, ConfigMaps, Secrets, Jobs y CronJobs quedan programados para la sesión 9.
 
-**Práctica / evidencia:** Preparar el entorno, observar ReplicaSets y probes, actualizar una aplicación con Deployment y configurar ConfigMaps y Secrets. Si queda tiempo, practicar Jobs y CronJobs de forma guiada; en caso contrario, seguir la demostración docente.
-
-**Ampliación opcional:** Selectores y adopción de Pods, rolling update manual con ReplicaSets, actualización en vivo de ConfigMap, StatefulSet, DaemonSet, scheduling y estrategias de despliegue; práctica de Jobs y CronJobs si queda tiempo.
+**Ampliación opcional:** Selectores y adopción de Pods, rolling update manual con ReplicaSets, StatefulSet, DaemonSet, scheduling y estrategias de despliegue.
 
 ### Sesión 9 · Persistencia en Kubernetes
 
 **Fecha:** 01/12/2026 · 18:00–21:00 · **Docente:** Rael Garcia.
 
-**Objetivo:** Mantener datos y comprender las necesidades de workloads con estado.
+**Objetivo:** Gestionar aplicaciones y su configuración, mantener datos y comprender las necesidades de workloads con estado.
 
-**Contenido principal:** Volúmenes, PV/PVC, StorageClass, aprovisionamiento dinámico, CSI, StatefulSet y afinidad relevante para almacenamiento.
+**Contenido principal:** Deployments, ConfigMaps y Secrets; Jobs y CronJobs, al menos mediante demostración docente. Retomar persistencia: volúmenes, PV/PVC, StorageClass, aprovisionamiento dinámico, CSI, StatefulSet y afinidad relevante para almacenamiento.
 
-**Práctica / evidencia:** Añadir persistencia, recrear un Pod y verificar datos y comportamiento del workload.
+**Práctica / evidencia:** Actualizar una aplicación con Deployment y configurar ConfigMaps y Secrets; practicar Jobs y CronJobs de forma guiada si queda tiempo o seguir la demostración docente. Añadir persistencia, recrear un Pod y verificar datos y comportamiento del workload.
 
-**Ampliación:** Snapshots/cloning y afinidad avanzada.
+**Ampliación:** Actualización en vivo de ConfigMap, práctica adicional de Jobs y CronJobs, snapshots/cloning y afinidad avanzada.
 
 ### Sesión 10 · EKS y networking en Kubernetes
 
